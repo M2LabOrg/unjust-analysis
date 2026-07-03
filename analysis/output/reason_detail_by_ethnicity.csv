@@ -1,0 +1,63 @@
+reason,ethnicity,total_searches,population,rate_per_1000
+Anticipation of Violence,Asian,3006,5515455,0.5450139653029532
+Anticipation of Violence,Black,4523,2409283,1.8773220082489273
+Anticipation of Violence,Mixed,1001,1717977,0.5826620496083474
+Anticipation of Violence,Other,648,1255632,0.5160747735005161
+Anticipation of Violence,White,11517,48699231,0.2364924407122568
+Criminal Damage,Asian,1050,5515455,0.19037413957687987
+Criminal Damage,Black,1391,2409283,0.5773501909074193
+Criminal Damage,Mixed,856,1717977,0.49826045401073477
+Criminal Damage,Other,307,1255632,0.2444983880627445
+Criminal Damage,White,24562,48699231,0.5043611468936748
+Drone or Unmanned Aircraft,Asian,1,5515455,1.8130870435893322e-4
+Drone or Unmanned Aircraft,Black,2,2409283,8.301224887238236e-4
+Drone or Unmanned Aircraft,Mixed,1,1717977,5.820799696387087e-4
+Drone or Unmanned Aircraft,White,4,48699231,8.213682059989817e-5
+Drugs,Asian,184350,5515455,33.42425964856933
+Drugs,Black,195707,2409283,81.23039095033667
+Drugs,Mixed,53494,1717977,31.13778589585309
+Drugs,Other,30231,1255632,24.07632172483658
+Drugs,White,925189,48699231,18.9980207284998
+Firearms,Asian,2946,5515455,0.5341354430414172
+Firearms,Black,2917,2409283,1.210733649803697
+Firearms,Mixed,803,1717977,0.46741021561988316
+Firearms,Other,364,1255632,0.2898938542502899
+Firearms,White,10754,48699231,0.22082484218282625
+Going Equipped,Asian,11382,5515455,2.0636556730133777
+Going Equipped,Black,12079,2409283,5.013524770647533
+Going Equipped,Mixed,5304,1717977,3.087352158963711
+Going Equipped,Other,3142,1255632,2.5023255221275025
+Going Equipped,White,133354,48699231,2.7383183935697053
+Items in connection with protest related offences: suspicion-led,Asian,6,5515455,0.0010878522261535994
+Items in connection with protest related offences: suspicion-led,Black,12,2409283,0.004980734932342942
+Items in connection with protest related offences: suspicion-led,Mixed,15,1717977,0.008731199544580633
+Items in connection with protest related offences: suspicion-led,Other,5,1255632,0.003982058437503982
+Items in connection with protest related offences: suspicion-led,White,183,48699231,0.003757759542445342
+Items in connection with protest related offences: suspicion-less,Asian,3,5515455,5.439261130767997e-4
+Items in connection with protest related offences: suspicion-less,Black,3,2409283,0.0012451837330857355
+Items in connection with protest related offences: suspicion-less,White,16,48699231,3.285472823995927e-4
+Offensive Weapons,Asian,31702,5515455,5.747848545586901
+Offensive Weapons,Black,64827,2409283,26.907175288249658
+Offensive Weapons,Mixed,14757,1717977,8.589754111958426
+Offensive Weapons,Other,6711,1255632,5.344718834817845
+Offensive Weapons,White,189012,48699231,3.8812111838069887
+Other,Asian,4594,5515455,0.8329321878249392
+Other,Black,4243,2409283,1.7611048598275918
+Other,Mixed,1324,1717977,0.7706738798016504
+Other,Other,946,1255632,0.7534054563757534
+Other,White,30690,48699231,0.6301947560527187
+Serious Violence Reduction Order,Asian,8,5515455,0.0014504696348714657
+Serious Violence Reduction Order,Black,23,2409283,0.009546408620323972
+Serious Violence Reduction Order,Mixed,10,1717977,0.005820799696387088
+Serious Violence Reduction Order,Other,6,1255632,0.004778470125004778
+Serious Violence Reduction Order,White,277,48699231,0.005687974826542949
+Stolen Property,Asian,16092,5515455,2.9176196705439534
+Stolen Property,Black,32863,2409283,13.64015767346551
+Stolen Property,Mixed,8817,1717977,5.132199092304496
+Stolen Property,Other,6921,1255632,5.511965289193012
+Stolen Property,White,144363,48699231,2.964379458065775
+Terrorism Act 2000 section 43,Asian,396,5515455,0.07179824692613755
+Terrorism Act 2000 section 43,Black,173,2409283,0.07180559527461074
+Terrorism Act 2000 section 43,Mixed,46,1717977,0.026775678603380603
+Terrorism Act 2000 section 43,Other,126,1255632,0.10034787262510035
+Terrorism Act 2000 section 43,White,517,48699231,0.010616184062536841

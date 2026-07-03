@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Statistical Analysis of Stop and Search Practices on Black Communities in the UK - 4&nbsp; Methodology</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./results.html" rel="next">
+<link href="./literature.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./methodology.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Methodology</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Statistical Analysis of Stop and Search Practices on Black Communities in the UK</a> 
+        <div class="sidebar-tools-main">
+    <a href="./Statistical-Analysis-of-Stop-and-Search-Practices-on-Black-Communities-in-the-UK.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statistical Analysis of UK Stop and Search</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./literature.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Literature Review</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./methodology.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Methodology</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Results</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./discussion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Discussion Section</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./conclusion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title"><strong>Conclusion</strong></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">References</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link active" data-scroll-target="#data-sources"><span class="header-section-number">4.1</span> Data Sources</a></li>
+  <li><a href="#data-cleaning-steps" id="toc-data-cleaning-steps" class="nav-link" data-scroll-target="#data-cleaning-steps"><span class="header-section-number">4.2</span> Data Cleaning Steps</a></li>
+  <li><a href="#sec-data-processing" id="toc-sec-data-processing" class="nav-link" data-scroll-target="#sec-data-processing"><span class="header-section-number">4.3</span> Data Processing and Filtering</a>
+  <ul class="collapse">
+  <li><a href="#stop-and-search-data" id="toc-stop-and-search-data" class="nav-link" data-scroll-target="#stop-and-search-data"><span class="header-section-number">4.3.1</span> Stop and Search Data</a></li>
+  <li><a href="#census-data" id="toc-census-data" class="nav-link" data-scroll-target="#census-data"><span class="header-section-number">4.3.2</span> Census Data</a></li>
+  <li><a href="#merging-and-aggregation" id="toc-merging-and-aggregation" class="nav-link" data-scroll-target="#merging-and-aggregation"><span class="header-section-number">4.3.3</span> Merging and Aggregation</a></li>
+  <li><a href="#additional-filtering-in-derived-analyses" id="toc-additional-filtering-in-derived-analyses" class="nav-link" data-scroll-target="#additional-filtering-in-derived-analyses"><span class="header-section-number">4.3.4</span> Additional Filtering in Derived Analyses</a></li>
+  <li><a href="#reproducibility" id="toc-reproducibility" class="nav-link" data-scroll-target="#reproducibility"><span class="header-section-number">4.3.5</span> Reproducibility</a></li>
+  </ul></li>
+  <li><a href="#sec-pooled-model" id="toc-sec-pooled-model" class="nav-link" data-scroll-target="#sec-pooled-model"><span class="header-section-number">4.4</span> The Pooled Model</a></li>
+  <li><a href="#sec-quasipoisson" id="toc-sec-quasipoisson" class="nav-link" data-scroll-target="#sec-quasipoisson"><span class="header-section-number">4.5</span> Quasi-Poisson: Justification</a></li>
+  <li><a href="#sec-peryear" id="toc-sec-peryear" class="nav-link" data-scroll-target="#sec-peryear"><span class="header-section-number">4.6</span> Per-Year IRR Models</a></li>
+  <li><a href="#random-forest-model-as-a-complementary-analysis" id="toc-random-forest-model-as-a-complementary-analysis" class="nav-link" data-scroll-target="#random-forest-model-as-a-complementary-analysis"><span class="header-section-number">4.7</span> Random Forest Model as a Complementary Analysis</a>
+  <ul class="collapse">
+  <li><a href="#rationale-for-using-random-forest-in-addition-to-the-main-model" id="toc-rationale-for-using-random-forest-in-addition-to-the-main-model" class="nav-link" data-scroll-target="#rationale-for-using-random-forest-in-addition-to-the-main-model"><span class="header-section-number">4.7.1</span> Rationale for Using Random Forest in Addition to the Main Model</a></li>
+  <li><a href="#overview-of-the-random-forest-model" id="toc-overview-of-the-random-forest-model" class="nav-link" data-scroll-target="#overview-of-the-random-forest-model"><span class="header-section-number">4.7.2</span> Overview of the Random Forest Model</a></li>
+  <li><a href="#interpretation-of-random-forest-output" id="toc-interpretation-of-random-forest-output" class="nav-link" data-scroll-target="#interpretation-of-random-forest-output"><span class="header-section-number">4.7.3</span> Interpretation of Random Forest Output</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="methodology" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Methodology</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="data-sources" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="data-sources"><span class="header-section-number">4.1</span> Data Sources</h2>
+<p>The analysis utilizes two primary data sources:</p>
+<ol type="1">
+<li><p><strong>GOV.UK Stop and Search Open Data (2020/21–2024/25)</strong>: This dataset provides comprehensive records of stop and search incidents across England and Wales, including variables such as ethnicity, age, sex, region, and reason for search. The five-year extract covers the financial years ending March 2021 through March 2025, comprising over 556,000 records after cleaning. The data are released by the Home Office <span class="citation" data-cites="home_office_govuk_stop_2024">(<a href="references.html#ref-home_office_govuk_stop_2024" role="doc-biblioref">Home Office (GOV.UK), 2024</a>)</span> and include all searches conducted under Section 1 of the Police and Criminal Evidence Act (PACE) and Section 60 of the Criminal Justice and Public Order Act (CJPOA).</p></li>
+<li><p><strong>ONS Census 2021</strong>: Used to obtain population denominators by ethnicity and region, serving as the offset in the rate models <span class="citation" data-cites="ons_2022">(<a href="references.html#ref-ons_2022" role="doc-biblioref">National Statistics (ONS), 2022</a>)</span>. We assume that the 2021 population counts remain a reasonable approximation across all five financial years, a limitation discussed in the Discussion chapter.</p></li>
+</ol>
+<p>The analysis is inspired by <span class="citation" data-cites="Vomfell2021">Vomfell and Stewart (<a href="references.html#ref-Vomfell2021" role="doc-biblioref">2021</a>)</span>, who identified ethnic disparities in stop and search in the United Kingdom.</p>
+<p>The selected variables, their code names, and data types are: number of stop and search events (<code>number_of_searches</code>, continuous), year (<code>financial_year</code>, categorical with five levels), region name (<code>region</code>, categorical with ten levels), ethnicity group defined by the person stopped (<code>self_defined_ethnicity_group</code>, categorical), sex (<code>sex</code>, categorical), age group (<code>age_group</code>, categorical), reason for search (<code>reason_for_search</code>, categorical), and population from census data (<code>population</code>, continuous).</p>
+<p>Post-processing of the stop and search data includes: (1) verifying totals match published government figures <span class="citation" data-cites="govuk_police_2024">(<a href="references.html#ref-govuk_police_2024" role="doc-biblioref">(GOV.UK), 2024</a>)</span>; (2) filtering to Section 1 (PACE) and Section 60 (CJPOA) only; (3) converting categorical variables to factors; (4) removing vehicle searches (<code>N/A - vehicle search</code>), “Unknown” age group, “Not Stated” ethnicity, “Unknown” sex, and region <code>0</code> (British Transport Police, excluded because the 2021 Census provides no BTP-specific denominator); (5) converting <code>age_group</code> to a binary variable where <code>1</code> = under 25 and <code>0</code> = 25 or above; and (6) converting <code>reason_for_search</code> to a binary variable where <code>1</code> = Drugs and <code>0</code> = otherwise.</p>
+</section>
+<section id="data-cleaning-steps" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="data-cleaning-steps"><span class="header-section-number">4.2</span> Data Cleaning Steps</h2>
+<ul>
+<li><strong>Removal of Incomplete Cases</strong>: Excluded entries with missing or irrelevant data (e.g., vehicle searches).</li>
+<li><strong>Categorization</strong>: Transformed continuous variables into categorical factors where appropriate.</li>
+<li><strong>Legislative Filtering</strong>: Ensured that all stop and search incidents analyzed were conducted under Section 1 (PACE) or Section 60 (CJPOA).</li>
+</ul>
+</section>
+<section id="sec-data-processing" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="sec-data-processing"><span class="header-section-number">4.3</span> Data Processing and Filtering</h2>
+<p>The following steps describe how the raw data were processed and filtered prior to analysis. All operations are implemented in <code>01_load_and_clean.R</code> and are fully reproducible from the raw files.</p>
+<section id="stop-and-search-data" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="stop-and-search-data"><span class="header-section-number">4.3.1</span> Stop and Search Data</h3>
+<p>The raw dataset is the Home Office stop and search open data tables (March 2021 to March 2025 release), distributed as a single ODS file covering five financial years (2020/21–2024/25). Processing proceeded as follows:</p>
+<ol type="1">
+<li><p><strong>Vehicle searches removed.</strong> Rows where <code>self_defined_ethnicity_group</code> equals “N/A - vehicle search” were excluded because these records lack person-level demographics.</p></li>
+<li><p><strong>British Transport Police removed.</strong> Records coded as region <code>0</code> (British Transport Police) were excluded because the 2021 Census provides no BTP-specific population denominator, making rate calculations impossible.</p></li>
+<li><p><strong>Ethnicity harmonisation.</strong> The five Home Office ethnicity groups (Asian or Asian British, Black or Black British, Mixed, Other Ethnic Group, White) were retained and mapped to short labels (Asian, Black, Mixed, Other, White). Records where <code>self_defined_ethnicity_group</code> is “Not Stated” were set to <code>NA</code> and excluded from disparity calculations but retained for total-count comparisons and missing-data analyses.</p></li>
+<li><p><strong>Age binarisation.</strong> The original age groups (Under 10, 10–17, 18–24, 25–29, 30 or over) were collapsed into a binary variable: <code>age_under25 = TRUE</code> for Under 10, 10–17, and 18–24; <code>FALSE</code> for 25–29 and 30 or over. Records with “Unknown” age were set to <code>NA</code>.</p></li>
+<li><p><strong>Reason binarisation.</strong> <code>reason_for_search</code> was converted to a binary indicator: <code>reason_drugs = TRUE</code> if the reason is “Drugs”, <code>FALSE</code> otherwise. The original reason variable was retained for the reason-by-reason analyses in <a href="results.html#sec-reason-skew" class="quarto-xref"><span>Section 5.10</span></a>.</p></li>
+<li><p><strong>Region name standardisation.</strong> Two region names were recoded to match the ONS Census geography: “Eastern” → “East of England”; “Yorkshire and the Humber” → “Yorkshire and The Humber”.</p></li>
+<li><p><strong>Sex filtering.</strong> Records with sex recorded as “Unknown” were excluded. Only “Male” and “Female” were retained.</p></li>
+<li><p><strong>Legislative scope.</strong> The raw data include searches under Section 1 (PACE) and Section 60 (CJPOA) only, as released by the Home Office. No additional legislative filtering was required.</p></li>
+</ol>
+</section>
+<section id="census-data" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="census-data"><span class="header-section-number">4.3.2</span> Census Data</h3>
+<p>Population denominators were drawn from the ONS 2021 Census table on population by ethnicity and region <span class="citation" data-cites="ons_2022">(<a href="references.html#ref-ons_2022" role="doc-biblioref">National Statistics (ONS), 2022</a>)</span>. Processing steps:</p>
+<ol type="1">
+<li><strong>Ethnicity type filtered.</strong> Only rows with <code>ethnicity_type = "ONS 2021 5+1"</code> (the five main groups plus Other) were retained.</li>
+<li><strong>National aggregate excluded.</strong> The “All - England And Wales” geography row was removed; only regional totals were kept.</li>
+<li><strong>Five ethnic groups retained.</strong> Asian, Black, White, Mixed, and Other,matching the stop and search categories.</li>
+</ol>
+</section>
+<section id="merging-and-aggregation" class="level3" data-number="4.3.3">
+<h3 data-number="4.3.3" class="anchored" data-anchor-id="merging-and-aggregation"><span class="header-section-number">4.3.3</span> Merging and Aggregation</h3>
+<p>Stop and search records were aggregated by financial year, region, and ethnicity (after excluding rows with missing ethnicity), then joined to the census population by region and ethnicity. This produced a merged dataset of stratified counts with population denominators, from which per-1,000 rates and model offsets were calculated.</p>
+<p>For the Poisson regression models, the data were further stratified by sex, age group (binary), and reason for search (binary), producing the full factorial modelling dataset.</p>
+</section>
+<section id="additional-filtering-in-derived-analyses" class="level3" data-number="4.3.4">
+<h3 data-number="4.3.4" class="anchored" data-anchor-id="additional-filtering-in-derived-analyses"><span class="header-section-number">4.3.4</span> Additional Filtering in Derived Analyses</h3>
+<ul>
+<li><strong>Reason-by-reason disparity</strong> (<a href="results.html#sec-reason-skew" class="quarto-xref"><span>Section 5.10</span></a>): Black/White rate ratios were computed per search reason. Reasons with fewer than 1,000 total searches across all years and ethnicities were excluded as unreliable.</li>
+<li><strong>Missing ethnicity analysis</strong> (<a href="results.html#sec-missing" class="quarto-xref"><span>Section 5.11</span></a>): Force-level missingness was computed from the full dataset (including <code>NA</code> ethnicity records). Only forces with data in at least three of the five years were included in the persistent-missingness ranking.</li>
+<li><strong>NFA and outcome analysis</strong>: Computed from all records with non-missing ethnicity, without further exclusions.</li>
+</ul>
+</section>
+<section id="reproducibility" class="level3" data-number="4.3.5">
+<h3 data-number="4.3.5" class="anchored" data-anchor-id="reproducibility"><span class="header-section-number">4.3.5</span> Reproducibility</h3>
+<p>All scripts are available in the project repository (<code>analysis/01_load_and_clean.R</code> through <code>analysis/06_export_for_dashboard.R</code>). Raw data can be downloaded via <code>data/download_data.sh</code>, which retrieves the Home Office ODS file and ONS census CSV from their published URLs. Running the scripts in numerical order from the repository root will reproduce all processed datasets and analysis outputs.</p>
+</section>
+</section>
+<section id="sec-pooled-model" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="sec-pooled-model"><span class="header-section-number">4.4</span> The Pooled Model</h2>
+<p>We model total searches as the dependent variable (<span class="math inline">\(Y\)</span>) with region, ethnic group, sex, age group, and reason for search as independent variables. Because the raw count data exhibited severe overdispersion (estimated dispersion parameter <span class="math inline">\(\hat{\phi} = 181.8\)</span>; see <a href="#sec-quasipoisson" class="quarto-xref"><span>Section 4.5</span></a>), we use a <strong>Quasi-Poisson generalised linear model</strong> with a log link and the stratified census population as an offset.</p>
+<p>Let <span class="math inline">\(Y\)</span> be the number of searches observed for population stratum <span class="math inline">\(N\)</span>. The mean is <span class="math inline">\(\mu = N \exp(\mathbf{X}^T \beta)\)</span>, with linear predictor <span class="math inline">\(\eta = \mathbf{X}^T \beta + \log N\)</span>. For the <span class="math inline">\(i\)</span>-th stratum:</p>
+<p><span class="math display">\[\mu_i = n_i \exp\!\bigl(x_i^T \beta\bigr) = \exp\!\bigl(x_i^T \beta + \log n_i\bigr) \tag{1}\]</span></p>
+<p>using the notation in <span class="citation" data-cites="dav09">Davison (<a href="references.html#ref-dav09" role="doc-biblioref">2009</a>)</span>. Expanding the linear predictor over the five-year period:</p>
+<span class="math display">\[\begin{align*}
+\log(\mu_i) &amp;= \log(pop_i) + \beta_0 + \sum_{h=2}^{5} \beta_{1h} I(\text{year}_{ih}) + \sum_{l=1}^{L} \beta_{3l} I(\text{region}_{il}) + \sum_{j=1}^{J} \beta_{4j} I(\text{ethnic}_{ij}) \\
+&amp;\quad + \beta_5 I(\text{sex}_{i,\text{Male}}) + \beta_7 I(\text{age}_{i,&lt;25}) + \beta_8 I(\text{drugs}_{i1}) \tag{2}
+\end{align*}\]</span>
+<p>where <span class="math inline">\(I(\cdot)\)</span> is an indicator variable. Reference levels are: financial year <strong>2020/21</strong>, region <strong>East Midlands</strong>, ethnicity <strong>White</strong>, sex <strong>Female</strong>, age group <strong>25 and above</strong>, and reason <strong>non-drug-related</strong>.</p>
+<p>Variable descriptions:</p>
+<ul>
+<li><span class="math inline">\(pop_i\)</span>: census population count for stratum <span class="math inline">\(i\)</span> <span class="citation" data-cites="ons_2022">(<a href="references.html#ref-ons_2022" role="doc-biblioref">National Statistics (ONS), 2022</a>)</span></li>
+<li><span class="math inline">\(I(\text{year}_{ih})\)</span> (<code>financial_year</code>): five levels: 2020/21, 2021/22, 2022/23, 2023/24, 2024/25</li>
+<li><span class="math inline">\(I(\text{region}_{il})\)</span> (<code>region</code>): ten regions in England and Wales (East Midlands as reference)</li>
+<li><span class="math inline">\(I(\text{ethnic}_{ij})\)</span> (<code>self_defined_ethnicity_group</code>): five groups: Asian or Asian British, Black or Black British, Mixed, Other Ethnic Group, White (reference)</li>
+<li><span class="math inline">\(I(\text{sex}_{i,\text{Male}})\)</span> (<code>sex</code>): Male vs Female (reference)</li>
+<li><span class="math inline">\(I(\text{age}_{i,&lt;25})\)</span> (<code>age_group</code>): binary: 1 if under 25, 0 otherwise</li>
+<li><span class="math inline">\(I(\text{drugs}_{i1})\)</span> (<code>reason_for_search</code>): binary: 1 if drug-related, 0 otherwise</li>
+</ul>
+</section>
+<section id="sec-quasipoisson" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="sec-quasipoisson"><span class="header-section-number">4.5</span> Quasi-Poisson: Justification</h2>
+<p>A standard Poisson model assumes that the mean equals the variance (<span class="math inline">\(\text{Var}(Y) = \mu\)</span>). In practice, count data on policing activity routinely exhibit <strong>overdispersion</strong>, variance substantially exceeding the mean, due to unmodelled heterogeneity across police forces, local crime environments, and seasonal patterns.</p>
+<p>Fitting the pooled model with a standard Poisson family yields a residual deviance of 342,749 on 1,950 degrees of freedom, producing an estimated dispersion parameter of:</p>
+<p><span class="math display">\[\hat{\phi} = \frac{\text{Residual deviance}}{\text{df}} = \frac{342{,}749}{1{,}950} \approx 181.8\]</span></p>
+<p>This is far greater than 1, confirming severe overdispersion. A Quasi-Poisson model retains the same coefficient estimates as Poisson but scales all standard errors by <span class="math inline">\(\sqrt{\hat{\phi}}\)</span>, producing correct (wider) confidence intervals and conservative inference. Using a Poisson family without this correction would dramatically understate uncertainty and inflate the apparent precision of the IRR estimates.</p>
+<p>Note that Quasi-Poisson models do not yield a finite AIC; model adequacy is instead assessed via the pseudo-R² <span class="citation" data-cites="cohen88">(<a href="references.html#ref-cohen88" role="doc-biblioref">Cohen, 1988</a>)</span> and residual deviance diagnostics.</p>
+</section>
+<section id="sec-peryear" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="sec-peryear"><span class="header-section-number">4.6</span> Per-Year IRR Models</h2>
+<p>To examine whether the adjusted disparity in stop and search rates has changed over time (Research Question 3), we fit five separate Quasi-Poisson models, one per financial year, each using the same specification as the pooled model but without the <code>financial_year</code> term. This yields year-specific incidence rate ratios (IRRs) and 95% confidence intervals for each ethnic group relative to White individuals. The per-year Black IRRs are presented in the Results chapter (<a href="results.html#sec-trend" class="quarto-xref"><span>Section 5.6</span></a>).</p>
+</section>
+<section id="random-forest-model-as-a-complementary-analysis" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="random-forest-model-as-a-complementary-analysis"><span class="header-section-number">4.7</span> Random Forest Model as a Complementary Analysis</h2>
+<section id="rationale-for-using-random-forest-in-addition-to-the-main-model" class="level3" data-number="4.7.1">
+<h3 data-number="4.7.1" class="anchored" data-anchor-id="rationale-for-using-random-forest-in-addition-to-the-main-model"><span class="header-section-number">4.7.1</span> Rationale for Using Random Forest in Addition to the Main Model</h3>
+<p>The main model for this analysis employs a regression approach to examine the impact of various demographic and contextual factors on stop-and-search practices. While regression models are powerful for estimating specific associations and providing clear interpretations through coefficients, they have some limitations. Specifically, regression models assume linearity and often require predefined interactions between predictors to fully capture complex relationships within the data. In contrast, random forests are a non-parametric machine learning approach that can automatically capture both non-linear relationships and interactions among variables without needing explicit specification. This capability makes random forests an ideal complementary tool for exploring complex, multi-dimensional patterns within stop-and-search data.</p>
+<p>Using random forests in addition to the main model serves several key purposes:</p>
+<ul>
+<li><strong>Validation and Robustness</strong>: The random forest model validates findings from the regression model by identifying the most influential predictors of stop-and-search activity without assuming specific linear relationships. If similar predictors emerge as significant in both models, this strengthens the evidence for their role in influencing stop-and-search practices.</li>
+<li><strong>Non-linear and Interaction Effects</strong>: Random forests are effective at capturing non-linear relationships and variable interactions, allowing for deeper insights into how combinations of factors (e.g., ethnicity and region) may contribute to disparities in stop-and-search practices. This is particularly relevant for understanding complex social phenomena where the effects of variables are unlikely to be purely linear or independent.</li>
+<li><strong>Variable Importance</strong>: Unlike regression coefficients, which quantify the effect of each predictor, random forests provide variable importance scores. These scores allow us to rank predictors by their influence on the outcome (total stop-and-search counts), offering an alternative perspective on which factors most drive stop-and-search activity.</li>
+</ul>
+<p>By using random forests alongside the main regression model, we obtain a comprehensive view of stop-and-search patterns, combining the interpretability of regression with the flexibility and interaction-capturing ability of random forests.</p>
+</section>
+<section id="overview-of-the-random-forest-model" class="level3" data-number="4.7.2">
+<h3 data-number="4.7.2" class="anchored" data-anchor-id="overview-of-the-random-forest-model"><span class="header-section-number">4.7.2</span> Overview of the Random Forest Model</h3>
+<p>The random forest model applied in this study is designed to predict <strong>total stop-and-search counts</strong> using demographic, geographic, and contextual variables. Random forests operate by constructing an ensemble of decision trees, each built from a bootstrap sample of the original data. Each tree independently predicts the outcome, and the final prediction for each observation is obtained by aggregating the predictions across all trees (for regression, this is typically the mean prediction). Key steps and features of the random forest model are as follows:</p>
+<ol type="1">
+<li><strong>Bootstrap Sampling and Tree Construction</strong>:
+<ul>
+<li>For each decision tree in the forest, a random sample (with replacement) is drawn from the dataset, which is known as bootstrap sampling. This approach introduces variation among the trees, enhancing the model’s robustness and reducing overfitting to any one sample.</li>
+<li>At each node of a tree, a random subset of predictors is selected as candidate variables for splitting. This process, known as <strong>feature bagging</strong>, ensures that each tree explores different predictor combinations, further improving the model’s generalization to new data.</li>
+</ul></li>
+<li><strong>Split Criteria and Aggregation</strong>:
+<ul>
+<li>The model uses <strong>mean squared error (MSE)</strong> as the criterion for creating splits in each tree, which minimizes the variance within each split group. This criterion is effective for identifying variable thresholds associated with differences in stop-and-search counts.</li>
+<li>Once all trees are built, the model aggregates predictions from each tree to produce a single, overall prediction for each observation. This aggregation (averaging) process improves accuracy and stability, as it reduces the likelihood of overfitting that may occur in individual decision trees.</li>
+</ul></li>
+<li><strong>Variable Importance Measures</strong>:
+<ul>
+<li>The random forest model provides <strong>variable importance</strong> scores, specifically % Increase in Mean Squared Error (%IncMSE), which indicates the decrease in prediction accuracy when a variable is removed. Higher %IncMSE values suggest that the variable is crucial for accurate prediction, while lower or negative values indicate limited or no contribution to the model’s predictive ability.</li>
+<li>These importance scores allow us to rank the predictors, offering insights into which factors most strongly influence stop-and-search counts. The importance measures are central to our objectives, as they reveal key drivers of disparities and patterns in stop-and-search practices across different groups.</li>
+</ul></li>
+</ol>
+</section>
+<section id="interpretation-of-random-forest-output" class="level3" data-number="4.7.3">
+<h3 data-number="4.7.3" class="anchored" data-anchor-id="interpretation-of-random-forest-output"><span class="header-section-number">4.7.3</span> Interpretation of Random Forest Output</h3>
+<p>In the results, we focus on the variable importance scores to identify the most influential factors contributing to stop-and-search activity. This approach allows us to highlight demographic, regional, and contextual factors that may not show straightforward relationships but still play a significant role in total search volume. The random forest findings are interpreted in conjunction with the main regression model results to provide a comprehensive analysis of stop-and-search practices, validating key factors and uncovering complex relationships that inform policy recommendations.</p>
+<p>By incorporating the random forest model into the analysis, we achieve a richer, multi-faceted understanding of stop-and-search dynamics, capturing both straightforward and complex patterns that contribute to observed disparities. This dual-model approach thus enhances the robustness and depth of the study’s findings, aligning with the project’s objective of identifying and addressing factors contributing to inequality in policing practices.</p>
+
+
+<div id="refs" class="references csl-bib-body" role="list" style="display: none">
+<div id="ref-cohen88" class="csl-entry" role="listitem">
+Cohen, J. (1988) <em>Statistical power analysis for the behavioral sciences</em>, 2nd edn, Hillsdale, NJ, Lawrence Erlbaum Associates.
+</div>
+<div id="ref-dav09" class="csl-entry" role="listitem">
+Davison, A. C. (2009) <em>Statistical models</em>, Cambridge series in statistical and probabilistic mathematics, 1. paperback ed., reprinted., Cambridge, Cambridge Univ. Press.
+</div>
+<div id="ref-govuk_police_2024" class="csl-entry" role="listitem">
+(GOV.UK), H. O. (2024) <span>“Police powers and procedures: <span>Stop</span> and search and arrests, <span>England</span> and <span>Wales</span>, year ending 31 <span>March</span> 2023 (second edition),”</span> National {Statistics} [Online]. Available at <a href="https://www.gov.uk/government/statistics/stop-and-search-and-arrests-year-ending-march-2023/police-powers-and-procedures-stop-and-search-and-arrests-england-and-wales-year-ending-31-march-2023">https://www.gov.uk/government/statistics/stop-and-search-and-arrests-year-ending-march-2023/police-powers-and-procedures-stop-and-search-and-arrests-england-and-wales-year-ending-31-march-2023</a> (Accessed 29 March 2024).
+</div>
+<div id="ref-home_office_govuk_stop_2024" class="csl-entry" role="listitem">
+Home Office (GOV.UK) (2024) <span>“Stop and search and arrests, year ending <span>March</span> 2023 (second edition),”</span> [Online]. Available at <a href="https://www.gov.uk/government/statistics/stop-and-search-and-arrests-year-ending-march-2023">https://www.gov.uk/government/statistics/stop-and-search-and-arrests-year-ending-march-2023</a> (Accessed 28 March 2024).
+</div>
+<div id="ref-ons_2022" class="csl-entry" role="listitem">
+National Statistics (ONS), O. for (2022) <em>Ethnic group, <span>England</span> and <span>Wales</span>: <span>Census</span> 2021</em>, [Online]. Available at <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/culturalidentity/ethnicity/bulletins/ethnicgroupenglandandwales/census2021">https://www.ons.gov.uk/peoplepopulationandcommunity/culturalidentity/ethnicity/bulletins/ethnicgroupenglandandwales/census2021</a> (Accessed 29 March 2024).
+</div>
+<div id="ref-Vomfell2021" class="csl-entry" role="listitem">
+Vomfell, L. and Stewart, N. (2021) <span>“Officer bias, over-patrolling and ethnic disparities in stop and search,”</span> <em>Nature Human Behaviour</em> [Online]. DOI: <a href="https://doi.org/10.1038/s41562-020-01029-w">10.1038/s41562-020-01029-w</a>.
+</div>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./literature.html" class="pagination-link" aria-label="Literature Review">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Literature Review</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./results.html" class="pagination-link" aria-label="Results">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Results</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

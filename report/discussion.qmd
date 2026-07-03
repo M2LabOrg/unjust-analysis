@@ -1,0 +1,149 @@
+# Discussion Section
+
+```{r setup, include=FALSE}
+# knitr settings
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, results = 'hide') 
+
+# set seed
+set.seed(100)
+
+# load libraries
+library(tidyverse)
+# Load variable values from results.qmd to use in the discussion text
+outcome_ratio <- readRDS("data/share_data_across_chapters.rds")
+
+# Load disparity trend data for inline references
+disparity_trend <- read.csv("../analysis/output/disparity_trend.csv")
+asian_range <- disparity_trend %>% filter(ethnicity == "Asian") %>% pull(ratio_vs_white)
+black_range <- disparity_trend %>% filter(ethnicity == "Black") %>% pull(ratio_vs_white)
+asian_min <- round(min(asian_range), 1)
+asian_max <- round(max(asian_range), 1)
+black_min <- round(min(black_range), 1)
+black_max <- round(max(black_range), 1)
+
+# Load pooled model IRR table from pipeline
+irr_table <- read.csv("../analysis/output/irr_table.csv")
+black_irr_pooled <- round(filter(irr_table, term == "ethnicityBlack")$irr, 1)
+male_female_ratio <- round(filter(irr_table, term == "sexMale")$irr, 1)
+
+# Load yearly IRR data
+yearly_irr <- read.csv("../analysis/output/yearly_irr.csv")
+black_irr_2020 <- round(filter(yearly_irr, financial_year == "2020/21", term == "ethnicityBlack")$irr, 2)
+black_irr_2021 <- round(filter(yearly_irr, financial_year == "2021/22", term == "ethnicityBlack")$irr, 2)
+black_irr_2024 <- round(filter(yearly_irr, financial_year == "2024/25", term == "ethnicityBlack")$irr, 2)
+black_ci_low_2024 <- round(filter(yearly_irr, financial_year == "2024/25", term == "ethnicityBlack")$irr_lower, 2)
+black_ci_high_2024 <- round(filter(yearly_irr, financial_year == "2024/25", term == "ethnicityBlack")$irr_upper, 2)
+mixed_irr_2020 <- round(filter(yearly_irr, financial_year == "2020/21", term == "ethnicityMixed")$irr, 2)
+mixed_irr_2024 <- round(filter(yearly_irr, financial_year == "2024/25", term == "ethnicityMixed")$irr, 2)
+
+# Load regional disparity data
+regional <- read.csv("../analysis/output/regional_disparity.csv")
+sw_bw_ratio <- round(filter(regional, region_clean == "South West")$black_white_ratio, 2)
+london_bw_ratio <- round(filter(regional, region_clean == "London")$black_white_ratio, 2)
+
+# Load outcomes data
+outcomes <- read.csv("../analysis/output/outcomes_by_ethnicity.csv")
+black_arrest_pct <- filter(outcomes, ethnicity == "Black", outcome == "Arrest")$pct
+white_arrest_pct <- filter(outcomes, ethnicity == "White", outcome == "Arrest")$pct
+arrest_gap <- round(black_arrest_pct - white_arrest_pct, 1)
+black_nfa_pct <- round(filter(outcomes, ethnicity == "Black", outcome == "No Further Action")$pct, 0)
+
+# Load reason B/W ratios
+reason_ratios <- read.csv("../analysis/output/reason_bw_ratio.csv")
+drugs_bw <- round(filter(reason_ratios, reason == "Drugs")$black_white_ratio, 1)
+violence_bw <- round(filter(reason_ratios, reason == "Anticipation of Violence")$black_white_ratio, 1)
+weapons_bw <- round(filter(reason_ratios, reason == "Offensive Weapons")$black_white_ratio, 1)
+terrorism_bw <- round(filter(reason_ratios, reason == "Terrorism Act 2000 section 43")$black_white_ratio, 1)
+
+# Load reason detail for drone searches
+reason_detail <- read.csv("../analysis/output/reason_detail_by_ethnicity.csv")
+drone_black_rate <- filter(reason_detail, grepl("Drone", reason), ethnicity == "Black")$rate_per_1000
+drone_white_rate <- filter(reason_detail, grepl("Drone", reason), ethnicity == "White")$rate_per_1000
+drone_bw <- round(drone_black_rate / drone_white_rate, 1)
+
+# Load missing ethnicity data
+missing_forces <- read.csv("../analysis/output/missing_persistent_forces.csv")
+city_missing <- filter(missing_forces, grepl("City of", police_force))$mean_pct_missing
+notts_missing <- filter(missing_forces, police_force == "Nottinghamshire")$mean_pct_missing
+avon_missing <- filter(missing_forces, police_force == "Avon & Somerset")$mean_pct_missing
+gmp_missing <- filter(missing_forces, police_force == "Greater Manchester")$mean_pct_missing
+```
+
+
+```{r}
+outcome_nofurtheraction_perc <- outcome_ratio %>% filter(outcome=="No Further Action") %>% select(outcome_ratio) %>% round(.,2)*100
+```
+
+
+
+## Interpretation of Results and Comparison with Government Findings
+
+The analysis of stop and search practices reveals significant disparities across demographic groups and regions, providing insights that align closely with recent findings from the UK government’s 2023 report [@HomeOffice2023]. Compared to baseline groups (e.g., White ethnicity, female gender, age 25 and older, and non-drug-related searches), certain groups, including Black individuals, young people under 25, and males, experience disproportionately higher stop and search rates. For example, our model, which accounts for variables such as age, region, and type of search, estimates that Black individuals are approximately `r black_irr_pooled` times more likely to be stopped than their White counterparts. This modelled rate contrasts with the government’s reported raw disparity rates, adjusted for population size only, of 4.1 to 5.5 for Black individuals compared to their White counterparts, offering a more nuanced understanding of the factors contributing to these disparities.
+
+Beyond the modeled rates, we also compare raw disparity rates calculated directly from our data with those reported by the government. Although our findings align with the overall trends reported in Table 2.5 from the UK government’s report (Ibid.), the raw disparity rates are broadly consistent. For example, our analysis estimates that Asian individuals are `r asian_min` to `r asian_max` times more likely to be stopped than White individuals, which is consistent with the government’s reported disparity rate of 1.4 for 2022/23. Similarly, our analysis shows Black individuals are `r black_min` to `r black_max` times more likely to be stopped, consistent with the government’s reported range of 4.1 to 5.5. Minor differences stem from variations in population adjustments and processing methodologies, as our analysis uses raw census data for England and Wales, excluding BTP. Additionally, variations in how stop and search data are aggregated across financial years and regions may contribute to these differences. This includes how missing data are handled. In our case, we have removed missing data before the calculations. Despite methodological differences, both analyses highlight the persistent disproportionate impact.
+
+The total number of stop and searches in our analysis closely aligns with the figures reported in the UK government’s 2023 report (Ibid.). For the year ending March 2023, our analysis estimates a total of 547,002 stop and searches, matching the government’s reported figure. Similarly, for the year ending March 2022, both our analysis and the government report a total of 530,970 searches. The trend of increasing stop and searches in recent years is consistent across both datasets, with a 3% increase observed from 2021/22 to 2022/23.
+
+While the total counts align with government figures, the disparity rates highlight critical differences in how stop and searches are distributed across demographic groups. The random forest model, through variable importance measures, reinforces these findings by highlighting ethnicity and sex as key drivers of total search volume. This underscores a potential bias in stop and search deployment, particularly for drug-related stops where young individuals and ethnic minorities are overrepresented. Our results also show that stop and searches frequently lead to no further action (`r outcome_nofurtheraction_perc`% of cases), similar to findings in the government report, which notes that stop and search seldom culminates in arrests or legal outcomes.
+
+## Contrasting with Vomfell and Stewart’s Findings on Officer Bias and Over-Patrolling
+
+Vomfell and Stewart’s study is a significant benchmark for understanding ethnic disparities in stop and search practices, particularly their focus on officer behavior and regional contexts. Our findings align with and extend the work of Vomfell and Stewart [-@Vomfell2021] on ethnic disparities in stop and search. In their study, Vomfell and Stewart focus on “officer over-searching” and “over-patrolling” as contributors to the overrepresentation of minorities in stop and search practices. They find that officers search Black individuals 1.41 times more frequently than White individuals, even when controlling for local crime rates. Our analysis, however, reveals a broader pattern across regions and demographics, with Black individuals `r black_irr_pooled` times more likely to be stopped. This disparity may reflect systemic biases in both individual and institutional levels, extending beyond specific patrol areas to broader policy-driven practices.
+
+The random forest model adds depth to these findings, capturing **non-linear and interaction effects** among variables such as **region** and **ethnicity**. The model identified **population size** as a significant driver of total searches, indicating that over-patrolling may be more concentrated in highly populated, ethnically diverse urban areas. This is consistent with Vomfell and Stewart’s findings on over-policing in metropolitan areas, such as London, which is disproportionately targeted for stop and search. Additionally, our models reveal that **males** are `r male_female_ratio` times more likely than females to be subjected to stop and search, echoing Vomfell and Stewart’s observations that males aged 15-34 are concentrated in high-surveillance areas. Together, these insights suggest a feedback loop where over-policing in certain regions reinforces higher stop rates for ethnic minorities, potentially perpetuating biased policing practices.
+
+## Implications for Policy and Policing
+
+The integration of the regression and random forest models offers a more comprehensive view of disparities in stop and search practices, suggesting several policy implications. First, the high percentage of “no further action” cases indicates a need for more stringent criteria for initiating stops, especially in drug-related cases that disproportionately impact young individuals and ethnic minorities. The random forest’s emphasis on **population** and **region** as critical factors in predicting stop and search volume further suggests that over-patrolling in densely populated, ethnically diverse regions contributes to these disparities. Addressing this issue could involve adopting **data-driven patrol strategies** that minimize over-surveillance of specific demographic groups, as recommended by Vomfell and Stewart.
+
+In conclusion, the combination of regression and random forest models offers robust insights into demographic and regional disparities in stop and search practices across England and Wales. The findings support a strong case for policy reform aimed at achieving more equitable policing practices, ensuring that stop and search policies do not disproportionately affect certain populations. Moving forward, further analysis could incorporate officer-level data to better assess individual contributions to these disparities, as Vomfell and Stewart suggest. This could enable policymakers to address both institutional and individual sources of bias within policing, ultimately supporting fairer and more effective law enforcement practices.
+
+## Is the Disparity Getting Worse? {#sec-trend-disc}
+
+One of the most concerning findings of the extended five-year analysis is that the adjusted disparity for Black individuals has **worsened** over the period. The per-year Quasi-Poisson models reveal an adjusted Black/White IRR of `r black_irr_2020` in 2020/21, falling briefly to `r black_irr_2021` in 2021/22 before rising to `r black_irr_2024` by 2024/25. This rising trend is statistically significant: the 2024/25 confidence interval (`r black_ci_low_2024`–`r black_ci_high_2024`) does not overlap with the 2021/22 estimate, indicating a genuine deterioration.
+
+Crucially, this worsening occurs in the context of a substantial fall in *absolute* search volumes for Black individuals, from approximately 96,000 in 2020/21 to around 51,000 in 2024/25. The apparent paradox resolves when we note that White search volumes fell even faster over the same period, causing the *relative* disparity (after adjusting for population and other covariates) to widen. In other words, the reduction in stop and search activity since the 2020/21 peak has not been equally distributed across ethnic groups: Black communities have benefited proportionally less from the overall reduction.
+
+The increase in the Mixed IRR, from `r mixed_irr_2020` in 2020/21 to `r mixed_irr_2024` in 2024/25, is also notable and merits closer attention in future analyses.
+
+## The South West Anomaly {#sec-southwest}
+
+The regional analysis reveals that the **South West** has the highest Black/White unadjusted rate ratio (`r sw_bw_ratio`×), significantly exceeding London (`r london_bw_ratio`×). This is counter-intuitive: London has a large, established Black community and has historically attracted the most scrutiny over stop and search. The South West, by contrast, has the smallest Black population of any English region (under 2%), which may contribute to a "visibility effect" in which Black individuals are more conspicuous to officers in predominantly White areas [@Vomfell2021].
+
+This finding aligns with evidence that ethnic disproportionality is not simply an urban or metropolitan phenomenon. Forces such as Avon & Somerset and Devon & Cornwall operate in regions with very low Black population shares, yet produce some of the highest Black/White rate ratios in England. This suggests that national policy interventions focused exclusively on London and other major cities may miss a large share of the disproportionality problem.
+
+## Outcome Disparity and Differential Suspicion Thresholds {#sec-nfa-disc}
+
+The outcome analysis adds an important complementary perspective. Black individuals have the highest arrest rate (`r sprintf("%.1f", black_arrest_pct)`%) of all ethnic groups, compared to `r white_arrest_pct`% for White individuals, a gap of `r arrest_gap` percentage points. At first glance, this might suggest that searches of Black individuals are *more* productive, not less. However, this interpretation requires caution.
+
+First, an arrest does not imply guilt; it is itself an exercise of discretionary police power. Second, given that Black individuals are stopped at over three times the adjusted rate of White individuals, even a slightly higher arrest-to-search conversion rate implies a vastly larger burden of unjustified stops for Black communities in absolute terms. The No Further Action rate of approximately `r black_nfa_pct`% is broadly similar across ethnic groups, indicating that most searches, regardless of ethnicity, do not result in enforcement action.
+
+The combination of a high search rate, similar NFA proportions, and a modestly higher arrest rate is consistent with a model in which officers apply a **lower suspicion threshold** to Black individuals before initiating a search: Black individuals are more frequently stopped, but when a stop does produce evidence, the outcome is broadly similar to other groups. This interpretation echoes the "hit rate" framework used in the literature to test for discriminatory targeting [@Vomfell2021].
+
+## Disparity Is Not Explained by Search Reason {#sec-reason-disc}
+
+A common counter-argument to claims of racial disproportionality is that it reflects enforcement focus rather than bias: if drug offending is concentrated in particular communities, higher drug-stop rates for Black individuals may reflect enforcement patterns rather than systemic targeting. The reason-by-reason analysis (see @sec-reason-skew) tests this directly.
+
+The results contradict the enforcement-focus hypothesis. The highest Black/White rate ratios are found not in drug stops (`r drugs_bw`×) but in **anticipation of violence** (`r violence_bw`×), **offensive weapons** (`r weapons_bw`×), and **terrorism searches** (`r terrorism_bw`×): non-drug categories with different legal powers, different officers, and different operational justifications. The disparity is even visible in negligible-volume categories such as drone searches (`r drone_bw`×).
+
+This is inconsistent with a drug-enforcement explanation. If that were driving the disparity, we would expect drug stops to show the highest ratio and other categories to approach parity. The opposite is observed. Instead, the data suggests that the lower suspicion threshold identified in the regression analysis operates across the **full range** of stop-and-search powers, not merely in drug contexts, consistent with a systemic rather than enforcement-specific pattern.
+
+## Missing Ethnicity Data: Analytical Implications {#sec-missing-disc}
+
+The missing ethnicity analysis (see @sec-missing) raises important data quality considerations. Twenty-one forces have maintained more than 25% missing self-defined ethnicity consistently across the full five-year period. City of London Police averages **`r city_missing`%** missing; Nottinghamshire `r notts_missing`%; Avon & Somerset `r avon_missing`%; Greater Manchester `r gmp_missing`%.
+
+As the Home Office notes, self-defined ethnicity is voluntary: individuals are not required to state their ethnicity during a stop and search [@govuk_police_2024]. High missing rates may therefore reflect individuals declining to provide this information, differences in how officers ask, recording system transitions, or some combination of these. The data alone cannot distinguish between these explanations.
+
+The analytical consequence is the same regardless of cause: searches without an ethnicity record are excluded from disparity calculations, meaning disparity estimates for high-missingness forces are based on incomplete data and should be interpreted cautiously. The missing data pattern is a limitation on the force-level conclusions of this analysis, not a finding in itself.
+
+Notably, Avon & Somerset, the force serving the South West, which shows the highest regional Black/White ratio, has `r avon_missing`% mean missing ethnicity. This raises a question about whether the South West anomaly identified in section @sec-southwest is partly an artefact of which searches have ethnicity recorded, rather than solely a reflection of search rates.
+
+## Limitations: Missing Data and Census Denominator Lag {#sec-limitations}
+
+Three limitations merit particular emphasis in interpreting these results.
+
+**Missing data on officer-defined ethnicity.** A substantial share of records in the 5-year dataset are missing officer-defined ethnicity. This variable is important for distinguishing between self-identification (used in our models) and officer perception (the operationally relevant variable for a discrimination test). The self-defined ethnicity missing rate analysis (see @sec-missing and @sec-missing-disc) now documents which forces are responsible, but the officer-defined gap remains unresolved.
+
+**Census denominator lag.** Population denominators are fixed at the 2021 Census, meaning that demographic changes, including migration, gentrification, and shifts in where ethnic minority populations reside, accumulate silently over the five-year period. By 2024/25, the 2021 figures may understate population growth in some areas and overstate it in others, potentially biasing the per-100,000 rates in unknown directions.
+
+**Force-level heterogeneity.** The region-level analysis masks substantial variation among the 43 territorial forces within each region. Data on missing rates and search volumes by individual force (available in `analysis/output/missing_by_force.csv` and `missing_persistent_forces.csv`) show considerable heterogeneity. Aggregating to regions masks forces with especially high or low disparity, limiting the precision of the policy recommendations.

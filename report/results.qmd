@@ -1,0 +1,1450 @@
+---
+title: "Results"
+editor: visual
+---
+
+```{r setup, include=FALSE}
+# knitr settings
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, results = 'hide') 
+
+# set seed
+set.seed(100)
+
+# load libraries
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(scales)
+library(maps)
+library(ggplot2)
+library(sf)
+library(kableExtra)
+library(janitor)
+library(broom)
+
+source("data/getData.R")
+
+# ── Load pre-computed model outputs from the analysis pipeline ──
+# (03_model_poisson.R is the single source of truth for all regression results)
+modglmoff           <- readRDS("../analysis/output/model_pooled.rds")
+model_interaction    <- readRDS("../analysis/output/model_interaction.rds")
+model_diagnostics   <- read_csv("../analysis/output/model_diagnostics.csv", show_col_types = FALSE)
+combined_effects    <- read_csv("../analysis/output/combined_effects.csv", show_col_types = FALSE)
+irr_table           <- read_csv("../analysis/output/irr_table.csv", show_col_types = FALSE)
+
+# Pre-compute tidy summaries used in inline text throughout
+model_raw_summary <- tidy(modglmoff, exponentiate = FALSE, conf.int = TRUE)
+model_exp_summary <- tidy(modglmoff, exponentiate = TRUE,  conf.int = TRUE)
+
+# Pseudo R² and diagnostics
+pseudoR2   <- model_diagnostics %>% filter(model == "pooled_main_effects") %>% pull(pseudo_r2)
+dispersion <- model_diagnostics %>% filter(model == "pooled_main_effects") %>% pull(dispersion)
+```
+
+The results presented in this section provide a comprehensive analysis of stop-and-search data in England and Wales. Leveraging both descriptive statistics and advanced statistical models, we explore the key patterns, disparities, and trends in stop-and-search practices across demographic, geographic, and temporal dimensions. The findings highlight significant disproportionalities in stop-and-search rates among ethnic groups, with a particular focus on the Black or Black British population. Additionally, the results provide insights into the influence of factors such as age, sex, region, and reason for search on stop-and-search frequencies. This section concludes with the application of machine learning techniques, specifically random forests, to uncover additional patterns and establish a framework for prediction.
+
+## Census data
+
+The analysis of census data provides critical insights into the demographic composition of England and Wales. This section examines the distribution of ethnic groups across English regions, highlighting variations in population proportions and regional disparities. The results form the basis for understanding broader demographic patterns that intersect with stop-and-search practices. Key metrics such as mean percentages, standard deviations, and ranges are calculated to quantify these distributions and inform subsequent analyses.
+
+### Ethnic Composition Across English Regions
+
+```{r}
+# Load census data
+census_data <- load_census_data(print_info = FALSE, download = FALSE)
+
+census_data  <-  census_data %>% 
+  na.omit()
+```
+
+```{r}
+# Calculate the proportion of each ethnic group within each region
+data_region_group_sum <- census_data %>%
+  group_by(region, ethnic_group_code) %>%
+  summarize(sumGroupRegion = sum(population))
+
+# Calculate the sum of observations for each region
+data_group_sum <- census_data %>% 
+  group_by(region) %>% 
+  summarize(sumregion = sum(population))
+
+# Merge the two data frames
+data_prop <- left_join(data_region_group_sum, data_group_sum, by = "region")
+
+# Calculate the proportion within each region
+data_prop <- data_prop %>%
+  mutate(prop = sumGroupRegion / sumregion * 100)
+```
+
+The table below summarizes the composition of ethnic groups across English regions, showing the mean percentage, standard deviation (SD), and range (minimum to maximum) for each group. This provides an overview of the variability in ethnic group proportions across regions.
+
+```{r, results="asis"}
+# Create a summary table for each ethnic group
+summary_table <- data_prop %>%
+  select(-sumGroupRegion, -sumregion) %>%
+  group_by(ethnic_group_code) %>%
+  summarise(
+    mean = round(mean(prop),1),
+    sd = round(sd(prop), 1),
+    min = round(min(prop), 1),
+    max = round(max(prop), 1)
+  ) %>%
+  rename(`Ethnic Group` = ethnic_group_code)  # Rename the column
+
+# Format the table using kableExtra
+summary_table %>%
+  kable() %>%
+  kable_styling(full_width = F, position = "center", stripe_color = "white",
+                font_size = 9,
+                latex_options = c("HOLD_position")) %>%
+  add_header_above(c(" " = 1, "Ethnic Group Composition Across English Regions (%)" = 4))  # Add your custom header here
+```
+
+```{r}
+# In an R chunk before your text
+black_mean <- summary_table %>% filter(`Ethnic Group` == "Black or Black British") %>% pull(mean)
+black_min <- summary_table %>% filter(`Ethnic Group` == "Black or Black British") %>% pull(min)
+black_max <- summary_table %>% filter(`Ethnic Group` == "Black or Black British") %>% pull(max)
+
+white_mean <- summary_table %>% filter(`Ethnic Group` == "White") %>% pull(mean)
+white_min <- summary_table %>% filter(`Ethnic Group` == "White") %>% pull(min)
+white_max <- summary_table %>% filter(`Ethnic Group` == "White") %>% pull(max)
+
+```
+
+The data highlights significant disparities between ethnic groups. Notably, the average proportion of individuals identifying as Black or Black British is `r black_mean`%, with regional variation ranging from `r black_min`% to `r black_max`%. In contrast, the White group, which has the largest mean proportion at `r white_mean`%, also shows variability, ranging from `r white_min`% to `r white_max`%. These patterns underline the diverse ethnic composition across regions, particularly the stark contrast between Black and White populations.
+
+### Population Distribution by Ethnic Group and Region
+
+The table below summarizes the total population distribution by ethnic group across regions in England and Wales, based on census data. Population counts are presented in thousands, providing a clear view of regional demographics. The summary includes total counts for each ethnic group and highlights regional variations, which are key to understanding the geographic diversity of the population.
+
+```{r, results="asis"}
+# Create a summary table for the mean count by ethnic group and region
+summary_table_pivot_wider <- census_data %>%
+  group_by(region, ethnic_group_code)  %>%
+  summarise(mean_count = round(sum(population)/1000, 1)) %>%
+  pivot_wider(names_from = ethnic_group_code, values_from = mean_count) %>%   # Pivot to get regions in columns
+  adorn_totals()
+
+# Print the kable table
+kable(summary_table_pivot_wider) %>%
+  kable_styling(full_width = F, position = "center", stripe_color = "white",
+                font_size = 9,
+                bootstrap_options = c("striped", "responsive"),
+                latex_options = c("HOLD_position")) %>%
+  add_header_above(c(" " = 1, "Total Population by Ethnic Group and Region (per 1,000)" = length(unique(data_prop$ethnic_group_code)))) %>%
+  row_spec(nrow(summary_table_pivot_wider), bold = TRUE) %>%
+  column_spec(1, width = "3cm")
+
+
+```
+
+```{r}
+# Extract key values for analysis
+total_black_population <- summary_table_pivot_wider %>%
+  filter(region == "Total") %>%
+  pull(`Black or Black British`)
+
+total_white_population <- summary_table_pivot_wider %>%
+  filter(region == "Total") %>%
+  pull(White)
+
+london_black_population <- summary_table_pivot_wider %>%
+  filter(region == "London") %>%
+  pull(`Black or Black British`)
+
+london_white_population <- summary_table_pivot_wider %>%
+  filter(region == "London") %>%
+  pull(White)
+
+largest_region_white <- summary_table_pivot_wider %>%
+  filter(region != "Total") %>%
+  slice_max(White) %>%
+  pull(region)
+
+largest_region_black <- summary_table_pivot_wider %>%
+  filter(region != "Total") %>%
+  slice_max(`Black or Black British`) %>%
+  pull(region)
+
+```
+
+The census data reveals that the total population of individuals identifying as Black or Black British across all regions is `r format(total_black_population, big.mark = ",", digits = 1)` thousand, compared to `r format(total_white_population, big.mark = ",", digits = 1)` thousand for the White group. In London, which has the highest concentration of Black or Black British individuals among all regions, this group accounts for `r format(london_black_population, big.mark = ",", digits = 1)` thousand, while the White population in London is `r format(london_white_population, big.mark = ",", digits = 1)` thousand.
+
+The region with the largest White population is `r largest_region_white`, while `r largest_region_black` has the highest Black or Black British population outside London. These figures highlight the substantial geographic and demographic diversity captured in the census data.
+
+### Geographic Distribution of the Black or Black British Population
+
+The map below visualizes the geographic distribution of individuals identifying as Black or Black British across regions in the UK, based on census data. It represents the proportion of this ethnic group within each region as a percentage of the total regional population, highlighting spatial patterns and regional disparities.
+
+```{r}
+# For mapping
+# Calculate the proportion of each ethnic group within each region
+data_map_region_group_sum <- census_data %>%
+  group_by(regions_code, ethnic_group_code) %>%
+  summarize(sumGroupRegion = sum(population))
+
+# Calculate the sum of observations for each region
+data_map_group_sum <- census_data %>% 
+  group_by(regions_code) %>% 
+  summarize(sumregion = sum(population))
+
+# Merge the two data frames
+data_map_prop <- left_join(data_map_region_group_sum, data_map_group_sum, by = "regions_code")
+
+# Calculate the proportion within each region
+data_map_prop <- data_map_prop %>%
+  mutate(prop = sumGroupRegion / sumregion * 100)
+
+
+
+# Load your shapefile for UK regions, replace 'your_shapefile.shp' with the actual file path.
+uk_shapefile <- st_read('../data/raw/shapefile/Ew_rgn_2022_bgc_shapefile/ew_rgn_2022_bgc.shp')
+
+
+# Filter: Black ethnic group
+data_map_prop_black <- data_map_prop %>% 
+  filter(ethnic_group_code == "Black or Black British") %>% 
+  mutate(rgn22cd = regions_code)
+
+# Join
+data_map_final <- left_join(uk_shapefile,data_map_prop_black, by = "rgn22cd")
+
+```
+
+```{r, results="asis"}
+# Create a map plot for the proportion of Black or Black British ethnic group per region
+ggplot() +
+  geom_sf(data = data_map_final, aes(fill = prop), color = "white") +
+  labs(
+    title = "London is home to the largest share of England's Black population",
+    subtitle = "Proportion of Black or Black British ethnic group by region, Census 2021",
+    fill = "Proportion (%)",
+    caption = "Source: ONS Census 2021"
+  ) +
+  scale_fill_distiller(
+    palette = "Blues",
+    direction = 1,
+    name = "Proportion (%)"
+  ) +
+  theme_minimal() +
+  theme(plot.title.position = "plot")  # Use a clean and minimal theme
+
+```
+
+```{r}
+# Include region names in the proportions data
+data_map_prop <- left_join(
+  data_map_prop,
+  census_data %>% select(regions_code, region) %>% distinct(),
+  by = "regions_code"
+)
+
+# Extract key insights for the map
+highest_black_prop <- data_map_prop %>%
+  filter(ethnic_group_code == "Black or Black British") %>%
+  ungroup() %>%  # Ensure no grouping for global max
+  slice_max(prop, n = 1) %>%
+  select(region, prop)
+
+lowest_black_prop <- data_map_prop %>%
+  filter(ethnic_group_code == "Black or Black British") %>%
+  ungroup() %>%  # Ensure no grouping for global min
+  slice_min(prop, n = 1) %>%
+  select(region, prop)
+
+# Unpack results with region names
+highest_black_region <- highest_black_prop$region[1]
+highest_black_value <- round(highest_black_prop$prop[1], 1)
+
+lowest_black_region <- lowest_black_prop$region[1]
+lowest_black_value <- round(lowest_black_prop$prop[1], 1)
+
+```
+
+The map illustrates substantial regional variability in the proportion of individuals identifying as Black or Black British. The region with the highest proportion is `r highest_black_region`, where this group accounts for `r highest_black_value`% of the total population. In contrast, the region with the lowest proportion is `r lowest_black_region`, at just `r lowest_black_value`%.
+
+These results emphasize the uneven distribution of the Black population across the UK, reflecting broader patterns of settlement, migration, and urbanization.
+
+## Stop and Search data
+
+This section examines police stop and search activities across England and Wales. This data includes searches conducted under key legislations, specifically Section 1 of the Police and Criminal Evidence Act (PACE) and Section 60 of the Criminal Justice and Public Order Act (CJPOA). By analyzing annual trends, legislative frameworks, and demographic characteristics, this section aims to provide insights into the scale and patterns of stop and search practices. The results inform subsequent analyses of disparities and contributing factors.
+
+```{r}
+# Get stop and search data
+stop_search_data <- load_stop_search_data(print_info= TRUE, download=FALSE)
+```
+
+### Total Stop and Searches by Year
+
+```{r}
+# Total number of stop and searches in England and Wales
+# Convert financial_year to a factor
+stop_search_data$financial_year <- as.factor(stop_search_data$financial_year)
+
+# Sum number_of_searches by year (for legislation Section 1 PACE and section 60 CJPOA to match the total shown on the data website at: https://www.gov.uk/government/statistics/stop-and-search-and-arrests-year-ending-march-2023/police-powers-and-procedures-stop-and-search-and-arrests-england-and-wales-year-ending-31-march-2023 )
+sum_searches_by_year <- stop_search_data %>%
+  filter(legislation == "Section 1 (PACE)" | legislation == "Section 60 (CJPOA)") %>% 
+  group_by(financial_year) %>%
+  summarise(total_searches = sum(number_of_searches, na.rm = TRUE))
+
+print(sum_searches_by_year)
+```
+
+```{r}
+#First, we check that the numbers match those in \\citep[gov24] (Section 2.2). 
+# The legislation filter, Section 1 (PACE) and section 60 CJPOA, should also be 
+# applied to get the correct counts.
+
+stop_search_data$legislation <- as.factor(stop_search_data$legislation)
+stop_search_data <- stop_search_data %>% 
+  filter(legislation == "Section 1 (PACE)"| legislation == "Section 60 (CJPOA)")
+
+# stop_search_data
+```
+
+```{r}
+# Convert categorical variables, which we are interested in, into factors
+
+stop_search_data$financial_year <- as.factor(stop_search_data$financial_year)
+stop_search_data$sex <- as.factor(stop_search_data$sex)
+stop_search_data$age_group <- as.factor(stop_search_data$age_group)
+stop_search_data$region <- as.factor(stop_search_data$region)
+stop_search_data$self_defined_ethnicity_group <- as.factor(stop_search_data$self_defined_ethnicity_group)
+```
+
+The table below details the annual total of stop and searches conducted in England and Wales under Section 1 of the Police and Criminal Evidence Act (PACE) and Section 60 of the Criminal Justice and Public Order Act (CJPOA). This summary highlights year-on-year trends and the overall scale of these police powers.
+
+```{r, results="asis"}
+# Check total counts after cleaning the data
+# Total number of stop and searches in England and Wales
+# Sum number_of_searches by year
+# Summarise total searches by year
+sum_searches_by_year <- stop_search_data %>%
+  group_by(financial_year) %>%
+  summarise(total_searches = sum(number_of_searches, na.rm = TRUE))
+
+# Display table with caption
+# Format total searches with commas and display table with header
+sum_searches_by_year %>%
+  mutate(total_searches = comma(total_searches)) %>%  # Format numbers with commas
+  kable(
+    col.names = c("Financial Year", "Total Searches")
+  ) %>%
+  kable_styling(font_size = 9,
+                latex_options = c("HOLD_position")) %>%
+  add_header_above(c("Total Stop and Searches Conducted in England and Wales by Financial Year" = 2))
+
+```
+
+```{r}
+# Calculate year with the highest and lowest searches
+highest_searches <- sum_searches_by_year %>%
+  slice_max(total_searches)
+
+lowest_searches <- sum_searches_by_year %>%
+  slice_min(total_searches)
+
+# Extract key values
+highest_search_year <- highest_searches$financial_year
+highest_search_count <- format(highest_searches$total_searches, big.mark = ",")
+
+lowest_search_year <- lowest_searches$financial_year
+lowest_search_count <- format(lowest_searches$total_searches, big.mark = ",")
+
+```
+
+The data shows that the highest number of stop and searches was conducted in the financial year `r highest_search_year`, with a total of `r highest_search_count` searches. In contrast, the financial year with the lowest number of searches was `r lowest_search_year`, with `r lowest_search_count` searches.
+
+These figures reflect changes in policing strategies and legal contexts, as well as broader socio-political factors influencing the use of stop and search powers over time.
+
+::: {.callout-note}
+## Analysis sample vs. published totals
+
+The totals above match the figures published by the UK Government and include *all* recorded stop and searches under PACE s.1 and CJPOA s.60. The disparity analysis presented in the rest of this report uses a smaller **analysis sample** that excludes three categories of records that cannot be assigned to a demographic group or geographic denominator (see @sec-data-processing for details):
+
+1. **Vehicle searches**: no person-level demographics are recorded.
+2. **British Transport Police (region 0)**: no Census population denominator exists for BTP.
+3. **"Not Stated" ethnicity**:these records cannot be attributed to any ethnic group for rate calculations.
+
+```{r, results="asis"}
+analysis_by_year <- stop_search_data %>%
+  filter(self_defined_ethnicity_group != "N/A - vehicle search") %>%
+  filter(region != '0') %>%
+  filter(self_defined_ethnicity_group != "Not Stated") %>%
+  group_by(financial_year) %>%
+  summarise(
+    analysis_searches = sum(number_of_searches, na.rm = TRUE)
+  )
+
+left_join(sum_searches_by_year, analysis_by_year, by = "financial_year") %>%
+  mutate(
+    excluded = total_searches - analysis_searches,
+    pct_retained = round(analysis_searches / total_searches * 100, 1)
+  ) %>%
+  mutate(across(c(total_searches, analysis_searches, excluded), comma)) %>%
+  kable(
+    col.names = c("Financial Year", "Published Total", "Analysis Sample", "Excluded", "% Retained")
+  ) %>%
+  kable_styling(font_size = 9,
+                latex_options = c("HOLD_position")) %>%
+  add_header_above(c("Reconciliation of Published Totals and Analysis Sample" = 5))
+```
+
+The analysis sample retains approximately `r round(mean(left_join(sum_searches_by_year, analysis_by_year, by = "financial_year")$analysis_searches / left_join(sum_searches_by_year, analysis_by_year, by = "financial_year")$total_searches) * 100, 0)`% of all searches across years. All disparity rates, IRRs, and dashboard figures are based on this analysis sample.
+:::
+
+```{r}
+# Now that the numbers match, we can clean the data further for the variables 
+# we are interested in 
+
+stop_search_data_clean <- stop_search_data %>% 
+  select(number_of_searches,financial_year,region,
+           self_defined_ethnicity_group,sex,age_group,reason_for_search) %>% 
+  na.omit() %>% 
+  filter(self_defined_ethnicity_group != "N/A - vehicle search") %>% 
+  filter(age_group != "Unknown") %>% 
+  filter(self_defined_ethnicity_group != "Not Stated") %>% 
+  filter(sex != "Unknown")  %>% 
+  filter(region != '0') 
+
+# Drop the level we removed (including N/A - vehicle search in some variables)
+stop_search_data_clean$age_group <- droplevels(stop_search_data_clean$age_group)
+stop_search_data_clean$self_defined_ethnicity_group <- droplevels(stop_search_data_clean$self_defined_ethnicity_group)
+stop_search_data_clean$sex <- droplevels(stop_search_data_clean$sex)
+stop_search_data_clean$region <- droplevels(stop_search_data_clean$region)
+  
+```
+
+```{r}
+# We end up with a subset of the original data, in this case containing `r nrow(stop_search_data_clean)` rows, which corresponds to `r round((nrow(stop_search_data_clean)/nrow(stop_search_data))*100,1)`% of the original data set. Then we group the variables and sum the stop and search events for each strata. 
+```
+
+```{r}
+stop_search_data_clean2 <- stop_search_data_clean %>% 
+  mutate(age_group = if_else(age_group %in% c("10-17", "18-24"), 1, 0),
+         reason_for_search = if_else(reason_for_search == "Drugs", 1, 0))
+
+stop_search_data_clean2$age_group <- as.factor(stop_search_data_clean2$age_group)
+stop_search_data_clean2$reason_for_search <- as.factor(stop_search_data_clean2$reason_for_search)
+```
+
+```{r}
+stop_search_data_clean_group <-   stop_search_data_clean2 %>% 
+  group_by(financial_year,region,
+           self_defined_ethnicity_group,sex,age_group,reason_for_search) %>% 
+  summarise(total_searches = sum(number_of_searches, na.rm = TRUE)) 
+
+df <- stop_search_data_clean_group %>% 
+  ungroup()
+  
+```
+
+```{r}
+# This gives us a final dataframe with `r ncol(df)` columns and `r nrow(df)` rows. Next, we obtain the $population$ variable, from the census data, to calculate the rates. The only change applied to these data is the use of `na.omit()`. Finally, we join the stop and search data frame with the census one taking into account the different strata. The data are now in a format suitable for linear modelling.
+```
+
+```{r}
+# Get census data
+census_data <- load_census_data(print_info = FALSE, download = FALSE)
+
+census_data  <-  census_data %>% 
+  na.omit()
+```
+
+```{r}
+# Finally, we join the tables and calculate the rates.
+
+df_join <- df %>% 
+  left_join(census_data, by = c("region"="region",
+                                "self_defined_ethnicity_group"="ethnic_group_code"))
+
+
+# Rates per 100 000            
+df_join <- df_join %>% 
+  mutate(rate = (total_searches/population) * 100000)
+
+# Rename self_defined_ethnicity_group
+df_join <- df_join %>% 
+  rename(ethnicity = self_defined_ethnicity_group) 
+
+# Use White as the reference group
+df_join$ethnicity <- relevel(df_join$ethnicity, ref="White") 
+```
+
+```{r}
+# Checking missing data in the original dataset
+orig_mis_perVar <- colSums(is.na(stop_search_data))/nrow(stop_search_data)
+orig_mis_perc <- sum(is.na(stop_search_data))/(nrow(stop_search_data)*ncol(stop_search_data))*100
+```
+
+Note that the stop and search dataset contains some missing data, primarily in the `officer_defined_ethnicity` variable. Other missing values occur because certain searches were related to vehicles, which are not included in this analysis. As a result, the percentage of truly missing data in the original dataset is `r round(orig_mis_perc,2)`%. These missing values were handled appropriately to ensure robust analysis.
+
+### Disparity Rates Relative to White Individuals
+
+The table below presents disparity rates for stop and searches relative to White individuals across different financial years. Disparity rates indicate how much more (or less) likely individuals from other ethnic groups are to be stopped and searched compared to White individuals. These rates are derived by comparing the stop-and-search rate per population for each ethnic group against the rate for White individuals.
+
+```{r results="asis"}
+# Read the pre-computed disparity trend from the analysis pipeline (02_eda.R),
+# which uses the lighter filtering that matches official Home Office methodology.
+disparity_trend_csv <- read_csv("../analysis/output/disparity_trend.csv",
+                                show_col_types = FALSE)
+
+disparity_table <- disparity_trend_csv %>%
+  select(financial_year, ethnicity, ratio_vs_white) %>%
+  rename(relative_rate_to_white = ratio_vs_white) %>%
+  pivot_wider(
+    names_from = ethnicity,
+    values_from = relative_rate_to_white,
+    names_sort = TRUE
+  ) %>%
+  arrange(financial_year)
+
+
+disparity_table_avg <- disparity_table %>%
+  summarise(across(-c(financial_year, White), ~ mean(.x, na.rm = TRUE))) %>%
+  mutate(financial_year = "Average")  # Assign a label for the average row
+
+
+# Combine with original table
+disparity_table_with_avg <- bind_rows(disparity_table, disparity_table_avg)
+
+# Replace NA in 'financial_year' with 'Average'
+disparity_table_with_avg <- disparity_table_with_avg %>%
+  mutate(financial_year = ifelse(is.na(financial_year), "Average", financial_year))
+
+# Generate a styled kable table without caption and with header info
+disparity_table_with_avg %>%
+  select(-White) %>%  # Remove the 'White' column, since it will always be 1
+  kable(
+    digits = 2,
+    col.names = c("Financial Year", "Asian or Asian British", "Black or Black British", "Mixed", "Other Ethnic Group"),
+    # Note: source data uses short names (Asian, Black, Mixed, Other)
+  ) %>%
+  kable_styling(full_width = F, position = "center", stripe_color = "white",
+                font_size = 9,
+                latex_options = c("HOLD_position")) %>%
+  add_header_above(c(" " = 1,
+    "Disparity rates relative to White individuals,\nby financial year" = 4
+  )) %>%
+  row_spec(nrow(disparity_table_with_avg), bold = TRUE)  # Highlight the average row
+
+
+
+```
+
+```{r}
+# Calculate highest and lowest disparities for each ethnic group
+highest_black_disparity <- disparity_table_with_avg %>%
+  filter(financial_year != "Average") %>%
+  slice_max(Black) %>%
+  select(financial_year, Black)
+
+lowest_black_disparity <- disparity_table_with_avg %>%
+  filter(financial_year != "Average") %>%
+  slice_min(Black) %>%
+  select(financial_year, Black)
+
+# Extract key values for Black or Black British
+highest_black_year <- highest_black_disparity$financial_year
+highest_black_value <- round(highest_black_disparity$Black, 2)
+
+lowest_black_year <- lowest_black_disparity$financial_year
+lowest_black_value <- round(lowest_black_disparity$Black, 2)
+
+# Calculate average disparity for Black or Black British
+average_black_disparity <- disparity_table_with_avg %>%
+  filter(financial_year == "Average") %>%
+  pull(Black)
+
+# Latest year Black disparity (for inline text)
+latest_black_disparity <- disparity_table_with_avg %>%
+  filter(financial_year == max(disparity_trend_csv$financial_year)) %>%
+  pull(Black)
+
+```
+
+The data reveals that individuals identifying as Black or Black British consistently experience the highest disparity rates in stop and searches compared to White individuals. The highest disparity was recorded in `r highest_black_year`, with a relative rate of `r highest_black_value`, while the lowest disparity occurred in `r lowest_black_year`, at `r lowest_black_value`. On average, the disparity rate for this group across all financial years is `r round(average_black_disparity,2)`.
+
+These figures underscore the significant disparities faced by Black individuals in stop and search practices. Similar trends are observed for other ethnic groups, though with lower disparity rates compared to the Black or Black British group.
+
+The most recent year, `r max(disparity_trend_csv$financial_year)`, yields a Black/White disparity rate of **`r round(latest_black_disparity, 1)`×** (from `r round(latest_black_disparity, 2)`). This is the unadjusted figure, calculated directly from search counts divided by Census 2021 population denominators with no covariates controlled, and is the number shown on the interactive dashboard. The adjusted incidence rate ratio from the Poisson model (see @sec-trend) is lower because the model accounts for differences in regional composition, sex, age, and search type across ethnic groups; the gap between the two measures reflects those compositional differences rather than any inconsistency in the data.
+
+### Outcome and Link
+
+The question we want to investigate here is whether stop and search results in successful motives. We have removed "Unknown link" and "Unknown whether article found." Then, we create a new column called "success" - if link is "Linked," it is successful, otherwise, it is not.
+
+```{r}
+# Overall success ratio
+over_succ_ratio <- stop_search_data %>% 
+  filter(link != "Unknown link" & link != "Unknown whether article found") %>% 
+  mutate(success = ifelse(link == "Linked", "yes", "no")) %>% 
+  group_by(success) %>% 
+  summarise(count = sum(number_of_searches)) %>%
+  mutate(total = sum(count), success_ratio = count/total) %>% 
+  filter(success == "yes") %>% 
+  select(success_ratio)
+print(over_succ_ratio)
+```
+
+```{r}
+# TO DO: Success ratio vs. ethnicity
+over_succ_ratio <- stop_search_data %>% 
+  filter(link != "Unknown link" & link != "Unknown whether article found") %>% 
+  mutate(success = ifelse(link == "Linked", "yes", "no")) %>% 
+  group_by(success) %>% 
+  summarise(count = n()) %>%
+  mutate(total = sum(count), success_ratio = count/total) %>% 
+  filter(success == "yes") %>% 
+  select(success_ratio)
+print(over_succ_ratio)
+```
+
+```{r}
+# Success ratio per year
+yearly_succ_ratio <- stop_search_data %>% 
+  filter(link != "Unknown link" & link != "Unknown whether article found") %>% 
+  mutate(success = ifelse(link == "Linked", "yes", "no")) %>% 
+  group_by(financial_year,success) %>% 
+  summarise(count = sum(number_of_searches)) %>%
+  mutate(total = sum(count), success_ratio = count/total) %>% 
+  filter(success == "yes") %>% 
+  select(success_ratio)
+print(yearly_succ_ratio)
+```
+
+The overall success ratio is: `r round(over_succ_ratio*100,1)`%.
+
+```{r}
+# Outcome and Link Success YES: 
+# Question: For successful stop and search, what are the most (or least) common outcomes?
+outlink_succ_ratio <- stop_search_data %>% 
+  filter(link != "Unknown link" & link != "Unknown whether article found") %>% 
+  mutate(success = ifelse(link == "Linked", "yes", "no")) %>% 
+  group_by(outcome,success) %>% 
+  summarise(count = sum(number_of_searches)) %>%
+  mutate(total = sum(count), success_ratio = count/total) %>% 
+  filter(success == "yes") %>% 
+  select(success, success_ratio) %>% 
+  arrange(desc(success_ratio))
+print(outlink_succ_ratio)
+```
+
+```{r}
+# Outcome and Link Success NO: 
+# Question: For successful stop and search, what are the most (or least) common outcomes?
+outlink_succ_ratio <- stop_search_data %>% 
+  filter(link != "Unknown link" & link != "Unknown whether article found") %>% 
+  mutate(success = ifelse(link == "Linked", "yes", "no")) %>% 
+  group_by(outcome,success) %>% 
+  summarise(count = sum(number_of_searches)) %>%
+  mutate(total = sum(count), success_ratio = count/total) %>% 
+  filter(success == "no") %>% 
+  select(success, success_ratio) %>% 
+  arrange(desc(success_ratio))
+print(outlink_succ_ratio)
+```
+
+```{r cache=TRUE}
+# Outcome ratio
+#---> This variable is needed in the Discussion section. So saveRDS
+outcome_ratio <- stop_search_data %>% 
+  group_by(outcome) %>% 
+  summarise(count = sum(number_of_searches)) %>% 
+  mutate(total = sum(count), outcome_ratio = count/total) %>% 
+  arrange(desc(outcome_ratio)) %>% 
+  select(outcome, outcome_ratio)
+print(outcome_ratio)
+saveRDS(outcome_ratio, "data/share_data_across_chapters.rds")
+```
+
+## Modelling
+
+This section outlines the statistical modelling approach applied to analyze stop and search data. Multiple models were constructed and evaluated, each targeting specific aspects of the data while considering methodological rigor. The focus was on understanding disparities across financial years, regions, and ethnic groups, controlling for key covariates such as sex, age group, and reason for search.
+
+### **Overview of Models Tested**
+
+1.  **Model 1: Simple Linear Regression**
+    - A baseline linear regression model was fitted with the stop-and-search rate (`rate`) as the dependent variable.
+    - Independent variables included financial year, region, ethnicity, sex, age group, and reason for search.
+    - Diagnostics revealed significant heteroscedasticity, making this model unsuitable.
+2.  **Model 2: Log-Transformed Linear Regression**
+    - To address heteroscedasticity, a logarithmic transformation of the rate (`log(rate)`) was applied.
+    - The transformed model demonstrated improved fit and approximate normality in residuals.
+3.  **Mixed Linear Model**
+    - A mixed-effects model was considered, treating financial year as a random effect to account for potential year-specific variability.
+    - However, the random effect's variance was close to zero, indicating that this added complexity was unnecessary.
+4.  **Generalized Linear Model (GLM) with Offset**
+    - A Poisson GLM with a log link function was employed, using the number of searches as the dependent variable and the log population as an offset.
+    - This model was particularly relevant for adjusting for population size across regions and demographics.
+    - All parameters were highly significant (`p < 0.0001`), and the effect sizes for ethnic groups were consistent with findings from prior research.
+5.  **Model Evaluation**
+    - Pseudo-R² by Cohen was used to assess the GLM's fit. The pseudo-R² value confirmed the model's adequacy for explaining variability in the data.
+
+### **Key Considerations**
+
+- **Model Selection**: While multiple models were tested, the GLM with an offset was identified as the most appropriate for the dataset, balancing interpretability and statistical validity.
+- **Diagnostics**: Each model was assessed for assumptions such as normality of residuals, heteroscedasticity, and random effects variance to ensure robustness.
+- **Significance of Covariates**: Across models, ethnicity consistently emerged as a significant factor, supporting the focus on disparities in stop-and-search practices.
+
+These models provide a robust framework for understanding patterns and disparities in stop-and-search data, and they form the foundation for further statistical and interpretive analysis.
+
+Based on the results of the evaluated models, a Poisson regression with a population offset was selected as the final model. The following section delves into the rationale, structure, and key findings of the chosen model.
+
+```{r}
+# NOTE: All models (OLS, log-OLS, mixed, and quasi-Poisson) were explored during
+# development and are documented in the Methodology chapter.  The chosen model
+# (quasi-Poisson with log-population offset) is fitted once in the analysis
+# pipeline (03_model_poisson.R) and loaded at the top of this document, ensuring
+# a single source of truth.  The exploratory models are therefore not re-fitted
+# here.
+```
+
+## Chosen Model
+
+### Overview of the Poisson Regression
+
+The Poisson regression model with an offset for population size was selected as the most appropriate approach for this analysis. This model accounts for varying population sizes across regions, allowing for a fair comparison of stop-and-search rates. The dependent variable is the total number of stop and searches, with independent variables including financial year, region, ethnicity, sex, age group, and reason for search. Reference levels for categorical variables are:
+
+- Financial Year: 2020/21
+- Region: East Midlands
+- Ethnicity: White
+- Sex: Female
+- Age Group: 25 and above
+- Reason for Search: Non-drug-related
+
+### Model results
+
+The table below summarizes the results of the Poisson regression model analyzing the frequency of stop and searches across England and Wales. The raw coefficients from the model (log-scale) provide statistical estimates for the association between each variable and the expected log count of stop and searches.
+
+However, for ease of interpretation, these coefficients are exponentiated to present rate ratios, which quantify the multiplicative effect of each variable relative to the baseline categories. For instance, a rate ratio greater than 1 indicates a higher likelihood of stop and searches compared to the baseline category, while a rate ratio less than 1 indicates a lower likelihood. Baseline levels for the categorical variables are: financial year **2020/21**, region **East Midlands**, ethnicity **White**, sex **Female**, age group **25 and above**, and reason for search **non-drug-related**.
+
+The following tables first present the raw coefficients for statistical rigor, followed by the exponentiated coefficients (rate ratios) for practical interpretation.
+
+#### Table Code: Raw Coefficients
+
+```{r}
+# model_raw_summary and model_exp_summary are computed in the setup chunk
+```
+
+```{r, results="asis"}
+# Full model tables are HTML-only (too wide for PDF)
+if (knitr::is_html_output()) {
+  library(kableExtra)
+
+  model_raw_summary %>%
+    mutate(across(c(estimate, conf.low, conf.high, p.value), ~ round(.x, 3))) %>%
+    rename(
+      Term = term,
+      `Log Coefficient` = estimate,
+      `Standard Error`  = std.error,
+      `Z-Statistic`     = statistic,
+      `P-Value`         = p.value,
+      `Lower 95% CI`    = conf.low,
+      `Upper 95% CI`    = conf.high
+    ) %>%
+    kable(
+      col.names = c("Term", "Log Coefficient", "Std Error", "Z", "P-Value", "Lower CI", "Upper CI"),
+      caption   = "Raw Coefficients from Quasi-Poisson Regression Model"
+    ) %>%
+    kable_styling(full_width = FALSE, position = "center",
+                font_size = 9,
+                latex_options = c("HOLD_position")) %>%
+    print()
+}
+```
+
+#### Table Code: Exponentiated Coefficients (Rate Ratios)
+
+```{r, results="asis"}
+if (knitr::is_html_output()) {
+  library(kableExtra)
+
+  model_exp_summary %>%
+    select(term, estimate, conf.low, conf.high) %>%
+    mutate(across(c(estimate, conf.low, conf.high), ~ round(.x, 3))) %>%
+    rename(
+      Term           = term,
+      `Rate Ratio`   = estimate,
+      `Lower 95% CI` = conf.low,
+      `Upper 95% CI` = conf.high
+    ) %>%
+    kable(
+      col.names = c("Term", "Rate Ratio", "Lower 95% CI", "Upper 95% CI"),
+      caption   = "Exponentiated Coefficients (Incidence Rate Ratios) with 95% CIs"
+    ) %>%
+    kable_styling(full_width = FALSE, position = "center",
+                font_size = 9,
+                latex_options = c("HOLD_position")) %>%
+    print()
+} else {
+  # Compact PDF-safe table — key ethnicities only
+  model_exp_summary %>%
+    filter(grepl("^ethnicity|^financial_year|reason_drugs|sexMale|age_under25", term)) %>%
+    select(term, estimate, conf.low, conf.high) %>%
+    mutate(across(where(is.numeric), ~ round(.x, 2))) %>%
+    rename(Term = term, IRR = estimate, `Lower CI` = conf.low, `Upper CI` = conf.high) %>%
+    knitr::kable(caption = "Key Incidence Rate Ratios from Quasi-Poisson model (selected terms)")
+}
+
+
+```
+
+#### Key Findings
+
+The results show significant disparities in stop-and-search likelihoods. For instance, individuals identifying as **Black or Black British** are `r round(filter(model_exp_summary, term == "ethnicityBlack")$estimate, 2)` times more likely to be stopped and searched compared to **White** individuals, with a 95% confidence interval of (`r round(filter(model_exp_summary, term == "ethnicityBlack")$conf.low, 2)`, `r round(filter(model_exp_summary, term == "ethnicityBlack")$conf.high, 2)`). Similarly, **males** are `r round(filter(model_exp_summary, term == "sexMale")$estimate, 2)` times more likely to be stopped and searched than females, highlighting a significant gender disparity.
+
+**London** stands out with the highest regional rate: individuals there are `r round(filter(model_exp_summary, term == "region_cleanLondon")$estimate, 2)` times as likely to be stopped and searched as those in the East Midlands (95% CI: `r round(filter(model_exp_summary, term == "region_cleanLondon")$conf.low, 2)`–`r round(filter(model_exp_summary, term == "region_cleanLondon")$conf.high, 2)`).
+
+These findings underscore critical disparities in stop-and-search practices across demographic and geographic dimensions.
+
+### Model Coefficients: Interpretation
+
+This analysis evaluates the association between demographic, temporal, and geographic factors and police stop-and-search frequencies in England and Wales using a Poisson regression model. The model includes an offset for population size to account for differences in regional populations, providing rate ratios for stop-and-search frequencies across groups.
+
+Key variables were encoded for interpretability: **age group** was binary, with "Under 25" for individuals aged 10–24 and "25 and over" for those 25 and above; **reason for search** was binary, with "Drugs" for drug-related stops and "Non-drugs" for other reasons. Baseline levels for categorical variables include: financial year **2020/21**, region **East Midlands**, ethnicity **White**, sex **Female**, age group **25 and above**, and reason for search **non-drug-related**. All coefficients are exponentiated to represent rate ratios.
+
+Each rate ratio indicates the multiplicative effect of a variable on the likelihood of stop and search, relative to the baseline. Values greater than 1 represent increased likelihood, while values below 1 signify decreased likelihood.
+
+#### Coefficients and Interpretations
+
+##### **Financial Year**
+
+- **2021/22**: The rate ratio for **2021/22** is `r round(filter(model_exp_summary, term == "financial_year2021/22")$estimate, 2)` (95% CI: `r round(filter(model_exp_summary, term == "financial_year2021/22")$conf.low, 2)`–`r round(filter(model_exp_summary, term == "financial_year2021/22")$conf.high, 2)`), indicating that stop-and-search frequencies were approximately `r round(filter(model_exp_summary, term == "financial_year2021/22")$estimate, 2)` times as likely compared to **2020/21**.
+- **2022/23**: The rate ratio for **2022/23** is `r round(filter(model_exp_summary, term == "financial_year2022/23")$estimate, 2)` (95% CI: `r round(filter(model_exp_summary, term == "financial_year2022/23")$conf.low, 2)`–`r round(filter(model_exp_summary, term == "financial_year2022/23")$conf.high, 2)`).
+
+These results suggest a consistent decrease in stop-and-search activities over time.
+
+##### **Region** (Relative to **East Midlands**)
+
+Most regions show higher stop-and-search rates than East Midlands, with **London** standing out. For instance: - **London**: Rate ratio of `r round(filter(model_exp_summary, term == "region_cleanLondon")$estimate, 2)` (95% CI: `r round(filter(model_exp_summary, term == "region_cleanLondon")$conf.low, 2)`–`r round(filter(model_exp_summary, term == "region_cleanLondon")$conf.high, 2)`). - **South East**: Rate ratio of `r round(filter(model_exp_summary, term == "region_cleanSouth East")$estimate, 2)` (95% CI: `r round(filter(model_exp_summary, term == "region_cleanSouth East")$conf.low, 2)`–`r round(filter(model_exp_summary, term == "region_cleanSouth East")$conf.high, 2)`).
+
+The variation across regions likely reflects differences in policing practices, crime profiles, and population density.
+
+##### **Ethnicity** (Relative to **White**)
+
+Ethnic minorities showed significantly different rates of stop and search compared to White individuals: - **Black or Black British**: Rate ratio of `r round(filter(model_exp_summary, term == "ethnicityBlack")$estimate, 2)` (95% CI: `r round(filter(model_exp_summary, term == "ethnicityBlack")$conf.low, 2)`–`r round(filter(model_exp_summary, term == "ethnicityBlack")$conf.high, 2)`), indicating a `r round((filter(model_exp_summary, term == "ethnicityBlack")$estimate - 1) * 100, 1)`% higher likelihood of being stopped and searched.
+
+##### **Sex** (Relative to **Female**)
+
+- **Male**: Rate ratio of `r round(filter(model_exp_summary, term == "sexMale")$estimate, 2)` (95% CI: `r round(filter(model_exp_summary, term == "sexMale")$conf.low, 2)`–`r round(filter(model_exp_summary, term == "sexMale")$conf.high, 2)`). Men are significantly more likely to be stopped and searched compared to women.
+
+##### **Age Group** (Relative to Age 25+)
+
+- **Under 25**: Rate ratio of `r round(filter(model_exp_summary, term == "age_under25Under 25")$estimate, 2)` (95% CI: `r round(filter(model_exp_summary, term == "age_under25Under 25")$conf.low, 2)`–`r round(filter(model_exp_summary, term == "age_under25Under 25")$conf.high, 2)`), reflecting a slightly increased likelihood for younger individuals.
+
+##### **Reason for Search** (Relative to Non-Drug Related)
+
+- **Drug-Related**: Rate ratio of `r round(filter(model_exp_summary, term == "reason_drugsDrugs")$estimate, 2)` (95% CI: `r round(filter(model_exp_summary, term == "reason_drugsDrugs")$conf.low, 2)`–`r round(filter(model_exp_summary, term == "reason_drugsDrugs")$conf.high, 2)`), indicating a substantial increase in stop-and-search likelihood for drug-related reasons.
+
+### Model Fit and Diagnostics
+
+- **Pseudo R-squared (Cohen’s)**: The pseudo R-squared value of `r round(pseudoR2,4)` indicates that the model explains approximately `r round(pseudoR2*100,1)`% of the variability in stop and search counts, suggesting a strong fit. This high explanatory power supports the model’s validity in identifying and quantifying the associations between stop and search practices and demographic, geographic, and temporal factors.
+
+The residual deviance (`r format(modglmoff$deviance, big.mark = ",")` on `r modglmoff$df.residual` degrees of freedom) indicates a good model fit, with some remaining variability potentially attributable to unobserved factors. The estimated dispersion parameter is `r round(dispersion, 1)`, confirming severe overdispersion; standard errors are scaled accordingly by the Quasi-Poisson family (see Methodology). AIC is not defined for Quasi-Poisson models.
+
+```{r}
+dispersion_int <- model_diagnostics %>% filter(model == "interaction_ethnicity_year") %>% pull(dispersion)
+pseudoR2_int   <- model_diagnostics %>% filter(model == "interaction_ethnicity_year") %>% pull(pseudo_r2)
+f_pval         <- model_diagnostics %>% filter(model == "interaction_ethnicity_year") %>% pull(interaction_f_pval)
+```
+
+- **Interaction model (ethnicity × financial year)**: To account for part of this overdispersion and allow ethnic disparities to vary over time, we fitted an extended model including an `ethnicity × financial_year` interaction. The interaction model reduces the dispersion parameter from `r round(dispersion, 1)` to `r round(dispersion_int, 1)` and improves the pseudo R² from `r round(pseudoR2 * 100, 1)`% to `r round(pseudoR2_int * 100, 1)`%. An F-test confirms the interaction terms are jointly significant (*p* < 0.001), indicating that ethnic disparities have shifted meaningfully across financial years. Despite this improvement, the remaining overdispersion ($\hat{\phi} \approx$ `r round(dispersion_int, 0)`) reflects heterogeneity at the force level and other unmodelled factors, a common feature of aggregate policing data. The Quasi-Poisson framework ensures that all reported confidence intervals and significance tests remain conservative regardless.
+
+```{r}
+# Load combined effects from the analysis pipeline
+# These are pre-computed in 03_model_poisson.R
+ethnicity_black_coef <- filter(model_raw_summary, term == "ethnicityBlack")$estimate
+reason_drug_coef     <- filter(model_raw_summary, term == "reason_drugsDrugs")$estimate
+age_under25_coef     <- filter(model_raw_summary, term == "age_under25Under 25")$estimate
+sex_male_coef        <- filter(model_raw_summary, term == "sexMale")$estimate
+london_coef          <- filter(model_raw_summary, term == "region_cleanLondon")$estimate
+
+# Combined effect: Black + London + Drugs (vs White female 25+ non-drug in East Midlands)
+combined_black_london_raw <- ethnicity_black_coef + london_coef + reason_drug_coef
+combined_black_london <- round(exp(combined_black_london_raw), 2)
+
+# Combined effect: Under 25 + Drugs
+combined_under25_drug_raw <- age_under25_coef + reason_drug_coef
+combined_under25_drug <- round(exp(combined_under25_drug_raw), 2)
+
+# Pipeline pre-computed combined effects
+black_male_drug_rr      <- combined_effects %>% filter(effect == "black_male_drug") %>% pull(rate_ratio)
+black_male_u25_drug_rr  <- combined_effects %>% filter(effect == "black_male_u25_drug") %>% pull(rate_ratio)
+black_drug_rr           <- combined_effects %>% filter(effect == "black_drug") %>% pull(rate_ratio)
+```
+
+### Addressing the Project Questions
+
+1.  **Do Black People in Metropolitan Areas Experience More Drug Stop and Searches?**
+
+    To address this question, we analyze the combined effects of ethnicity (Black or Black British), region (London as a proxy for metropolitan area), and reason for search (drug-related):
+
+    - **Ethnicity (Black or Black British)**: The rate ratio is `r round(filter(model_exp_summary, term == "ethnicityBlack")$estimate, 2)` (95% CI: `r round(filter(model_exp_summary, term == "ethnicityBlack")$conf.low, 2)`–`r round(filter(model_exp_summary, term == "ethnicityBlack")$conf.high, 2)`), indicating Black individuals are approximately `r round(filter(model_exp_summary, term == "ethnicityBlack")$estimate, 2)` times more likely to be stopped and searched compared to White individuals.
+    - **Region (London)**: The rate ratio for London relative to East Midlands is `r round(filter(model_exp_summary, term == "region_cleanLondon")$estimate, 2)` (95% CI: `r round(filter(model_exp_summary, term == "region_cleanLondon")$conf.low, 2)`–`r round(filter(model_exp_summary, term == "region_cleanLondon")$conf.high, 2)`), confirming that London has far higher search rates than the baseline region.
+    - **Reason for Search (Drug-Related)**: The rate ratio is `r round(filter(model_exp_summary, term == "reason_drugsDrugs")$estimate, 2)` (95% CI: `r round(filter(model_exp_summary, term == "reason_drugsDrugs")$conf.low, 2)`–`r round(filter(model_exp_summary, term == "reason_drugsDrugs")$conf.high, 2)`), indicating drug-related searches are approximately `r round(filter(model_exp_summary, term == "reason_drugsDrugs")$estimate, 2)` times more likely than non-drug-related searches.
+
+    **Combined effect**: The multiplicative rate effect for Black individuals in London during drug-related stops is approximately `r combined_black_london` times that for White individuals in the East Midlands for non-drug-related reasons, holding sex and age constant.
+
+2.  **What is the Relationship Between Young People Under 25 and Drug Stops?**
+
+    For this question, we examine the effects of **age group (under 25)** and **reason for search (drug-related)**:
+
+    - **Age Group (Under 25)**: The rate ratio is `r round(filter(model_exp_summary, term == "age_under25Under 25")$estimate, 2)` (95% CI: `r round(filter(model_exp_summary, term == "age_under25Under 25")$conf.low, 2)`–`r round(filter(model_exp_summary, term == "age_under25Under 25")$conf.high, 2)`), indicating individuals under 25 are approximately `r round(filter(model_exp_summary, term == "age_under25Under 25")$estimate, 2)` times more likely to be stopped and searched compared to individuals aged 25 and above.
+    - **Reason for Search (Drug-Related)**: The rate ratio is `r round(filter(model_exp_summary, term == "reason_drugsDrugs")$estimate, 2)` (95% CI: `r round(filter(model_exp_summary, term == "reason_drugsDrugs")$conf.low, 2)`–`r round(filter(model_exp_summary, term == "reason_drugsDrugs")$conf.high, 2)`), suggesting that drug-related searches are approximately `r round(filter(model_exp_summary, term == "reason_drugsDrugs")$estimate, 2)` times more likely than non-drug-related searches.
+
+    **Combined effect**: The multiplicative rate effect for individuals under 25 in drug-related stops is approximately `r combined_under25_drug` times more likely than for older individuals for non-drug-related reasons.
+
+### Implications of Findings
+
+This analysis addresses two primary questions regarding drug-related stop-and-search practices in metropolitan areas:
+
+1.  **Do Black Males under 25 Years of Age in Metropolitan Areas Experience More Drug Stop-and-Searches?**
+
+2.  **How Does This Compare to Black Females, White Females, and White Males under 25 in Metropolitan Areas, Specifically When the Reason for Stop and Search is Drug-Related?**
+
+#### 1. Black Males Under 25 in Metropolitan Areas
+
+The model results indicate that **Black or Black British males under 25 years of age** in metropolitan areas are significantly more likely to experience drug-related stop-and-search encounters. Specifically, this group serves as the reference point for comparison against other demographic groups.
+
+#### 2. Comparative Analysis Across Demographic Groups
+
+The model's statistical reference cell is a White female aged 25+ stopped for non-drug reasons in the East Midlands (i.e.\ the intercept). While useful for model construction, the most **policy-relevant** comparison is between individuals of different ethnicities who share the same sex, age, and search reason, isolating the ethnicity effect. The table below re-expresses the combined rate ratios in two ways: first relative to a **comparable White individual** (same sex, age, and reason), then relative to the statistical reference cell.
+
+```{r, results="asis"}
+# Individual coefficient IRRs
+irr_black   <- round(exp(ethnicity_black_coef), 2)
+irr_male    <- round(exp(sex_male_coef), 2)
+irr_u25     <- round(exp(age_under25_coef), 2)
+irr_drug    <- round(exp(reason_drug_coef), 2)
+
+# Rate ratios vs statistical reference cell (White female 25+ non-drug East Midlands)
+rr_black_male_u25_drug <- round(exp(ethnicity_black_coef + sex_male_coef + age_under25_coef + reason_drug_coef), 2)
+rr_black_male_drug     <- round(exp(ethnicity_black_coef + sex_male_coef + reason_drug_coef), 2)
+rr_black_female_drug   <- round(exp(ethnicity_black_coef + reason_drug_coef), 2)
+rr_white_male_u25_drug <- round(exp(sex_male_coef + age_under25_coef + reason_drug_coef), 2)
+rr_white_male_drug     <- round(exp(sex_male_coef + reason_drug_coef), 2)
+rr_white_female_drug   <- round(exp(reason_drug_coef), 2)
+
+# The ethnicity multiplier is constant across all comparisons (main-effects model)
+# Black vs White within the same sex/age/reason = exp(ethnicityBlack)
+# This is the key policy number: how much more likely is a Black person
+# to be stopped than a White person in identical circumstances?
+
+rate_table <- data.frame(
+  profile = c(
+    "Black Male Under 25, Drug Stop",
+    "Black Male 25+, Drug Stop",
+    "White Male Under 25, Drug Stop",
+    "White Male 25+, Drug Stop",
+    "Black Female 25+, Drug Stop",
+    "White Female 25+, Drug Stop"
+  ),
+  vs_comparable_white = c(
+    irr_black, irr_black, NA, NA, irr_black, NA
+  ),
+  vs_reference_cell = c(
+    rr_black_male_u25_drug,
+    rr_black_male_drug,
+    rr_white_male_u25_drug,
+    rr_white_male_drug,
+    rr_black_female_drug,
+    rr_white_female_drug
+  )
+)
+
+rate_table %>%
+  mutate(
+    vs_comparable_white = ifelse(is.na(vs_comparable_white), "---", 
+                                  paste0(vs_comparable_white, "\u00d7")),
+    vs_reference_cell = paste0(vs_reference_cell, "\u00d7")
+  ) %>%
+  kable(
+    col.names = c("Demographic Profile", 
+                   "Black/White Ratio (same sex, age, reason)",
+                   "vs Reference Cell (White Female, 25+, non-drug)"),
+    row.names = FALSE,
+    align = c("l", "c", "c")
+  ) %>%
+  kable_styling(full_width = FALSE, position = "center",
+                font_size = 9,
+                latex_options = c("HOLD_position")) %>%
+  row_spec(1, bold = TRUE, background = "#fff3cd") %>%
+  row_spec(c(3, 4, 6), color = "#6c757d")
+```
+
+**Interpretation:**
+
+- Because this is a main-effects (additive on the log scale) model, the **ethnicity multiplier is constant**: a Black individual is `r irr_black`$\times$ more likely to be stopped than a White individual of the same sex, age group, and search reason. This `r irr_black`$\times$ factor is the central measure of racial disparity.
+
+- A **Black male under 25** stopped for drug-related reasons has a combined rate ratio of **`r rr_black_male_u25_drug`** relative to the reference cell, but **`r irr_black`$\times$** relative to a White male under 25 stopped for the same reason. The difference between `r rr_black_male_u25_drug` and `r irr_black` is entirely explained by the sex (`r irr_male`$\times$), age (`r irr_u25`$\times$), and drug (`r irr_drug`$\times$) effects, which affect Black and White individuals equally in this model.
+
+- **White Males Under 25 for Drugs** have a rate ratio of `r rr_white_male_u25_drug` versus the reference cell, highlighting that sex and drug effects are substantial independent of ethnicity, but the **ethnicity gap** roughly triples the rate for Black individuals in every combination.
+
+### Policy Implications
+
+The identified disparities necessitate targeted interventions to ensure equitable policing practices:
+
+1.  **Policy Review and Reform:**
+    - **Implement Equitable Policing Guidelines:** Develop and enforce guidelines that minimize racial and gender biases in stop-and-search operations.
+    - **Data Transparency:** Mandate comprehensive data collection and public reporting on stop-and-search encounters to monitor and address disparities.
+2.  **Training and Awareness:**
+    - **Bias Training:** Enhance training programs for law enforcement to recognize and mitigate unconscious biases that contribute to disproportionate targeting of specific demographic groups.
+    - **Cultural Competency:** Foster cultural competency among police officers to improve interactions with diverse communities.
+3.  **Community Engagement:**
+    - **Build Trust:** Engage with communities, particularly among young Black males, to build trust and cooperation between law enforcement and the populations they serve.
+    - **Feedback Mechanisms:** Establish channels for community members to provide feedback and report instances of discriminatory practices without fear of retaliation.
+
+By addressing these areas, policymakers and law enforcement agencies can work towards more fair and just policing strategies, ensuring that stop-and-search practices do not disproportionately affect specific demographic groups and that all individuals are treated equitably under the law.
+
+## Random Forest Model: Machine Learning Approach
+
+```{r}
+# Load pre-computed random forest importance from the analysis pipeline
+rf_importance <- read_csv("../analysis/output/rf_importance.csv", show_col_types = FALSE)
+```
+
+```{r results="asis"}
+# Plot using ggplot2
+ggplot(rf_importance, aes(x = reorder(variable, pct_inc_mse), y = pct_inc_mse)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  coord_flip() +
+  labs(title = "Sex is the strongest predictor of who gets stopped",
+       subtitle = "Variable importance (%IncMSE) from random forest model",
+       x = "Variable",
+       y = "% Increase in MSE") +
+  theme_minimal(base_size = 14) +
+  theme(plot.title.position = "plot")
+```
+
+A random forest model was used to identify the most influential factors associated with total stop-and-search activity across financial years, regions, and demographic groups. This approach complements the regression analysis by revealing complex, non-linear relationships between predictors and total searches. The random forest was trained on demographic and contextual variables, including **financial year**, **region**, **ethnicity**, **sex**, **age group**, **reason for search**, and **population size**, to determine the relative importance of each factor in predicting the total number of stop-and-searches. The variable importance measures (based on %IncMSE) highlight key factors that influence stop-and-search volume and allow an in-depth exploration of the project’s objectives.
+
+### Variable Importance and Interpretation
+
+The variable importance plot shows each predictor's contribution to the model, measured by % Increase in Mean Squared Error (%IncMSE). Key findings from the random forest analysis include:
+
+1.  **Sex**:
+    - **Sex** emerged as the most influential predictor (%IncMSE = 61.8), the single strongest driver of search volume in the model. Consistent with the regression findings, males are disproportionately represented in stop-and-search activity. This alignment across model types underscores the persistent gender gap in policing.
+2.  **Population**:
+    - **Population size** was the second most important predictor (%IncMSE = 36.8). Areas with larger populations experience higher total search counts, reflecting the concentration of searches in densely populated regions.
+3.  **Region**:
+    - **Region** also displayed a high %IncMSE, suggesting that geographic location strongly influences stop-and-search activity. This regional variation likely reflects different policing strategies and priorities across England and Wales. The substantial impact of region on search volume suggests that certain areas are more intensely policed, which may be related to local crime rates, population density, or policy differences.
+4.  **Ethnicity**:
+    - **Ethnicity** emerged as an influential factor, with notable %IncMSE values. Within the random forest model, Black or Black British individuals were particularly associated with higher search counts, reflecting the model's capacity to capture ethnic disparities in policing. The importance of ethnicity aligns with the project’s focus on identifying demographic disparities in stop-and-search practices, confirming that specific ethnic groups are more frequently targeted in police searches.
+5.  **Financial Year and Reason for Search**:
+    - **Financial year** and **reason for search** also contributed to the prediction of total searches, though to a lesser extent than population, sex, and region. The financial year variable’s influence suggests temporal changes in policing activity, potentially linked to policy adjustments or shifts in crime prevention focus over time. **Drug-related stops** (indicated by the reason for search variable) were also predictive of higher search counts, suggesting that specific search reasons contribute to variation in stop-and-search volume.
+6.  **Age Group**:
+    - **Age group** exhibited a low and even negative %IncMSE, indicating that age group alone may not meaningfully enhance prediction accuracy in this model. This contrasts with the regression analysis, where age group had a positive association with search counts. The random forest results suggest that age might interact with other factors (like ethnicity or reason for search) rather than being a primary predictor of search volume independently.
+
+### Implications for Project Objectives
+
+The random forest model findings align with the project’s objectives, providing detailed insights into factors influencing total stop-and-search counts and validating key areas of demographic disparity. The high importance of **sex**, **population**, and **region** reveals structural factors that drive search volumes across England and Wales, with clear implications for regional and demographic disparities in policing. The consistent influence of **ethnicity** across both the random forest and regression models underscores the model's reliability in identifying areas where certain groups are disproportionately affected by stop-and-search practices.
+
+In summary, the random forest analysis provides a robust exploration of the factors driving total stop-and-search volume. By identifying sex, population, region, and ethnicity as major predictors, the model highlights demographic and regional differences in policing practices. This evidence-based approach supports the project’s goal to uncover disparities and guide recommendations for more equitable policing policies across demographic groups.
+
+------------------------------------------------------------------------
+
+## Five-Year Disparity Trend {#sec-trend}
+
+The sections above present the pooled model results. Here we examine how the **adjusted disparity**, controlling for region, sex, age, and reason for search, has evolved year by year over the five-year period 2020/21–2024/25, using pre-computed per-year Quasi-Poisson models.
+
+```{r}
+library(tidyverse)
+library(kableExtra)
+
+yearly_irr <- read_csv("../analysis/output/yearly_irr.csv", show_col_types = FALSE)
+
+# Extract Black IRRs
+black_irr <- yearly_irr %>%
+  filter(term == "ethnicityBlack") %>%
+  mutate(
+    financial_year = factor(financial_year,
+                            levels = c("2020/21","2021/22","2022/23","2023/24","2024/25")),
+    irr       = round(irr, 2),
+    irr_lower = round(irr_lower, 2),
+    irr_upper = round(irr_upper, 2),
+    ci        = paste0("(", irr_lower, "–", irr_upper, ")")
+  )
+```
+
+```{r results="asis"}
+black_irr %>%
+  select(financial_year, irr, ci) %>%
+  kable(
+    col.names = c("Financial Year", "Adjusted IRR", "95% CI"),
+    caption   = "Per-year adjusted IRR for Black vs White individuals (Quasi-Poisson)",
+    digits     = 2
+  ) %>%
+  kable_styling(full_width = FALSE, position = "center",
+                font_size = 9,
+                latex_options = c("HOLD_position"))
+```
+
+```{r results="asis"}
+ggplot(black_irr, aes(x = financial_year, y = irr, group = 1)) +
+  geom_ribbon(aes(ymin = irr_lower, ymax = irr_upper), alpha = 0.15, fill = "steelblue") +
+  geom_line(colour = "steelblue", linewidth = 1.1) +
+  geom_point(colour = "steelblue", size = 3) +
+  geom_hline(yintercept = 1, linetype = "dashed", colour = "grey50") +
+  labs(
+    title   = "Adjusted racial disparity in stop and search has worsened since 2021/22",
+    subtitle = "Black/White incidence rate ratio, Quasi-Poisson model controlling for region, sex, age, and search reason",
+    x       = "Financial Year",
+    y       = "Incidence Rate Ratio (Black vs White)",
+    caption = "Shaded band = 95% confidence interval"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(plot.title.position = "plot")
+```
+
+The adjusted IRR for Black individuals relative to White individuals shows a **U-shaped trend**: falling slightly in 2021/22 (IRR = `r black_irr$irr[2]`) and 2022/23 (IRR = `r black_irr$irr[3]`) before rising sharply to `r black_irr$irr[4]` in 2023/24 and reaching `r black_irr$irr[5]` (95% CI: `r black_irr$irr_lower[5]`–`r black_irr$irr_upper[5]`) in 2024/25. The 2024/25 figure is statistically distinguishable from the 2020/21 baseline (IRR = `r black_irr$irr[1]`; 95% CI: `r black_irr$irr_lower[1]`–`r black_irr$irr_upper[1]`), indicating a real and significant worsening of the adjusted disparity over the five-year period.
+
+This worsening is all the more striking because it occurs against a backdrop of **falling overall search volumes**: raw Black search rates per 1,000 population have declined substantially since 2020/21, but have fallen more slowly than White rates, resulting in a widening relative gap once demographic and geographic composition is held constant.
+
+------------------------------------------------------------------------
+
+## Regional Force Rankings {#sec-regional}
+
+```{r}
+regional <- read_csv("../analysis/output/regional_disparity.csv", show_col_types = FALSE) %>%
+  arrange(desc(black_white_ratio)) %>%
+  mutate(
+    black_white_ratio = round(black_white_ratio, 2),
+    rate_Black = round(rate_Black, 1),
+    rate_White = round(rate_White, 1)
+  )
+```
+
+```{r results="asis"}
+regional %>%
+  select(region_clean, rate_Black, rate_White, black_white_ratio) %>%
+  kable(
+    col.names = c("Region", "Black rate (per 100k)", "White rate (per 100k)", "Black/White ratio"),
+    digits    = 2
+  ) %>%
+  kable_styling(full_width = FALSE, position = "center",
+                font_size = 9,
+                latex_options = c("HOLD_position")) %>%
+  add_header_above(c(
+    "Stop and search rates and Black/White disparity ratios by region (2020/21–2024/25 pooled)" = 4
+  )) %>%
+  row_spec(1, bold = TRUE, background = "#fff3cd")  # highlight South West
+```
+
+```{r results="asis"}
+ggplot(regional, aes(x = reorder(region_clean, black_white_ratio),
+                     y = black_white_ratio)) +
+  geom_col(fill = "steelblue") +
+  geom_hline(yintercept = 1, linetype = "dashed", colour = "grey40") +
+  coord_flip() +
+  labs(
+    title   = "Black/White Stop and Search Rate Ratio by Region",
+    subtitle = "Pooled 2020/21–2024/25; unadjusted for demographic composition",
+    x       = NULL,
+    y       = "Black / White rate ratio",
+    caption = "Rates per 100,000 population; Census 2021 denominator"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+The regional analysis reveals striking variation in the unadjusted Black/White disparity. The **South West** has the highest ratio at `r regional$black_white_ratio[1]`×, substantially exceeding London (`r regional %>% filter(region_clean == "London") %>% pull(black_white_ratio)`×). This is notable given that London is typically assumed to be the focal point of ethnic disproportionality. The North East has the lowest ratio (`r regional %>% filter(region_clean == "North East") %>% pull(black_white_ratio)`×), though it remains above parity. The South West anomaly is discussed further in the Discussion chapter.
+
+The North West shows extremely high absolute rates for all ethnic groups (Black: `r regional %>% filter(region_clean == "North West") %>% pull(rate_Black)` per 100,000; White: `r regional %>% filter(region_clean == "North West") %>% pull(rate_White)` per 100,000), suggesting a general pattern of intensive policing rather than ethnicity-specific targeting, reflected in its relatively lower ratio of `r regional %>% filter(region_clean == "North West") %>% pull(black_white_ratio)`×.
+
+------------------------------------------------------------------------
+
+## Outcome Disparity by Ethnicity {#sec-outcomes}
+
+A key indicator of whether stop and search powers are deployed appropriately is the **post-search outcome distribution**. If the evidential threshold for initiating a search is genuinely equivalent across ethnic groups, we would expect broadly similar outcome profiles.
+
+```{r}
+outcomes <- read_csv("../analysis/output/outcomes_by_ethnicity.csv",
+                     show_col_types = FALSE)
+
+# Pivot to wide for easy comparison
+outcomes_wide <- outcomes %>%
+  filter(outcome %in% c("No Further Action", "Arrest", "Community Resolution")) %>%
+  select(ethnicity, outcome, pct) %>%
+  pivot_wider(names_from = outcome, values_from = pct) %>%
+  rename(
+    `No Further Action (%)` = `No Further Action`,
+    `Arrest (%)`            = Arrest,
+    `Community Resolution (%)` = `Community Resolution`
+  )
+
+# Pull key values
+nfa_black  <- outcomes %>% filter(ethnicity == "Black", outcome == "No Further Action") %>% pull(pct)
+nfa_white  <- outcomes %>% filter(ethnicity == "White", outcome == "No Further Action") %>% pull(pct)
+arr_black  <- outcomes %>% filter(ethnicity == "Black", outcome == "Arrest") %>% pull(pct)
+arr_white  <- outcomes %>% filter(ethnicity == "White", outcome == "Arrest") %>% pull(pct)
+arr_asian  <- outcomes %>% filter(ethnicity == "Asian", outcome == "Arrest") %>% pull(pct)
+```
+
+```{r results="asis"}
+outcomes_wide %>%
+  kable(digits = 1) %>%
+  kable_styling(full_width = FALSE, position = "center",
+                font_size = 9,
+                latex_options = c("HOLD_position")) %>%
+  add_header_above(c(
+    "Post-search outcome distribution by ethnicity (2020/21–2024/25, %, selected outcomes)" = 4
+  ))
+```
+
+```{r results="asis"}
+# Faceted horizontal bar chart with free x-axis scales per outcome
+# This reveals within-outcome variation that is hidden in a grouped chart
+arrest_order <- outcomes %>%
+  filter(outcome == "Arrest") %>%
+  arrange(pct) %>%
+  pull(ethnicity)
+
+outcomes %>%
+  filter(outcome %in% c("No Further Action", "Arrest")) %>%
+  mutate(
+    outcome   = factor(outcome, levels = c("Arrest", "No Further Action")),
+    ethnicity = factor(ethnicity, levels = arrest_order)
+  ) %>%
+  ggplot(aes(y = ethnicity, x = pct, fill = outcome)) +
+  geom_col(show.legend = FALSE) +
+  geom_text(aes(label = paste0(round(pct, 1), "%")),
+            hjust = -0.15, size = 3.5) +
+  scale_fill_manual(values = c("Arrest" = "#d73027",
+                                "No Further Action" = "#6baed6")) +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.18))) +
+  facet_wrap(~ outcome, scales = "free_x", ncol = 2) +
+  labs(
+    title    = "Black individuals have the highest arrest rate but similar no-further-action rates",
+    subtitle = "Post-search outcomes by ethnicity, pooled 2020/21–2024/25",
+    y        = NULL,
+    x        = "Percentage (%)",
+    caption  = "Source: GOV.UK Stop and Search Open Data"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title.position = "plot",
+    strip.text   = element_text(face = "bold", size = 12),
+    panel.spacing = unit(2, "lines")
+  )
+```
+
+Across all ethnic groups, **No Further Action (NFA)** is by far the most common outcome, indicating that the majority of searches do not result in any enforcement action. The NFA rate for Black individuals (`r nfa_black`%) is marginally lower than for White individuals (`r nfa_white`%), which might appear reassuring. However, the **arrest rate** tells a different story: Black individuals have one of the highest arrest rates at `r arr_black`% (tied with Mixed), compared to `r arr_white`% for White individuals and `r arr_asian`% for Asian individuals. This differential is consistent with searches against Black individuals being somewhat more likely to yield enforcement action; yet given the substantially higher stop rate, it also implies that a large number of Black individuals are searched without justification. The implications of this pattern are discussed in the Discussion chapter.
+
+------------------------------------------------------------------------
+
+## Age by Ethnicity Interaction {#sec-age-ethnicity}
+
+```{r}
+age_eth <- read_csv("../analysis/output/age_ethnicity.csv", show_col_types = FALSE) %>%
+  mutate(age_label = ifelse(age_under25, "Under 25", "25 and over"))
+
+# Calculate percentage under 25 by ethnicity and year
+age_pct <- age_eth %>%
+  group_by(financial_year, ethnicity) %>%
+  mutate(total_eth = sum(total_searches)) %>%
+  filter(age_under25) %>%
+  mutate(pct_u25 = round(100 * total_searches / total_eth, 1)) %>%
+  select(financial_year, ethnicity, pct_u25)
+```
+
+```{r results="asis"}
+age_pct_wide <- age_pct %>%
+  pivot_wider(names_from = ethnicity, values_from = pct_u25) %>%
+  arrange(financial_year)
+
+age_pct_wide %>%
+  kable(
+    col.names = c("Financial Year", "Asian", "Black", "Mixed", "Other", "White"),
+    digits = 1
+  ) %>%
+  kable_styling(full_width = FALSE, position = "center",
+                font_size = 9,
+                latex_options = c("HOLD_position")) %>%
+  add_header_above(c(
+    "Percentage of stops involving individuals under 25, by ethnicity and year (%)" = 6
+  ))
+```
+
+```{r results="asis"}
+ggplot(age_pct, aes(x = financial_year, y = pct_u25, colour = ethnicity, group = ethnicity)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 2.5) +
+  labs(
+    title   = "Black and Mixed groups are stopped younger than White individuals",
+    subtitle = "Share of searches involving under-25s by ethnicity and year",
+    x       = "Financial Year",
+    y       = "% of searches (under 25)",
+    colour  = "Ethnicity",
+    caption = "Source: GOV.UK Stop and Search Open Data"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(plot.title.position = "plot")
+```
+
+```{r}
+# Pull 2024/25 values for narrative
+u25_black_2425 <- age_pct %>%
+  filter(financial_year == "2024/25", ethnicity == "Black") %>%
+  pull(pct_u25)
+u25_white_2425 <- age_pct %>%
+  filter(financial_year == "2024/25", ethnicity == "White") %>%
+  pull(pct_u25)
+```
+
+Black individuals who are stopped and searched are more likely to be under 25 than any other ethnic group. In 2024/25, `r u25_black_2425`% of all searches targeting Black individuals involved someone under 25, compared with `r u25_white_2425`% for White individuals. This age concentration has remained broadly stable over the five years, suggesting that the compounded disadvantage faced by young Black men in stop and search encounters is a persistent structural feature rather than a short-term fluctuation.
+
+------------------------------------------------------------------------
+
+## Racial Skew by Search Reason {#sec-reason-skew}
+
+Not all search reasons carry the same racial disparity. This section asks: **which reason for search shows the greatest Black/White rate gap?** Rates are computed per 1,000 population using the 2021 Census as denominator, pooled across all five years.
+
+```{r}
+reason_detail <- read_csv("../analysis/output/reason_detail_by_ethnicity.csv",
+                          show_col_types = FALSE)
+reason_bw     <- read_csv("../analysis/output/reason_bw_ratio.csv",
+                          show_col_types = FALSE)
+
+# Keep only Black and White for the chart; exclude very rare reasons
+reason_bw_clean <- reason_bw |>
+  filter(!is.na(black_white_ratio)) |>
+  arrange(desc(black_white_ratio))
+
+# Pull headline values for narrative
+top_reason      <- reason_bw_clean$reason[1]
+top_ratio       <- reason_bw_clean$black_white_ratio[1]
+drug_ratio      <- reason_bw_clean |> filter(grepl("Drug", reason, ignore.case = TRUE)) |> pull(black_white_ratio) |> first()
+weapon_ratio    <- reason_bw_clean |> filter(grepl("weapon|article", reason, ignore.case = TRUE)) |> pull(black_white_ratio) |> first()
+```
+
+```{r results="asis"}
+reason_bw_clean |>
+  select(reason, rate_Black, rate_White, black_white_ratio) |>
+  mutate(across(c(rate_Black, rate_White), \(x) round(x, 3))) |>
+  rename(
+    `Reason for Search`       = reason,
+    `Black rate (per 1,000)`  = rate_Black,
+    `White rate (per 1,000)`  = rate_White,
+    `Black / White ratio`     = black_white_ratio
+  ) |>
+  kable(digits = 2) |>
+  kable_styling(full_width = FALSE, position = "center",
+                font_size = 9,
+                latex_options = c("HOLD_position")) |>
+  add_header_above(c(
+    "Black/White stop-and-search rate ratio by reason (pooled 2020/21–2024/25)" = 4
+  )) |>
+  row_spec(1, bold = TRUE, background = "#fff3cd")
+```
+
+```{r results="asis"}
+ggplot(reason_bw_clean,
+       aes(x = reorder(reason, black_white_ratio), y = black_white_ratio)) +
+  geom_col(fill = "steelblue") +
+  geom_hline(yintercept = 1, linetype = "dashed", colour = "grey40") +
+  coord_flip() +
+  labs(
+    title    = "Racial disparity is highest for anticipation-of-violence searches, not drugs",
+    subtitle = "Black/White rate ratio by search reason, pooled 2020/21–2024/25",
+    x        = NULL,
+    y        = "Black / White rate ratio",
+    caption  = "Dashed line = parity (ratio = 1)"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(plot.title.position = "plot")
+```
+
+The search reason with the highest racial disparity is **`r top_reason`** (Black/White ratio: `r top_ratio`×). Drug-related stops carry a ratio of `r drug_ratio`×, while searches for offensive weapons or articles for use in crime show a ratio of `r weapon_ratio`×. The fact that disparity is pronounced across multiple search reasons, not just drugs, indicates that the over-representation of Black individuals in stop and search cannot be attributed to a single enforcement focus. Every major search category shows a Black/White rate gap well above parity.
+
+------------------------------------------------------------------------
+
+## Missing Ethnicity Data: Systematic Patterns {#sec-missing}
+
+Around 1 in 10 stop and search records does not include a self-defined ethnicity. The primary reason for this is that individuals are not legally required to disclose their ethnicity during a stop and search: the Home Office notes that "good quality data for self-defined ethnicity is reliant on the individual who is stopped and searched to provide this information, which they are not required to tell the police officer" [@govuk_police_2024]. In addition, transitions between recording systems within individual forces can cause temporary spikes in missing records. Variation in missing rates across forces may therefore reflect differences in how often individuals decline to state their ethnicity, local recording practices, or system changes; these factors cannot be distinguished from the data alone.
+
+```{r}
+missing_trend   <- read_csv("../analysis/output/missing_trend_by_force.csv",
+                            show_col_types = FALSE)
+missing_persist <- read_csv("../analysis/output/missing_persistent_forces.csv",
+                            show_col_types = FALSE)
+
+# National average missing % per year
+national_missing <- missing_trend |>
+  group_by(financial_year) |>
+  summarise(
+    total_searches    = sum(total_searches),
+    missing_searches  = sum(missing_searches),
+    pct_missing       = round(100 * missing_searches / total_searches, 1),
+    .groups = "drop"
+  )
+
+worst_force     <- missing_persist$police_force[1]
+worst_pct       <- missing_persist$mean_pct_missing[1]
+n_high          <- sum(missing_persist$mean_pct_missing > 20)
+```
+
+```{r results="asis"}
+national_missing |>
+  kable(
+    col.names = c("Financial Year", "Total Searches", "Missing Ethnicity", "% Missing"),
+    format.args = list(big.mark = ",")
+  ) |>
+  kable_styling(full_width = FALSE, position = "center",
+                font_size = 9,
+                latex_options = c("HOLD_position")) |>
+  add_header_above(c(
+    "National missing ethnicity rate by year" = 4
+  ))
+```
+
+```{r results="asis"}
+missing_persist |>
+  head(15) |>
+  select(police_force, region_clean, mean_pct_missing, max_pct_missing) |>
+  rename(
+    `Police Force`    = police_force,
+    Region            = region_clean,
+    `Mean % Missing`  = mean_pct_missing,
+    `Max % Missing`   = max_pct_missing
+  ) |>
+  kable(digits = 1) |>
+  kable_styling(full_width = FALSE, position = "center",
+                font_size = 9,
+                latex_options = c("HOLD_position")) |>
+  add_header_above(c(
+    "Forces with highest persistent missing ethnicity (mean across all available years)" = 4
+  )) |>
+  row_spec(1, bold = TRUE, background = "#fff3cd")
+```
+
+```{r results="asis", fig.height=8, fig.width=7}
+# Heatmap: force × year missing %
+# Limit to forces with mean > 10% to keep chart readable
+high_missing_forces <- missing_persist |>
+  filter(mean_pct_missing > 10) |>
+  pull(police_force)
+
+missing_trend |>
+  filter(police_force %in% high_missing_forces) |>
+  mutate(financial_year = factor(financial_year)) |>
+  ggplot(aes(x = financial_year, y = reorder(police_force, pct_missing),
+             fill = pct_missing)) +
+  geom_tile(colour = "white") +
+  scale_fill_distiller(palette = "Reds", direction = 1,
+                       name = "% missing") +
+  labs(
+    title    = "Missing ethnicity data is concentrated in a handful of forces",
+    subtitle = "Percentage of searches missing self-defined ethnicity, forces with mean > 10%",
+    x        = "Financial Year",
+    y        = NULL,
+    caption  = "Source: GOV.UK Stop and Search Open Data"
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    plot.title.position = "plot",
+    axis.text.y   = element_text(size = 7)
+  )
+```
+
+The missing ethnicity rate is far from uniformly distributed. **`r worst_force`** has the highest average missing rate at `r worst_pct`%, and `r n_high` forces average above 20% missing across the study period. Forces with persistently high rates of missing self-defined ethnicity are effectively absent from ethnicity-specific analyses, which limits the extent to which disparity estimates can be compared equally across all forces. Whether this concentration reflects recording practice differences, system transitions, or higher rates of non-disclosure in particular areas cannot be determined from the available data.

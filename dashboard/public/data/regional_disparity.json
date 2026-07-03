@@ -1,0 +1,92 @@
+[
+  {
+    "region_clean": "South West",
+    "rate_Asian": 2.64,
+    "rate_Black": 12.18,
+    "rate_Mixed": 5.12,
+    "rate_Other": 4.09,
+    "rate_White": 2.39,
+    "black_white_ratio": 5.09
+  },
+  {
+    "region_clean": "West Midlands",
+    "rate_Asian": 8.64,
+    "rate_Black": 15.35,
+    "rate_Mixed": 13.55,
+    "rate_Other": 0.8,
+    "rate_White": 3.68,
+    "black_white_ratio": 4.17
+  },
+  {
+    "region_clean": "East Midlands",
+    "rate_Asian": 2.85,
+    "rate_Black": 10.9,
+    "rate_Mixed": 5.59,
+    "rate_Other": 3.87,
+    "rate_White": 2.7,
+    "black_white_ratio": 4.04
+  },
+  {
+    "region_clean": "East of England",
+    "rate_Asian": 4.41,
+    "rate_Black": 12.94,
+    "rate_Mixed": 5.91,
+    "rate_Other": 7.05,
+    "rate_White": 3.4,
+    "black_white_ratio": 3.81
+  },
+  {
+    "region_clean": "South East",
+    "rate_Asian": 4.79,
+    "rate_Black": 16.3,
+    "rate_Mixed": 8.48,
+    "rate_Other": 8.9,
+    "rate_White": 4.49,
+    "black_white_ratio": 3.63
+  },
+  {
+    "region_clean": "London",
+    "rate_Asian": 7.09,
+    "rate_Black": 24.65,
+    "rate_Mixed": 10.91,
+    "rate_Other": 8.52,
+    "rate_White": 6.82,
+    "black_white_ratio": 3.62
+  },
+  {
+    "region_clean": "Wales",
+    "rate_Asian": 3.86,
+    "rate_Black": 13.61,
+    "rate_Mixed": 4.69,
+    "rate_Other": 5.21,
+    "rate_White": 3.95,
+    "black_white_ratio": 3.44
+  },
+  {
+    "region_clean": "Yorkshire and The Humber",
+    "rate_Asian": 11.88,
+    "rate_Black": 14.35,
+    "rate_Mixed": 11.1,
+    "rate_Other": 8.28,
+    "rate_White": 4.51,
+    "black_white_ratio": 3.18
+  },
+  {
+    "region_clean": "North West",
+    "rate_Asian": 17.56,
+    "rate_Black": 37.63,
+    "rate_Mixed": 18.06,
+    "rate_Other": 23.74,
+    "rate_White": 16.32,
+    "black_white_ratio": 2.31
+  },
+  {
+    "region_clean": "North East",
+    "rate_Asian": 8.34,
+    "rate_Black": 12.92,
+    "rate_Mixed": 7.58,
+    "rate_Other": 3.04,
+    "rate_White": 6.62,
+    "black_white_ratio": 1.95
+  }
+]

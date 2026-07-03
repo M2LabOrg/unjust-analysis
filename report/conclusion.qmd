@@ -1,0 +1,109 @@
+# **Conclusion**
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, results = 'hide')
+library(tidyverse)
+
+# Load pooled model diagnostics and IRR table from pipeline
+irr_table <- read.csv("../analysis/output/irr_table.csv")
+model_diagnostics <- read.csv("../analysis/output/model_diagnostics.csv")
+combined_effects <- read.csv("../analysis/output/combined_effects.csv")
+pseudoR2 <- round(filter(model_diagnostics, model == "pooled")$pseudo_r2 * 100, 1)
+
+# Combined effect: Black + Drugs (from pipeline)
+combined_black_drug <- round(filter(combined_effects, effect == "black_drug")$rate_ratio, 1)
+
+# Combined effect: Black + London + Drugs
+ethnicity_black_coef <- filter(irr_table, term == "ethnicityBlack")$estimate
+reason_drug_coef <- filter(irr_table, term == "reason_drugsDrugs")$estimate
+london_coef <- filter(irr_table, term == "region_cleanLondon")$estimate
+combined_black_london <- round(exp(log(filter(irr_table, term == "ethnicityBlack")$irr) +
+                                   log(filter(irr_table, term == "reason_drugsDrugs")$irr) +
+                                   log(filter(irr_table, term == "region_cleanLondon")$irr)), 1)
+
+# Load yearly IRR data
+yearly_irr <- read.csv("../analysis/output/yearly_irr.csv")
+black_irr_2020 <- round(filter(yearly_irr, financial_year == "2020/21", term == "ethnicityBlack")$irr, 1)
+black_irr_2024 <- round(filter(yearly_irr, financial_year == "2024/25", term == "ethnicityBlack")$irr, 1)
+
+# Load regional disparity data
+regional <- read.csv("../analysis/output/regional_disparity.csv")
+sw_bw_ratio <- round(filter(regional, region_clean == "South West")$black_white_ratio, 1)
+london_bw_ratio <- round(filter(regional, region_clean == "London")$black_white_ratio, 1)
+
+# Load outcomes data
+outcomes <- read.csv("../analysis/output/outcomes_by_ethnicity.csv")
+black_arrest_pct <- filter(outcomes, ethnicity == "Black", outcome == "Arrest")$pct
+white_arrest_pct <- filter(outcomes, ethnicity == "White", outcome == "Arrest")$pct
+black_nfa_pct <- round(filter(outcomes, ethnicity == "Black", outcome == "No Further Action")$pct, 0)
+
+# Load reason B/W ratios
+reason_ratios <- read.csv("../analysis/output/reason_bw_ratio.csv")
+drugs_bw <- round(filter(reason_ratios, reason == "Drugs")$black_white_ratio, 1)
+violence_bw <- round(filter(reason_ratios, reason == "Anticipation of Violence")$black_white_ratio, 1)
+weapons_bw <- round(filter(reason_ratios, reason == "Offensive Weapons")$black_white_ratio, 1)
+terrorism_bw <- round(filter(reason_ratios, reason == "Terrorism Act 2000 section 43")$black_white_ratio, 1)
+
+# Load reason detail for drone searches
+reason_detail <- read.csv("../analysis/output/reason_detail_by_ethnicity.csv")
+drone_black_rate <- filter(reason_detail, grepl("Drone", reason), ethnicity == "Black")$rate_per_1000
+drone_white_rate <- filter(reason_detail, grepl("Drone", reason), ethnicity == "White")$rate_per_1000
+drone_bw <- round(drone_black_rate / drone_white_rate, 1)
+
+# Load missing ethnicity data
+missing_forces <- read.csv("../analysis/output/missing_persistent_forces.csv")
+city_missing <- filter(missing_forces, grepl("City of", police_force))$mean_pct_missing
+notts_missing <- filter(missing_forces, police_force == "Nottinghamshire")$mean_pct_missing
+avon_missing <- filter(missing_forces, police_force == "Avon & Somerset")$mean_pct_missing
+gmp_missing <- filter(missing_forces, police_force == "Greater Manchester")$mean_pct_missing
+min_missing <- round(min(gmp_missing, avon_missing), 0)
+max_missing <- round(max(city_missing, notts_missing), 0)
+```
+
+This analysis, conducted for UNJUST, offers a comprehensive examination of stop-and-search practices in England and Wales, focusing on their disproportionate impact on Black communities and young people. By utilizing publicly available data and applying regression and random forest models, we identified significant disparities in stop-and-search practices based on ethnicity, age, and region. 
+
+
+## Key Findings
+
+The five-year analysis (2020/21–2024/25) produces six headline findings:
+
+- **Persistent and growing adjusted disparity**: After controlling for region, sex, age, and reason for search, Black individuals face an adjusted incidence rate ratio of **`r black_irr_2020`× in 2020/21, rising to `r black_irr_2024`× by 2024/25**, a statistically significant worsening despite an overall fall in search volumes nationwide.
+- **Intersection effects**: Black males under 25 stopped for drug-related reasons in London face a combined stop rate approximately **`r combined_black_london` times** the rate of a White individual stopped for non-drug reasons in the East Midlands, holding sex and age constant.
+- **Regional variation beyond London**: The South West has the highest Black/White unadjusted ratio (**`r sw_bw_ratio`×**), exceeding London (`r london_bw_ratio`×), demonstrating that ethnic disproportionality is a national problem rather than a metropolitan one.
+- **Outcome disparity**: Black individuals have one of the highest arrest rates following a search (`r sprintf("%.1f", black_arrest_pct)`%, tied with Mixed) versus `r white_arrest_pct`% for White individuals, yet similar No Further Action rates (~`r black_nfa_pct`%). This pattern is consistent with a lower suspicion threshold applied to Black individuals before initiating stops.
+- **Racial skew spans every search reason**: The Black/White rate gap is not confined to drug stops. The highest disparity is found in drone/unmanned aircraft searches (`r drone_bw`×) and anticipation of violence (`r violence_bw`×), followed by offensive weapons (`r weapons_bw`×) and terrorism searches (`r terrorism_bw`×). Drug stops show a ratio of `r drugs_bw`×. No major search reason approaches parity, indicating a systemic rather than enforcement-specific pattern (see @sec-reason-skew).
+- **Missing ethnicity data is concentrated in a subset of forces**: Twenty-one forces average above 25% missing self-defined ethnicity across the five years. City of London Police averages `r city_missing`% missing, Nottinghamshire `r notts_missing`%, and Avon & Somerset `r avon_missing`%. Because individuals are not required to disclose their ethnicity, the reasons for high missing rates cannot be determined from the data alone; the effect is that disparity estimates for these forces are based on incomplete records and should be interpreted with caution (see @sec-missing).
+
+These findings affirm UNJUST’s concerns about the disproportionate targeting of ethnic minorities and young people. The random forest model reinforced these results, explaining **`r pseudoR2`% of variance** in search volumes and identifying **sex**, **population size**, **region**, and **ethnicity** as the dominant predictors, and confirming non-linear interaction effects that compound disadvantage for specific demographic groups.
+
+The disparities identified in stop-and-search practices, particularly among ethnic minorities and younger populations, emphasize the need to re-evaluate current policies to prevent over-policing and promote fairness within the criminal justice system. These insights align with recommendations from researchers such as Vomfell and Stewart [-@Vomfell2021], who highlight the importance of addressing both over-patrolling of diverse areas and officer biases that disproportionately impact ethnic minorities. Together, these insights provide a robust foundation for advocating equitable policing practices.
+
+
+## **Evidence-Based Implications**
+
+The following observations arise directly from the statistical findings and are offered as evidence-based points for consideration. Questions about appropriate responses, including any policy or advocacy positions, are for UNJUST and relevant bodies to determine. The statistician's role is to present what the data shows and to note where the findings raise questions that may be worth pursuing further.
+
+1. **Adjusted Disparity Trends Are Not Reflected in Current Official Reporting**
+   Published statistics on stop and search focus primarily on raw counts and unadjusted rate ratios. This analysis shows that the adjusted Black/White disparity, after accounting for region, sex, age, and reason for search, rose from `r black_irr_2020`× to `r black_irr_2024`× over five years, during a period in which overall search volumes fell. A worsening trend that is not visible in headline figures may warrant consideration by those responsible for the design of official statistical reporting.
+
+2. **Ethnic Disproportionality Extends Beyond Metropolitan Areas**
+   The South West records the highest Black/White unadjusted rate ratio (`r sw_bw_ratio`×) of any region in England and Wales, substantially exceeding London (`r london_bw_ratio`×). This is consistent with a "visibility effect" in predominantly White regions, as discussed in the academic literature [@Vomfell2021]. Analyses and oversight that focus exclusively on metropolitan forces may not capture the full national picture.
+
+3. **The No Further Action Rate Raises Questions About Consistency of Suspicion Thresholds**
+   Approximately `r black_nfa_pct`% of all stops result in no further action across all ethnic groups. Combined with the higher stop rate for Black individuals and a modestly higher arrest rate (`r sprintf("%.1f", black_arrest_pct)`% vs `r white_arrest_pct`% for White individuals), this pattern is statistically consistent with a lower suspicion threshold being applied before initiating searches of Black individuals. The data identifies a pattern; the causes and appropriate responses are beyond the scope of this analysis.
+
+4. **Drug-Related Searches and the Intersection of Ethnicity, Age, and Sex**
+   The interaction analysis indicates that Black males under 25 stopped for drug-related reasons in London face a combined adjusted rate approximately `r combined_black_london` times higher than comparable White males. Given the high NFA rate for drug-related stops overall, the data raises questions about the consistency with which suspicion criteria are applied across demographic groups in this context.
+
+5. **Racial Disproportionality Is Not Explained by Search Reason**
+   One might expect drug enforcement, disproportionately targeted at Black individuals, to account for much of the overall disparity. The reason-by-reason analysis (see @sec-reason-skew) shows this is not the case. Disparity is highest in low-volume, non-drug categories such as anticipation of violence (`r violence_bw`×) and offensive weapons (`r weapons_bw`×). The gap in drug stops (`r drugs_bw`×) is in fact lower than for most other categories, suggesting that the hypothesis of drug-enforcement bias alone does not account for the overall pattern.
+
+6. **Missing Ethnicity Data Is Concentrated and Limits Force-Level Analysis**
+   The missing ethnicity analysis (see @sec-missing) identifies a group of forces, including City of London, Nottinghamshire, and Greater Manchester, that have maintained high missing rates (`r min_missing`–`r max_missing`%) consistently over the full five-year period. Self-defined ethnicity is voluntary under Home Office guidance, so high missing rates may reflect individuals declining to disclose, differences in recording practice, or system transitions; these cannot be separated from the data. The consequence is that disparity estimates for high-missingness forces are based on a partial record of their stops, and force-level comparisons should be treated with corresponding caution.
+
+7. **Census Denominator Lag Introduces Uncertainty in Rate Calculations**
+   All per-100,000 rates rely on 2021 Census denominators. By 2024/25, demographic changes, particularly population growth and redistribution in urban areas, will have accumulated over four years. The direction and scale of any resulting bias in disparity rates is unknown. Whether more timely population estimates could improve the accuracy of future analyses is a question the data highlights but cannot itself resolve.
+
+## **Closing Statement**
+
+This project equips UNJUST with valuable insights into the complexities of stop-and-search practices, emphasizing both their role in maintaining public safety and the disparities that warrant careful consideration. By shedding light on these nuances and identifying areas for improvement, UNJUST can contribute constructively to discussions with policymakers, law enforcement, and communities. These efforts aim to support ongoing progress toward a policing approach that balances public safety with fairness and equity.

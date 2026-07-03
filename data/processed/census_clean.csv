@@ -1,0 +1,51 @@
+region_clean,ethnicity,population,region_population
+South West,Asian,159183,5701177
+Wales,Black,27561,3107513
+North East,Mixed,33264,2647006
+Wales,Asian,89032,3107513
+North East,Black,26635,2647006
+Wales,Mixed,48602,3107513
+East Midlands,Other,61946,4880049
+East Midlands,White,4179766,4880049
+North East,Asian,98046,2647006
+South West,Black,69610,5701177
+South West,Mixed,114081,5701177
+East of England,Other,86232,6335075
+East of England,White,5478363,6335075
+East of England,Asian,405866,6335075
+Yorkshire and The Humber,Black,117649,5480783
+Yorkshire and The Humber,Mixed,117011,5480783
+London,White,4731172,8799736
+London,Other,556772,8799736
+South East,Asian,650549,9278064
+North West,Black,173922,7417407
+North West,Mixed,163254,7417407
+North East,Other,26341,2647006
+North East,White,2462720,2647006
+North West,White,6347383,7417407
+East Midlands,Asian,391111,4880049
+South East,Black,221579,9278064
+East Midlands,Mixed,117247,4880049
+North West,Other,110156,7417407
+North West,Asian,622692,7417407
+East Midlands,Black,129979,4880049
+South East,Mixed,260866,9278064
+South East,White,8009377,9278064
+South East,Other,135693,9278064
+Yorkshire and The Humber,Asian,487061,5480783
+East of England,Black,184956,6335075
+East of England,Mixed,179658,6335075
+South West,Other,48701,5701177
+South West,White,5309602,5701177
+Wales,Other,26466,3107513
+Wales,White,2915852,3107513
+West Midlands,Asian,794268,5950768
+West Midlands,Black,269023,5950768
+West Midlands,Mixed,178218,5950768
+West Midlands,White,4585030,5950768
+West Midlands,Other,124229,5950768
+Yorkshire and The Humber,White,4679966,5480783
+London,Asian,1817647,8799736
+London,Black,1188369,8799736
+London,Mixed,505776,8799736
+Yorkshire and The Humber,Other,79096,5480783

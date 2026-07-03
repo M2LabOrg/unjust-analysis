@@ -1,0 +1,156 @@
+# Methodology {#methodology}
+
+## Data Sources
+
+The analysis utilizes two primary data sources:
+
+1. **GOV.UK Stop and Search Open Data (2020/21–2024/25)**: This dataset provides comprehensive records of stop and search incidents across England and Wales, including variables such as ethnicity, age, sex, region, and reason for search. The five-year extract covers the financial years ending March 2021 through March 2025, comprising over 2.1 million records after cleaning. The data are released by the Home Office [@home_office_govuk_stop_2024] and include all searches conducted under Section 1 of the Police and Criminal Evidence Act (PACE) and Section 60 of the Criminal Justice and Public Order Act (CJPOA).
+
+2. **ONS Census 2021**: Used to obtain population denominators by ethnicity and region, serving as the offset in the rate models [@ons_2022]. We assume that the 2021 population counts remain a reasonable approximation across all five financial years, a limitation discussed in the Discussion chapter.
+
+The analysis is inspired by @Vomfell2021, who identified ethnic disparities in stop and search in the United Kingdom.
+
+The selected variables, their code names, and data types are: number of stop and search events (`number_of_searches`, continuous), year (`financial_year`, categorical with five levels), region name (`region`, categorical with ten levels), ethnicity group defined by the person stopped (`self_defined_ethnicity_group`, categorical), sex (`sex`, categorical), age group (`age_group`, categorical), reason for search (`reason_for_search`, categorical), and population from census data (`population`, continuous).
+
+Post-processing of the stop and search data includes: (1) verifying totals match published government figures [@govuk_police_2024]; (2) filtering to Section 1 (PACE) and Section 60 (CJPOA) only; (3) converting categorical variables to factors; (4) removing vehicle searches (`N/A - vehicle search`), "Unknown" age group, "Not Stated" ethnicity, "Unknown" sex, and region `0` (British Transport Police, excluded because the 2021 Census provides no BTP-specific denominator); (5) converting `age_group` to a binary variable where `1` = under 25 and `0` = 25 or above; and (6) converting `reason_for_search` to a binary variable where `1` = Drugs and `0` = otherwise.
+
+
+## Data Cleaning Steps
+
+- **Removal of Incomplete Cases**: Excluded entries with missing or irrelevant data (e.g., vehicle searches).
+- **Categorization**: Transformed continuous variables into categorical factors where appropriate.
+- **Legislative Filtering**: Ensured that all stop and search incidents analyzed were conducted under Section 1 (PACE) or Section 60 (CJPOA).
+
+
+## Data Processing and Filtering {#sec-data-processing}
+
+The following steps describe how the raw data were processed and filtered prior to analysis. All operations are implemented in `01_load_and_clean.R` and are fully reproducible from the raw files.
+
+### Stop and Search Data
+
+The raw dataset is the Home Office stop and search open data tables (March 2021 to March 2025 release), distributed as a single ODS file covering five financial years (2020/21–2024/25). Processing proceeded as follows:
+
+1. **Vehicle searches removed.** Rows where `self_defined_ethnicity_group` equals "N/A - vehicle search" were excluded because these records lack person-level demographics.
+
+2. **British Transport Police removed.** Records coded as region `0` (British Transport Police) were excluded because the 2021 Census provides no BTP-specific population denominator, making rate calculations impossible.
+
+3. **Ethnicity harmonisation.** The five Home Office ethnicity groups (Asian or Asian British, Black or Black British, Mixed, Other Ethnic Group, White) were retained and mapped to short labels (Asian, Black, Mixed, Other, White). Records where `self_defined_ethnicity_group` is "Not Stated" were set to `NA` and excluded from disparity calculations but retained for total-count comparisons and missing-data analyses.
+
+4. **Age binarisation.** The original age groups (Under 10, 10–17, 18–24, 25–29, 30 or over) were collapsed into a binary variable: `age_under25 = TRUE` for Under 10, 10–17, and 18–24; `FALSE` for 25–29 and 30 or over. Records with "Unknown" age were set to `NA`.
+
+5. **Reason binarisation.** `reason_for_search` was converted to a binary indicator: `reason_drugs = TRUE` if the reason is "Drugs", `FALSE` otherwise. The original reason variable was retained for the reason-by-reason analyses in @sec-reason-skew.
+
+6. **Region name standardisation.** Two region names were recoded to match the ONS Census geography: "Eastern" → "East of England"; "Yorkshire and the Humber" → "Yorkshire and The Humber".
+
+7. **Sex filtering.** Records with sex recorded as "Unknown" were excluded. Only "Male" and "Female" were retained.
+
+8. **Legislative scope.** The raw data include searches under Section 1 (PACE) and Section 60 (CJPOA) only, as released by the Home Office. No additional legislative filtering was required.
+
+### Census Data
+
+Population denominators were drawn from the ONS 2021 Census table on population by ethnicity and region [@ons_2022]. Processing steps:
+
+1. **Ethnicity type filtered.** Only rows with `ethnicity_type = "ONS 2021 5+1"` (the five main groups plus Other) were retained.
+2. **National aggregate excluded.** The "All - England And Wales" geography row was removed; only regional totals were kept.
+3. **Five ethnic groups retained.** Asian, Black, White, Mixed, and Other, matching the stop and search categories.
+
+### Merging and Aggregation
+
+Stop and search records were aggregated by financial year, region, and ethnicity (after excluding rows with missing ethnicity), then joined to the census population by region and ethnicity. This produced a merged dataset of stratified counts with population denominators, from which per-1,000 rates and model offsets were calculated.
+
+For the Poisson regression models, the data were further stratified by sex, age group (binary), and reason for search (binary), producing the full factorial modelling dataset.
+
+### Additional Filtering in Derived Analyses
+
+- **Reason-by-reason disparity** (@sec-reason-skew): Black/White rate ratios were computed per search reason. Reasons with fewer than 1,000 total searches across all years and ethnicities were excluded as unreliable.
+- **Missing ethnicity analysis** (@sec-missing): Force-level missingness was computed from the full dataset (including `NA` ethnicity records). Only forces with data in at least three of the five years were included in the persistent-missingness ranking.
+- **NFA and outcome analysis**: Computed from all records with non-missing ethnicity, without further exclusions.
+
+### Reproducibility
+
+All scripts are available in the project repository (`analysis/01_load_and_clean.R` through `analysis/06_export_for_dashboard.R`). Raw data can be downloaded via `data/download_data.sh`, which retrieves the Home Office ODS file and ONS census CSV from their published URLs. Running the scripts in numerical order from the repository root will reproduce all processed datasets and analysis outputs.
+
+
+## The Pooled Model {#sec-pooled-model}
+
+We model total searches as the dependent variable ($Y$) with region, ethnic group, sex, age group, and reason for search as independent variables. Because the raw count data exhibited severe overdispersion (estimated dispersion parameter $\hat{\phi} = 181.8$; see @sec-quasipoisson), we use a **Quasi-Poisson generalised linear model** with a log link and the stratified census population as an offset.
+
+Let $Y$ be the number of searches observed for population stratum $N$. The mean is $\mu = N \exp(\mathbf{X}^T \beta)$, with linear predictor $\eta = \mathbf{X}^T \beta + \log N$. For the $i$-th stratum:
+
+$$\mu_i = n_i \exp\!\bigl(x_i^T \beta\bigr) = \exp\!\bigl(x_i^T \beta + \log n_i\bigr) \tag{1}$$
+
+using the notation in @dav09. Expanding the linear predictor over the five-year period:
+
+```{=tex}
+\begin{align*}
+\log(\mu_i) &= \log(pop_i) + \beta_0 + \sum_{h=2}^{5} \beta_{1h} I(\text{year}_{ih}) + \sum_{l=1}^{L} \beta_{3l} I(\text{region}_{il}) + \sum_{j=1}^{J} \beta_{4j} I(\text{ethnic}_{ij}) \\
+&\quad + \beta_5 I(\text{sex}_{i,\text{Male}}) + \beta_7 I(\text{age}_{i,<25}) + \beta_8 I(\text{drugs}_{i1}) \tag{2}
+\end{align*}
+```
+
+where $I(\cdot)$ is an indicator variable. Reference levels are: financial year **2020/21**, region **East Midlands**, ethnicity **White**, sex **Female**, age group **25 and above**, and reason **non-drug-related**.
+
+Variable descriptions:
+
+- $pop_i$: census population count for stratum $i$ [@ons_2022]
+- $I(\text{year}_{ih})$ (`financial_year`): five levels: 2020/21, 2021/22, 2022/23, 2023/24, 2024/25
+- $I(\text{region}_{il})$ (`region`): ten regions in England and Wales (East Midlands as reference)
+- $I(\text{ethnic}_{ij})$ (`self_defined_ethnicity_group`): five groups: Asian or Asian British, Black or Black British, Mixed, Other Ethnic Group, White (reference)
+- $I(\text{sex}_{i,\text{Male}})$ (`sex`): Male vs Female (reference)
+- $I(\text{age}_{i,<25})$ (`age_group`): binary: 1 if under 25, 0 otherwise
+- $I(\text{drugs}_{i1})$ (`reason_for_search`): binary: 1 if drug-related, 0 otherwise
+
+
+## Quasi-Poisson: Justification {#sec-quasipoisson}
+
+A standard Poisson model assumes that the mean equals the variance ($\text{Var}(Y) = \mu$). In practice, count data on policing activity routinely exhibit **overdispersion**, variance substantially exceeding the mean, due to unmodelled heterogeneity across police forces, local crime environments, and seasonal patterns.
+
+Fitting the pooled model with a standard Poisson family yields a residual deviance of 342,749 on 1,950 degrees of freedom, producing an estimated dispersion parameter of:
+
+$$\hat{\phi} = \frac{\text{Residual deviance}}{\text{df}} = \frac{342{,}749}{1{,}950} \approx 181.8$$
+
+This is far greater than 1, confirming severe overdispersion. A Quasi-Poisson model retains the same coefficient estimates as Poisson but scales all standard errors by $\sqrt{\hat{\phi}}$, producing correct (wider) confidence intervals and conservative inference. Using a Poisson family without this correction would dramatically understate uncertainty and inflate the apparent precision of the IRR estimates.
+
+Note that Quasi-Poisson models do not yield a finite AIC; model adequacy is instead assessed via the pseudo-R² [@cohen88] and residual deviance diagnostics.
+
+
+## Per-Year IRR Models {#sec-peryear}
+
+To examine whether the adjusted disparity in stop and search rates has changed over time (Research Question 3), we fit five separate Quasi-Poisson models, one per financial year, each using the same specification as the pooled model but without the `financial_year` term. This yields year-specific incidence rate ratios (IRRs) and 95% confidence intervals for each ethnic group relative to White individuals. The per-year Black IRRs are presented in the Results chapter (@sec-trend).
+
+
+## Random Forest Model as a Complementary Analysis
+
+### Rationale for Using Random Forest in Addition to the Main Model
+
+The main model for this analysis employs a regression approach to examine the impact of various demographic and contextual factors on stop-and-search practices. While regression models are powerful for estimating specific associations and providing clear interpretations through coefficients, they have some limitations. Specifically, regression models assume linearity and often require predefined interactions between predictors to fully capture complex relationships within the data. In contrast, random forests are a non-parametric machine learning approach that can automatically capture both non-linear relationships and interactions among variables without needing explicit specification. This capability makes random forests an ideal complementary tool for exploring complex, multi-dimensional patterns within stop-and-search data.
+
+Using random forests in addition to the main model serves several key purposes:
+
+- **Validation and Robustness**: The random forest model validates findings from the regression model by identifying the most influential predictors of stop-and-search activity without assuming specific linear relationships. If similar predictors emerge as significant in both models, this strengthens the evidence for their role in influencing stop-and-search practices.
+- **Non-linear and Interaction Effects**: Random forests are effective at capturing non-linear relationships and variable interactions, allowing for deeper insights into how combinations of factors (e.g., ethnicity and region) may contribute to disparities in stop-and-search practices. This is particularly relevant for understanding complex social phenomena where the effects of variables are unlikely to be purely linear or independent.
+- **Variable Importance**: Unlike regression coefficients, which quantify the effect of each predictor, random forests provide variable importance scores. These scores allow us to rank predictors by their influence on the outcome (total stop-and-search counts), offering an alternative perspective on which factors most drive stop-and-search activity.
+
+By using random forests alongside the main regression model, we obtain a comprehensive view of stop-and-search patterns, combining the interpretability of regression with the flexibility and interaction-capturing ability of random forests.
+
+### Overview of the Random Forest Model
+
+The random forest model applied in this study is designed to predict **total stop-and-search counts** using demographic, geographic, and contextual variables. Random forests operate by constructing an ensemble of decision trees, each built from a bootstrap sample of the original data. Each tree independently predicts the outcome, and the final prediction for each observation is obtained by aggregating the predictions across all trees (for regression, this is typically the mean prediction). Key steps and features of the random forest model are as follows:
+
+1. **Bootstrap Sampling and Tree Construction**:
+   - For each decision tree in the forest, a random sample (with replacement) is drawn from the dataset, which is known as bootstrap sampling. This approach introduces variation among the trees, enhancing the model's robustness and reducing overfitting to any one sample.
+   - At each node of a tree, a random subset of predictors is selected as candidate variables for splitting. This process, known as **feature bagging**, ensures that each tree explores different predictor combinations, further improving the model's generalization to new data.
+
+2. **Split Criteria and Aggregation**:
+   - The model uses **mean squared error (MSE)** as the criterion for creating splits in each tree, which minimizes the variance within each split group. This criterion is effective for identifying variable thresholds associated with differences in stop-and-search counts.
+   - Once all trees are built, the model aggregates predictions from each tree to produce a single, overall prediction for each observation. This aggregation (averaging) process improves accuracy and stability, as it reduces the likelihood of overfitting that may occur in individual decision trees.
+
+3. **Variable Importance Measures**:
+   - The random forest model provides **variable importance** scores, specifically % Increase in Mean Squared Error (%IncMSE), which indicates the decrease in prediction accuracy when a variable is removed. Higher %IncMSE values suggest that the variable is crucial for accurate prediction, while lower or negative values indicate limited or no contribution to the model's predictive ability.
+   - These importance scores allow us to rank the predictors, offering insights into which factors most strongly influence stop-and-search counts. The importance measures are central to our objectives, as they reveal key drivers of disparities and patterns in stop-and-search practices across different groups.
+
+### Interpretation of Random Forest Output
+
+In the results, we focus on the variable importance scores to identify the most influential factors contributing to stop-and-search activity. This approach allows us to highlight demographic, regional, and contextual factors that may not show straightforward relationships but still play a significant role in total search volume. The random forest findings are interpreted in conjunction with the main regression model results to provide a comprehensive analysis of stop-and-search practices, validating key factors and uncovering complex relationships that inform policy recommendations.
+
+By incorporating the random forest model into the analysis, we achieve a richer, multi-faceted understanding of stop-and-search dynamics, capturing both straightforward and complex patterns that contribute to observed disparities. This dual-model approach thus enhances the robustness and depth of the study's findings, aligning with the project's objective of identifying and addressing factors contributing to inequality in policing practices.

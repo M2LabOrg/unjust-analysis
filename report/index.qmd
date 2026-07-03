@@ -1,0 +1,70 @@
+---
+title: "Statistical Analysis of UK Stop and Search"
+author: "Michel Mesquita, Ph.D., CStat"
+date: last-modified
+date-format: "YYYY-MM-DD"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, results = "hide")
+library(tidyverse)
+
+# Load pipeline outputs for inline references
+irr_table   <- read.csv("../analysis/output/irr_table.csv")
+yearly_irr  <- read.csv("../analysis/output/yearly_irr.csv")
+combined_fx <- read.csv("../analysis/output/combined_effects.csv")
+regional    <- read.csv("../analysis/output/regional_disparity.csv")
+outcomes    <- read.csv("../analysis/output/outcomes_by_ethnicity.csv")
+disparity   <- read.csv("../analysis/output/disparity_trend.csv")
+
+# Raw headline ratio (latest year, Black/White unadjusted)
+latest_year    <- max(disparity$financial_year)
+headline_ratio <- round(filter(disparity, financial_year == latest_year, ethnicity == "Black")$ratio_vs_white, 1)
+
+# Adjusted IRRs (per-year models)
+black_irr_2020 <- round(filter(yearly_irr, financial_year == "2020/21", term == "ethnicityBlack")$irr, 1)
+black_irr_2024 <- round(filter(yearly_irr, financial_year == "2024/25", term == "ethnicityBlack")$irr, 1)
+
+# Interaction: Black × Drugs × London (relative to reference cell, holding sex & age constant)
+black_irr_val  <- filter(irr_table, term == "ethnicityBlack")$irr
+drugs_irr_val  <- filter(irr_table, term == "reason_drugsDrugs")$irr
+london_irr_val <- filter(irr_table, term == "region_cleanLondon")$irr
+combined_black_london <- round(black_irr_val * drugs_irr_val * london_irr_val, 1)
+
+# Regional
+sw_bw   <- round(filter(regional, region_clean == "South West")$black_white_ratio, 1)
+lon_bw  <- round(filter(regional, region_clean == "London")$black_white_ratio, 1)
+
+# Outcomes
+black_arrest <- round(filter(outcomes, ethnicity == "Black", outcome == "Arrest")$pct, 1)
+white_arrest <- round(filter(outcomes, ethnicity == "White", outcome == "Arrest")$pct, 1)
+arrest_gap   <- round(black_arrest - white_arrest, 1)
+black_nfa    <- round(filter(outcomes, ethnicity == "Black", outcome == "No Further Action")$pct, 0)
+```
+
+This report presents the final findings of the **UNJUST** project, which examines the impact of police stop and search powers on Black communities in England and Wales. Conducted as part of the **Statisticians for Society** programme, the project delivers a comprehensive analysis supported by literature reviews, statistical modelling, and data evaluation. All methodologies and findings are documented and accessible through the GitHub repository accompanying this report [@mesquita_github_2023].
+
+## Research Questions
+
+The analysis addresses four research questions identified by **UNJUST**:
+
+1. **Disproportionate Targeting**: Do Black individuals in metropolitan areas experience higher rates of drug-related stop and searches compared to other ethnic groups?
+2. **Youth Impact**: How do stop and search rates vary for young individuals (under 25 years old) in drug-related cases?
+3. **Trend over Time**: Has the adjusted disparity in stop and search rates changed over the five-year period 2020/21–2024/25?
+4. **Outcome Disparity**: Do post-search outcomes differ by ethnicity, suggesting differential thresholds for suspicion?
+
+## Scope and Data
+
+This report covers five complete financial years, 2020/21 through 2024/25, using the GOV.UK Stop and Search Open Data (2.1 million+ records) merged with ONS Census 2021 population denominators.
+
+## Key Findings
+
+- **Raw national disparity**: In `r latest_year`, Black individuals were stopped at **`r headline_ratio` times** the rate of White individuals, the headline figure shown on the accompanying dashboard. This is the unadjusted rate ratio (rounded to 1 d.p.), calculated directly from search counts divided by 2021 Census population denominators, with no covariates controlled.
+- **Persistent and growing adjusted disparity**: After controlling for region, sex, age, and reason for search, the adjusted incidence rate ratio (IRR) rises from **`r black_irr_2020`× in 2020/21 to `r black_irr_2024`× by 2024/25**, a statistically significant worsening. The adjusted figure is lower than the raw `r headline_ratio`× because the model accounts for differences in regional composition and search type across ethnic groups; the gap between the two measures reflects those compositional differences, not measurement error.
+- **Interaction effects**: The compounding of ethnicity, search reason, and geography means that a Black individual stopped for drug-related reasons in London is searched at approximately **`r combined_black_london` times** the rate of a White individual stopped for non-drug reasons in the East Midlands, holding sex and age constant.
+- **Regional anomaly**: The South West has the highest Black/White disparity ratio (`r sw_bw`×), exceeding London (`r lon_bw`× pooled across all five years), suggesting nationally uneven patterns of disproportionality.
+- **Outcome disparity**: Black individuals have one of the highest arrest rates across all ethnic groups (`r black_arrest`%, tied with Mixed), `r arrest_gap` percentage points above White individuals (`r white_arrest`%), yet similar No Further Action rates (~`r black_nfa`%), raising questions about differential suspicion thresholds.
+- **Disparity cuts across all search reasons**: The racial gap is not confined to drug stops. Every major reason for search, from weapons to articles for use in crime, shows a Black/White rate ratio substantially above parity, indicating a systemic rather than enforcement-specific pattern (see @sec-reason-skew).
+- **Missing ethnicity data is concentrated in a subset of forces**: Self-defined ethnicity is voluntary: individuals are not required to state it during a stop, and around 1 in 10 records nationally has no ethnicity recorded. The rate varies substantially across forces, which limits the comparability of force-level disparity estimates (see @sec-missing).
+
+These findings are intended to inform policy reform discussions and contribute to broader conversations on fairness and equity in law enforcement. An interactive dashboard accompanying this report is available at [unjust.netlify.app](https://unjust.netlify.app).

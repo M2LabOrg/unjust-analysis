@@ -1,0 +1,15 @@
+[build]
+  command = "cd dashboard && npm ci && npm run build && cp -r ../report/_book/. dist/report/"
+  publish = "dashboard/dist"
+
+# Serve the report subfolder as static files
+[[redirects]]
+  from = "/report/*"
+  to = "/report/:splat"
+  status = 200
+
+# SPA fallback for the React dashboard
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

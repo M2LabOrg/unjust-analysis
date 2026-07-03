@@ -1,0 +1,4 @@
+effect,description,rate_ratio
+black_male_drug,Black male drug stop vs White female 25+ non-drug,42.91
+black_male_u25_drug,Black male under-25 drug stop vs White female 25+ non-drug,44.01
+black_drug,Black drug stop vs White non-drug (sex/age at reference),5.36

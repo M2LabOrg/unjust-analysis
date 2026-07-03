@@ -1,0 +1,167 @@
+# =============================================================================
+# UNJUST — Reproducibility Pipeline
+#
+# Verifies that the full analysis runs end-to-end from raw data download
+# through R analysis, QA checks, and Quarto report rendering (HTML + PDF).
+#
+# Triggers: push to main, weekly schedule, and manual dispatch.
+# =============================================================================
+name: Reproducibility
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'analysis/**'
+      - 'qa/**'
+      - 'report/**'
+      - 'data/download_data.sh'
+      - 'Makefile'
+      - '.github/workflows/reproduce.yml'
+  schedule:
+    # Weekly on Mondays at 06:00 UTC — catches upstream data URL changes
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+concurrency:
+  group: reproduce-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  reproduce:
+    name: Full pipeline (R ${{ matrix.r-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        r-version: ['4.4']
+
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      R_KEEP_PKG_SOURCE: yes
+
+    steps:
+      # ── Checkout ──────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── System dependencies ───────────────────────────────────────────────
+      - name: Install system libraries
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            libcurl4-openssl-dev \
+            libssl-dev \
+            libxml2-dev \
+            libfontconfig1-dev \
+            libfreetype6-dev \
+            libharfbuzz-dev \
+            libfribidi-dev \
+            libpng-dev \
+            libtiff5-dev \
+            libjpeg-dev \
+            libgdal-dev \
+            libgeos-dev \
+            libproj-dev \
+            libudunits2-dev
+
+      # ── R setup ───────────────────────────────────────────────────────────
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: ${{ matrix.r-version }}
+          use-public-rspm: true
+
+      - name: Install R packages
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::tidyverse
+            any::readODS
+            any::janitor
+            any::randomForest
+            any::jsonlite
+            any::httr
+            any::knitr
+            any::kableExtra
+            any::scales
+            any::maps
+            any::ggplot2
+            any::sf
+            any::gt
+            any::lme4
+            any::broom
+            any::rmarkdown
+
+      # ── Quarto setup ──────────────────────────────────────────────────────
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Install TinyTeX (for PDF)
+        run: quarto install tinytex
+
+      # ── Data download ─────────────────────────────────────────────────────
+      - name: Download raw data
+        run: bash data/download_data.sh
+
+      - name: Verify raw data files exist
+        run: |
+          test -f data/raw/stop-search-open-data-tables-mar21-mar25.ods \
+            || { echo "::error::Raw ODS file not downloaded"; exit 1; }
+
+      # ── Analysis pipeline ─────────────────────────────────────────────────
+      - name: 01 — Load and clean
+        run: Rscript analysis/01_load_and_clean.R
+
+      - name: 02 — Exploratory data analysis
+        run: Rscript analysis/02_eda.R
+
+      - name: 03 — Poisson regression
+        run: Rscript analysis/03_model_poisson.R
+
+      - name: 04 — Random forest
+        run: Rscript analysis/04_model_rf.R
+
+      - name: 05 — New insights
+        run: Rscript analysis/05_new_insights.R
+
+      - name: 06 — Export for dashboard
+        run: Rscript analysis/06_export_for_dashboard.R
+
+      # ── QA checks ─────────────────────────────────────────────────────────
+      - name: QA — Check totals
+        run: Rscript qa/check_totals.R
+
+      - name: QA — Check rates
+        run: Rscript qa/check_rates.R
+
+      - name: QA — Check consistency
+        run: Rscript qa/check_consistency.R
+
+      # ── Quarto report (HTML + PDF) ────────────────────────────────────────
+      - name: Render Quarto report
+        run: |
+          cd report
+          quarto render
+
+      - name: Verify report outputs
+        run: |
+          test -f report/_book/index.html \
+            || { echo "::error::HTML report not generated"; exit 1; }
+          # PDF may be named after the book title
+          ls report/_book/*.pdf 2>/dev/null \
+            || { echo "::error::PDF report not generated"; exit 1; }
+
+      # ── Upload artifacts ──────────────────────────────────────────────────
+      - name: Upload report (HTML + PDF)
+        uses: actions/upload-artifact@v4
+        with:
+          name: unjust-report
+          path: report/_book/
+          retention-days: 30
+
+      - name: Upload analysis outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: unjust-analysis-outputs
+          path: analysis/output/
+          retention-days: 30

@@ -1,0 +1,61 @@
+ethnicity,outcome,n,total,pct
+Asian,Arrest,31660,255536,12.4
+Asian,Caution,728,255536,0.3
+Asian,Community Resolution,24368,255536,9.5
+Asian,Guardian Intervention,9,255536,0
+Asian,Khat or Cannabis Warning,2460,255536,1
+Asian,No Further Action,176086,255536,68.9
+Asian,Other Action,1505,255536,0.6
+Asian,Penalty Notice for Disorder,6548,255536,2.6
+Asian,Seizure of Property,3001,255536,1.2
+Asian,Summons,4415,255536,1.7
+Asian,Verbal Warning or Words of Advice,3969,255536,1.6
+Asian,Voluntary Attendance,787,255536,0.3
+Black,Arrest,50930,318763,16
+Black,Caution,472,318763,0.1
+Black,Community Resolution,27674,318763,8.7
+Black,Guardian Intervention,23,318763,0
+Black,Khat or Cannabis Warning,1713,318763,0.5
+Black,No Further Action,219682,318763,68.9
+Black,Other Action,1115,318763,0.3
+Black,Penalty Notice for Disorder,7753,318763,2.4
+Black,Seizure of Property,1838,318763,0.6
+Black,Summons,4792,318763,1.5
+Black,Verbal Warning or Words of Advice,1633,318763,0.5
+Black,Voluntary Attendance,1138,318763,0.4
+Mixed,Arrest,13847,86428,16
+Mixed,Caution,249,86428,0.3
+Mixed,Community Resolution,9123,86428,10.6
+Mixed,Guardian Intervention,9,86428,0
+Mixed,Khat or Cannabis Warning,883,86428,1
+Mixed,No Further Action,56231,86428,65.1
+Mixed,Other Action,699,86428,0.8
+Mixed,Penalty Notice for Disorder,1374,86428,1.6
+Mixed,Seizure of Property,940,86428,1.1
+Mixed,Summons,1289,86428,1.5
+Mixed,Verbal Warning or Words of Advice,1065,86428,1.2
+Mixed,Voluntary Attendance,719,86428,0.8
+Other,Arrest,7517,49407,15.2
+Other,Caution,96,49407,0.2
+Other,Community Resolution,4755,49407,9.6
+Other,Guardian Intervention,3,49407,0
+Other,Khat or Cannabis Warning,259,49407,0.5
+Other,No Further Action,33927,49407,68.7
+Other,Other Action,345,49407,0.7
+Other,Penalty Notice for Disorder,926,49407,1.9
+Other,Seizure of Property,147,49407,0.3
+Other,Summons,747,49407,1.5
+Other,Verbal Warning or Words of Advice,366,49407,0.7
+Other,Voluntary Attendance,319,49407,0.6
+White,Arrest,195713,1470438,13.3
+White,Caution,5929,1470438,0.4
+White,Community Resolution,115918,1470438,7.9
+White,Guardian Intervention,240,1470438,0
+White,Khat or Cannabis Warning,18600,1470438,1.3
+White,No Further Action,1023508,1470438,69.6
+White,Other Action,18923,1470438,1.3
+White,Penalty Notice for Disorder,11774,1470438,0.8
+White,Seizure of Property,8636,1470438,0.6
+White,Summons,25254,1470438,1.7
+White,Verbal Warning or Words of Advice,26506,1470438,1.8
+White,Voluntary Attendance,19437,1470438,1.3

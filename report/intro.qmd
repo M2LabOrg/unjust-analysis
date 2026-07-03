@@ -1,0 +1,18 @@
+# Introduction {#introduction}
+
+Stop and search is a key aspect of policing in the United Kingdom, involving efforts to identify and prevent criminal activity. Previous studies indicate that ethnic minorities, particularly Black individuals, are subject to stop and search procedures at higher rates compared to other groups [@Vomfell2021; @EHRC2010; @CSJ2020; @CRED2021; @IER2023; @HomeOffice2023]. The UNJUST project, initiated under the Statisticians for Society program [@rss_statisticians_2024], aims to provide a detailed, data-driven examination of these patterns to enhance understanding and inform policy discussions.
+
+The project addresses four research questions identified by UNJUST:
+
+1. **Disproportionate Targeting**: Do Black individuals in metropolitan areas experience higher rates of drug-related stop and searches compared to other ethnic groups?
+2. **Youth Impact**: How do stop and search rates vary for young individuals (under 25 years old) in drug-related cases?
+3. **Trend over Time**: Has the adjusted disparity in stop and search rates changed over the five-year period 2020/21–2024/25?
+4. **Outcome Disparity**: Do post-search outcomes differ by ethnicity, suggesting differential thresholds for suspicion?
+
+These questions align with broader concerns about systemic inequalities within policing practices and their potential impact on community trust and social justice.
+
+To address these questions, the UNJUST project employs comprehensive data analysis and statistical modelling, utilising techniques that offer insights into the distribution of stop and search incidents across different ethnic groups. This report builds on the foundational work of researchers such as @Vomfell2021, whose studies highlight the combined impact of officer discretion and the increased patrolling of ethnic minority areas. By analysing stop and search data from five complete financial years, 2020/21 to 2024/25, covering over 2.1 million records, the project provides an updated perspective on the prevalence of these disparities and, crucially, whether they are improving or worsening over time.
+
+One notable development in this area is the increasing use of artificial intelligence (AI) to support police operations. AI-driven tools, such as Live Facial Recognition (LFR), have been trialled by the Metropolitan Police in London to enhance stop and search methods. This technology enables real-time identification of individuals on police watchlists by scanning and recognising faces from distances of 10 to 20 metres. The system compares faces against databases containing thousands of known individuals, and when a match is detected, officers are alerted to potentially stop the individual for further questioning. According to recent reports, AI has the potential to improve the efficiency and objectivity of stop and search practices, contributing to more data-driven policing methods [@Sylvester2024]. While the UNJUST project does not incorporate AI-based stop and search data in its current analysis, understanding the role of emerging technologies is crucial for future efforts aimed at reducing disparities and enhancing the fairness of policing practices.
+
+The findings presented in this report offer a rigorous, evidence-based analysis of the current state of stop and search practices, with a particular focus on racial disparities. By examining these issues through the lens of statistical rigour, the UNJUST project aims to contribute valuable insights to ongoing discussions about justice, equality, and effective law enforcement.
