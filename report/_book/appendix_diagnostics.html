@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Statistical Analysis of Stop and Search Practices on Black Communities in the UK - 2&nbsp; Introduction</title>
+<title>Statistical Analysis of Stop and Search Practices on Black Communities in the UK - Appendix A — Appendix A: Model Diagnostics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,8 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./literature.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./appendix_sensitivity.html" rel="next">
+<link href="./references.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -87,7 +68,38 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -100,7 +112,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./appendix_diagnostics.html">Appendices</a></li><li class="breadcrumb-item"><a href="./appendix_diagnostics.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix A: Model Diagnostics</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -136,7 +148,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
@@ -187,7 +199,7 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix_diagnostics.html" class="sidebar-item-text sidebar-link">
+  <a href="./appendix_diagnostics.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix A: Model Diagnostics</span></span></a>
   </div>
 </li>
@@ -211,14 +223,24 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#a.1-pearson-residuals-vs-fitted-values" id="toc-a.1-pearson-residuals-vs-fitted-values" class="nav-link active" data-scroll-target="#a.1-pearson-residuals-vs-fitted-values"><span class="header-section-number">A.1</span> A.1 Pearson Residuals vs Fitted Values</a></li>
+  <li><a href="#a.2-normal-q-q-plot-of-pearson-residuals" id="toc-a.2-normal-q-q-plot-of-pearson-residuals" class="nav-link" data-scroll-target="#a.2-normal-q-q-plot-of-pearson-residuals"><span class="header-section-number">A.2</span> A.2 Normal Q-Q Plot of Pearson Residuals</a></li>
+  <li><a href="#a.3-cooks-distance" id="toc-a.3-cooks-distance" class="nav-link" data-scroll-target="#a.3-cooks-distance"><span class="header-section-number">A.3</span> A.3 Cook’s Distance</a></li>
+  <li><a href="#a.4-observed-vs-expected-counts" id="toc-a.4-observed-vs-expected-counts" class="nav-link" data-scroll-target="#a.4-observed-vs-expected-counts"><span class="header-section-number">A.4</span> A.4 Observed vs Expected Counts</a></li>
+  <li><a href="#a.5-summary-of-diagnostic-statistics" id="toc-a.5-summary-of-diagnostic-statistics" class="nav-link" data-scroll-target="#a.5-summary-of-diagnostic-statistics"><span class="header-section-number">A.5</span> A.5 Summary of Diagnostic Statistics</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./appendix_diagnostics.html">Appendices</a></li><li class="breadcrumb-item"><a href="./appendix_diagnostics.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix A: Model Diagnostics</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="introduction" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></h1>
+<h1 class="title"><span id="sec-appendix-diagnostics" class="quarto-section-identifier">Appendix A — Appendix A: Model Diagnostics</span></h1>
 </div>
 
 
@@ -235,46 +257,155 @@ div.csl-indent {
 </header>
 
 
-<p>Stop and search is a key aspect of policing in the United Kingdom, involving efforts to identify and prevent criminal activity. Previous studies indicate that ethnic minorities, particularly Black individuals, are subject to stop and search procedures at higher rates compared to other groups <span class="citation" data-cites="Vomfell2021 EHRC2010 CSJ2020 CRED2021 IER2023 HomeOffice2023">(<a href="references.html#ref-HomeOffice2023" role="doc-biblioref">Home Office (GOV.UK), 2023</a>; <a href="references.html#ref-IER2023" role="doc-biblioref">IER UK, 2023</a>; <a href="references.html#ref-CRED2021" role="doc-biblioref">Commission on Race and Ethnic Disparities, 2021</a>; <a href="references.html#ref-Vomfell2021" role="doc-biblioref">Vomfell and Stewart, 2021</a>; <a href="references.html#ref-CSJ2020" role="doc-biblioref">Social Justice, 2020</a>; <a href="references.html#ref-EHRC2010" role="doc-biblioref">Equality and Commission, 2010</a>)</span>. The UNJUST project, initiated under the Statisticians for Society program <span class="citation" data-cites="rss_statisticians_2024">(<a href="references.html#ref-rss_statisticians_2024" role="doc-biblioref">Royal Statistical Society (RSS), 2023</a>)</span>, aims to provide a detailed, data-driven examination of these patterns to enhance understanding and inform policy discussions.</p>
-<p>The project addresses four research questions identified by UNJUST:</p>
-<ol type="1">
-<li><strong>Disproportionate Targeting</strong>: Do Black individuals in metropolitan areas experience higher rates of drug-related stop and searches compared to other ethnic groups?</li>
-<li><strong>Youth Impact</strong>: How do stop and search rates vary for young individuals (under 25 years old) in drug-related cases?</li>
-<li><strong>Trend over Time</strong>: Has the adjusted disparity in stop and search rates changed over the five-year period 2020/21–2024/25?</li>
-<li><strong>Outcome Disparity</strong>: Do post-search outcomes differ by ethnicity, suggesting differential thresholds for suspicion?</li>
-</ol>
-<p>These questions align with broader concerns about systemic inequalities within policing practices and their potential impact on community trust and social justice.</p>
-<p>To address these questions, the UNJUST project employs comprehensive data analysis and statistical modelling, utilising techniques that offer insights into the distribution of stop and search incidents across different ethnic groups. This report builds on the foundational work of researchers such as <span class="citation" data-cites="Vomfell2021">Vomfell and Stewart (<a href="references.html#ref-Vomfell2021" role="doc-biblioref">2021</a>)</span>, whose studies highlight the combined impact of officer discretion and the increased patrolling of ethnic minority areas. By analysing stop and search data from five complete financial years, 2020/21 to 2024/25, covering 556,000+ aggregated records representing approximately 2.9 million individual stop-and-search incidents, the project provides an updated perspective on the prevalence of these disparities and, crucially, whether they are improving or worsening over time.</p>
-<p>One notable development in this area is the increasing use of artificial intelligence (AI) to support police operations. AI-driven tools, such as Live Facial Recognition (LFR), have been trialled by the Metropolitan Police in London to enhance stop and search methods. This technology enables real-time identification of individuals on police watchlists by scanning and recognising faces from distances of 10 to 20 metres. The system compares faces against databases containing thousands of known individuals, and when a match is detected, officers are alerted to potentially stop the individual for further questioning. According to recent reports, AI has the potential to improve the efficiency and objectivity of stop and search practices, contributing to more data-driven policing methods <span class="citation" data-cites="Sylvester2024">(<a href="references.html#ref-Sylvester2024" role="doc-biblioref">Sylvester, 2024</a>)</span>. While the UNJUST project does not incorporate AI-based stop and search data in its current analysis, understanding the role of emerging technologies is crucial for future efforts aimed at reducing disparities and enhancing the fairness of policing practices.</p>
-<p>The findings presented in this report offer a rigorous, evidence-based analysis of the current state of stop and search practices, with a particular focus on racial disparities. By examining these issues through the lens of statistical rigour, the UNJUST project aims to contribute valuable insights to ongoing discussions about justice, equality, and effective law enforcement.</p>
+<p>This appendix presents regression diagnostics for the pooled Quasi-Poisson generalised linear model described in <a href="methodology.html#sec-pooled-model" class="quarto-xref"><span>Section 4.4</span></a>. The diagnostics assess whether the model’s linear predictor is correctly specified and whether any individual observations exert disproportionate influence on the estimated incidence rate ratios (IRRs). All figures were produced by <code>analysis/07_model_diagnostics.R</code> and are fully reproducible from the repository.</p>
+<section id="a.1-pearson-residuals-vs-fitted-values" class="level2" data-number="A.1">
+<h2 data-number="A.1" class="anchored" data-anchor-id="a.1-pearson-residuals-vs-fitted-values"><span class="header-section-number">A.1</span> A.1 Pearson Residuals vs Fitted Values</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-pearson" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pearson-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../analysis/output/figures/diag_pearson_vs_fitted.png" class="img-fluid figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pearson-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;A.1: Pearson residuals plotted against fitted values on a log scale. The orange loess smoother runs close to zero across the full range of fitted values, indicating no systematic trend in the residuals.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The Pearson residual for stratum <span class="math inline">\(i\)</span> is defined as:</p>
+<p><span class="math display">\[r_i^P = \frac{y_i - \hat{\mu}_i}{\sqrt{\hat{\mu}_i}}\]</span></p>
+<p>where <span class="math inline">\(y_i\)</span> is the observed search count and <span class="math inline">\(\hat{\mu}_i\)</span> is the model’s fitted value. For a well-specified model, these residuals should be centred at zero with no systematic pattern across the fitted value range.</p>
+<p><a href="#fig-pearson" class="quarto-xref">Figure&nbsp;<span>A.1</span></a> shows the loess smoother remaining flat along the zero line across three orders of magnitude of fitted values. This indicates that the model’s linear predictor captures the systematic variation in search counts without meaningful directional bias. The widening scatter at large fitted values is the expected consequence of count-data variance scaling with the mean: rather than indicating misspecification, it reflects the heterogeneity that motivated the Quasi-Poisson family in the first place. The dispersion parameter is <span class="math inline">\(\hat{\phi} =\)</span> 181.8, and the Quasi-Poisson framework corrects all confidence intervals for this by scaling standard errors by <span class="math inline">\(\sqrt{\hat{\phi}}\)</span>.</p>
+</section>
+<section id="a.2-normal-q-q-plot-of-pearson-residuals" class="level2" data-number="A.2">
+<h2 data-number="A.2" class="anchored" data-anchor-id="a.2-normal-q-q-plot-of-pearson-residuals"><span class="header-section-number">A.2</span> A.2 Normal Q-Q Plot of Pearson Residuals</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-qq" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-qq-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../analysis/output/figures/diag_qq_pearson.png" class="img-fluid figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-qq-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;A.2: Normal Q-Q plot of Pearson residuals. The S-shaped departure from the dashed line in both tails is consistent with the extreme overdispersion present in the data and does not indicate misspecification of the linear predictor.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><a href="#fig-qq" class="quarto-xref">Figure&nbsp;<span>A.2</span></a> compares the empirical quantiles of the Pearson residuals against the quantiles of a standard normal distribution. Perfect normality would place all points on the dashed line. The observed S-shaped curve, with heavier tails on both sides, is a predictable consequence of modelling count data with a dispersion parameter as large as 181.8: the residuals are not drawn from a standard normal, and there is no theoretical reason to expect them to be. What the plot does confirm is approximate symmetry around zero in the central mass of the distribution, which is the relevant property for the validity of the coefficient estimates. The heavy tails are addressed through the Quasi-Poisson variance correction rather than through any transformation of the response.</p>
+</section>
+<section id="a.3-cooks-distance" class="level2" data-number="A.3">
+<h2 data-number="A.3" class="anchored" data-anchor-id="a.3-cooks-distance"><span class="header-section-number">A.3</span> A.3 Cook’s Distance</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-cooks" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cooks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../analysis/output/figures/diag_cooks_distance.png" class="img-fluid figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cooks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;A.3: Cook’s distance for each of the 1,971 strata. Red points exceed the conventional threshold of 4 / df (dashed line). The most influential stratum has a Cook’s distance of approximately 0.50.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Cook’s distance measures the aggregate change in all coefficient estimates when a single observation is removed. The conventional threshold used here is <span class="math inline">\(4 / \text{df}_\text{residual} =\)</span> 0.0021. With 195 strata (9.9%) exceeding this threshold (<a href="#fig-cooks" class="quarto-xref">Figure&nbsp;<span>A.3</span></a>), the model is working on data where a small number of high-volume subgroups carry meaningful leverage.</p>
+<p>Inspecting the top ten strata by Cook’s distance reveals a consistent pattern: they are all either male drug-related searches in the North West (where the model underpredicts observed counts by a factor of roughly two in 2023/24 and 2024/25) or male searches in London involving Black and Asian groups in 2020/21. These are genuine observations, not recording errors. The North West pattern is consistent with documented increases in suspicionless Section 60 stop and search activity in that region over the later years of the study period. The London strata reflect the capital’s disproportionately large and concentrated minority populations combined with high absolute search volumes.</p>
+<p>The sensitivity analysis in <a href="appendix_sensitivity.html" class="quarto-xref"><span>Appendix B</span></a> directly addresses whether these influential strata materially alter the ethnicity IRRs by testing specifications that progressively exclude or modify the high-leverage subgroups.</p>
+</section>
+<section id="a.4-observed-vs-expected-counts" class="level2" data-number="A.4">
+<h2 data-number="A.4" class="anchored" data-anchor-id="a.4-observed-vs-expected-counts"><span class="header-section-number">A.4</span> A.4 Observed vs Expected Counts</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-oe" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-oe-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../analysis/output/figures/diag_obs_vs_expected.png" class="img-fluid figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-oe-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;A.4: Observed counts plotted against model-expected counts on a log-log scale. Points track closely along the 1:1 dashed line across four orders of magnitude, with Pearson r = 0.93.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><a href="#fig-oe" class="quarto-xref">Figure&nbsp;<span>A.4</span></a> plots observed against expected counts on a logarithmic scale, covering strata from single-digit to tens of thousands of searches. The Pearson correlation between observed and expected is 0.9298, and the points track the 1:1 line closely across the full range. The modest scatter at very low counts (bottom left) reflects the difficulty any aggregate model has in predicting sparse cells, but these strata contribute negligibly to the overall disparity estimates due to their small volumes.</p>
+<p>Taken together, the four diagnostics support the conclusion that the pooled Quasi-Poisson model is appropriately specified. The primary limitation is not structural bias in the linear predictor but rather regional heterogeneity that the model partially absorbs through the region fixed effect. The robustness of the key ethnicity IRRs to this heterogeneity is examined in <a href="appendix_sensitivity.html" class="quarto-xref"><span>Appendix B</span></a>.</p>
+</section>
+<section id="a.5-summary-of-diagnostic-statistics" class="level2" data-number="A.5">
+<h2 data-number="A.5" class="anchored" data-anchor-id="a.5-summary-of-diagnostic-statistics"><span class="header-section-number">A.5</span> A.5 Summary of Diagnostic Statistics</h2>
+<div class="cell">
+<div id="tbl-diag-summary" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-diag-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;A.1: Summary of key diagnostic statistics for the pooled Quasi-Poisson GLM. The dispersion-scaled Pearson residual row divides each raw Pearson residual by sqrt(phi) before applying the <u>2 threshold; using raw residuals against <u>2 would be uninformative when phi &gt;&gt; 1.</u></u>
+</figcaption>
+<div aria-describedby="tbl-diag-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table table-striped table-hover do-not-create-environment cell table-sm small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Diagnostic metric</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Observations (strata)</td>
+<td style="text-align: right;">1,971</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Degrees of freedom (residual)</td>
+<td style="text-align: right;">1,950</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Dispersion parameter</td>
+<td style="text-align: right;">181.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Residual deviance</td>
+<td style="text-align: right;">342,749</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Null deviance</td>
+<td style="text-align: right;">2,954,454</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Pseudo R-squared (McFadden)</td>
+<td style="text-align: right;">0.884</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cook's threshold (4/df)</td>
+<td style="text-align: right;">0.0021</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Observations above Cook's threshold (%)</td>
+<td style="text-align: right;">9.9%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Dispersion-scaled Pearson residuals &gt; 2 (%)</td>
+<td style="text-align: right;">5.7%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Obs vs expected Pearson r</td>
+<td style="text-align: right;">0.93</td>
+</tr>
+</tbody>
+</table>
 
 
-<div id="refs" class="references csl-bib-body" role="list" style="display: none">
-<div id="ref-CRED2021" class="csl-entry" role="listitem">
-Commission on Race and Ethnic Disparities (2021) <em>Commission on race and ethnic disparities: The report</em>, London, HM Government.
-</div>
-<div id="ref-EHRC2010" class="csl-entry" role="listitem">
-Equality and Commission, H. R. (2010) <em>Stop and think: A critical review of the use of stop and search powers in england and wales</em>, London, EHRC.
-</div>
-<div id="ref-HomeOffice2023" class="csl-entry" role="listitem">
-Home Office (GOV.UK) (2023) <em>Police powers and procedures: Stop and search and arrests, england and wales, year ending 31 march 2023</em>, London, Home Office [Online]. Available at <a href="https://www.gov.uk/government/statistics/stop-and-search-and-arrests-year-ending-march-2023/police-powers-and-procedures-stop-and-search-and-arrests-england-and-wales-year-ending-31-march-2023">https://www.gov.uk/government/statistics/stop-and-search-and-arrests-year-ending-march-2023/police-powers-and-procedures-stop-and-search-and-arrests-england-and-wales-year-ending-31-march-2023</a>.
-</div>
-<div id="ref-IER2023" class="csl-entry" role="listitem">
-IER UK (2023) <em>Anti-racism strategy for the city of york</em>, York, Inclusive Equal Rights UK.
-</div>
-<div id="ref-rss_statisticians_2024" class="csl-entry" role="listitem">
-Royal Statistical Society (RSS) (2023) <span>“Statisticians for <span>Society</span>,”</span> <em>RSS Statisticians for Society</em> [Online]. Available at <a href="https://rss.org.uk/membership/volunteering-and-promoting/statisticians-for-society-initiative/">https://rss.org.uk/membership/volunteering-and-promoting/statisticians-for-society-initiative/</a> (Accessed 15 November 2024).
-</div>
-<div id="ref-CSJ2020" class="csl-entry" role="listitem">
-Social Justice, C. for (2020) <em>Facing the facts: Ethnicity and disadvantage in britain</em>, London, Centre for Social Justice.
-</div>
-<div id="ref-Sylvester2024" class="csl-entry" role="listitem">
-Sylvester, T. (2024) <span>“’No human could do this’: How facial recognition is transforming policing,”</span> <em>The Times</em>.
-</div>
-<div id="ref-Vomfell2021" class="csl-entry" role="listitem">
-Vomfell, L. and Stewart, N. (2021) <span>“Officer bias, over-patrolling and ethnic disparities in stop and search,”</span> <em>Nature Human Behaviour</em> [Online]. DOI: <a href="https://doi.org/10.1038/s41562-020-01029-w">10.1038/s41562-020-01029-w</a>.
 </div>
 </div>
+</figure>
+</div>
+</div>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -666,13 +797,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link  aria-label=" &lt;span="" analysis="" of="" uk="" stop="" and="" search&lt;="" span&gt;"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statistical Analysis of UK Stop and Search</span></span>
+      <a href="./references.html" class="pagination-link  aria-label=" &lt;span="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">References</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./literature.html" class="pagination-link" aria-label="<span class='chapter-number'>3</span>&nbsp; <span class='chapter-title'>Literature Review</span>">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Literature Review</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./appendix_sensitivity.html" class="pagination-link" aria-label="<span class='chapter-number'>B</span>&nbsp; <span class='chapter-title'>Appendix B: Sensitivity Analysis</span>">
+        <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Appendix B: Sensitivity Analysis</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

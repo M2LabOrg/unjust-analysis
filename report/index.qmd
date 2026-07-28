@@ -55,7 +55,7 @@ The analysis addresses four research questions identified by **UNJUST**:
 
 ## Scope and Data
 
-This report covers five complete financial years, 2020/21 through 2024/25, using the GOV.UK Stop and Search Open Data (2.1 million+ records) merged with ONS Census 2021 population denominators.
+This report covers five complete financial years, 2020/21 through 2024/25, using the GOV.UK Stop and Search Open Data (556,000+ aggregated records representing approximately 2.9 million individual stop-and-search incidents) merged with ONS Census 2021 population denominators.
 
 ## Key Findings
 

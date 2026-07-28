@@ -1,0 +1,5 @@
+term,ethnicity,irr_point,irr_normal_lo,irr_normal_hi,irr_boot_lo,irr_boot_hi
+ethnicityAsian,Asian,1.169,1.101,1.241,1.004,1.341
+ethnicityBlack,Black,3.022,2.855,3.199,2.526,3.459
+ethnicityMixed,Mixed,1.357,1.233,1.494,1.207,1.512
+ethnicityOther,Other,0.934,0.824,1.057,0.829,1.063

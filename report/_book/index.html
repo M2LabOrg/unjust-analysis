@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Michel Mesquita, Ph.D., CStat">
-<meta name="dcterms.date" content="2026-04-23">
+<meta name="dcterms.date" content="2026-07-28">
 
 <title>Statistical Analysis of Stop and Search Practices on Black Communities in the UK</title>
 <style>
@@ -177,6 +177,35 @@ div.csl-indent {
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix_diagnostics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix A: Model Diagnostics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix_sensitivity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Appendix B: Sensitivity Analysis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix_ipw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Appendix C: Inverse Propensity Weighted Estimates</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -215,7 +244,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2026-04-23</p>
+      <p class="date">2026-07-28</p>
     </div>
   </div>
   
@@ -240,13 +269,13 @@ div.csl-indent {
 </section>
 <section id="scope-and-data" class="level2" data-number="0.2">
 <h2 data-number="0.2" class="anchored" data-anchor-id="scope-and-data"><span class="header-section-number">0.2</span> Scope and Data</h2>
-<p>This report covers five complete financial years, 2020/21 through 2024/25, using the GOV.UK Stop and Search Open Data (556,000+ records) merged with ONS Census 2021 population denominators.</p>
+<p>This report covers five complete financial years, 2020/21 through 2024/25, using the GOV.UK Stop and Search Open Data (556,000+ aggregated records representing approximately 2.9 million individual stop-and-search incidents) merged with ONS Census 2021 population denominators.</p>
 </section>
 <section id="key-findings" class="level2" data-number="0.3">
 <h2 data-number="0.3" class="anchored" data-anchor-id="key-findings"><span class="header-section-number">0.3</span> Key Findings</h2>
 <ul>
 <li><strong>Raw national disparity</strong>: In 2024/25, Black individuals were stopped at <strong>3.6 times</strong> the rate of White individuals, the headline figure shown on the accompanying dashboard. This is the unadjusted rate ratio (rounded to 1 d.p.), calculated directly from search counts divided by 2021 Census population denominators, with no covariates controlled.</li>
-<li><strong>Persistent and growing adjusted disparity</strong>: After controlling for region, sex, age, and reason for search, the adjusted incidence rate ratio (IRR) rises from <strong>3× in 2020/21 to 3.3× by 2024/25</strong>,a statistically significant worsening. The adjusted figure is lower than the raw 3.6× because the model accounts for differences in regional composition and search type across ethnic groups; the gap between the two measures reflects those compositional differences, not measurement error.</li>
+<li><strong>Persistent and growing adjusted disparity</strong>: After controlling for region, sex, age, and reason for search, the adjusted incidence rate ratio (IRR) rises from <strong>3× in 2020/21 to 3.3× by 2024/25</strong>, a statistically significant worsening. The adjusted figure is lower than the raw 3.6× because the model accounts for differences in regional composition and search type across ethnic groups; the gap between the two measures reflects those compositional differences, not measurement error.</li>
 <li><strong>Interaction effects</strong>: The compounding of ethnicity, search reason, and geography means that a Black individual stopped for drug-related reasons in London is searched at approximately <strong>21.9 times</strong> the rate of a White individual stopped for non-drug reasons in the East Midlands, holding sex and age constant.</li>
 <li><strong>Regional anomaly</strong>: The South West has the highest Black/White disparity ratio (5.1×), exceeding London (3.6× pooled across all five years), suggesting nationally uneven patterns of disproportionality.</li>
 <li><strong>Outcome disparity</strong>: Black individuals have one of the highest arrest rates across all ethnic groups (16%, tied with Mixed), 2.7 percentage points above White individuals (13.3%), yet similar No Further Action rates (~69%), raising questions about differential suspicion thresholds.</li>
@@ -343,24 +372,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -395,11 +406,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
+      return note.innerHTML;
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -677,7 +684,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link" aria-label="Introduction">
+      <a href="./intro.html" class="pagination-link" aria-label="<span class='chapter-number'>2</span>&nbsp; <span class='chapter-title'>Introduction</span>">
         <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -205,6 +205,35 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix_diagnostics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix A: Model Diagnostics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix_sensitivity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Appendix B: Sensitivity Analysis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix_ipw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Appendix C: Inverse Propensity Weighted Estimates</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -263,7 +292,7 @@ window.Quarto = {
 <h2 data-number="4.1" class="anchored" data-anchor-id="data-sources"><span class="header-section-number">4.1</span> Data Sources</h2>
 <p>The analysis utilizes two primary data sources:</p>
 <ol type="1">
-<li><p><strong>GOV.UK Stop and Search Open Data (2020/21–2024/25)</strong>: This dataset provides comprehensive records of stop and search incidents across England and Wales, including variables such as ethnicity, age, sex, region, and reason for search. The five-year extract covers the financial years ending March 2021 through March 2025, comprising over 556,000 records after cleaning. The data are released by the Home Office <span class="citation" data-cites="home_office_govuk_stop_2024">(<a href="references.html#ref-home_office_govuk_stop_2024" role="doc-biblioref">Home Office (GOV.UK), 2024</a>)</span> and include all searches conducted under Section 1 of the Police and Criminal Evidence Act (PACE) and Section 60 of the Criminal Justice and Public Order Act (CJPOA).</p></li>
+<li><p><strong>GOV.UK Stop and Search Open Data (2020/21–2024/25)</strong>: This dataset provides comprehensive records of stop and search incidents across England and Wales, including variables such as ethnicity, age, sex, region, and reason for search. The five-year extract covers the financial years ending March 2021 through March 2025, comprising 556,000+ aggregated records representing approximately 2.9 million individual stop-and-search incidents after cleaning. The data are released by the Home Office <span class="citation" data-cites="home_office_govuk_stop_2024">(<a href="references.html#ref-home_office_govuk_stop_2024" role="doc-biblioref">Home Office (GOV.UK), 2024</a>)</span> and include all searches conducted under Section 1 of the Police and Criminal Evidence Act (PACE) and Section 60 of the Criminal Justice and Public Order Act (CJPOA).</p></li>
 <li><p><strong>ONS Census 2021</strong>: Used to obtain population denominators by ethnicity and region, serving as the offset in the rate models <span class="citation" data-cites="ons_2022">(<a href="references.html#ref-ons_2022" role="doc-biblioref">National Statistics (ONS), 2022</a>)</span>. We assume that the 2021 population counts remain a reasonable approximation across all five financial years, a limitation discussed in the Discussion chapter.</p></li>
 </ol>
 <p>The analysis is inspired by <span class="citation" data-cites="Vomfell2021">Vomfell and Stewart (<a href="references.html#ref-Vomfell2021" role="doc-biblioref">2021</a>)</span>, who identified ethnic disparities in stop and search in the United Kingdom.</p>
@@ -301,7 +330,7 @@ window.Quarto = {
 <ol type="1">
 <li><strong>Ethnicity type filtered.</strong> Only rows with <code>ethnicity_type = "ONS 2021 5+1"</code> (the five main groups plus Other) were retained.</li>
 <li><strong>National aggregate excluded.</strong> The “All - England And Wales” geography row was removed; only regional totals were kept.</li>
-<li><strong>Five ethnic groups retained.</strong> Asian, Black, White, Mixed, and Other,matching the stop and search categories.</li>
+<li><strong>Five ethnic groups retained.</strong> Asian, Black, White, Mixed, and Other, matching the stop and search categories.</li>
 </ol>
 </section>
 <section id="merging-and-aggregation" class="level3" data-number="4.3.3">
@@ -350,7 +379,7 @@ window.Quarto = {
 <p>Fitting the pooled model with a standard Poisson family yields a residual deviance of 342,749 on 1,950 degrees of freedom, producing an estimated dispersion parameter of:</p>
 <p><span class="math display">\[\hat{\phi} = \frac{\text{Residual deviance}}{\text{df}} = \frac{342{,}749}{1{,}950} \approx 181.8\]</span></p>
 <p>This is far greater than 1, confirming severe overdispersion. A Quasi-Poisson model retains the same coefficient estimates as Poisson but scales all standard errors by <span class="math inline">\(\sqrt{\hat{\phi}}\)</span>, producing correct (wider) confidence intervals and conservative inference. Using a Poisson family without this correction would dramatically understate uncertainty and inflate the apparent precision of the IRR estimates.</p>
-<p>Note that Quasi-Poisson models do not yield a finite AIC; model adequacy is instead assessed via the pseudo-R² <span class="citation" data-cites="cohen88">(<a href="references.html#ref-cohen88" role="doc-biblioref">Cohen, 1988</a>)</span> and residual deviance diagnostics.</p>
+<p>Note that Quasi-Poisson models do not yield a finite AIC; model adequacy is instead assessed via the pseudo-R² <span class="citation" data-cites="cohen88">(<a href="references.html#ref-cohen88" role="doc-biblioref">Cohen, 1988</a>)</span> and residual deviance diagnostics. Full regression diagnostics, including Pearson residual plots, Cook’s distance analysis, and an observed-vs-expected comparison, are presented in <a href="appendix_diagnostics.html" class="quarto-xref"><span>Appendix A</span></a>. Sensitivity of the ethnicity IRRs to alternative model specifications is assessed in <a href="appendix_sensitivity.html" class="quarto-xref"><span>Appendix B</span></a>, and a comparison with inverse propensity weighted estimates is provided in <a href="appendix_ipw.html" class="quarto-xref"><span>Appendix C</span></a>.</p>
 </section>
 <section id="sec-peryear" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="sec-peryear"><span class="header-section-number">4.6</span> Per-Year IRR Models</h2>
@@ -499,24 +528,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -551,11 +562,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
+      return note.innerHTML;
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -831,12 +838,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./literature.html" class="pagination-link" aria-label="Literature Review">
+      <a href="./literature.html" class="pagination-link  aria-label=" &lt;span="" review&lt;="" span&gt;"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Literature Review</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./results.html" class="pagination-link" aria-label="Results">
+      <a href="./results.html" class="pagination-link" aria-label="<span class='chapter-number'>5</span>&nbsp; <span class='chapter-title'>Results</span>">
         <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Results</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

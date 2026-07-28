@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Statistical Analysis of Stop and Search Practices on Black Communities in the UK - 2&nbsp; Introduction</title>
+<title>Statistical Analysis of Stop and Search Practices on Black Communities in the UK - Appendix C — Appendix C: Inverse Propensity Weighted Estimates</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,8 +30,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./literature.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./appendix_sensitivity.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -87,7 +67,38 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -100,7 +111,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./appendix_diagnostics.html">Appendices</a></li><li class="breadcrumb-item"><a href="./appendix_ipw.html"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Appendix C: Inverse Propensity Weighted Estimates</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -136,7 +147,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
@@ -199,7 +210,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix_ipw.html" class="sidebar-item-text sidebar-link">
+  <a href="./appendix_ipw.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Appendix C: Inverse Propensity Weighted Estimates</span></span></a>
   </div>
 </li>
@@ -211,14 +222,23 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#c.1-method" id="toc-c.1-method" class="nav-link active" data-scroll-target="#c.1-method"><span class="header-section-number">C.1</span> C.1 Method</a></li>
+  <li><a href="#c.2-weight-distributions" id="toc-c.2-weight-distributions" class="nav-link" data-scroll-target="#c.2-weight-distributions"><span class="header-section-number">C.2</span> C.2 Weight Distributions</a></li>
+  <li><a href="#c.3-glm-vs-ipw-comparison" id="toc-c.3-glm-vs-ipw-comparison" class="nav-link" data-scroll-target="#c.3-glm-vs-ipw-comparison"><span class="header-section-number">C.3</span> C.3 GLM vs IPW Comparison</a></li>
+  <li><a href="#c.4-interpretation-and-limitations" id="toc-c.4-interpretation-and-limitations" class="nav-link" data-scroll-target="#c.4-interpretation-and-limitations"><span class="header-section-number">C.4</span> C.4 Interpretation and Limitations</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./appendix_diagnostics.html">Appendices</a></li><li class="breadcrumb-item"><a href="./appendix_ipw.html"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Appendix C: Inverse Propensity Weighted Estimates</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="introduction" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></h1>
+<h1 class="title"><span id="sec-appendix-ipw" class="quarto-section-identifier">Appendix C — Appendix C: Inverse Propensity Weighted Estimates</span></h1>
 </div>
 
 
@@ -235,46 +255,148 @@ div.csl-indent {
 </header>
 
 
-<p>Stop and search is a key aspect of policing in the United Kingdom, involving efforts to identify and prevent criminal activity. Previous studies indicate that ethnic minorities, particularly Black individuals, are subject to stop and search procedures at higher rates compared to other groups <span class="citation" data-cites="Vomfell2021 EHRC2010 CSJ2020 CRED2021 IER2023 HomeOffice2023">(<a href="references.html#ref-HomeOffice2023" role="doc-biblioref">Home Office (GOV.UK), 2023</a>; <a href="references.html#ref-IER2023" role="doc-biblioref">IER UK, 2023</a>; <a href="references.html#ref-CRED2021" role="doc-biblioref">Commission on Race and Ethnic Disparities, 2021</a>; <a href="references.html#ref-Vomfell2021" role="doc-biblioref">Vomfell and Stewart, 2021</a>; <a href="references.html#ref-CSJ2020" role="doc-biblioref">Social Justice, 2020</a>; <a href="references.html#ref-EHRC2010" role="doc-biblioref">Equality and Commission, 2010</a>)</span>. The UNJUST project, initiated under the Statisticians for Society program <span class="citation" data-cites="rss_statisticians_2024">(<a href="references.html#ref-rss_statisticians_2024" role="doc-biblioref">Royal Statistical Society (RSS), 2023</a>)</span>, aims to provide a detailed, data-driven examination of these patterns to enhance understanding and inform policy discussions.</p>
-<p>The project addresses four research questions identified by UNJUST:</p>
-<ol type="1">
-<li><strong>Disproportionate Targeting</strong>: Do Black individuals in metropolitan areas experience higher rates of drug-related stop and searches compared to other ethnic groups?</li>
-<li><strong>Youth Impact</strong>: How do stop and search rates vary for young individuals (under 25 years old) in drug-related cases?</li>
-<li><strong>Trend over Time</strong>: Has the adjusted disparity in stop and search rates changed over the five-year period 2020/21–2024/25?</li>
-<li><strong>Outcome Disparity</strong>: Do post-search outcomes differ by ethnicity, suggesting differential thresholds for suspicion?</li>
-</ol>
-<p>These questions align with broader concerns about systemic inequalities within policing practices and their potential impact on community trust and social justice.</p>
-<p>To address these questions, the UNJUST project employs comprehensive data analysis and statistical modelling, utilising techniques that offer insights into the distribution of stop and search incidents across different ethnic groups. This report builds on the foundational work of researchers such as <span class="citation" data-cites="Vomfell2021">Vomfell and Stewart (<a href="references.html#ref-Vomfell2021" role="doc-biblioref">2021</a>)</span>, whose studies highlight the combined impact of officer discretion and the increased patrolling of ethnic minority areas. By analysing stop and search data from five complete financial years, 2020/21 to 2024/25, covering 556,000+ aggregated records representing approximately 2.9 million individual stop-and-search incidents, the project provides an updated perspective on the prevalence of these disparities and, crucially, whether they are improving or worsening over time.</p>
-<p>One notable development in this area is the increasing use of artificial intelligence (AI) to support police operations. AI-driven tools, such as Live Facial Recognition (LFR), have been trialled by the Metropolitan Police in London to enhance stop and search methods. This technology enables real-time identification of individuals on police watchlists by scanning and recognising faces from distances of 10 to 20 metres. The system compares faces against databases containing thousands of known individuals, and when a match is detected, officers are alerted to potentially stop the individual for further questioning. According to recent reports, AI has the potential to improve the efficiency and objectivity of stop and search practices, contributing to more data-driven policing methods <span class="citation" data-cites="Sylvester2024">(<a href="references.html#ref-Sylvester2024" role="doc-biblioref">Sylvester, 2024</a>)</span>. While the UNJUST project does not incorporate AI-based stop and search data in its current analysis, understanding the role of emerging technologies is crucial for future efforts aimed at reducing disparities and enhancing the fairness of policing practices.</p>
-<p>The findings presented in this report offer a rigorous, evidence-based analysis of the current state of stop and search practices, with a particular focus on racial disparities. By examining these issues through the lens of statistical rigour, the UNJUST project aims to contribute valuable insights to ongoing discussions about justice, equality, and effective law enforcement.</p>
+<p>The main analysis uses a Quasi-Poisson GLM to estimate the association between ethnicity and stop and search rates while adjusting for year, region, sex, age group, and reason for search. This regression approach produces estimates of the ethnicity effect <strong>conditional</strong> on the observed covariate values. A complementary approach, here implemented using stabilised inverse propensity weights (IPW), models the probability of belonging to each ethnic group given the same covariates, then uses those probabilities to reweight the observed searched population so that the covariate distributions are equalised across groups. This is most precisely described as <strong>direct standardisation</strong> of the searched population’s covariate mix: because the propensity model is fitted on people who were already stopped (weighted by search count), the resulting rate ratios describe what the disparity would look like if all ethnic groups had the same covariate profile within the searched population, rather than providing a causal estimate in the general population sense.</p>
+<p>Comparing GLM and IPW-standardised estimates is informative in two ways. First, if the two methods produce similar rate ratios, the findings are unlikely to depend on the parametric assumptions of the regression model. Second, where the estimates diverge, the divergence reveals something substantive: differences in how ethnic groups are distributed across high- and low-stop conditions.</p>
+<p>All computations are implemented in <code>analysis/09_ipw.R</code>.</p>
+<section id="c.1-method" class="level2" data-number="C.1">
+<h2 data-number="C.1" class="anchored" data-anchor-id="c.1-method"><span class="header-section-number">C.1</span> C.1 Method</h2>
+<p><strong>Propensity model.</strong> A multinomial logistic regression is fitted to the modelling dataset, predicting ethnicity from the same five covariates used in the GLM: financial year, region, sex, age group, and reason for search. Each stratum is weighted by its search count so that the model estimates <span class="math inline">\(\hat{P}(\text{ethnicity} \mid \text{covariates})\)</span> within the searched population, not in the general population. The model converged in all cases.</p>
+<p><strong>Stabilised weights.</strong> For each stratum <span class="math inline">\(i\)</span> with observed ethnicity <span class="math inline">\(g_i\)</span>, the stabilised IPW weight is:</p>
+<p><span class="math display">\[w_i = \frac{\hat{P}(E = g_i)}{\hat{P}(E = g_i \mid X_i)}\]</span></p>
+<p>where <span class="math inline">\(\hat{P}(E = g_i)\)</span> is the marginal proportion of ethnicity <span class="math inline">\(g_i\)</span> in the searched population and <span class="math inline">\(\hat{P}(E = g_i \mid X_i)\)</span> is the predicted probability from the propensity model. Stabilising by the marginal probability reduces variance relative to unstabilised weights. Weights are trimmed at the 99th percentile (threshold: 19.4) to limit the influence of extreme values; 20 strata are affected by this trimming.</p>
+<p><strong>IPW rate ratios.</strong> Weighted search rates per 1,000 population are computed for each ethnic group and divided by the weighted White rate to give IPW rate ratios. Bootstrap percentile confidence intervals (B = 200) are obtained by resampling modelling strata with replacement and repeating the full weighting procedure.</p>
+</section>
+<section id="c.2-weight-distributions" class="level2" data-number="C.2">
+<h2 data-number="C.2" class="anchored" data-anchor-id="c.2-weight-distributions"><span class="header-section-number">C.2</span> C.2 Weight Distributions</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-ipw-weights" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ipw-weights-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../analysis/output/figures/ipw_weights_distribution.png" class="img-fluid figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ipw-weights-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;C.1: Distribution of stabilised IPW weights by ethnicity group. White weights are highly concentrated near their mean (0.87), indicating that White people’s covariate profile closely matches the overall searched population. Asian and Black weights are more dispersed and larger on average, reflecting the concentration of these groups in high-stop conditions such as London.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><a href="#fig-ipw-weights" class="quarto-xref">Figure&nbsp;<span>C.1</span></a> shows the weight distributions by ethnicity. For White individuals, mean weight = 0.87, concentrated close to 1, which indicates that White people’s observed covariate distribution closely resembles the overall searched population. For Black individuals, mean weight = 4.39, and for Asian individuals mean weight = 4.53. These larger weights reflect the fact that Black and Asian people are over-represented in conditions (particularly London, drug-related searches, younger age groups) where overall stop rates are high. The IPW procedure up-weights these individuals to represent what their rates would be if their covariate profile matched the full searched population.</p>
+<p>The moderate extent of weight trimming (20 strata at the 99th percentile) suggests the propensity model achieves reasonable coverage without extreme extrapolation.</p>
+</section>
+<section id="c.3-glm-vs-ipw-comparison" class="level2" data-number="C.3">
+<h2 data-number="C.3" class="anchored" data-anchor-id="c.3-glm-vs-ipw-comparison"><span class="header-section-number">C.3</span> C.3 GLM vs IPW Comparison</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-ipw-comp" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ipw-comp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../analysis/output/figures/ipw_comparison.png" class="img-fluid figure-img" style="width:85.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ipw-comp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;C.2: GLM incidence rate ratios (blue) and IPW rate ratios (orange) for each non-White ethnic group, relative to White. Both estimates and their 95% confidence intervals are shown. The Black/White disparity is large under both methods. The Asian disparity reverses sign under IPW, indicating that the GLM Asian coefficient largely reflects covariate concentration rather than differential treatment.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-ipw-comp" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ipw-comp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;C.1: GLM IRRs and IPW rate ratios with 95% confidence intervals. All estimates are relative to White. GLM CIs use the normal approximation; IPW CIs are percentile bootstrap intervals (B = 200).
+</figcaption>
+<div aria-describedby="tbl-ipw-comp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table table-striped table-hover do-not-create-environment cell table-sm small" data-quarto-postprocess="true">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; empty-cells: hide; border-bottom: hidden;"></th>
+<th colspan="3" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Quasi-Poisson GLM
+</div></th>
+<th colspan="3" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+IPW
+</div></th>
+</tr>
+<tr class="odd">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Ethnicity</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">GLM IRR</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">GLM CI lo</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">GLM CI hi</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">IPW RR</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">IPW CI lo</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">IPW CI hi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Black</td>
+<td style="text-align: right;">3.022</td>
+<td style="text-align: right;">2.855</td>
+<td style="text-align: right;">3.199</td>
+<td style="text-align: right;">1.872</td>
+<td style="text-align: right;">1.157</td>
+<td style="text-align: right;">2.335</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mixed</td>
+<td style="text-align: right;">1.357</td>
+<td style="text-align: right;">1.233</td>
+<td style="text-align: right;">1.494</td>
+<td style="text-align: right;">1.228</td>
+<td style="text-align: right;">0.878</td>
+<td style="text-align: right;">1.332</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Asian</td>
+<td style="text-align: right;">1.169</td>
+<td style="text-align: right;">1.101</td>
+<td style="text-align: right;">1.241</td>
+<td style="text-align: right;">0.484</td>
+<td style="text-align: right;">0.292</td>
+<td style="text-align: right;">0.587</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Other</td>
+<td style="text-align: right;">0.934</td>
+<td style="text-align: right;">0.824</td>
+<td style="text-align: right;">1.057</td>
+<td style="text-align: right;">0.569</td>
+<td style="text-align: right;">0.329</td>
+<td style="text-align: right;">0.665</td>
+</tr>
+</tbody>
+</table>
 
 
-<div id="refs" class="references csl-bib-body" role="list" style="display: none">
-<div id="ref-CRED2021" class="csl-entry" role="listitem">
-Commission on Race and Ethnic Disparities (2021) <em>Commission on race and ethnic disparities: The report</em>, London, HM Government.
-</div>
-<div id="ref-EHRC2010" class="csl-entry" role="listitem">
-Equality and Commission, H. R. (2010) <em>Stop and think: A critical review of the use of stop and search powers in england and wales</em>, London, EHRC.
-</div>
-<div id="ref-HomeOffice2023" class="csl-entry" role="listitem">
-Home Office (GOV.UK) (2023) <em>Police powers and procedures: Stop and search and arrests, england and wales, year ending 31 march 2023</em>, London, Home Office [Online]. Available at <a href="https://www.gov.uk/government/statistics/stop-and-search-and-arrests-year-ending-march-2023/police-powers-and-procedures-stop-and-search-and-arrests-england-and-wales-year-ending-31-march-2023">https://www.gov.uk/government/statistics/stop-and-search-and-arrests-year-ending-march-2023/police-powers-and-procedures-stop-and-search-and-arrests-england-and-wales-year-ending-31-march-2023</a>.
-</div>
-<div id="ref-IER2023" class="csl-entry" role="listitem">
-IER UK (2023) <em>Anti-racism strategy for the city of york</em>, York, Inclusive Equal Rights UK.
-</div>
-<div id="ref-rss_statisticians_2024" class="csl-entry" role="listitem">
-Royal Statistical Society (RSS) (2023) <span>“Statisticians for <span>Society</span>,”</span> <em>RSS Statisticians for Society</em> [Online]. Available at <a href="https://rss.org.uk/membership/volunteering-and-promoting/statisticians-for-society-initiative/">https://rss.org.uk/membership/volunteering-and-promoting/statisticians-for-society-initiative/</a> (Accessed 15 November 2024).
-</div>
-<div id="ref-CSJ2020" class="csl-entry" role="listitem">
-Social Justice, C. for (2020) <em>Facing the facts: Ethnicity and disadvantage in britain</em>, London, Centre for Social Justice.
-</div>
-<div id="ref-Sylvester2024" class="csl-entry" role="listitem">
-Sylvester, T. (2024) <span>“’No human could do this’: How facial recognition is transforming policing,”</span> <em>The Times</em>.
-</div>
-<div id="ref-Vomfell2021" class="csl-entry" role="listitem">
-Vomfell, L. and Stewart, N. (2021) <span>“Officer bias, over-patrolling and ethnic disparities in stop and search,”</span> <em>Nature Human Behaviour</em> [Online]. DOI: <a href="https://doi.org/10.1038/s41562-020-01029-w">10.1038/s41562-020-01029-w</a>.
 </div>
 </div>
+</figure>
+</div>
+</div>
+<p><a href="#fig-ipw-comp" class="quarto-xref">Figure&nbsp;<span>C.2</span></a> and <a href="#tbl-ipw-comp" class="quarto-xref">Table&nbsp;<span>C.1</span></a> present the side-by-side comparison. Three patterns are worth noting.</p>
+<p><strong>Black/White disparity: large under both methods.</strong> The GLM IRR is 3.022 (95% CI: 2.855, 3.199) and the IPW rate ratio is 1.872 (95% CI: 1.157, 2.335). The IPW estimate is lower, which is expected: the conditional GLM estimate asks “among people searched for the same reason, in the same region, of the same sex and age, what is the Black/White rate ratio?”, while the IPW estimate asks “if Black and White people had the same overall covariate profile, what would the rate ratio be?” Because Black people are more concentrated in high-stop conditions (London, drug searches), the marginal IPW rate ratio is smaller than the conditional GLM IRR. Critically, both estimates are well above 1, and the IPW lower bound (1.157) excludes 1. The Black/White disparity is therefore robust to the choice of estimand and method.</p>
+<p><strong>Asian/White: divergence reveals geographic concentration.</strong> The GLM estimates a modest positive disparity (IRR = 1.169), but the IPW method produces a rate ratio of 0.484 (95% CI: 0.292, 0.587), well below 1. The mean Asian propensity weight of 4.53 is the largest of any group, indicating that the Asian-searched population is concentrated in conditions with high stop rates for all groups. Once the reweighting equalises those conditions, the Asian rate falls below the White rate. In other words, the positive GLM coefficient for Asian individuals reflects primarily their geographic and demographic concentration (particularly in London and in drug-related searches), not evidence of differential treatment conditional on being in similar circumstances. This does not imply the absence of racial discrimination in Asian stops, but it does show that the mechanism differs from the Black/White case.</p>
+<p><strong>Mixed and Other groups.</strong> The IPW rate ratios for Mixed (1.23, CI: 0.88, 1.33) and Other (0.57, CI: 0.33, 0.67) are somewhat lower than the corresponding GLM estimates, consistent with partial geographic concentration effects. The Mixed group shows a positive but uncertain IPW disparity. The Other group has lower rates than White under both methods.</p>
+</section>
+<section id="c.4-interpretation-and-limitations" class="level2" data-number="C.4">
+<h2 data-number="C.4" class="anchored" data-anchor-id="c.4-interpretation-and-limitations"><span class="header-section-number">C.4</span> C.4 Interpretation and Limitations</h2>
+<p>The GLM and IPW analyses are complementary rather than competing. The GLM IRR is the appropriate summary for the question “within comparable conditions, are Black individuals stopped more than White individuals?”, to which the answer is yes, by a factor of approximately 3. The IPW rate ratio addresses “across the whole searched population, standardised to a common covariate profile, what is the disparity?”, to which the answer is also yes, by a factor of approximately 1.9. Both are valid and both confirm a substantial Black/White disparity.</p>
+<p>Three limitations apply to this analysis. First, because the propensity model is fitted on the searched population weighted by count, the estimates are more accurately characterised as direct standardisation within the searched population than as classical causal IPW in the general population. A causal interpretation would additionally require an unconfoundedness assumption holding in the full population, which cannot be verified here. Second, the analysis relies on the propensity model being correctly specified within the searched population; it uses the same covariates as the GLM and has no access to unmeasured variables such as police force policies or local crime conditions. Third, the large weights for Asian and Black groups (mean 4.5 and 4.4 respectively) indicate limited covariate overlap, which increases the variance of the standardised estimates and means the bootstrap confidence intervals for these groups are relatively wide.</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -666,14 +788,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link  aria-label=" &lt;span="" analysis="" of="" uk="" stop="" and="" search&lt;="" span&gt;"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statistical Analysis of UK Stop and Search</span></span>
+      <a href="./appendix_sensitivity.html" class="pagination-link  aria-label=" &lt;span="" b:="" sensitivity="" analysis&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Appendix B: Sensitivity Analysis</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./literature.html" class="pagination-link" aria-label="<span class='chapter-number'>3</span>&nbsp; <span class='chapter-title'>Literature Review</span>">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Literature Review</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

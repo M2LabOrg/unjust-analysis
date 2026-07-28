@@ -12,6 +12,9 @@ analysis: data
 	Rscript analysis/04_model_rf.R
 	Rscript analysis/05_new_insights.R
 	Rscript analysis/06_export_for_dashboard.R
+	Rscript analysis/07_model_diagnostics.R
+	Rscript analysis/08_sensitivity.R
+	Rscript analysis/09_ipw.R
 
 # Run QA checks
 qa: analysis

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Statistical Analysis of Stop and Search Practices on Black Communities in the UK - 2&nbsp; Introduction</title>
+<title>Statistical Analysis of Stop and Search Practices on Black Communities in the UK - Appendix B — Appendix B: Sensitivity Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,8 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./literature.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./appendix_ipw.html" rel="next">
+<link href="./appendix_diagnostics.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -87,7 +68,38 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -100,7 +112,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./appendix_diagnostics.html">Appendices</a></li><li class="breadcrumb-item"><a href="./appendix_sensitivity.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Appendix B: Sensitivity Analysis</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -136,7 +148,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
@@ -193,7 +205,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix_sensitivity.html" class="sidebar-item-text sidebar-link">
+  <a href="./appendix_sensitivity.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Appendix B: Sensitivity Analysis</span></span></a>
   </div>
 </li>
@@ -211,14 +223,22 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#b.1-leave-one-covariate-out" id="toc-b.1-leave-one-covariate-out" class="nav-link active" data-scroll-target="#b.1-leave-one-covariate-out"><span class="header-section-number">B.1</span> B.1 Leave-One-Covariate-Out</a></li>
+  <li><a href="#b.2-bootstrap-confidence-intervals" id="toc-b.2-bootstrap-confidence-intervals" class="nav-link" data-scroll-target="#b.2-bootstrap-confidence-intervals"><span class="header-section-number">B.2</span> B.2 Bootstrap Confidence Intervals</a></li>
+  <li><a href="#b.3-poisson-vs-quasi-poisson-standard-errors" id="toc-b.3-poisson-vs-quasi-poisson-standard-errors" class="nav-link" data-scroll-target="#b.3-poisson-vs-quasi-poisson-standard-errors"><span class="header-section-number">B.3</span> B.3 Poisson vs Quasi-Poisson Standard Errors</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./appendix_diagnostics.html">Appendices</a></li><li class="breadcrumb-item"><a href="./appendix_sensitivity.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Appendix B: Sensitivity Analysis</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="introduction" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></h1>
+<h1 class="title"><span id="sec-appendix-sensitivity" class="quarto-section-identifier">Appendix B — Appendix B: Sensitivity Analysis</span></h1>
 </div>
 
 
@@ -235,46 +255,292 @@ div.csl-indent {
 </header>
 
 
-<p>Stop and search is a key aspect of policing in the United Kingdom, involving efforts to identify and prevent criminal activity. Previous studies indicate that ethnic minorities, particularly Black individuals, are subject to stop and search procedures at higher rates compared to other groups <span class="citation" data-cites="Vomfell2021 EHRC2010 CSJ2020 CRED2021 IER2023 HomeOffice2023">(<a href="references.html#ref-HomeOffice2023" role="doc-biblioref">Home Office (GOV.UK), 2023</a>; <a href="references.html#ref-IER2023" role="doc-biblioref">IER UK, 2023</a>; <a href="references.html#ref-CRED2021" role="doc-biblioref">Commission on Race and Ethnic Disparities, 2021</a>; <a href="references.html#ref-Vomfell2021" role="doc-biblioref">Vomfell and Stewart, 2021</a>; <a href="references.html#ref-CSJ2020" role="doc-biblioref">Social Justice, 2020</a>; <a href="references.html#ref-EHRC2010" role="doc-biblioref">Equality and Commission, 2010</a>)</span>. The UNJUST project, initiated under the Statisticians for Society program <span class="citation" data-cites="rss_statisticians_2024">(<a href="references.html#ref-rss_statisticians_2024" role="doc-biblioref">Royal Statistical Society (RSS), 2023</a>)</span>, aims to provide a detailed, data-driven examination of these patterns to enhance understanding and inform policy discussions.</p>
-<p>The project addresses four research questions identified by UNJUST:</p>
-<ol type="1">
-<li><strong>Disproportionate Targeting</strong>: Do Black individuals in metropolitan areas experience higher rates of drug-related stop and searches compared to other ethnic groups?</li>
-<li><strong>Youth Impact</strong>: How do stop and search rates vary for young individuals (under 25 years old) in drug-related cases?</li>
-<li><strong>Trend over Time</strong>: Has the adjusted disparity in stop and search rates changed over the five-year period 2020/21–2024/25?</li>
-<li><strong>Outcome Disparity</strong>: Do post-search outcomes differ by ethnicity, suggesting differential thresholds for suspicion?</li>
-</ol>
-<p>These questions align with broader concerns about systemic inequalities within policing practices and their potential impact on community trust and social justice.</p>
-<p>To address these questions, the UNJUST project employs comprehensive data analysis and statistical modelling, utilising techniques that offer insights into the distribution of stop and search incidents across different ethnic groups. This report builds on the foundational work of researchers such as <span class="citation" data-cites="Vomfell2021">Vomfell and Stewart (<a href="references.html#ref-Vomfell2021" role="doc-biblioref">2021</a>)</span>, whose studies highlight the combined impact of officer discretion and the increased patrolling of ethnic minority areas. By analysing stop and search data from five complete financial years, 2020/21 to 2024/25, covering 556,000+ aggregated records representing approximately 2.9 million individual stop-and-search incidents, the project provides an updated perspective on the prevalence of these disparities and, crucially, whether they are improving or worsening over time.</p>
-<p>One notable development in this area is the increasing use of artificial intelligence (AI) to support police operations. AI-driven tools, such as Live Facial Recognition (LFR), have been trialled by the Metropolitan Police in London to enhance stop and search methods. This technology enables real-time identification of individuals on police watchlists by scanning and recognising faces from distances of 10 to 20 metres. The system compares faces against databases containing thousands of known individuals, and when a match is detected, officers are alerted to potentially stop the individual for further questioning. According to recent reports, AI has the potential to improve the efficiency and objectivity of stop and search practices, contributing to more data-driven policing methods <span class="citation" data-cites="Sylvester2024">(<a href="references.html#ref-Sylvester2024" role="doc-biblioref">Sylvester, 2024</a>)</span>. While the UNJUST project does not incorporate AI-based stop and search data in its current analysis, understanding the role of emerging technologies is crucial for future efforts aimed at reducing disparities and enhancing the fairness of policing practices.</p>
-<p>The findings presented in this report offer a rigorous, evidence-based analysis of the current state of stop and search practices, with a particular focus on racial disparities. By examining these issues through the lens of statistical rigour, the UNJUST project aims to contribute valuable insights to ongoing discussions about justice, equality, and effective law enforcement.</p>
+<p>This appendix assesses whether the ethnicity incidence rate ratios (IRRs) reported in the main results are stable across three types of perturbation: (1) dropping individual covariates from the model, one at a time; (2) replacing the normal-approximation confidence intervals with non-parametric bootstrap intervals; and (3) comparing the standard errors produced by a standard Poisson model against those from the Quasi-Poisson model used in the main analysis. All computations are implemented in <code>analysis/08_sensitivity.R</code>.</p>
+<section id="b.1-leave-one-covariate-out" class="level2" data-number="B.1">
+<h2 data-number="B.1" class="anchored" data-anchor-id="b.1-leave-one-covariate-out"><span class="header-section-number">B.1</span> B.1 Leave-One-Covariate-Out</h2>
+<p>The full model includes six predictors: financial year, region, ethnicity, sex, age group, and reason for search. To assess which covariates act as genuine confounders of the ethnicity effect, the model is re-estimated five times, each time omitting one non-ethnicity predictor. The Black/White IRR and its 95% confidence interval are extracted from each specification and compared.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-loocv" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-loocv-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../analysis/output/figures/sensitivity_irr_stability.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-loocv-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;B.1: Ethnicity IRRs (relative to White) under six model specifications. Each row drops one covariate. All non-ethnicity ethnicity groups are also shown. The Black/White IRR is stable across all specifications except when region is removed.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><a href="#fig-loocv" class="quarto-xref">Figure&nbsp;<span>B.1</span></a> shows that the Black/White IRR is 3.022 (95% CI: 2.855, 3.199) in the full model and remains at that level when financial year, sex, age group, or reason for search is dropped. These four covariates are therefore not meaningful confounders of the racial disparity estimate in this dataset.</p>
+<p>The exception is region: removing the regional fixed effect inflates the Black/White IRR to 4.351 (95% CI: 3.972, 4.766). This is expected. London combines the largest Black population in England with the highest per-capita stop and search volume. Without controlling for region, this concentration is partially absorbed into the ethnicity coefficient, producing upward bias. Crucially, even the uncontrolled estimate of 4.351 confirms a large disparity, so the Black/White finding is not an artefact of the regional distribution of the population.</p>
+<div class="cell">
+<div id="tbl-loocv-black" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-loocv-black-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;B.1: Black/White IRR under each leave-one-covariate-out specification.
+</figcaption>
+<div aria-describedby="tbl-loocv-black-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table table-striped table-hover do-not-create-environment cell table-sm small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Specification</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">IRR</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Lower 95% CI</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Upper 95% CI</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">Full model (reference)</td>
+<td style="text-align: right; font-weight: bold;">3.022</td>
+<td style="text-align: right; font-weight: bold;">2.855</td>
+<td style="text-align: right; font-weight: bold;">3.199</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Drop financial_year</td>
+<td style="text-align: right;">3.022</td>
+<td style="text-align: right;">2.842</td>
+<td style="text-align: right;">3.213</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Drop region</td>
+<td style="text-align: right;">4.351</td>
+<td style="text-align: right;">3.972</td>
+<td style="text-align: right;">4.766</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Drop sex</td>
+<td style="text-align: right;">3.026</td>
+<td style="text-align: right;">2.663</td>
+<td style="text-align: right;">3.438</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Drop age group</td>
+<td style="text-align: right;">3.022</td>
+<td style="text-align: right;">2.855</td>
+<td style="text-align: right;">3.199</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Drop reason (drugs)</td>
+<td style="text-align: right;">3.022</td>
+<td style="text-align: right;">2.816</td>
+<td style="text-align: right;">3.243</td>
+</tr>
+</tbody>
+</table>
 
 
-<div id="refs" class="references csl-bib-body" role="list" style="display: none">
-<div id="ref-CRED2021" class="csl-entry" role="listitem">
-Commission on Race and Ethnic Disparities (2021) <em>Commission on race and ethnic disparities: The report</em>, London, HM Government.
-</div>
-<div id="ref-EHRC2010" class="csl-entry" role="listitem">
-Equality and Commission, H. R. (2010) <em>Stop and think: A critical review of the use of stop and search powers in england and wales</em>, London, EHRC.
-</div>
-<div id="ref-HomeOffice2023" class="csl-entry" role="listitem">
-Home Office (GOV.UK) (2023) <em>Police powers and procedures: Stop and search and arrests, england and wales, year ending 31 march 2023</em>, London, Home Office [Online]. Available at <a href="https://www.gov.uk/government/statistics/stop-and-search-and-arrests-year-ending-march-2023/police-powers-and-procedures-stop-and-search-and-arrests-england-and-wales-year-ending-31-march-2023">https://www.gov.uk/government/statistics/stop-and-search-and-arrests-year-ending-march-2023/police-powers-and-procedures-stop-and-search-and-arrests-england-and-wales-year-ending-31-march-2023</a>.
-</div>
-<div id="ref-IER2023" class="csl-entry" role="listitem">
-IER UK (2023) <em>Anti-racism strategy for the city of york</em>, York, Inclusive Equal Rights UK.
-</div>
-<div id="ref-rss_statisticians_2024" class="csl-entry" role="listitem">
-Royal Statistical Society (RSS) (2023) <span>“Statisticians for <span>Society</span>,”</span> <em>RSS Statisticians for Society</em> [Online]. Available at <a href="https://rss.org.uk/membership/volunteering-and-promoting/statisticians-for-society-initiative/">https://rss.org.uk/membership/volunteering-and-promoting/statisticians-for-society-initiative/</a> (Accessed 15 November 2024).
-</div>
-<div id="ref-CSJ2020" class="csl-entry" role="listitem">
-Social Justice, C. for (2020) <em>Facing the facts: Ethnicity and disadvantage in britain</em>, London, Centre for Social Justice.
-</div>
-<div id="ref-Sylvester2024" class="csl-entry" role="listitem">
-Sylvester, T. (2024) <span>“’No human could do this’: How facial recognition is transforming policing,”</span> <em>The Times</em>.
-</div>
-<div id="ref-Vomfell2021" class="csl-entry" role="listitem">
-Vomfell, L. and Stewart, N. (2021) <span>“Officer bias, over-patrolling and ethnic disparities in stop and search,”</span> <em>Nature Human Behaviour</em> [Online]. DOI: <a href="https://doi.org/10.1038/s41562-020-01029-w">10.1038/s41562-020-01029-w</a>.
 </div>
 </div>
+</figure>
+</div>
+</div>
+</section>
+<section id="b.2-bootstrap-confidence-intervals" class="level2" data-number="B.2">
+<h2 data-number="B.2" class="anchored" data-anchor-id="b.2-bootstrap-confidence-intervals"><span class="header-section-number">B.2</span> B.2 Bootstrap Confidence Intervals</h2>
+<p>The 95% confidence intervals in the main analysis are based on a normal approximation: point estimate ± 1.96 × standard error. For GLMs with high dispersion and influential observations (identified in <a href="appendix_diagnostics.html" class="quarto-xref"><span>Appendix A</span></a>), the normal approximation may understate uncertainty. As a non-parametric alternative, 500 bootstrap replicates of the full model are fitted by resampling the 1,971 modelling strata with replacement, and the 2.5th and 97.5th percentiles of the resulting coefficient distributions form the bootstrap intervals.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-bootstrap" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bootstrap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../analysis/output/figures/sensitivity_bootstrap_ci.png" class="img-fluid figure-img" style="width:85.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bootstrap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;B.2: Bootstrap (B = 500) and normal-approximation 95% confidence intervals for each ethnicity group. The diamond marks the point estimate. Bootstrap intervals are wider for the Black and Asian groups, reflecting the influence of high-leverage strata identified in Appendix A.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><a href="#fig-bootstrap" class="quarto-xref">Figure&nbsp;<span>B.2</span></a> shows the comparison for all four non-White groups. For the Black group, the bootstrap interval (2.526, 3.459) is wider than the normal-approximation interval (2.855, 3.199), with the upper bound extending further. Both intervals are well above 1, confirming that the Black disparity is a robust finding. The bootstrap lower bound (2.526) represents a conservative minimum estimate of the Black/White rate ratio.</p>
+<p>For the Asian group, the bootstrap lower bound reaches 1.00, compared with 1.10 from the normal approximation. This indicates that the elevated Asian stop rate is less precisely estimated than the main results suggest, driven by the sensitivity of this coefficient to certain high-volume London strata.</p>
+<p>For the Mixed and Other groups, bootstrap and normal-approximation intervals are very similar, confirming that the uncertainty reported for those groups in the main analysis is well-calibrated.</p>
+<div class="cell">
+<div id="tbl-bootstrap" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-bootstrap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;B.2: Point estimates and 95% CIs by two methods. All IRRs are relative to White.
+</figcaption>
+<div aria-describedby="tbl-bootstrap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table table-striped table-hover do-not-create-environment cell table-sm small" data-quarto-postprocess="true">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: left; empty-cells: hide; border-bottom: hidden;"></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Normal approximation
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Bootstrap (B = 500)
+</div></th>
+</tr>
+<tr class="odd">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Ethnicity</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">IRR</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Normal lo</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Normal hi</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Bootstrap lo</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Bootstrap hi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Asian</td>
+<td style="text-align: right;">1.169</td>
+<td style="text-align: right;">1.101</td>
+<td style="text-align: right;">1.241</td>
+<td style="text-align: right;">1.004</td>
+<td style="text-align: right;">1.341</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Black</td>
+<td style="text-align: right;">3.022</td>
+<td style="text-align: right;">2.855</td>
+<td style="text-align: right;">3.199</td>
+<td style="text-align: right;">2.526</td>
+<td style="text-align: right;">3.459</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mixed</td>
+<td style="text-align: right;">1.357</td>
+<td style="text-align: right;">1.233</td>
+<td style="text-align: right;">1.494</td>
+<td style="text-align: right;">1.207</td>
+<td style="text-align: right;">1.512</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Other</td>
+<td style="text-align: right;">0.934</td>
+<td style="text-align: right;">0.824</td>
+<td style="text-align: right;">1.057</td>
+<td style="text-align: right;">0.829</td>
+<td style="text-align: right;">1.063</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section id="b.3-poisson-vs-quasi-poisson-standard-errors" class="level2" data-number="B.3">
+<h2 data-number="B.3" class="anchored" data-anchor-id="b.3-poisson-vs-quasi-poisson-standard-errors"><span class="header-section-number">B.3</span> B.3 Poisson vs Quasi-Poisson Standard Errors</h2>
+<p>As noted in <a href="methodology.html#sec-quasipoisson" class="quarto-xref"><span>Section 4.5</span></a>, the standard Poisson model produces standard errors that do not account for the overdispersion present in the data. The Quasi-Poisson model corrects this by multiplying all standard errors by <span class="math inline">\(\sqrt{\hat{\phi}}\)</span>. <a href="#tbl-pois-qp" class="quarto-xref">Table&nbsp;<span>B.3</span></a> confirms that the correction factor is 13.48 for all ethnicity terms (equal to <span class="math inline">\(\sqrt{181.7}\)</span>, the estimated dispersion parameter), and that the resulting confidence intervals are far wider under Quasi-Poisson than under a naive Poisson fit.</p>
+<div class="cell">
+<div id="tbl-pois-qp" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-pois-qp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;B.3: Comparison of standard errors and 95% CIs under Poisson and Quasi-Poisson families. IRRs are identical; only the standard errors differ.
+</figcaption>
+<div aria-describedby="tbl-pois-qp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table table-striped table-hover do-not-create-environment cell table-sm small" data-quarto-postprocess="true">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="5" data-quarto-table-cell-role="th" style="text-align: left; empty-cells: hide; border-bottom: hidden;"></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Poisson 95% CI
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Quasi-Poisson 95% CI
+</div></th>
+</tr>
+<tr class="odd">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Ethnicity</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">IRR</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">SE (Poisson)</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">SE (QP)</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">SE ratio</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Pois lo</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Pois hi</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">QP lo</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">QP hi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Asian</td>
+<td style="text-align: right;">1.169</td>
+<td style="text-align: right;">0.0023</td>
+<td style="text-align: right;">0.0306</td>
+<td style="text-align: right;">13.48</td>
+<td style="text-align: right;">1.164</td>
+<td style="text-align: right;">1.174</td>
+<td style="text-align: right;">1.101</td>
+<td style="text-align: right;">1.241</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Black</td>
+<td style="text-align: right;">3.022</td>
+<td style="text-align: right;">0.0022</td>
+<td style="text-align: right;">0.0291</td>
+<td style="text-align: right;">13.48</td>
+<td style="text-align: right;">3.009</td>
+<td style="text-align: right;">3.035</td>
+<td style="text-align: right;">2.855</td>
+<td style="text-align: right;">3.199</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mixed</td>
+<td style="text-align: right;">1.357</td>
+<td style="text-align: right;">0.0036</td>
+<td style="text-align: right;">0.0488</td>
+<td style="text-align: right;">13.48</td>
+<td style="text-align: right;">1.348</td>
+<td style="text-align: right;">1.367</td>
+<td style="text-align: right;">1.233</td>
+<td style="text-align: right;">1.494</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Other</td>
+<td style="text-align: right;">0.934</td>
+<td style="text-align: right;">0.0047</td>
+<td style="text-align: right;">0.0635</td>
+<td style="text-align: right;">13.48</td>
+<td style="text-align: right;">0.925</td>
+<td style="text-align: right;">0.942</td>
+<td style="text-align: right;">0.824</td>
+<td style="text-align: right;">1.057</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>The Poisson confidence interval for the Black/White IRR spans (3.009, 3.035), a range of approximately 0.03. The corresponding Quasi-Poisson interval (2.855, 3.199) spans 0.34. The difference is entirely attributable to the dispersion correction: without it, confidence intervals would convey false precision and any significance tests would be severely anti-conservative. The Quasi-Poisson approach is the appropriate choice for data of this kind, and the bootstrap results in <a href="#sec-appendix-sensitivity" class="quarto-xref"><span>Appendix B</span></a> confirm that its intervals are also consistent with non-parametric uncertainty estimates.</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -666,13 +932,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link  aria-label=" &lt;span="" analysis="" of="" uk="" stop="" and="" search&lt;="" span&gt;"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statistical Analysis of UK Stop and Search</span></span>
+      <a href="./appendix_diagnostics.html" class="pagination-link  aria-label=" &lt;span="" a:="" model="" diagnostics&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix A: Model Diagnostics</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./literature.html" class="pagination-link" aria-label="<span class='chapter-number'>3</span>&nbsp; <span class='chapter-title'>Literature Review</span>">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Literature Review</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./appendix_ipw.html" class="pagination-link" aria-label="<span class='chapter-number'>C</span>&nbsp; <span class='chapter-title'>Appendix C: Inverse Propensity Weighted Estimates</span>">
+        <span class="nav-page-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Appendix C: Inverse Propensity Weighted Estimates</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

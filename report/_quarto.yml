@@ -19,6 +19,10 @@ book:
     - discussion.qmd
     - conclusion.qmd
     - references.qmd
+  appendices:
+    - appendix_diagnostics.qmd
+    - appendix_sensitivity.qmd
+    - appendix_ipw.qmd
   downloads: [pdf]
 
 bibliography: bibliography.bib
@@ -38,8 +42,10 @@ format:
       text: |
         \usepackage{lmodern}
         \usepackage[T1]{fontenc}
+        \usepackage[table]{xcolor}
         \usepackage{booktabs}
         \usepackage{longtable}
         \usepackage{float}
+        \usepackage{makecell}
 
 prefer-html: true

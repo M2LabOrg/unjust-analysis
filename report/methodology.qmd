@@ -4,7 +4,7 @@
 
 The analysis utilizes two primary data sources:
 
-1. **GOV.UK Stop and Search Open Data (2020/21–2024/25)**: This dataset provides comprehensive records of stop and search incidents across England and Wales, including variables such as ethnicity, age, sex, region, and reason for search. The five-year extract covers the financial years ending March 2021 through March 2025, comprising over 2.1 million records after cleaning. The data are released by the Home Office [@home_office_govuk_stop_2024] and include all searches conducted under Section 1 of the Police and Criminal Evidence Act (PACE) and Section 60 of the Criminal Justice and Public Order Act (CJPOA).
+1. **GOV.UK Stop and Search Open Data (2020/21–2024/25)**: This dataset provides comprehensive records of stop and search incidents across England and Wales, including variables such as ethnicity, age, sex, region, and reason for search. The five-year extract covers the financial years ending March 2021 through March 2025, comprising 556,000+ aggregated records representing approximately 2.9 million individual stop-and-search incidents after cleaning. The data are released by the Home Office [@home_office_govuk_stop_2024] and include all searches conducted under Section 1 of the Police and Criminal Evidence Act (PACE) and Section 60 of the Criminal Justice and Public Order Act (CJPOA).
 
 2. **ONS Census 2021**: Used to obtain population denominators by ethnicity and region, serving as the offset in the rate models [@ons_2022]. We assume that the 2021 population counts remain a reasonable approximation across all five financial years, a limitation discussed in the Discussion chapter.
 
@@ -111,7 +111,7 @@ $$\hat{\phi} = \frac{\text{Residual deviance}}{\text{df}} = \frac{342{,}749}{1{,
 
 This is far greater than 1, confirming severe overdispersion. A Quasi-Poisson model retains the same coefficient estimates as Poisson but scales all standard errors by $\sqrt{\hat{\phi}}$, producing correct (wider) confidence intervals and conservative inference. Using a Poisson family without this correction would dramatically understate uncertainty and inflate the apparent precision of the IRR estimates.
 
-Note that Quasi-Poisson models do not yield a finite AIC; model adequacy is instead assessed via the pseudo-R² [@cohen88] and residual deviance diagnostics.
+Note that Quasi-Poisson models do not yield a finite AIC; model adequacy is instead assessed via the pseudo-R² [@cohen88] and residual deviance diagnostics. Full regression diagnostics, including Pearson residual plots, Cook's distance analysis, and an observed-vs-expected comparison, are presented in @sec-appendix-diagnostics. Sensitivity of the ethnicity IRRs to alternative model specifications is assessed in @sec-appendix-sensitivity, and a comparison with inverse propensity weighted estimates is provided in @sec-appendix-ipw.
 
 
 ## Per-Year IRR Models {#sec-peryear}

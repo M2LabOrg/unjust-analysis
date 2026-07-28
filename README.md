@@ -50,6 +50,22 @@ bash build.sh
 - [ONS Census 2021](https://www.ons.gov.uk/census) (Population by ethnicity and region)
 - [Ethnicity Facts and Figures](https://www.ethnicity-facts-figures.service.gov.uk/crime-justice-and-the-law/policing/stop-and-search/latest/) (Pre-calculated rates for QA cross-validation)
 
+## Acknowledgements
+
+This project was carried out through the Royal Statistical Society's
+[Statisticians for Society](https://rss.org.uk/membership/volunteering-and-promoting/statisticians-for-society-initiative/)
+programme, which connects volunteer statisticians with third-sector organisations.
+We thank the RSS and Statisticians for Society for facilitating and supporting
+this collaboration.
+
+We are grateful to the RSS reviewer for a thorough mid-way review, whose
+recommendations led to the addition of regression diagnostics, sensitivity
+analyses, and inverse propensity weighted estimates to this work.
+
+We thank [UNJUST CIC](https://www.theunjustproject.com/) for sharing their
+mission and for the opportunity to contribute statistical evidence to the
+conversation on racial justice in policing.
+
 ## Licence
 
 This repository uses a dual licence:
