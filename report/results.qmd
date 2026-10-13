@@ -220,7 +220,12 @@ ggplot() +
     title = "London is home to the largest share of England's Black population",
     subtitle = "Proportion of Black or Black British ethnic group by region, Census 2021",
     fill = "Proportion (%)",
-    caption = "Source: ONS Census 2021"
+    caption = paste(
+      "Source: ONS Census 2021, licensed under the Open Government Licence v3.0.",
+      "Contains National Statistics data © Crown copyright and database right 2026.",
+      "Contains OS data © Crown copyright and database right 2026.",
+      sep = "\n"
+    )
   ) +
   scale_fill_distiller(
     palette = "Blues",

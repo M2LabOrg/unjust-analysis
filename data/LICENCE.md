@@ -25,6 +25,9 @@ The datasets in this directory are derived from publicly available UK government
 - **Source:** [ONS Open Geography Portal](https://geoportal.statistics.gov.uk/)
 - **Licence:** [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
 - **Files:** `raw/shapefile/`
+- **Attribution** (required wherever the boundaries are shown, as in the regional map in the report):
+  Contains National Statistics data © Crown copyright and database right 2026.
+  Contains OS data © Crown copyright and database right 2026.
 
 ## Derived Data
 
