@@ -91,6 +91,8 @@ jobs:
             any::lme4
             any::broom
             any::rmarkdown
+          # Quarto is installed by the pinned step below
+          install-quarto: false
 
       # ── Quarto setup ──────────────────────────────────────────────────────
       - name: Set up Quarto
