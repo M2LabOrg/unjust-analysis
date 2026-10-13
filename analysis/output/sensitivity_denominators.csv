@@ -1,85 +1,85 @@
 term,offset,irr,irr_lower,irr_upper
-financial_year2021/22,region x ethnicity,0.727,0.688,0.768
-financial_year2022/23,region x ethnicity,0.736,0.696,0.777
-financial_year2023/24,region x ethnicity,0.717,0.679,0.758
-financial_year2024/25,region x ethnicity,0.694,0.657,0.735
-region_cleanEast of England,region x ethnicity,1.547,1.375,1.741
-region_cleanLondon,region x ethnicity,4.093,3.692,4.537
-region_cleanNorth East,region x ethnicity,1.855,1.616,2.129
-region_cleanNorth West,region x ethnicity,3.952,3.561,4.385
-region_cleanSouth East,region x ethnicity,1.435,1.282,1.607
-region_cleanSouth West,region x ethnicity,0.913,0.798,1.046
-region_cleanWales,region x ethnicity,1.923,1.686,2.193
-region_cleanWest Midlands,region x ethnicity,1.446,1.282,1.63
-region_cleanYorkshire and The Humber,region x ethnicity,1.914,1.703,2.151
-ethnicityAsian,region x ethnicity,1.169,1.101,1.241
-ethnicityBlack,region x ethnicity,3.022,2.855,3.199
-ethnicityMixed,region x ethnicity,1.357,1.233,1.494
-ethnicityOther,region x ethnicity,0.934,0.824,1.057
-sexMale,region x ethnicity,8.003,7.552,8.482
-age_under25Under 25,region x ethnicity,1.026,0.989,1.064
-reason_drugsDrugs,region x ethnicity,1.774,1.708,1.843
-dispersion,region x ethnicity,181.826,NA,NA
-financial_year2021/22,region x ethnicity x sex x age,0.727,0.688,0.768
-financial_year2022/23,region x ethnicity x sex x age,0.736,0.696,0.777
-financial_year2023/24,region x ethnicity x sex x age,0.717,0.679,0.758
-financial_year2024/25,region x ethnicity x sex x age,0.694,0.657,0.734
-region_cleanEast of England,region x ethnicity x sex x age,1.56,1.389,1.754
-region_cleanLondon,region x ethnicity x sex x age,4.281,3.866,4.74
-region_cleanNorth East,region x ethnicity x sex x age,1.855,1.619,2.126
-region_cleanNorth West,region x ethnicity x sex x age,3.941,3.555,4.369
-region_cleanSouth East,region x ethnicity x sex x age,1.447,1.294,1.617
-region_cleanSouth West,region x ethnicity x sex x age,0.924,0.808,1.057
-region_cleanWales,region x ethnicity x sex x age,1.923,1.688,2.19
-region_cleanWest Midlands,region x ethnicity x sex x age,1.447,1.285,1.629
-region_cleanYorkshire and The Humber,region x ethnicity x sex x age,1.908,1.7,2.142
-ethnicityAsian,region x ethnicity x sex x age,1.047,0.987,1.111
-ethnicityBlack,region x ethnicity x sex x age,2.717,2.568,2.875
-ethnicityMixed,region x ethnicity x sex x age,1.025,0.932,1.128
-ethnicityOther,region x ethnicity x sex x age,0.833,0.736,0.942
-sexMale,region x ethnicity x sex x age,8.237,7.777,8.724
-age_under25Under 25,region x ethnicity x sex x age,2.249,2.168,2.333
-reason_drugsDrugs,region x ethnicity x sex x age,1.774,1.709,1.842
-dispersion,region x ethnicity x sex x age,178.058,NA,NA
-financial_year2021/22,region x ethnicity x sex,0.727,0.687,0.768
-financial_year2022/23,region x ethnicity x sex,0.736,0.696,0.777
-financial_year2023/24,region x ethnicity x sex,0.717,0.678,0.758
-financial_year2024/25,region x ethnicity x sex,0.694,0.656,0.735
-region_cleanEast of England,region x ethnicity x sex,1.551,1.377,1.746
-region_cleanLondon,region x ethnicity x sex,4.159,3.75,4.612
-region_cleanNorth East,region x ethnicity x sex,1.865,1.624,2.142
-region_cleanNorth West,region x ethnicity x sex,3.96,3.566,4.397
-region_cleanSouth East,region x ethnicity x sex,1.442,1.287,1.615
-region_cleanSouth West,region x ethnicity x sex,0.918,0.801,1.052
-region_cleanWales,region x ethnicity x sex,1.932,1.693,2.205
-region_cleanWest Midlands,region x ethnicity x sex,1.447,1.283,1.632
-region_cleanYorkshire and The Humber,region x ethnicity x sex,1.918,1.706,2.158
-ethnicityAsian,region x ethnicity x sex,1.163,1.095,1.235
-ethnicityBlack,region x ethnicity x sex,3.114,2.942,3.297
-ethnicityMixed,region x ethnicity x sex,1.359,1.234,1.496
-ethnicityOther,region x ethnicity x sex,0.909,0.802,1.03
-sexMale,region x ethnicity x sex,8.442,7.964,8.95
-age_under25Under 25,region x ethnicity x sex,1.026,0.989,1.064
-reason_drugsDrugs,region x ethnicity x sex,1.774,1.708,1.843
-dispersion,region x ethnicity x sex,183.827,NA,NA
-financial_year2021/22,region x ethnicity x age,0.727,0.688,0.768
-financial_year2022/23,region x ethnicity x age,0.736,0.696,0.777
-financial_year2023/24,region x ethnicity x age,0.717,0.679,0.758
-financial_year2024/25,region x ethnicity x age,0.694,0.657,0.734
-region_cleanEast of England,region x ethnicity x age,1.56,1.388,1.753
-region_cleanLondon,region x ethnicity x age,4.231,3.821,4.684
-region_cleanNorth East,region x ethnicity x age,1.847,1.612,2.117
-region_cleanNorth West,region x ethnicity x age,3.932,3.547,4.359
-region_cleanSouth East,region x ethnicity x age,1.443,1.291,1.614
-region_cleanSouth West,region x ethnicity x age,0.922,0.807,1.054
-region_cleanWales,region x ethnicity x age,1.918,1.684,2.184
-region_cleanWest Midlands,region x ethnicity x age,1.446,1.285,1.628
-region_cleanYorkshire and The Humber,region x ethnicity x age,1.903,1.695,2.136
-ethnicityAsian,region x ethnicity x age,1.047,0.987,1.111
-ethnicityBlack,region x ethnicity x age,2.645,2.499,2.799
-ethnicityMixed,region x ethnicity x age,1.011,0.919,1.112
-ethnicityOther,region x ethnicity x age,0.847,0.749,0.958
-sexMale,region x ethnicity x age,8.002,7.555,8.475
-age_under25Under 25,region x ethnicity x age,2.367,2.282,2.455
-reason_drugsDrugs,region x ethnicity x age,1.774,1.709,1.842
-dispersion,region x ethnicity x age,177.848,NA,NA
+financial_year2021/22,region x ethnicity,0.726669,0.687542,0.768022
+financial_year2022/23,region x ethnicity,0.735535,0.696066,0.777241
+financial_year2023/24,region x ethnicity,0.717271,0.678509,0.758247
+financial_year2024/25,region x ethnicity,0.694492,0.656614,0.734556
+region_cleanEast of England,region x ethnicity,1.54722,1.375118,1.740861
+region_cleanLondon,region x ethnicity,4.093122,3.69229,4.537468
+region_cleanNorth East,region x ethnicity,1.854893,1.616272,2.128744
+region_cleanNorth West,region x ethnicity,3.951615,3.56068,4.385472
+region_cleanSouth East,region x ethnicity,1.4353070000000001,1.282227,1.606663
+region_cleanSouth West,region x ethnicity,0.913413,0.797685,1.045931
+region_cleanWales,region x ethnicity,1.922744,1.686013,2.192714
+region_cleanWest Midlands,region x ethnicity,1.445693,1.282404,1.629773
+region_cleanYorkshire and The Humber,region x ethnicity,1.913651,1.702568,2.150903
+ethnicityAsian,region x ethnicity,1.169112,1.101042,1.24139
+ethnicityBlack,region x ethnicity,3.021964,2.854703,3.199024
+ethnicityMixed,region x ethnicity,1.357399,1.23349,1.493756
+ethnicityOther,region x ethnicity,0.93373,0.824459,1.057484
+sexMale,region x ethnicity,8.003286,7.551715,8.481859
+age_under25Under 25,region x ethnicity,1.025664,0.988915,1.063778
+reason_drugsDrugs,region x ethnicity,1.774212,1.708066,1.842919
+dispersion,region x ethnicity,181.825648,NA,NA
+financial_year2021/22,region x ethnicity x sex x age,0.726653,0.687924,0.767564
+financial_year2022/23,region x ethnicity x sex x age,0.735514,0.696447,0.776772
+financial_year2023/24,region x ethnicity x sex x age,0.717256,0.678888,0.757793
+financial_year2024/25,region x ethnicity x sex x age,0.694481,0.656987,0.734115
+region_cleanEast of England,region x ethnicity x sex x age,1.560474,1.388603,1.753619
+region_cleanLondon,region x ethnicity x sex x age,4.280737,3.865935,4.740045
+region_cleanNorth East,region x ethnicity x sex x age,1.854808,1.618525,2.125586
+region_cleanNorth West,region x ethnicity x sex x age,3.941461,3.555382,4.369465
+region_cleanSouth East,region x ethnicity x sex x age,1.446558,1.293796,1.617358
+region_cleanSouth West,region x ethnicity x sex x age,0.924366,0.80839,1.05698
+region_cleanWales,region x ethnicity x sex x age,1.922746,1.688328,2.189712
+region_cleanWest Midlands,region x ethnicity x sex x age,1.44655,1.284756,1.628718
+region_cleanYorkshire and The Humber,region x ethnicity x sex x age,1.907999,1.699604,2.141947
+ethnicityAsian,region x ethnicity x sex x age,1.047285,0.98681,1.111466
+ethnicityBlack,region x ethnicity x sex x age,2.717085,2.567846,2.874996
+ethnicityMixed,region x ethnicity x sex x age,1.025265,0.931926,1.127953
+ethnicityOther,region x ethnicity x sex x age,0.832567,0.736122,0.941649
+sexMale,region x ethnicity x sex x age,8.237096,7.776927,8.724494
+age_under25Under 25,region x ethnicity x sex x age,2.249216,2.168301,2.33315
+reason_drugsDrugs,region x ethnicity x sex x age,1.774191,1.708722,1.842168
+dispersion,region x ethnicity x sex x age,178.057796,NA,NA
+financial_year2021/22,region x ethnicity x sex,0.726667,0.687332,0.768254
+financial_year2022/23,region x ethnicity x sex,0.73554,0.695861,0.777481
+financial_year2023/24,region x ethnicity x sex,0.717276,0.678307,0.758484
+financial_year2024/25,region x ethnicity x sex,0.694497,0.656416,0.734787
+region_cleanEast of England,region x ethnicity x sex,1.550878,1.377477,1.746108
+region_cleanLondon,region x ethnicity x sex,4.158689,3.749598,4.612412
+region_cleanNorth East,region x ethnicity x sex,1.865204,1.624033,2.14219
+region_cleanNorth West,region x ethnicity x sex,3.959564,3.565804,4.396807
+region_cleanSouth East,region x ethnicity x sex,1.442075,1.287475,1.615239
+region_cleanSouth West,region x ethnicity x sex,0.917768,0.800892,1.051699
+region_cleanWales,region x ethnicity x sex,1.93197,1.692883,2.204823
+region_cleanWest Midlands,region x ethnicity x sex,1.446804,1.282547,1.632098
+region_cleanYorkshire and The Humber,region x ethnicity x sex,1.918297,1.705608,2.157509
+ethnicityAsian,region x ethnicity x sex,1.163014,1.094972,1.235285
+ethnicityBlack,region x ethnicity x sex,3.11428,2.941706,3.296977
+ethnicityMixed,region x ethnicity x sex,1.358633,1.23401,1.495842
+ethnicityOther,region x ethnicity x sex,0.909215,0.80234,1.030325
+sexMale,region x ethnicity x sex,8.44245,7.963529,8.950173
+age_under25Under 25,region x ethnicity x sex,1.025653,0.988706,1.06398
+reason_drugsDrugs,region x ethnicity x sex,1.774226,1.707724,1.843319
+dispersion,region x ethnicity x sex,183.827275,NA,NA
+financial_year2021/22,region x ethnicity x age,0.726656,0.687949,0.767542
+financial_year2022/23,region x ethnicity x age,0.735508,0.696463,0.776741
+financial_year2023/24,region x ethnicity x age,0.717251,0.678905,0.757763
+financial_year2024/25,region x ethnicity x age,0.694477,0.657005,0.734086
+region_cleanEast of England,region x ethnicity x age,1.56011,1.388373,1.753089
+region_cleanLondon,region x ethnicity x age,4.230575,3.820684,4.68444
+region_cleanNorth East,region x ethnicity x age,1.847142,1.611961,2.116636
+region_cleanNorth West,region x ethnicity x age,3.932446,3.547465,4.359206
+region_cleanSouth East,region x ethnicity x age,1.443372,1.291031,1.613689
+region_cleanSouth West,region x ethnicity x age,0.922218,0.806575,1.054441
+region_cleanWales,region x ethnicity x age,1.91781,1.684121,2.183925
+region_cleanWest Midlands,region x ethnicity x age,1.446244,1.284573,1.628263
+region_cleanYorkshire and The Humber,region x ethnicity x age,1.902651,1.694955,2.135798
+ethnicityAsian,region x ethnicity x age,1.047294,0.986845,1.111447
+ethnicityBlack,region x ethnicity x age,2.644945,2.499496,2.798857
+ethnicityMixed,region x ethnicity x age,1.010875,0.9189,1.112057
+ethnicityOther,region x ethnicity x age,0.847216,0.749072,0.958218
+sexMale,region x ethnicity x age,8.001826,7.555162,8.474897
+age_under25Under 25,region x ethnicity x age,2.366592,2.281606,2.454743
+reason_drugsDrugs,region x ethnicity x age,1.774173,1.708743,1.842109
+dispersion,region x ethnicity x age,177.848317,NA,NA

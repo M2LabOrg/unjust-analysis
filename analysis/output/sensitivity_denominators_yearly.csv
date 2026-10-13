@@ -1,41 +1,41 @@
 term,irr,irr_lower,irr_upper,offset,financial_year
-ethnicityAsian,1.231,1.126,1.346,region x ethnicity,2020/21
-ethnicityBlack,3.002,2.762,3.264,region x ethnicity,2020/21
-ethnicityMixed,1.173,1.007,1.368,region x ethnicity,2020/21
-ethnicityOther,0.724,0.591,0.887,region x ethnicity,2020/21
-ethnicityAsian,1.094,1.001,1.197,region x ethnicity x sex x age,2020/21
-ethnicityBlack,2.669,2.455,2.902,region x ethnicity x sex x age,2020/21
-ethnicityMixed,0.857,0.734,0.999,region x ethnicity x sex x age,2020/21
-ethnicityOther,0.644,0.526,0.789,region x ethnicity x sex x age,2020/21
-ethnicityAsian,1.096,0.992,1.211,region x ethnicity,2021/22
-ethnicityBlack,2.86,2.608,3.135,region x ethnicity,2021/22
-ethnicityMixed,1.222,1.04,1.437,region x ethnicity,2021/22
-ethnicityOther,0.766,0.617,0.951,region x ethnicity,2021/22
-ethnicityAsian,0.98,0.888,1.082,region x ethnicity x sex x age,2021/22
-ethnicityBlack,2.565,2.34,2.811,region x ethnicity x sex x age,2021/22
-ethnicityMixed,0.911,0.775,1.071,region x ethnicity x sex x age,2021/22
-ethnicityOther,0.684,0.553,0.847,region x ethnicity x sex x age,2021/22
-ethnicityAsian,1.101,0.992,1.221,region x ethnicity,2022/23
-ethnicityBlack,2.901,2.63,3.2,region x ethnicity,2022/23
-ethnicityMixed,1.355,1.152,1.594,region x ethnicity,2022/23
-ethnicityOther,0.931,0.754,1.15,region x ethnicity,2022/23
-ethnicityAsian,0.981,0.887,1.086,region x ethnicity x sex x age,2022/23
-ethnicityBlack,2.593,2.357,2.854,region x ethnicity x sex x age,2022/23
-ethnicityMixed,1.014,0.864,1.189,region x ethnicity x sex x age,2022/23
-ethnicityOther,0.826,0.672,1.015,region x ethnicity x sex x age,2022/23
-ethnicityAsian,1.149,1.032,1.279,region x ethnicity,2023/24
-ethnicityBlack,3.077,2.773,3.414,region x ethnicity,2023/24
-ethnicityMixed,1.497,1.27,1.765,region x ethnicity,2023/24
-ethnicityOther,1.162,0.944,1.431,region x ethnicity,2023/24
-ethnicityAsian,1.034,0.933,1.147,region x ethnicity x sex x age,2023/24
-ethnicityBlack,2.782,2.518,3.075,region x ethnicity x sex x age,2023/24
-ethnicityMixed,1.157,0.987,1.357,region x ethnicity x sex x age,2023/24
-ethnicityOther,1.036,0.849,1.265,region x ethnicity x sex x age,2023/24
-ethnicityAsian,1.237,1.113,1.375,region x ethnicity,2024/25
-ethnicityBlack,3.332,3.001,3.699,region x ethnicity,2024/25
-ethnicityMixed,1.699,1.45,1.99,region x ethnicity,2024/25
-ethnicityOther,1.352,1.105,1.654,region x ethnicity,2024/25
-ethnicityAsian,1.125,1.015,1.247,region x ethnicity x sex x age,2024/25
-ethnicityBlack,3.046,2.752,3.372,region x ethnicity x sex x age,2024/25
-ethnicityMixed,1.351,1.158,1.578,region x ethnicity x sex x age,2024/25
-ethnicityOther,1.212,0.997,1.473,region x ethnicity x sex x age,2024/25
+ethnicityAsian,1.231122,1.126172,1.345854,region x ethnicity,2020/21
+ethnicityBlack,3.002385,2.762042,3.263641,region x ethnicity,2020/21
+ethnicityMixed,1.17349,1.006943,1.367584,region x ethnicity,2020/21
+ethnicityOther,0.723952,0.590883,0.886989,region x ethnicity,2020/21
+ethnicityAsian,1.094483,1.001144,1.196524,region x ethnicity x sex x age,2020/21
+ethnicityBlack,2.668807,2.454656,2.901642,region x ethnicity x sex x age,2020/21
+ethnicityMixed,0.856629,0.734437,0.99915,region x ethnicity x sex x age,2020/21
+ethnicityOther,0.644213,0.525963,0.789048,region x ethnicity x sex x age,2020/21
+ethnicityAsian,1.095833,0.991775,1.21081,region x ethnicity,2021/22
+ethnicityBlack,2.859504,2.607852,3.13544,region x ethnicity,2021/22
+ethnicityMixed,1.222126,1.039585,1.436719,region x ethnicity,2021/22
+ethnicityOther,0.76611,0.617484,0.950509,region x ethnicity,2021/22
+ethnicityAsian,0.980223,0.887793,1.082275,region x ethnicity x sex x age,2021/22
+ethnicityBlack,2.564675,2.340221,2.810657,region x ethnicity x sex x age,2021/22
+ethnicityMixed,0.911357,0.775465,1.071061,region x ethnicity x sex x age,2021/22
+ethnicityOther,0.68427,0.552632,0.847265,region x ethnicity x sex x age,2021/22
+ethnicityAsian,1.100867,0.992251,1.221372,region x ethnicity,2022/23
+ethnicityBlack,2.900721,2.62976,3.199601,region x ethnicity,2022/23
+ethnicityMixed,1.35479,1.151824,1.59352,region x ethnicity,2022/23
+ethnicityOther,0.931093,0.753638,1.150332,region x ethnicity,2022/23
+ethnicityAsian,0.981448,0.886847,1.08614,region x ethnicity x sex x age,2022/23
+ethnicityBlack,2.593355,2.356578,2.853923,region x ethnicity x sex x age,2022/23
+ethnicityMixed,1.01363,0.864393,1.188633,region x ethnicity x sex x age,2022/23
+ethnicityOther,0.825976,0.672306,1.014769,region x ethnicity x sex x age,2022/23
+ethnicityAsian,1.148546,1.031507,1.278866,region x ethnicity,2023/24
+ethnicityBlack,3.076665,2.772872,3.413742,region x ethnicity,2023/24
+ethnicityMixed,1.497129,1.270057,1.7648,region x ethnicity,2023/24
+ethnicityOther,1.162451,0.944394,1.430857,region x ethnicity,2023/24
+ethnicityAsian,1.034175,0.932537,1.146891,region x ethnicity x sex x age,2023/24
+ethnicityBlack,2.782381,2.517516,3.075111,region x ethnicity x sex x age,2023/24
+ethnicityMixed,1.157305,0.986927,1.357096,region x ethnicity x sex x age,2023/24
+ethnicityOther,1.036346,0.84899,1.265047,region x ethnicity x sex x age,2023/24
+ethnicityAsian,1.23703,1.112593,1.375386,region x ethnicity,2024/25
+ethnicityBlack,3.332048,3.00113,3.699455,region x ethnicity,2024/25
+ethnicityMixed,1.698594,1.450008,1.989798,region x ethnicity,2024/25
+ethnicityOther,1.352202,1.105486,1.653979,region x ethnicity,2024/25
+ethnicityAsian,1.12512,1.014951,1.247247,region x ethnicity x sex x age,2024/25
+ethnicityBlack,3.045929,2.751723,3.37159,region x ethnicity x sex x age,2024/25
+ethnicityMixed,1.351425,1.157647,1.577641,region x ethnicity x sex x age,2024/25
+ethnicityOther,1.21203,0.997113,1.473269,region x ethnicity x sex x age,2024/25

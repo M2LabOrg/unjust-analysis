@@ -144,7 +144,8 @@ pooled <- imap_dfr(offsets_parts, function(label, off) {
     mutate(offset = label)
 }) |>
   select(term, offset, irr, irr_lower, irr_upper) |>
-  mutate(across(c(irr, irr_lower, irr_upper), \(x) round(x, 3)))
+  # 6 decimals, so that rounding to 2 later is not a double rounding
+  mutate(across(c(irr, irr_lower, irr_upper), \(x) round(x, 6)))
 
 print(as.data.frame(pooled |>
   filter(grepl("ethnicity|sex|age|reason|dispersion", term))), row.names = FALSE)
@@ -178,7 +179,7 @@ yearly_full <- map_dfr(levels(model_data$financial_year), function(yr) {
 
 yearly <- yearly_full |>
   select(term, irr, irr_lower, irr_upper, offset, financial_year) |>
-  mutate(across(c(irr, irr_lower, irr_upper), \(x) round(x, 3)))
+  mutate(across(c(irr, irr_lower, irr_upper), \(x) round(x, 6)))
 
 message("\n  Black/White by year:")
 print(as.data.frame(yearly |> filter(term == "ethnicityBlack") |>
@@ -211,8 +212,8 @@ trend <- yearly_full |>
                         .data[[paste0("se_", last_year)]]^2),
     p_value    = 2 * pnorm(-abs(z))
   ) |>
-  mutate(across(c(irr_first, irr_last, ratio, z), \(x) round(x, 3)),
-         p_value = round(p_value, 3))
+  mutate(across(c(irr_first, irr_last, ratio, z), \(x) round(x, 6)),
+         p_value = round(p_value, 6))
 
 message("\n  Black/White change, ", first_year, " to ", last_year, ":")
 print(as.data.frame(trend), row.names = FALSE)
