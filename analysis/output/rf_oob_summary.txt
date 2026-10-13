@@ -1,0 +1,15 @@
+=== Random Forest OOB Summary ===
+
+ntree              : 500 
+mtry               : 2 
+% Var explained    : 82.6 %
+
+Variable importance (%IncMSE):
+        variable pct_inc_mse
+1            sex      61.810
+2     population      36.762
+3   region_clean      35.451
+4      ethnicity      22.990
+5   reason_drugs      17.630
+6 financial_year      -0.340
+7    age_under25      -9.541

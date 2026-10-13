@@ -1,0 +1,125 @@
+===  Quasi-Poisson  GLM Summary (Pooled Main Effects) ===
+
+Dispersion parameter: 181.83 
+
+
+Call:
+glm(formula = count ~ financial_year + region_clean + ethnicity + 
+    sex + age_under25 + reason_drugs, family = quasipoisson(link = "log"), 
+    data = model_data, offset = log(population))
+
+Coefficients:
+                                     Estimate Std. Error  t value Pr(>|t|)    
+(Intercept)                          -9.52366    0.06021 -158.174  < 2e-16 ***
+financial_year2021/22                -0.31928    0.02824  -11.307  < 2e-16 ***
+financial_year2022/23                -0.30716    0.02814  -10.916  < 2e-16 ***
+financial_year2023/24                -0.33230    0.02834  -11.724  < 2e-16 ***
+financial_year2024/25                -0.36457    0.02861  -12.741  < 2e-16 ***
+region_cleanEast of England           0.43646    0.06016    7.255 5.79e-13 ***
+region_cleanLondon                    1.40931    0.05258   26.802  < 2e-16 ***
+region_cleanNorth East                0.61783    0.07026    8.794  < 2e-16 ***
+region_cleanNorth West                1.37412    0.05315   25.854  < 2e-16 ***
+region_cleanSouth East                0.36138    0.05754    6.280 4.15e-10 ***
+region_cleanSouth West               -0.09057    0.06912   -1.310    0.190    
+region_cleanWales                     0.65375    0.06703    9.753  < 2e-16 ***
+region_cleanWest Midlands             0.36859    0.06115    6.028 1.98e-09 ***
+region_cleanYorkshire and The Humber  0.64901    0.05963   10.884  < 2e-16 ***
+ethnicityAsian                        0.15624    0.03061    5.105 3.63e-07 ***
+ethnicityBlack                        1.10591    0.02905   38.068  < 2e-16 ***
+ethnicityMixed                        0.30557    0.04884    6.257 4.82e-10 ***
+ethnicityOther                       -0.06857    0.06350   -1.080    0.280    
+sexMale                               2.07985    0.02963   70.191  < 2e-16 ***
+age_under25Under 25                   0.02534    0.01862    1.361    0.174    
+reason_drugsDrugs                     0.57336    0.01938   29.577  < 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for quasipoisson family taken to be 181.8256)
+
+    Null deviance: 2954454  on 1970  degrees of freedom
+Residual deviance:  342749  on 1950  degrees of freedom
+AIC: NA
+
+Number of Fisher Scoring iterations: 5
+
+
+
+=== Interaction Model: ethnicity × financial_year ===
+
+Dispersion parameter: 174.95 
+
+
+Call:
+glm(formula = count ~ financial_year * ethnicity + region_clean + 
+    sex + age_under25 + reason_drugs, family = quasipoisson(link = "log"), 
+    data = model_data, offset = log(population))
+
+Coefficients:
+                                      Estimate Std. Error  t value Pr(>|t|)    
+(Intercept)                          -9.588172   0.060283 -159.053  < 2e-16 ***
+financial_year2021/22                -0.273705   0.034311   -7.977 2.54e-15 ***
+financial_year2022/23                -0.224423   0.033839   -6.632 4.28e-11 ***
+financial_year2023/24                -0.226160   0.033855   -6.680 3.11e-11 ***
+financial_year2024/25                -0.254902   0.034129   -7.469 1.22e-13 ***
+ethnicityAsian                        0.364135   0.054698    6.657 3.63e-11 ***
+ethnicityBlack                        1.348946   0.049794   27.091  < 2e-16 ***
+ethnicityMixed                        0.320918   0.095999    3.343 0.000845 ***
+ethnicityOther                       -0.098441   0.127318   -0.773 0.439504    
+region_cleanEast of England           0.436450   0.059014    7.396 2.09e-13 ***
+region_cleanLondon                    1.409298   0.051578   27.324  < 2e-16 ***
+region_cleanNorth East                0.617869   0.068916    8.966  < 2e-16 ***
+region_cleanNorth West                1.374109   0.052134   26.357  < 2e-16 ***
+region_cleanSouth East                0.361369   0.056442    6.402 1.91e-10 ***
+region_cleanSouth West               -0.090587   0.067799   -1.336 0.181670    
+region_cleanWales                     0.653704   0.065754    9.942  < 2e-16 ***
+region_cleanWest Midlands             0.368598   0.059981    6.145 9.67e-10 ***
+region_cleanYorkshire and The Humber  0.649003   0.058491   11.096  < 2e-16 ***
+sexMale                               2.079852   0.029065   71.558  < 2e-16 ***
+age_under25Under 25                   0.025345   0.018260    1.388 0.165311    
+reason_drugsDrugs                     0.573368   0.019015   30.154  < 2e-16 ***
+financial_year2021/22:ethnicityAsian -0.169966   0.085986   -1.977 0.048219 *  
+financial_year2022/23:ethnicityAsian -0.280096   0.087159   -3.214 0.001332 ** 
+financial_year2023/24:ethnicityAsian -0.346730   0.088784   -3.905 9.73e-05 ***
+financial_year2024/25:ethnicityAsian -0.348175   0.089634   -3.884 0.000106 ***
+financial_year2021/22:ethnicityBlack -0.138694   0.076357   -1.816 0.069465 .  
+financial_year2022/23:ethnicityBlack -0.305705   0.078406   -3.899 9.99e-05 ***
+financial_year2023/24:ethnicityBlack -0.436261   0.081203   -5.372 8.71e-08 ***
+financial_year2024/25:ethnicityBlack -0.490759   0.083221   -5.897 4.36e-09 ***
+financial_year2021/22:ethnicityMixed -0.018641   0.146438   -0.127 0.898720    
+financial_year2022/23:ethnicityMixed -0.032928   0.144958   -0.227 0.820328    
+financial_year2023/24:ethnicityMixed -0.042850   0.145415   -0.295 0.768274    
+financial_year2024/25:ethnicityMixed  0.013372   0.144419    0.093 0.926237    
+financial_year2021/22:ethnicityOther -0.026194   0.194583   -0.135 0.892928    
+financial_year2022/23:ethnicityOther  0.007602   0.190014    0.040 0.968092    
+financial_year2023/24:ethnicityOther  0.065359   0.187241    0.349 0.727081    
+financial_year2024/25:ethnicityOther  0.103745   0.186804    0.555 0.578709    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for quasipoisson family taken to be 174.946)
+
+    Null deviance: 2954454  on 1970  degrees of freedom
+Residual deviance:  330755  on 1934  degrees of freedom
+AIC: NA
+
+Number of Fisher Scoring iterations: 5
+
+
+
+=== F-test: Main Effects vs Interaction ===
+
+Analysis of Deviance Table
+
+Model 1: count ~ financial_year + region_clean + ethnicity + sex + age_under25 + 
+    reason_drugs
+Model 2: count ~ financial_year * ethnicity + region_clean + sex + age_under25 + 
+    reason_drugs
+  Resid. Df Resid. Dev Df Deviance     F    Pr(>F)    
+1      1950     342749                                
+2      1934     330755 16    11994 4.285 2.601e-08 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+
+Pseudo R² (pooled): 0.884 
+Pseudo R² (interaction): 0.888 

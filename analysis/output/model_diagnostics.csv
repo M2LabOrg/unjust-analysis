@@ -1,0 +1,3 @@
+model,model_family,dispersion,pseudo_r2,null_deviance,residual_deviance,df_residual,n_obs,interaction_f_pval
+pooled_main_effects,Quasi-Poisson,181.83,0.884,2954453.6849134653,342749.3271995152,1950,1971,NA
+interaction_ethnicity_year,Quasi-Poisson,174.95,0.888,2954453.6849134653,330755.16511622537,1934,1971,2.6010207121766114e-8

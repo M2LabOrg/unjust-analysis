@@ -1,0 +1,50 @@
+{
+  "latest_year": "2024/25",
+  "first_year": "2020/21",
+  "finding_01": {
+    "raw_ratio_first": 5.5,
+    "raw_ratio_latest": 3.6,
+    "irr_first": 3,
+    "irr_latest": 3.3
+  },
+  "finding_02": {
+    "pct_under25_black": 55,
+    "pct_under25_white": 44,
+    "male_irr": 8
+  },
+  "finding_03": {
+    "worst_region": "South West",
+    "black_white_ratio": 5.1,
+    "black_pop_pct": 1
+  },
+  "finding_04": {
+    "nfa_pct_black": 69,
+    "nfa_pct_white": 70,
+    "raw_ratio": 3.6
+  },
+  "finding_05": {
+    "drug_pct_black": 59,
+    "drug_pct_white": 61
+  },
+  "finding_06": {
+    "overall_missing_pct": 19,
+    "worst_forces": [
+      {
+        "police_force": "London, City of",
+        "pct_missing": 43
+      },
+      {
+        "police_force": "Nottinghamshire",
+        "pct_missing": 40
+      },
+      {
+        "police_force": "North Wales",
+        "pct_missing": 34
+      },
+      {
+        "police_force": "Metropolitan Police",
+        "pct_missing": 31
+      }
+    ]
+  }
+}

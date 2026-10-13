@@ -1,0 +1,142 @@
+[
+  {
+    "financial_year": "2020/21",
+    "ethnicity": "Asian",
+    "irr": 1.23,
+    "irr_lower": 1.13,
+    "irr_upper": 1.35
+  },
+  {
+    "financial_year": "2020/21",
+    "ethnicity": "Black",
+    "irr": 3,
+    "irr_lower": 2.76,
+    "irr_upper": 3.26
+  },
+  {
+    "financial_year": "2020/21",
+    "ethnicity": "Mixed",
+    "irr": 1.17,
+    "irr_lower": 1.01,
+    "irr_upper": 1.37
+  },
+  {
+    "financial_year": "2020/21",
+    "ethnicity": "Other",
+    "irr": 0.72,
+    "irr_lower": 0.59,
+    "irr_upper": 0.89
+  },
+  {
+    "financial_year": "2021/22",
+    "ethnicity": "Asian",
+    "irr": 1.1,
+    "irr_lower": 0.99,
+    "irr_upper": 1.21
+  },
+  {
+    "financial_year": "2021/22",
+    "ethnicity": "Black",
+    "irr": 2.86,
+    "irr_lower": 2.61,
+    "irr_upper": 3.14
+  },
+  {
+    "financial_year": "2021/22",
+    "ethnicity": "Mixed",
+    "irr": 1.22,
+    "irr_lower": 1.04,
+    "irr_upper": 1.44
+  },
+  {
+    "financial_year": "2021/22",
+    "ethnicity": "Other",
+    "irr": 0.77,
+    "irr_lower": 0.62,
+    "irr_upper": 0.95
+  },
+  {
+    "financial_year": "2022/23",
+    "ethnicity": "Asian",
+    "irr": 1.1,
+    "irr_lower": 0.99,
+    "irr_upper": 1.22
+  },
+  {
+    "financial_year": "2022/23",
+    "ethnicity": "Black",
+    "irr": 2.9,
+    "irr_lower": 2.63,
+    "irr_upper": 3.2
+  },
+  {
+    "financial_year": "2022/23",
+    "ethnicity": "Mixed",
+    "irr": 1.35,
+    "irr_lower": 1.15,
+    "irr_upper": 1.59
+  },
+  {
+    "financial_year": "2022/23",
+    "ethnicity": "Other",
+    "irr": 0.93,
+    "irr_lower": 0.75,
+    "irr_upper": 1.15
+  },
+  {
+    "financial_year": "2023/24",
+    "ethnicity": "Asian",
+    "irr": 1.15,
+    "irr_lower": 1.03,
+    "irr_upper": 1.28
+  },
+  {
+    "financial_year": "2023/24",
+    "ethnicity": "Black",
+    "irr": 3.08,
+    "irr_lower": 2.77,
+    "irr_upper": 3.41
+  },
+  {
+    "financial_year": "2023/24",
+    "ethnicity": "Mixed",
+    "irr": 1.5,
+    "irr_lower": 1.27,
+    "irr_upper": 1.76
+  },
+  {
+    "financial_year": "2023/24",
+    "ethnicity": "Other",
+    "irr": 1.16,
+    "irr_lower": 0.94,
+    "irr_upper": 1.43
+  },
+  {
+    "financial_year": "2024/25",
+    "ethnicity": "Asian",
+    "irr": 1.24,
+    "irr_lower": 1.11,
+    "irr_upper": 1.38
+  },
+  {
+    "financial_year": "2024/25",
+    "ethnicity": "Black",
+    "irr": 3.33,
+    "irr_lower": 3,
+    "irr_upper": 3.7
+  },
+  {
+    "financial_year": "2024/25",
+    "ethnicity": "Mixed",
+    "irr": 1.7,
+    "irr_lower": 1.45,
+    "irr_upper": 1.99
+  },
+  {
+    "financial_year": "2024/25",
+    "ethnicity": "Other",
+    "irr": 1.35,
+    "irr_lower": 1.11,
+    "irr_upper": 1.65
+  }
+]

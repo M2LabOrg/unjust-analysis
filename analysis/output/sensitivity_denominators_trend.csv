@@ -1,0 +1,3 @@
+offset,year_first,year_last,irr_first,irr_last,ratio,z,p_value
+region x ethnicity,2020/21,2024/25,3.002,3.332,1.11,1.526,0.127
+region x ethnicity x sex x age,2020/21,2024/25,2.669,3.046,1.141,1.969,0.049

@@ -1,0 +1,13 @@
+metric,value
+Observations (strata),1971
+Degrees of freedom (residual),1950
+Dispersion parameter,181.83
+Pearson chi-squared / df,181.83
+Residual deviance,342749
+Null deviance,2954454
+Pseudo R-squared (McFadden),0.884
+Cook's threshold (4/df),0.00205
+Observations above Cook's threshold,195
+Observations above Cook's threshold (%),9.9
+Dispersion-scaled Pearson residuals > 2 (%),5.7
+Obs vs expected Pearson r,0.9298

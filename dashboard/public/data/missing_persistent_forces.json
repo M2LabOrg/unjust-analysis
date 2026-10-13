@@ -1,0 +1,303 @@
+[
+  {
+    "police_force": "London, City of",
+    "region_clean": "London",
+    "mean_pct_missing": 45.8,
+    "max_pct_missing": 50.6,
+    "n_years": 5
+  },
+  {
+    "police_force": "Nottinghamshire",
+    "region_clean": "East Midlands",
+    "mean_pct_missing": 29.3,
+    "max_pct_missing": 39.6,
+    "n_years": 5
+  },
+  {
+    "police_force": "Metropolitan Police",
+    "region_clean": "London",
+    "mean_pct_missing": 28.4,
+    "max_pct_missing": 31.3,
+    "n_years": 5
+  },
+  {
+    "police_force": "Thames Valley",
+    "region_clean": "South East",
+    "mean_pct_missing": 26.5,
+    "max_pct_missing": 32.1,
+    "n_years": 5
+  },
+  {
+    "police_force": "Leicestershire",
+    "region_clean": "East Midlands",
+    "mean_pct_missing": 24.9,
+    "max_pct_missing": 33.2,
+    "n_years": 5
+  },
+  {
+    "police_force": "Avon & Somerset",
+    "region_clean": "South West",
+    "mean_pct_missing": 23.9,
+    "max_pct_missing": 25.8,
+    "n_years": 5
+  },
+  {
+    "police_force": "Essex",
+    "region_clean": "East of England",
+    "mean_pct_missing": 23.7,
+    "max_pct_missing": 29.4,
+    "n_years": 5
+  },
+  {
+    "police_force": "Greater Manchester",
+    "region_clean": "North West",
+    "mean_pct_missing": 21.1,
+    "max_pct_missing": 31.4,
+    "n_years": 5
+  },
+  {
+    "police_force": "Wiltshire",
+    "region_clean": "South West",
+    "mean_pct_missing": 20.3,
+    "max_pct_missing": 26,
+    "n_years": 5
+  },
+  {
+    "police_force": "Humberside",
+    "region_clean": "Yorkshire and The Humber",
+    "mean_pct_missing": 19.5,
+    "max_pct_missing": 28.1,
+    "n_years": 5
+  },
+  {
+    "police_force": "Kent",
+    "region_clean": "South East",
+    "mean_pct_missing": 19.1,
+    "max_pct_missing": 24.4,
+    "n_years": 5
+  },
+  {
+    "police_force": "Devon & Cornwall",
+    "region_clean": "South West",
+    "mean_pct_missing": 18.7,
+    "max_pct_missing": 29.7,
+    "n_years": 5
+  },
+  {
+    "police_force": "South Yorkshire",
+    "region_clean": "Yorkshire and The Humber",
+    "mean_pct_missing": 18.6,
+    "max_pct_missing": 21.6,
+    "n_years": 5
+  },
+  {
+    "police_force": "Suffolk",
+    "region_clean": "East of England",
+    "mean_pct_missing": 18.2,
+    "max_pct_missing": 23.1,
+    "n_years": 5
+  },
+  {
+    "police_force": "North Yorkshire",
+    "region_clean": "Yorkshire and The Humber",
+    "mean_pct_missing": 18,
+    "max_pct_missing": 26.2,
+    "n_years": 5
+  },
+  {
+    "police_force": "Bedfordshire",
+    "region_clean": "East of England",
+    "mean_pct_missing": 17.8,
+    "max_pct_missing": 21.1,
+    "n_years": 5
+  },
+  {
+    "police_force": "Gwent",
+    "region_clean": "Wales",
+    "mean_pct_missing": 17.7,
+    "max_pct_missing": 30.1,
+    "n_years": 5
+  },
+  {
+    "police_force": "Surrey",
+    "region_clean": "South East",
+    "mean_pct_missing": 17.6,
+    "max_pct_missing": 29.7,
+    "n_years": 5
+  },
+  {
+    "police_force": "Lancashire",
+    "region_clean": "North West",
+    "mean_pct_missing": 17.3,
+    "max_pct_missing": 22.7,
+    "n_years": 5
+  },
+  {
+    "police_force": "Hertfordshire",
+    "region_clean": "East of England",
+    "mean_pct_missing": 17.1,
+    "max_pct_missing": 20.4,
+    "n_years": 5
+  },
+  {
+    "police_force": "Norfolk",
+    "region_clean": "East of England",
+    "mean_pct_missing": 17.1,
+    "max_pct_missing": 24.1,
+    "n_years": 5
+  },
+  {
+    "police_force": "Cleveland",
+    "region_clean": "North East",
+    "mean_pct_missing": 17,
+    "max_pct_missing": 18.7,
+    "n_years": 5
+  },
+  {
+    "police_force": "Cambridgeshire",
+    "region_clean": "East of England",
+    "mean_pct_missing": 16.8,
+    "max_pct_missing": 20.2,
+    "n_years": 5
+  },
+  {
+    "police_force": "North Wales",
+    "region_clean": "Wales",
+    "mean_pct_missing": 16.6,
+    "max_pct_missing": 33.5,
+    "n_years": 5
+  },
+  {
+    "police_force": "Hampshire",
+    "region_clean": "South East",
+    "mean_pct_missing": 15.3,
+    "max_pct_missing": 19.9,
+    "n_years": 5
+  },
+  {
+    "police_force": "Sussex",
+    "region_clean": "South East",
+    "mean_pct_missing": 14.2,
+    "max_pct_missing": 21,
+    "n_years": 5
+  },
+  {
+    "police_force": "Cheshire",
+    "region_clean": "North West",
+    "mean_pct_missing": 13.9,
+    "max_pct_missing": 19.4,
+    "n_years": 5
+  },
+  {
+    "police_force": "Derbyshire",
+    "region_clean": "East Midlands",
+    "mean_pct_missing": 13.2,
+    "max_pct_missing": 22.3,
+    "n_years": 5
+  },
+  {
+    "police_force": "Warwickshire",
+    "region_clean": "West Midlands",
+    "mean_pct_missing": 13,
+    "max_pct_missing": 22.4,
+    "n_years": 5
+  },
+  {
+    "police_force": "Dorset",
+    "region_clean": "South West",
+    "mean_pct_missing": 12.8,
+    "max_pct_missing": 14.6,
+    "n_years": 5
+  },
+  {
+    "police_force": "South Wales",
+    "region_clean": "Wales",
+    "mean_pct_missing": 12.5,
+    "max_pct_missing": 23.9,
+    "n_years": 5
+  },
+  {
+    "police_force": "Lincolnshire",
+    "region_clean": "East Midlands",
+    "mean_pct_missing": 12.3,
+    "max_pct_missing": 15,
+    "n_years": 5
+  },
+  {
+    "police_force": "West Mercia",
+    "region_clean": "West Midlands",
+    "mean_pct_missing": 11.9,
+    "max_pct_missing": 16.5,
+    "n_years": 5
+  },
+  {
+    "police_force": "Northamptonshire",
+    "region_clean": "East Midlands",
+    "mean_pct_missing": 10,
+    "max_pct_missing": 12,
+    "n_years": 5
+  },
+  {
+    "police_force": "Staffordshire",
+    "region_clean": "West Midlands",
+    "mean_pct_missing": 9.6,
+    "max_pct_missing": 11.3,
+    "n_years": 5
+  },
+  {
+    "police_force": "West Midlands",
+    "region_clean": "West Midlands",
+    "mean_pct_missing": 8.6,
+    "max_pct_missing": 10.7,
+    "n_years": 5
+  },
+  {
+    "police_force": "Merseyside",
+    "region_clean": "North West",
+    "mean_pct_missing": 8.5,
+    "max_pct_missing": 12.3,
+    "n_years": 5
+  },
+  {
+    "police_force": "West Yorkshire",
+    "region_clean": "Yorkshire and The Humber",
+    "mean_pct_missing": 8.5,
+    "max_pct_missing": 12.6,
+    "n_years": 5
+  },
+  {
+    "police_force": "Cumbria",
+    "region_clean": "North West",
+    "mean_pct_missing": 8.4,
+    "max_pct_missing": 10.1,
+    "n_years": 5
+  },
+  {
+    "police_force": "Gloucestershire",
+    "region_clean": "South West",
+    "mean_pct_missing": 8.1,
+    "max_pct_missing": 10.7,
+    "n_years": 5
+  },
+  {
+    "police_force": "Dyfed-Powys",
+    "region_clean": "Wales",
+    "mean_pct_missing": 7.6,
+    "max_pct_missing": 8.9,
+    "n_years": 5
+  },
+  {
+    "police_force": "Durham",
+    "region_clean": "North East",
+    "mean_pct_missing": 3.3,
+    "max_pct_missing": 4,
+    "n_years": 5
+  },
+  {
+    "police_force": "Northumbria",
+    "region_clean": "North East",
+    "mean_pct_missing": 2.1,
+    "max_pct_missing": 2.5,
+    "n_years": 5
+  }
+]

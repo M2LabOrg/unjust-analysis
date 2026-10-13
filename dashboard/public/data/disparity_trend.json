@@ -1,0 +1,152 @@
+[
+  {
+    "financial_year": "2020/21",
+    "ethnicity": "Asian",
+    "rate_per_1000": 13.46,
+    "ratio_vs_white": 1.85
+  },
+  {
+    "financial_year": "2020/21",
+    "ethnicity": "Black",
+    "rate_per_1000": 39.83,
+    "ratio_vs_white": 5.49
+  },
+  {
+    "financial_year": "2020/21",
+    "ethnicity": "Mixed",
+    "rate_per_1000": 12.14,
+    "ratio_vs_white": 1.67
+  },
+  {
+    "financial_year": "2020/21",
+    "ethnicity": "Other",
+    "rate_per_1000": 9.02,
+    "ratio_vs_white": 1.24
+  },
+  {
+    "financial_year": "2020/21",
+    "ethnicity": "White",
+    "rate_per_1000": 7.26,
+    "ratio_vs_white": 1
+  },
+  {
+    "financial_year": "2021/22",
+    "ethnicity": "Asian",
+    "rate_per_1000": 8.77,
+    "ratio_vs_white": 1.59
+  },
+  {
+    "financial_year": "2021/22",
+    "ethnicity": "Black",
+    "rate_per_1000": 26.6,
+    "ratio_vs_white": 4.81
+  },
+  {
+    "financial_year": "2021/22",
+    "ethnicity": "Mixed",
+    "rate_per_1000": 9.22,
+    "ratio_vs_white": 1.67
+  },
+  {
+    "financial_year": "2021/22",
+    "ethnicity": "Other",
+    "rate_per_1000": 6.69,
+    "ratio_vs_white": 1.21
+  },
+  {
+    "financial_year": "2021/22",
+    "ethnicity": "White",
+    "rate_per_1000": 5.53,
+    "ratio_vs_white": 1
+  },
+  {
+    "financial_year": "2022/23",
+    "ethnicity": "Asian",
+    "rate_per_1000": 8.29,
+    "ratio_vs_white": 1.43
+  },
+  {
+    "financial_year": "2022/23",
+    "ethnicity": "Black",
+    "rate_per_1000": 23.71,
+    "ratio_vs_white": 4.08
+  },
+  {
+    "financial_year": "2022/23",
+    "ethnicity": "Mixed",
+    "rate_per_1000": 9.51,
+    "ratio_vs_white": 1.64
+  },
+  {
+    "financial_year": "2022/23",
+    "ethnicity": "Other",
+    "rate_per_1000": 7.33,
+    "ratio_vs_white": 1.26
+  },
+  {
+    "financial_year": "2022/23",
+    "ethnicity": "White",
+    "rate_per_1000": 5.81,
+    "ratio_vs_white": 1
+  },
+  {
+    "financial_year": "2023/24",
+    "ethnicity": "Asian",
+    "rate_per_1000": 7.82,
+    "ratio_vs_white": 1.34
+  },
+  {
+    "financial_year": "2023/24",
+    "ethnicity": "Black",
+    "rate_per_1000": 21.14,
+    "ratio_vs_white": 3.62
+  },
+  {
+    "financial_year": "2023/24",
+    "ethnicity": "Mixed",
+    "rate_per_1000": 9.44,
+    "ratio_vs_white": 1.62
+  },
+  {
+    "financial_year": "2023/24",
+    "ethnicity": "Other",
+    "rate_per_1000": 7.87,
+    "ratio_vs_white": 1.35
+  },
+  {
+    "financial_year": "2023/24",
+    "ethnicity": "White",
+    "rate_per_1000": 5.84,
+    "ratio_vs_white": 1
+  },
+  {
+    "financial_year": "2024/25",
+    "ethnicity": "Asian",
+    "rate_per_1000": 7.99,
+    "ratio_vs_white": 1.39
+  },
+  {
+    "financial_year": "2024/25",
+    "ethnicity": "Black",
+    "rate_per_1000": 21.02,
+    "ratio_vs_white": 3.65
+  },
+  {
+    "financial_year": "2024/25",
+    "ethnicity": "Mixed",
+    "rate_per_1000": 10,
+    "ratio_vs_white": 1.74
+  },
+  {
+    "financial_year": "2024/25",
+    "ethnicity": "Other",
+    "rate_per_1000": 8.43,
+    "ratio_vs_white": 1.47
+  },
+  {
+    "financial_year": "2024/25",
+    "ethnicity": "White",
+    "rate_per_1000": 5.75,
+    "ratio_vs_white": 1
+  }
+]

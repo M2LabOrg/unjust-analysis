@@ -1,0 +1,1074 @@
+financial_year,police_force,ethnicity,total_searches
+2020/21,Avon & Somerset,Asian,310
+2020/21,Avon & Somerset,Black,859
+2020/21,Avon & Somerset,Mixed,267
+2020/21,Avon & Somerset,Other,63
+2020/21,Avon & Somerset,White,6136
+2020/21,Bedfordshire,Asian,811
+2020/21,Bedfordshire,Black,354
+2020/21,Bedfordshire,Mixed,131
+2020/21,Bedfordshire,Other,42
+2020/21,Bedfordshire,White,1694
+2020/21,Cambridgeshire,Asian,313
+2020/21,Cambridgeshire,Black,192
+2020/21,Cambridgeshire,Mixed,110
+2020/21,Cambridgeshire,Other,57
+2020/21,Cambridgeshire,White,1990
+2020/21,Cheshire,Asian,38
+2020/21,Cheshire,Black,126
+2020/21,Cheshire,Mixed,65
+2020/21,Cheshire,Other,34
+2020/21,Cheshire,White,4587
+2020/21,Cleveland,Asian,229
+2020/21,Cleveland,Black,83
+2020/21,Cleveland,Mixed,80
+2020/21,Cleveland,Other,55
+2020/21,Cleveland,White,4614
+2020/21,Cumbria,Asian,63
+2020/21,Cumbria,Black,17
+2020/21,Cumbria,Mixed,18
+2020/21,Cumbria,Other,6
+2020/21,Cumbria,White,2954
+2020/21,Derbyshire,Asian,204
+2020/21,Derbyshire,Black,139
+2020/21,Derbyshire,Mixed,81
+2020/21,Derbyshire,Other,18
+2020/21,Derbyshire,White,1381
+2020/21,Devon & Cornwall,Asian,59
+2020/21,Devon & Cornwall,Black,160
+2020/21,Devon & Cornwall,Mixed,105
+2020/21,Devon & Cornwall,Other,27
+2020/21,Devon & Cornwall,White,5618
+2020/21,Dorset,Asian,62
+2020/21,Dorset,Black,178
+2020/21,Dorset,Mixed,94
+2020/21,Dorset,Other,32
+2020/21,Dorset,White,2032
+2020/21,Durham,Asian,24
+2020/21,Durham,Black,9
+2020/21,Durham,Mixed,13
+2020/21,Durham,Other,7
+2020/21,Durham,White,2207
+2020/21,Dyfed-Powys,Asian,39
+2020/21,Dyfed-Powys,Black,23
+2020/21,Dyfed-Powys,Mixed,34
+2020/21,Dyfed-Powys,White,2953
+2020/21,Essex,Asian,951
+2020/21,Essex,Black,1877
+2020/21,Essex,Mixed,673
+2020/21,Essex,Other,141
+2020/21,Essex,White,17980
+2020/21,Gloucestershire,Asian,69
+2020/21,Gloucestershire,Black,148
+2020/21,Gloucestershire,Mixed,138
+2020/21,Gloucestershire,Other,16
+2020/21,Gloucestershire,White,2462
+2020/21,Greater Manchester,Asian,1352
+2020/21,Greater Manchester,Black,911
+2020/21,Greater Manchester,Mixed,261
+2020/21,Greater Manchester,Other,120
+2020/21,Greater Manchester,White,5241
+2020/21,Gwent,Asian,226
+2020/21,Gwent,Black,144
+2020/21,Gwent,Mixed,117
+2020/21,Gwent,Other,49
+2020/21,Gwent,White,3443
+2020/21,Hampshire,Asian,487
+2020/21,Hampshire,Black,797
+2020/21,Hampshire,Mixed,425
+2020/21,Hampshire,Other,160
+2020/21,Hampshire,White,9319
+2020/21,Hertfordshire,Asian,746
+2020/21,Hertfordshire,Black,843
+2020/21,Hertfordshire,Mixed,381
+2020/21,Hertfordshire,Other,148
+2020/21,Hertfordshire,White,5732
+2020/21,Humberside,Asian,167
+2020/21,Humberside,Black,165
+2020/21,Humberside,Mixed,101
+2020/21,Humberside,Other,22
+2020/21,Humberside,White,5358
+2020/21,Kent,Asian,493
+2020/21,Kent,Black,906
+2020/21,Kent,Mixed,419
+2020/21,Kent,Other,107
+2020/21,Kent,White,9897
+2020/21,Lancashire,Asian,1224
+2020/21,Lancashire,Black,123
+2020/21,Lancashire,Mixed,111
+2020/21,Lancashire,Other,19
+2020/21,Lancashire,White,6636
+2020/21,Leicestershire,Asian,687
+2020/21,Leicestershire,Black,490
+2020/21,Leicestershire,Mixed,131
+2020/21,Leicestershire,Other,50
+2020/21,Leicestershire,White,3274
+2020/21,Lincolnshire,Asian,76
+2020/21,Lincolnshire,Black,107
+2020/21,Lincolnshire,Mixed,63
+2020/21,Lincolnshire,Other,29
+2020/21,Lincolnshire,White,2688
+2020/21,"London, City of",Asian,294
+2020/21,"London, City of",Black,289
+2020/21,"London, City of",Mixed,78
+2020/21,"London, City of",Other,47
+2020/21,"London, City of",White,829
+2020/21,Merseyside,Asian,491
+2020/21,Merseyside,Black,887
+2020/21,Merseyside,Mixed,612
+2020/21,Merseyside,Other,298
+2020/21,Merseyside,White,39778
+2020/21,Metropolitan Police,Asian,44444
+2020/21,Metropolitan Police,Black,75651
+2020/21,Metropolitan Police,Mixed,10644
+2020/21,Metropolitan Police,Other,8558
+2020/21,Metropolitan Police,White,99724
+2020/21,Norfolk,Asian,102
+2020/21,Norfolk,Black,244
+2020/21,Norfolk,Mixed,137
+2020/21,Norfolk,Other,57
+2020/21,Norfolk,White,5958
+2020/21,North Wales,Asian,51
+2020/21,North Wales,Black,30
+2020/21,North Wales,Mixed,36
+2020/21,North Wales,Other,17
+2020/21,North Wales,White,5547
+2020/21,North Yorkshire,Asian,193
+2020/21,North Yorkshire,Black,45
+2020/21,North Yorkshire,Mixed,78
+2020/21,North Yorkshire,Other,19
+2020/21,North Yorkshire,White,2988
+2020/21,Northamptonshire,Asian,160
+2020/21,Northamptonshire,Black,233
+2020/21,Northamptonshire,Mixed,103
+2020/21,Northamptonshire,Other,19
+2020/21,Northamptonshire,White,1866
+2020/21,Northumbria,Asian,341
+2020/21,Northumbria,Black,100
+2020/21,Northumbria,Mixed,39
+2020/21,Northumbria,Other,10
+2020/21,Northumbria,White,4403
+2020/21,Nottinghamshire,Asian,338
+2020/21,Nottinghamshire,Black,381
+2020/21,Nottinghamshire,Mixed,204
+2020/21,Nottinghamshire,Other,35
+2020/21,Nottinghamshire,White,2849
+2020/21,South Wales,Asian,816
+2020/21,South Wales,Black,803
+2020/21,South Wales,Mixed,384
+2020/21,South Wales,Other,295
+2020/21,South Wales,White,12534
+2020/21,South Yorkshire,Asian,1426
+2020/21,South Yorkshire,Black,747
+2020/21,South Yorkshire,Mixed,287
+2020/21,South Yorkshire,Other,157
+2020/21,South Yorkshire,White,11321
+2020/21,Staffordshire,Asian,473
+2020/21,Staffordshire,Black,257
+2020/21,Staffordshire,Mixed,177
+2020/21,Staffordshire,Other,64
+2020/21,Staffordshire,White,4155
+2020/21,Suffolk,Asian,68
+2020/21,Suffolk,Black,297
+2020/21,Suffolk,Mixed,187
+2020/21,Suffolk,Other,65
+2020/21,Suffolk,White,3840
+2020/21,Surrey,Asian,472
+2020/21,Surrey,Black,437
+2020/21,Surrey,Mixed,214
+2020/21,Surrey,Other,62
+2020/21,Surrey,White,5204
+2020/21,Sussex,Asian,277
+2020/21,Sussex,Black,681
+2020/21,Sussex,Mixed,191
+2020/21,Sussex,Other,86
+2020/21,Sussex,White,6525
+2020/21,Thames Valley,Asian,2415
+2020/21,Thames Valley,Black,1445
+2020/21,Thames Valley,Mixed,804
+2020/21,Thames Valley,Other,114
+2020/21,Thames Valley,White,9531
+2020/21,Warwickshire,Asian,205
+2020/21,Warwickshire,Black,187
+2020/21,Warwickshire,Mixed,98
+2020/21,Warwickshire,Other,18
+2020/21,Warwickshire,White,1630
+2020/21,West Mercia,Asian,497
+2020/21,West Mercia,Black,268
+2020/21,West Mercia,Mixed,148
+2020/21,West Mercia,Other,29
+2020/21,West Mercia,White,4438
+2020/21,West Midlands,Asian,7045
+2020/21,West Midlands,Black,3334
+2020/21,West Midlands,Mixed,1812
+2020/21,West Midlands,Other,25
+2020/21,West Midlands,White,10052
+2020/21,West Yorkshire,Asian,5423
+2020/21,West Yorkshire,Black,882
+2020/21,West Yorkshire,Mixed,757
+2020/21,West Yorkshire,Other,152
+2020/21,West Yorkshire,White,10433
+2020/21,Wiltshire,Asian,76
+2020/21,Wiltshire,Black,113
+2020/21,Wiltshire,Mixed,45
+2020/21,Wiltshire,Other,3
+2020/21,Wiltshire,White,1730
+2021/22,Avon & Somerset,Asian,87
+2021/22,Avon & Somerset,Black,417
+2021/22,Avon & Somerset,Mixed,207
+2021/22,Avon & Somerset,Other,67
+2021/22,Avon & Somerset,White,4437
+2021/22,Bedfordshire,Asian,683
+2021/22,Bedfordshire,Black,430
+2021/22,Bedfordshire,Mixed,126
+2021/22,Bedfordshire,Other,48
+2021/22,Bedfordshire,White,1679
+2021/22,Cambridgeshire,Asian,195
+2021/22,Cambridgeshire,Black,147
+2021/22,Cambridgeshire,Mixed,81
+2021/22,Cambridgeshire,Other,51
+2021/22,Cambridgeshire,White,1580
+2021/22,Cheshire,Asian,42
+2021/22,Cheshire,Black,94
+2021/22,Cheshire,Mixed,103
+2021/22,Cheshire,Other,37
+2021/22,Cheshire,White,4711
+2021/22,Cleveland,Asian,206
+2021/22,Cleveland,Black,94
+2021/22,Cleveland,Mixed,84
+2021/22,Cleveland,Other,79
+2021/22,Cleveland,White,4327
+2021/22,Cumbria,Asian,54
+2021/22,Cumbria,Black,29
+2021/22,Cumbria,Mixed,23
+2021/22,Cumbria,Other,17
+2021/22,Cumbria,White,1964
+2021/22,Derbyshire,Asian,158
+2021/22,Derbyshire,Black,60
+2021/22,Derbyshire,Mixed,68
+2021/22,Derbyshire,Other,16
+2021/22,Derbyshire,White,1046
+2021/22,Devon & Cornwall,Asian,62
+2021/22,Devon & Cornwall,Black,85
+2021/22,Devon & Cornwall,Mixed,55
+2021/22,Devon & Cornwall,Other,13
+2021/22,Devon & Cornwall,White,3679
+2021/22,Dorset,Asian,35
+2021/22,Dorset,Black,134
+2021/22,Dorset,Mixed,73
+2021/22,Dorset,Other,16
+2021/22,Dorset,White,1607
+2021/22,Durham,Asian,25
+2021/22,Durham,Black,19
+2021/22,Durham,Mixed,14
+2021/22,Durham,Other,10
+2021/22,Durham,White,1992
+2021/22,Dyfed-Powys,Asian,23
+2021/22,Dyfed-Powys,Black,19
+2021/22,Dyfed-Powys,Mixed,25
+2021/22,Dyfed-Powys,White,2200
+2021/22,Essex,Asian,509
+2021/22,Essex,Black,998
+2021/22,Essex,Mixed,368
+2021/22,Essex,Other,133
+2021/22,Essex,White,11293
+2021/22,Gloucestershire,Asian,38
+2021/22,Gloucestershire,Black,74
+2021/22,Gloucestershire,Mixed,84
+2021/22,Gloucestershire,Other,3
+2021/22,Gloucestershire,White,1503
+2021/22,Greater Manchester,Asian,1130
+2021/22,Greater Manchester,Black,801
+2021/22,Greater Manchester,Mixed,238
+2021/22,Greater Manchester,Other,117
+2021/22,Greater Manchester,White,5404
+2021/22,Gwent,Asian,67
+2021/22,Gwent,Black,61
+2021/22,Gwent,Mixed,36
+2021/22,Gwent,Other,13
+2021/22,Gwent,White,1455
+2021/22,Hampshire,Asian,282
+2021/22,Hampshire,Black,532
+2021/22,Hampshire,Mixed,294
+2021/22,Hampshire,Other,101
+2021/22,Hampshire,White,7151
+2021/22,Hertfordshire,Asian,450
+2021/22,Hertfordshire,Black,665
+2021/22,Hertfordshire,Mixed,266
+2021/22,Hertfordshire,Other,129
+2021/22,Hertfordshire,White,4437
+2021/22,Humberside,Asian,138
+2021/22,Humberside,Black,135
+2021/22,Humberside,Mixed,83
+2021/22,Humberside,Other,30
+2021/22,Humberside,White,4514
+2021/22,Kent,Asian,354
+2021/22,Kent,Black,746
+2021/22,Kent,Mixed,390
+2021/22,Kent,Other,232
+2021/22,Kent,White,8261
+2021/22,Lancashire,Asian,1089
+2021/22,Lancashire,Black,165
+2021/22,Lancashire,Mixed,152
+2021/22,Lancashire,Other,38
+2021/22,Lancashire,White,7006
+2021/22,Leicestershire,Asian,666
+2021/22,Leicestershire,Black,477
+2021/22,Leicestershire,Mixed,181
+2021/22,Leicestershire,Other,53
+2021/22,Leicestershire,White,3055
+2021/22,Lincolnshire,Asian,33
+2021/22,Lincolnshire,Black,64
+2021/22,Lincolnshire,Mixed,36
+2021/22,Lincolnshire,Other,28
+2021/22,Lincolnshire,White,2339
+2021/22,"London, City of",Asian,274
+2021/22,"London, City of",Black,254
+2021/22,"London, City of",Mixed,89
+2021/22,"London, City of",Other,40
+2021/22,"London, City of",White,806
+2021/22,Merseyside,Asian,399
+2021/22,Merseyside,Black,721
+2021/22,Merseyside,Mixed,607
+2021/22,Merseyside,Other,471
+2021/22,Merseyside,White,37790
+2021/22,Metropolitan Police,Asian,25624
+2021/22,Metropolitan Police,Black,48158
+2021/22,Metropolitan Police,Mixed,7230
+2021/22,Metropolitan Police,Other,5682
+2021/22,Metropolitan Police,White,66023
+2021/22,Norfolk,Asian,64
+2021/22,Norfolk,Black,168
+2021/22,Norfolk,Mixed,127
+2021/22,Norfolk,Other,63
+2021/22,Norfolk,White,4343
+2021/22,North Wales,Asian,37
+2021/22,North Wales,Black,22
+2021/22,North Wales,Mixed,29
+2021/22,North Wales,Other,18
+2021/22,North Wales,White,3782
+2021/22,North Yorkshire,Asian,127
+2021/22,North Yorkshire,Black,26
+2021/22,North Yorkshire,Mixed,51
+2021/22,North Yorkshire,Other,14
+2021/22,North Yorkshire,White,1796
+2021/22,Northamptonshire,Asian,128
+2021/22,Northamptonshire,Black,316
+2021/22,Northamptonshire,Mixed,134
+2021/22,Northamptonshire,Other,17
+2021/22,Northamptonshire,White,2164
+2021/22,Northumbria,Asian,165
+2021/22,Northumbria,Black,84
+2021/22,Northumbria,Mixed,41
+2021/22,Northumbria,Other,8
+2021/22,Northumbria,White,3869
+2021/22,Nottinghamshire,Asian,207
+2021/22,Nottinghamshire,Black,327
+2021/22,Nottinghamshire,Mixed,167
+2021/22,Nottinghamshire,Other,43
+2021/22,Nottinghamshire,White,2547
+2021/22,South Wales,Asian,356
+2021/22,South Wales,Black,387
+2021/22,South Wales,Mixed,239
+2021/22,South Wales,Other,144
+2021/22,South Wales,White,8070
+2021/22,South Yorkshire,Asian,756
+2021/22,South Yorkshire,Black,533
+2021/22,South Yorkshire,Mixed,204
+2021/22,South Yorkshire,Other,100
+2021/22,South Yorkshire,White,7494
+2021/22,Staffordshire,Asian,309
+2021/22,Staffordshire,Black,133
+2021/22,Staffordshire,Mixed,141
+2021/22,Staffordshire,Other,25
+2021/22,Staffordshire,White,3324
+2021/22,Suffolk,Asian,66
+2021/22,Suffolk,Black,271
+2021/22,Suffolk,Mixed,108
+2021/22,Suffolk,Other,84
+2021/22,Suffolk,White,3108
+2021/22,Surrey,Asian,334
+2021/22,Surrey,Black,290
+2021/22,Surrey,Mixed,146
+2021/22,Surrey,Other,67
+2021/22,Surrey,White,3391
+2021/22,Sussex,Asian,183
+2021/22,Sussex,Black,428
+2021/22,Sussex,Mixed,153
+2021/22,Sussex,Other,94
+2021/22,Sussex,White,4595
+2021/22,Thames Valley,Asian,1591
+2021/22,Thames Valley,Black,1017
+2021/22,Thames Valley,Mixed,590
+2021/22,Thames Valley,Other,88
+2021/22,Thames Valley,White,7193
+2021/22,Warwickshire,Asian,120
+2021/22,Warwickshire,Black,131
+2021/22,Warwickshire,Mixed,69
+2021/22,Warwickshire,Other,19
+2021/22,Warwickshire,White,1222
+2021/22,West Mercia,Asian,264
+2021/22,West Mercia,Black,182
+2021/22,West Mercia,Mixed,76
+2021/22,West Mercia,Other,24
+2021/22,West Mercia,White,3199
+2021/22,West Midlands,Asian,6836
+2021/22,West Midlands,Black,3537
+2021/22,West Midlands,Mixed,1926
+2021/22,West Midlands,Other,19
+2021/22,West Midlands,White,9364
+2021/22,West Yorkshire,Asian,4126
+2021/22,West Yorkshire,Black,775
+2021/22,West Yorkshire,Mixed,684
+2021/22,West Yorkshire,Other,145
+2021/22,West Yorkshire,White,8355
+2021/22,Wiltshire,Asian,51
+2021/22,Wiltshire,Black,88
+2021/22,Wiltshire,Mixed,39
+2021/22,Wiltshire,Other,4
+2021/22,Wiltshire,White,1197
+2022/23,Avon & Somerset,Asian,129
+2022/23,Avon & Somerset,Black,448
+2022/23,Avon & Somerset,Mixed,214
+2022/23,Avon & Somerset,Other,80
+2022/23,Avon & Somerset,White,3988
+2022/23,Bedfordshire,Asian,699
+2022/23,Bedfordshire,Black,482
+2022/23,Bedfordshire,Mixed,147
+2022/23,Bedfordshire,Other,61
+2022/23,Bedfordshire,White,1807
+2022/23,Cambridgeshire,Asian,231
+2022/23,Cambridgeshire,Black,166
+2022/23,Cambridgeshire,Mixed,108
+2022/23,Cambridgeshire,Other,55
+2022/23,Cambridgeshire,White,1780
+2022/23,Cheshire,Asian,66
+2022/23,Cheshire,Black,206
+2022/23,Cheshire,Mixed,207
+2022/23,Cheshire,Other,84
+2022/23,Cheshire,White,9058
+2022/23,Cleveland,Asian,215
+2022/23,Cleveland,Black,123
+2022/23,Cleveland,Mixed,134
+2022/23,Cleveland,Other,94
+2022/23,Cleveland,White,5084
+2022/23,Cumbria,Asian,114
+2022/23,Cumbria,Black,48
+2022/23,Cumbria,Mixed,38
+2022/23,Cumbria,Other,35
+2022/23,Cumbria,White,3660
+2022/23,Derbyshire,Asian,171
+2022/23,Derbyshire,Black,88
+2022/23,Derbyshire,Mixed,96
+2022/23,Derbyshire,Other,25
+2022/23,Derbyshire,White,1301
+2022/23,Devon & Cornwall,Asian,53
+2022/23,Devon & Cornwall,Black,73
+2022/23,Devon & Cornwall,Mixed,77
+2022/23,Devon & Cornwall,Other,32
+2022/23,Devon & Cornwall,White,4506
+2022/23,Dorset,Asian,45
+2022/23,Dorset,Black,138
+2022/23,Dorset,Mixed,63
+2022/23,Dorset,Other,17
+2022/23,Dorset,White,1382
+2022/23,Durham,Asian,38
+2022/23,Durham,Black,15
+2022/23,Durham,Mixed,37
+2022/23,Durham,Other,11
+2022/23,Durham,White,3089
+2022/23,Dyfed-Powys,Asian,69
+2022/23,Dyfed-Powys,Black,44
+2022/23,Dyfed-Powys,Mixed,70
+2022/23,Dyfed-Powys,Other,4
+2022/23,Dyfed-Powys,White,7355
+2022/23,Essex,Asian,383
+2022/23,Essex,Black,861
+2022/23,Essex,Mixed,393
+2022/23,Essex,Other,162
+2022/23,Essex,White,10144
+2022/23,Gloucestershire,Asian,46
+2022/23,Gloucestershire,Black,102
+2022/23,Gloucestershire,Mixed,110
+2022/23,Gloucestershire,Other,21
+2022/23,Gloucestershire,White,1659
+2022/23,Greater Manchester,Asian,4080
+2022/23,Greater Manchester,Black,2502
+2022/23,Greater Manchester,Mixed,620
+2022/23,Greater Manchester,Other,348
+2022/23,Greater Manchester,White,16262
+2022/23,Gwent,Asian,93
+2022/23,Gwent,Black,82
+2022/23,Gwent,Mixed,56
+2022/23,Gwent,Other,17
+2022/23,Gwent,White,1571
+2022/23,Hampshire,Asian,290
+2022/23,Hampshire,Black,497
+2022/23,Hampshire,Mixed,283
+2022/23,Hampshire,Other,78
+2022/23,Hampshire,White,6939
+2022/23,Hertfordshire,Asian,437
+2022/23,Hertfordshire,Black,643
+2022/23,Hertfordshire,Mixed,278
+2022/23,Hertfordshire,Other,131
+2022/23,Hertfordshire,White,4128
+2022/23,Humberside,Asian,63
+2022/23,Humberside,Black,71
+2022/23,Humberside,Mixed,74
+2022/23,Humberside,Other,47
+2022/23,Humberside,White,3792
+2022/23,Kent,Asian,324
+2022/23,Kent,Black,741
+2022/23,Kent,Mixed,408
+2022/23,Kent,Other,232
+2022/23,Kent,White,8643
+2022/23,Lancashire,Asian,1634
+2022/23,Lancashire,Black,173
+2022/23,Lancashire,Mixed,173
+2022/23,Lancashire,Other,41
+2022/23,Lancashire,White,7826
+2022/23,Leicestershire,Asian,801
+2022/23,Leicestershire,Black,508
+2022/23,Leicestershire,Mixed,201
+2022/23,Leicestershire,Other,59
+2022/23,Leicestershire,White,3537
+2022/23,Lincolnshire,Asian,54
+2022/23,Lincolnshire,Black,69
+2022/23,Lincolnshire,Mixed,61
+2022/23,Lincolnshire,Other,24
+2022/23,Lincolnshire,White,2596
+2022/23,"London, City of",Asian,172
+2022/23,"London, City of",Black,232
+2022/23,"London, City of",Mixed,78
+2022/23,"London, City of",Other,47
+2022/23,"London, City of",White,578
+2022/23,Merseyside,Asian,666
+2022/23,Merseyside,Black,987
+2022/23,Merseyside,Mixed,888
+2022/23,Merseyside,Other,1114
+2022/23,Merseyside,White,43431
+2022/23,Metropolitan Police,Asian,19232
+2022/23,Metropolitan Police,Black,38961
+2022/23,Metropolitan Police,Mixed,6216
+2022/23,Metropolitan Police,Other,5311
+2022/23,Metropolitan Police,White,53863
+2022/23,Norfolk,Asian,42
+2022/23,Norfolk,Black,135
+2022/23,Norfolk,Mixed,54
+2022/23,Norfolk,Other,63
+2022/23,Norfolk,White,2944
+2022/23,North Wales,Asian,34
+2022/23,North Wales,Black,27
+2022/23,North Wales,Mixed,26
+2022/23,North Wales,Other,20
+2022/23,North Wales,White,3135
+2022/23,North Yorkshire,Asian,70
+2022/23,North Yorkshire,Black,33
+2022/23,North Yorkshire,Mixed,46
+2022/23,North Yorkshire,Other,25
+2022/23,North Yorkshire,White,2057
+2022/23,Northamptonshire,Asian,143
+2022/23,Northamptonshire,Black,347
+2022/23,Northamptonshire,Mixed,142
+2022/23,Northamptonshire,Other,21
+2022/23,Northamptonshire,White,2792
+2022/23,Northumbria,Asian,280
+2022/23,Northumbria,Black,136
+2022/23,Northumbria,Mixed,61
+2022/23,Northumbria,Other,10
+2022/23,Northumbria,White,4885
+2022/23,Nottinghamshire,Asian,270
+2022/23,Nottinghamshire,Black,418
+2022/23,Nottinghamshire,Mixed,171
+2022/23,Nottinghamshire,Other,54
+2022/23,Nottinghamshire,White,2426
+2022/23,South Wales,Asian,259
+2022/23,South Wales,Black,289
+2022/23,South Wales,Mixed,177
+2022/23,South Wales,Other,104
+2022/23,South Wales,White,5670
+2022/23,South Yorkshire,Asian,749
+2022/23,South Yorkshire,Black,454
+2022/23,South Yorkshire,Mixed,263
+2022/23,South Yorkshire,Other,134
+2022/23,South Yorkshire,White,7015
+2022/23,Staffordshire,Asian,298
+2022/23,Staffordshire,Black,114
+2022/23,Staffordshire,Mixed,176
+2022/23,Staffordshire,Other,29
+2022/23,Staffordshire,White,3385
+2022/23,Suffolk,Asian,52
+2022/23,Suffolk,Black,232
+2022/23,Suffolk,Mixed,115
+2022/23,Suffolk,Other,105
+2022/23,Suffolk,White,2870
+2022/23,Surrey,Asian,262
+2022/23,Surrey,Black,261
+2022/23,Surrey,Mixed,112
+2022/23,Surrey,Other,57
+2022/23,Surrey,White,2662
+2022/23,Sussex,Asian,170
+2022/23,Sussex,Black,339
+2022/23,Sussex,Mixed,150
+2022/23,Sussex,Other,97
+2022/23,Sussex,White,3850
+2022/23,Thames Valley,Asian,1126
+2022/23,Thames Valley,Black,827
+2022/23,Thames Valley,Mixed,408
+2022/23,Thames Valley,Other,90
+2022/23,Thames Valley,White,7113
+2022/23,Warwickshire,Asian,94
+2022/23,Warwickshire,Black,83
+2022/23,Warwickshire,Mixed,62
+2022/23,Warwickshire,Other,18
+2022/23,Warwickshire,White,791
+2022/23,West Mercia,Asian,280
+2022/23,West Mercia,Black,184
+2022/23,West Mercia,Mixed,100
+2022/23,West Mercia,Other,31
+2022/23,West Mercia,White,3042
+2022/23,West Midlands,Asian,7033
+2022/23,West Midlands,Black,3763
+2022/23,West Midlands,Mixed,2321
+2022/23,West Midlands,Other,34
+2022/23,West Midlands,White,9897
+2022/23,West Yorkshire,Asian,4405
+2022/23,West Yorkshire,Black,1123
+2022/23,West Yorkshire,Mixed,867
+2022/23,West Yorkshire,Other,184
+2022/23,West Yorkshire,White,9247
+2022/23,Wiltshire,Asian,53
+2022/23,Wiltshire,Black,96
+2022/23,Wiltshire,Mixed,60
+2022/23,Wiltshire,Other,3
+2022/23,Wiltshire,White,1197
+2023/24,Avon & Somerset,Asian,157
+2023/24,Avon & Somerset,Black,438
+2023/24,Avon & Somerset,Mixed,252
+2023/24,Avon & Somerset,Other,74
+2023/24,Avon & Somerset,White,3683
+2023/24,Bedfordshire,Asian,606
+2023/24,Bedfordshire,Black,500
+2023/24,Bedfordshire,Mixed,184
+2023/24,Bedfordshire,Other,44
+2023/24,Bedfordshire,White,2057
+2023/24,Cambridgeshire,Asian,224
+2023/24,Cambridgeshire,Black,186
+2023/24,Cambridgeshire,Mixed,93
+2023/24,Cambridgeshire,Other,58
+2023/24,Cambridgeshire,White,1722
+2023/24,Cheshire,Asian,255
+2023/24,Cheshire,Black,299
+2023/24,Cheshire,Mixed,284
+2023/24,Cheshire,Other,239
+2023/24,Cheshire,White,10904
+2023/24,Cleveland,Asian,287
+2023/24,Cleveland,Black,108
+2023/24,Cleveland,Mixed,144
+2023/24,Cleveland,Other,86
+2023/24,Cleveland,White,6631
+2023/24,Cumbria,Asian,233
+2023/24,Cumbria,Black,59
+2023/24,Cumbria,Mixed,58
+2023/24,Cumbria,Other,53
+2023/24,Cumbria,White,6481
+2023/24,Derbyshire,Asian,182
+2023/24,Derbyshire,Black,108
+2023/24,Derbyshire,Mixed,103
+2023/24,Derbyshire,Other,36
+2023/24,Derbyshire,White,1900
+2023/24,Devon & Cornwall,Asian,68
+2023/24,Devon & Cornwall,Black,130
+2023/24,Devon & Cornwall,Mixed,127
+2023/24,Devon & Cornwall,Other,60
+2023/24,Devon & Cornwall,White,5241
+2023/24,Dorset,Asian,53
+2023/24,Dorset,Black,98
+2023/24,Dorset,Mixed,50
+2023/24,Dorset,Other,32
+2023/24,Dorset,White,1439
+2023/24,Durham,Asian,39
+2023/24,Durham,Black,8
+2023/24,Durham,Mixed,32
+2023/24,Durham,Other,20
+2023/24,Durham,White,2825
+2023/24,Dyfed-Powys,Asian,42
+2023/24,Dyfed-Powys,Black,29
+2023/24,Dyfed-Powys,Mixed,51
+2023/24,Dyfed-Powys,Other,16
+2023/24,Dyfed-Powys,White,4311
+2023/24,Essex,Asian,422
+2023/24,Essex,Black,922
+2023/24,Essex,Mixed,382
+2023/24,Essex,Other,211
+2023/24,Essex,White,8869
+2023/24,Gloucestershire,Asian,40
+2023/24,Gloucestershire,Black,85
+2023/24,Gloucestershire,Mixed,114
+2023/24,Gloucestershire,Other,18
+2023/24,Gloucestershire,White,1562
+2023/24,Greater Manchester,Asian,6159
+2023/24,Greater Manchester,Black,4178
+2023/24,Greater Manchester,Mixed,1012
+2023/24,Greater Manchester,Other,598
+2023/24,Greater Manchester,White,24175
+2023/24,Gwent,Asian,77
+2023/24,Gwent,Black,51
+2023/24,Gwent,Mixed,53
+2023/24,Gwent,Other,14
+2023/24,Gwent,White,1659
+2023/24,Hampshire,Asian,442
+2023/24,Hampshire,Black,563
+2023/24,Hampshire,Mixed,463
+2023/24,Hampshire,Other,200
+2023/24,Hampshire,White,8583
+2023/24,Hertfordshire,Asian,375
+2023/24,Hertfordshire,Black,635
+2023/24,Hertfordshire,Mixed,274
+2023/24,Hertfordshire,Other,158
+2023/24,Hertfordshire,White,3724
+2023/24,Humberside,Asian,76
+2023/24,Humberside,Black,57
+2023/24,Humberside,Mixed,57
+2023/24,Humberside,Other,60
+2023/24,Humberside,White,3517
+2023/24,Kent,Asian,356
+2023/24,Kent,Black,744
+2023/24,Kent,Mixed,417
+2023/24,Kent,Other,323
+2023/24,Kent,White,8662
+2023/24,Lancashire,Asian,2067
+2023/24,Lancashire,Black,278
+2023/24,Lancashire,Mixed,181
+2023/24,Lancashire,Other,102
+2023/24,Lancashire,White,11453
+2023/24,Leicestershire,Asian,615
+2023/24,Leicestershire,Black,571
+2023/24,Leicestershire,Mixed,200
+2023/24,Leicestershire,Other,72
+2023/24,Leicestershire,White,3196
+2023/24,Lincolnshire,Asian,38
+2023/24,Lincolnshire,Black,73
+2023/24,Lincolnshire,Mixed,67
+2023/24,Lincolnshire,Other,21
+2023/24,Lincolnshire,White,2530
+2023/24,"London, City of",Asian,176
+2023/24,"London, City of",Black,230
+2023/24,"London, City of",Mixed,92
+2023/24,"London, City of",Other,50
+2023/24,"London, City of",White,625
+2023/24,Merseyside,Asian,795
+2023/24,Merseyside,Black,1219
+2023/24,Merseyside,Mixed,1034
+2023/24,Merseyside,Other,1192
+2023/24,Merseyside,White,42547
+2023/24,Metropolitan Police,Asian,13704
+2023/24,Metropolitan Police,Black,30489
+2023/24,Metropolitan Police,Mixed,4659
+2023/24,Metropolitan Police,Other,4731
+2023/24,Metropolitan Police,White,39382
+2023/24,Norfolk,Asian,33
+2023/24,Norfolk,Black,135
+2023/24,Norfolk,Mixed,30
+2023/24,Norfolk,Other,36
+2023/24,Norfolk,White,1972
+2023/24,North Wales,Asian,27
+2023/24,North Wales,Black,24
+2023/24,North Wales,Mixed,27
+2023/24,North Wales,Other,18
+2023/24,North Wales,White,2223
+2023/24,North Yorkshire,Asian,97
+2023/24,North Yorkshire,Black,36
+2023/24,North Yorkshire,Mixed,56
+2023/24,North Yorkshire,Other,38
+2023/24,North Yorkshire,White,2128
+2023/24,Northamptonshire,Asian,166
+2023/24,Northamptonshire,Black,424
+2023/24,Northamptonshire,Mixed,207
+2023/24,Northamptonshire,Other,33
+2023/24,Northamptonshire,White,3151
+2023/24,Northumbria,Asian,504
+2023/24,Northumbria,Black,217
+2023/24,Northumbria,Mixed,126
+2023/24,Northumbria,Other,17
+2023/24,Northumbria,White,7694
+2023/24,Nottinghamshire,Asian,232
+2023/24,Nottinghamshire,Black,362
+2023/24,Nottinghamshire,Mixed,133
+2023/24,Nottinghamshire,Other,38
+2023/24,Nottinghamshire,White,2117
+2023/24,South Wales,Asian,150
+2023/24,South Wales,Black,266
+2023/24,South Wales,Mixed,119
+2023/24,South Wales,Other,80
+2023/24,South Wales,White,4018
+2023/24,South Yorkshire,Asian,783
+2023/24,South Yorkshire,Black,525
+2023/24,South Yorkshire,Mixed,303
+2023/24,South Yorkshire,Other,211
+2023/24,South Yorkshire,White,6603
+2023/24,Staffordshire,Asian,398
+2023/24,Staffordshire,Black,169
+2023/24,Staffordshire,Mixed,207
+2023/24,Staffordshire,Other,36
+2023/24,Staffordshire,White,4460
+2023/24,Suffolk,Asian,36
+2023/24,Suffolk,Black,104
+2023/24,Suffolk,Mixed,54
+2023/24,Suffolk,Other,50
+2023/24,Suffolk,White,1835
+2023/24,Surrey,Asian,291
+2023/24,Surrey,Black,330
+2023/24,Surrey,Mixed,253
+2023/24,Surrey,Other,93
+2023/24,Surrey,White,3199
+2023/24,Sussex,Asian,177
+2023/24,Sussex,Black,361
+2023/24,Sussex,Mixed,266
+2023/24,Sussex,Other,119
+2023/24,Sussex,White,4288
+2023/24,Thames Valley,Asian,1205
+2023/24,Thames Valley,Black,882
+2023/24,Thames Valley,Mixed,667
+2023/24,Thames Valley,Other,271
+2023/24,Thames Valley,White,8361
+2023/24,Warwickshire,Asian,69
+2023/24,Warwickshire,Black,67
+2023/24,Warwickshire,Mixed,37
+2023/24,Warwickshire,Other,12
+2023/24,Warwickshire,White,786
+2023/24,West Mercia,Asian,259
+2023/24,West Mercia,Black,193
+2023/24,West Mercia,Mixed,104
+2023/24,West Mercia,Other,29
+2023/24,West Mercia,White,3213
+2023/24,West Midlands,Asian,6246
+2023/24,West Midlands,Black,3552
+2023/24,West Midlands,Mixed,2258
+2023/24,West Midlands,Other,63
+2023/24,West Midlands,White,9825
+2023/24,West Yorkshire,Asian,4952
+2023/24,West Yorkshire,Black,1167
+2023/24,West Yorkshire,Mixed,941
+2023/24,West Yorkshire,Other,256
+2023/24,West Yorkshire,White,9989
+2023/24,Wiltshire,Asian,41
+2023/24,Wiltshire,Black,67
+2023/24,Wiltshire,Mixed,52
+2023/24,Wiltshire,Other,13
+2023/24,Wiltshire,White,954
+2024/25,Avon & Somerset,Asian,144
+2024/25,Avon & Somerset,Black,415
+2024/25,Avon & Somerset,Mixed,222
+2024/25,Avon & Somerset,Other,63
+2024/25,Avon & Somerset,White,3229
+2024/25,Bedfordshire,Asian,615
+2024/25,Bedfordshire,Black,466
+2024/25,Bedfordshire,Mixed,145
+2024/25,Bedfordshire,Other,62
+2024/25,Bedfordshire,White,1734
+2024/25,Cambridgeshire,Asian,268
+2024/25,Cambridgeshire,Black,203
+2024/25,Cambridgeshire,Mixed,119
+2024/25,Cambridgeshire,Other,58
+2024/25,Cambridgeshire,White,1577
+2024/25,Cheshire,Asian,293
+2024/25,Cheshire,Black,336
+2024/25,Cheshire,Mixed,272
+2024/25,Cheshire,Other,209
+2024/25,Cheshire,White,9997
+2024/25,Cleveland,Asian,241
+2024/25,Cleveland,Black,101
+2024/25,Cleveland,Mixed,103
+2024/25,Cleveland,Other,66
+2024/25,Cleveland,White,4969
+2024/25,Cumbria,Asian,280
+2024/25,Cumbria,Black,107
+2024/25,Cumbria,Mixed,87
+2024/25,Cumbria,Other,64
+2024/25,Cumbria,White,7481
+2024/25,Derbyshire,Asian,262
+2024/25,Derbyshire,Black,162
+2024/25,Derbyshire,Mixed,149
+2024/25,Derbyshire,Other,62
+2024/25,Derbyshire,White,2641
+2024/25,Devon & Cornwall,Asian,62
+2024/25,Devon & Cornwall,Black,134
+2024/25,Devon & Cornwall,Mixed,116
+2024/25,Devon & Cornwall,Other,44
+2024/25,Devon & Cornwall,White,4968
+2024/25,Dorset,Asian,47
+2024/25,Dorset,Black,93
+2024/25,Dorset,Mixed,59
+2024/25,Dorset,Other,28
+2024/25,Dorset,White,1506
+2024/25,Durham,Asian,50
+2024/25,Durham,Black,18
+2024/25,Durham,Mixed,13
+2024/25,Durham,Other,6
+2024/25,Durham,White,2371
+2024/25,Dyfed-Powys,Asian,38
+2024/25,Dyfed-Powys,Black,30
+2024/25,Dyfed-Powys,Mixed,58
+2024/25,Dyfed-Powys,Other,23
+2024/25,Dyfed-Powys,White,3339
+2024/25,Essex,Asian,422
+2024/25,Essex,Black,935
+2024/25,Essex,Mixed,424
+2024/25,Essex,Other,279
+2024/25,Essex,White,8214
+2024/25,Gloucestershire,Asian,90
+2024/25,Gloucestershire,Black,117
+2024/25,Gloucestershire,Mixed,129
+2024/25,Gloucestershire,Other,43
+2024/25,Gloucestershire,White,1819
+2024/25,Greater Manchester,Asian,7120
+2024/25,Greater Manchester,Black,4411
+2024/25,Greater Manchester,Mixed,1167
+2024/25,Greater Manchester,Other,803
+2024/25,Greater Manchester,White,26616
+2024/25,Gwent,Asian,97
+2024/25,Gwent,Black,96
+2024/25,Gwent,Mixed,48
+2024/25,Gwent,Other,24
+2024/25,Gwent,White,2208
+2024/25,Hampshire,Asian,553
+2024/25,Hampshire,Black,752
+2024/25,Hampshire,Mixed,437
+2024/25,Hampshire,Other,282
+2024/25,Hampshire,White,9531
+2024/25,Hertfordshire,Asian,389
+2024/25,Hertfordshire,Black,543
+2024/25,Hertfordshire,Mixed,276
+2024/25,Hertfordshire,Other,142
+2024/25,Hertfordshire,White,3642
+2024/25,Humberside,Asian,64
+2024/25,Humberside,Black,73
+2024/25,Humberside,Mixed,46
+2024/25,Humberside,Other,78
+2024/25,Humberside,White,3487
+2024/25,Kent,Asian,453
+2024/25,Kent,Black,811
+2024/25,Kent,Mixed,461
+2024/25,Kent,Other,330
+2024/25,Kent,White,8967
+2024/25,Lancashire,Asian,2362
+2024/25,Lancashire,Black,314
+2024/25,Lancashire,Mixed,267
+2024/25,Lancashire,Other,162
+2024/25,Lancashire,White,13093
+2024/25,Leicestershire,Asian,550
+2024/25,Leicestershire,Black,506
+2024/25,Leicestershire,Mixed,163
+2024/25,Leicestershire,Other,96
+2024/25,Leicestershire,White,2499
+2024/25,Lincolnshire,Asian,47
+2024/25,Lincolnshire,Black,85
+2024/25,Lincolnshire,Mixed,46
+2024/25,Lincolnshire,Other,13
+2024/25,Lincolnshire,White,2109
+2024/25,"London, City of",Asian,227
+2024/25,"London, City of",Black,277
+2024/25,"London, City of",Mixed,92
+2024/25,"London, City of",Other,62
+2024/25,"London, City of",White,653
+2024/25,Merseyside,Asian,877
+2024/25,Merseyside,Black,1376
+2024/25,Merseyside,Mixed,1155
+2024/25,Merseyside,Other,1377
+2024/25,Merseyside,White,46403
+2024/25,Metropolitan Police,Asian,12660
+2024/25,Metropolitan Police,Black,29018
+2024/25,Metropolitan Police,Mixed,5427
+2024/25,Metropolitan Police,Other,4681
+2024/25,Metropolitan Police,White,31601
+2024/25,Norfolk,Asian,49
+2024/25,Norfolk,Black,129
+2024/25,Norfolk,Mixed,39
+2024/25,Norfolk,Other,27
+2024/25,Norfolk,White,1802
+2024/25,North Wales,Asian,43
+2024/25,North Wales,Black,25
+2024/25,North Wales,Mixed,27
+2024/25,North Wales,Other,15
+2024/25,North Wales,White,2787
+2024/25,North Yorkshire,Asian,96
+2024/25,North Yorkshire,Black,55
+2024/25,North Yorkshire,Mixed,39
+2024/25,North Yorkshire,Other,17
+2024/25,North Yorkshire,White,1750
+2024/25,Northamptonshire,Asian,122
+2024/25,Northamptonshire,Black,422
+2024/25,Northamptonshire,Mixed,151
+2024/25,Northamptonshire,Other,31
+2024/25,Northamptonshire,White,2559
+2024/25,Northumbria,Asian,527
+2024/25,Northumbria,Black,225
+2024/25,Northumbria,Mixed,136
+2024/25,Northumbria,Other,8
+2024/25,Northumbria,White,8966
+2024/25,Nottinghamshire,Asian,133
+2024/25,Nottinghamshire,Black,242
+2024/25,Nottinghamshire,Mixed,146
+2024/25,Nottinghamshire,Other,38
+2024/25,Nottinghamshire,White,1480
+2024/25,South Wales,Asian,166
+2024/25,South Wales,Black,224
+2024/25,South Wales,Mixed,95
+2024/25,South Wales,Other,76
+2024/25,South Wales,White,3186
+2024/25,South Yorkshire,Asian,755
+2024/25,South Yorkshire,Black,556
+2024/25,South Yorkshire,Mixed,342
+2024/25,South Yorkshire,Other,222
+2024/25,South Yorkshire,White,6435
+2024/25,Staffordshire,Asian,554
+2024/25,Staffordshire,Black,213
+2024/25,Staffordshire,Mixed,206
+2024/25,Staffordshire,Other,42
+2024/25,Staffordshire,White,4514
+2024/25,Suffolk,Asian,48
+2024/25,Suffolk,Black,118
+2024/25,Suffolk,Mixed,58
+2024/25,Suffolk,Other,40
+2024/25,Suffolk,White,1639
+2024/25,Surrey,Asian,360
+2024/25,Surrey,Black,458
+2024/25,Surrey,Mixed,312
+2024/25,Surrey,Other,127
+2024/25,Surrey,White,3564
+2024/25,Sussex,Asian,173
+2024/25,Sussex,Black,406
+2024/25,Sussex,Mixed,250
+2024/25,Sussex,Other,181
+2024/25,Sussex,White,4340
+2024/25,Thames Valley,Asian,1578
+2024/25,Thames Valley,Black,1185
+2024/25,Thames Valley,Mixed,753
+2024/25,Thames Valley,Other,288
+2024/25,Thames Valley,White,9549
+2024/25,Warwickshire,Asian,110
+2024/25,Warwickshire,Black,83
+2024/25,Warwickshire,Mixed,62
+2024/25,Warwickshire,Other,17
+2024/25,Warwickshire,White,913
+2024/25,West Mercia,Asian,171
+2024/25,West Mercia,Black,168
+2024/25,West Mercia,Mixed,80
+2024/25,West Mercia,Other,18
+2024/25,West Mercia,White,2292
+2024/25,West Midlands,Asian,6031
+2024/25,West Midlands,Black,3666
+2024/25,West Midlands,Mixed,2067
+2024/25,West Midlands,Other,22
+2024/25,West Midlands,White,9159
+2024/25,West Yorkshire,Asian,4872
+2024/25,West Yorkshire,Black,1004
+2024/25,West Yorkshire,Mixed,872
+2024/25,West Yorkshire,Other,338
+2024/25,West Yorkshire,White,9415
+2024/25,Wiltshire,Asian,78
+2024/25,Wiltshire,Black,89
+2024/25,Wiltshire,Mixed,58
+2024/25,Wiltshire,Other,21
+2024/25,Wiltshire,White,1180

@@ -1,0 +1,55 @@
+# R
+.Rhistory
+.Rproj.user/
+.RData
+.Rproj.user
+renv/library/
+renv/staging/
+renv/sandbox/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Node / Dashboard
+dashboard/node_modules/
+dashboard/dist/
+
+# Quarto build output — _book/ is committed so Netlify can copy it without needing R
+# report/_book/   <-- intentionally tracked
+report/.quarto/
+report/*_files/
+
+# Data (raw ODS/XLSX files are large; download via script)
+data/raw/*.ods
+data/raw/*.xlsx
+
+# Processed CSVs: large files excluded, regenerate with analysis/01_load_and_clean.R
+data/processed/stop_search_clean.csv
+data/processed/stop_search_detailed.csv
+
+# analysis/output CSVs are committed (feeds dashboard JSON export)
+# analysis/output/ -- intentionally NOT ignored
+
+# Build output
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Claude Code working files
+.claude/
+*/.claude/
+
+# Quarto model cache (large, regenerated on render)
+report/model.rds
+report/results_cache/
+report/data/share_data_across_chapters.rds
+.positai

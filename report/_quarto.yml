@@ -1,0 +1,52 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Statistical Analysis of Stop and Search Practices on Black Communities in the UK"
+  author:
+    - name: "Michel Mesquita, Ph.D., CStat"
+      affiliation: "M2Lab CSDS, Centre for Statistical and Data Science Research"
+      url: "https://m2lab.io"
+  date: today
+  date-format: long
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - literature.qmd
+    - methodology.qmd
+    - results.qmd
+    - discussion.qmd
+    - conclusion.qmd
+    - references.qmd
+  appendices:
+    - appendix_diagnostics.qmd
+    - appendix_sensitivity.qmd
+    - appendix_ipw.qmd
+  downloads: [pdf]
+
+bibliography: bibliography.bib
+csl: harvard.csl
+
+format:
+  html:
+    theme: cosmo
+    citeproc: true
+    toc: true
+    number-sections: true
+  pdf:
+    documentclass: scrreprt
+    papersize: a4
+    pdf-engine: pdflatex
+    include-in-header:
+      text: |
+        \usepackage{lmodern}
+        \usepackage[T1]{fontenc}
+        \usepackage[table]{xcolor}
+        \usepackage{booktabs}
+        \usepackage{longtable}
+        \usepackage{float}
+        \usepackage{placeins}
+        \usepackage{makecell}
+
+prefer-html: true

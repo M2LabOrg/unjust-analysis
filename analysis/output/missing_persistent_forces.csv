@@ -1,0 +1,44 @@
+police_force,region_clean,mean_pct_missing,max_pct_missing,n_years
+"London, City of",London,45.8,50.6,5
+Nottinghamshire,East Midlands,29.3,39.6,5
+Metropolitan Police,London,28.4,31.3,5
+Thames Valley,South East,26.5,32.1,5
+Leicestershire,East Midlands,24.9,33.2,5
+Avon & Somerset,South West,23.9,25.8,5
+Essex,East of England,23.7,29.4,5
+Greater Manchester,North West,21.1,31.4,5
+Wiltshire,South West,20.3,26,5
+Humberside,Yorkshire and The Humber,19.5,28.1,5
+Kent,South East,19.1,24.4,5
+Devon & Cornwall,South West,18.7,29.7,5
+South Yorkshire,Yorkshire and The Humber,18.6,21.6,5
+Suffolk,East of England,18.2,23.1,5
+North Yorkshire,Yorkshire and The Humber,18,26.2,5
+Bedfordshire,East of England,17.8,21.1,5
+Gwent,Wales,17.7,30.1,5
+Surrey,South East,17.6,29.7,5
+Lancashire,North West,17.3,22.7,5
+Hertfordshire,East of England,17.1,20.4,5
+Norfolk,East of England,17.1,24.1,5
+Cleveland,North East,17,18.7,5
+Cambridgeshire,East of England,16.8,20.2,5
+North Wales,Wales,16.6,33.5,5
+Hampshire,South East,15.3,19.9,5
+Sussex,South East,14.2,21,5
+Cheshire,North West,13.9,19.4,5
+Derbyshire,East Midlands,13.2,22.3,5
+Warwickshire,West Midlands,13,22.4,5
+Dorset,South West,12.8,14.6,5
+South Wales,Wales,12.5,23.9,5
+Lincolnshire,East Midlands,12.3,15,5
+West Mercia,West Midlands,11.9,16.5,5
+Northamptonshire,East Midlands,10,12,5
+Staffordshire,West Midlands,9.6,11.3,5
+West Midlands,West Midlands,8.6,10.7,5
+Merseyside,North West,8.5,12.3,5
+West Yorkshire,Yorkshire and The Humber,8.5,12.6,5
+Cumbria,North West,8.4,10.1,5
+Gloucestershire,South West,8.1,10.7,5
+Dyfed-Powys,Wales,7.6,8.9,5
+Durham,North East,3.3,4,5
+Northumbria,North East,2.1,2.5,5

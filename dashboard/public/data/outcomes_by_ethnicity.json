@@ -1,0 +1,422 @@
+[
+  {
+    "ethnicity": "Asian",
+    "outcome": "Arrest",
+    "n": 31660,
+    "total": 255536,
+    "pct": 12.4
+  },
+  {
+    "ethnicity": "Asian",
+    "outcome": "Caution",
+    "n": 728,
+    "total": 255536,
+    "pct": 0.3
+  },
+  {
+    "ethnicity": "Asian",
+    "outcome": "Community Resolution",
+    "n": 24368,
+    "total": 255536,
+    "pct": 9.5
+  },
+  {
+    "ethnicity": "Asian",
+    "outcome": "Guardian Intervention",
+    "n": 9,
+    "total": 255536,
+    "pct": 0
+  },
+  {
+    "ethnicity": "Asian",
+    "outcome": "Khat or Cannabis Warning",
+    "n": 2460,
+    "total": 255536,
+    "pct": 1
+  },
+  {
+    "ethnicity": "Asian",
+    "outcome": "No Further Action",
+    "n": 176086,
+    "total": 255536,
+    "pct": 68.9
+  },
+  {
+    "ethnicity": "Asian",
+    "outcome": "Other Action",
+    "n": 1505,
+    "total": 255536,
+    "pct": 0.6
+  },
+  {
+    "ethnicity": "Asian",
+    "outcome": "Penalty Notice for Disorder",
+    "n": 6548,
+    "total": 255536,
+    "pct": 2.6
+  },
+  {
+    "ethnicity": "Asian",
+    "outcome": "Seizure of Property",
+    "n": 3001,
+    "total": 255536,
+    "pct": 1.2
+  },
+  {
+    "ethnicity": "Asian",
+    "outcome": "Summons",
+    "n": 4415,
+    "total": 255536,
+    "pct": 1.7
+  },
+  {
+    "ethnicity": "Asian",
+    "outcome": "Verbal Warning or Words of Advice",
+    "n": 3969,
+    "total": 255536,
+    "pct": 1.6
+  },
+  {
+    "ethnicity": "Asian",
+    "outcome": "Voluntary Attendance",
+    "n": 787,
+    "total": 255536,
+    "pct": 0.3
+  },
+  {
+    "ethnicity": "Black",
+    "outcome": "Arrest",
+    "n": 50930,
+    "total": 318763,
+    "pct": 16
+  },
+  {
+    "ethnicity": "Black",
+    "outcome": "Caution",
+    "n": 472,
+    "total": 318763,
+    "pct": 0.1
+  },
+  {
+    "ethnicity": "Black",
+    "outcome": "Community Resolution",
+    "n": 27674,
+    "total": 318763,
+    "pct": 8.7
+  },
+  {
+    "ethnicity": "Black",
+    "outcome": "Guardian Intervention",
+    "n": 23,
+    "total": 318763,
+    "pct": 0
+  },
+  {
+    "ethnicity": "Black",
+    "outcome": "Khat or Cannabis Warning",
+    "n": 1713,
+    "total": 318763,
+    "pct": 0.5
+  },
+  {
+    "ethnicity": "Black",
+    "outcome": "No Further Action",
+    "n": 219682,
+    "total": 318763,
+    "pct": 68.9
+  },
+  {
+    "ethnicity": "Black",
+    "outcome": "Other Action",
+    "n": 1115,
+    "total": 318763,
+    "pct": 0.3
+  },
+  {
+    "ethnicity": "Black",
+    "outcome": "Penalty Notice for Disorder",
+    "n": 7753,
+    "total": 318763,
+    "pct": 2.4
+  },
+  {
+    "ethnicity": "Black",
+    "outcome": "Seizure of Property",
+    "n": 1838,
+    "total": 318763,
+    "pct": 0.6
+  },
+  {
+    "ethnicity": "Black",
+    "outcome": "Summons",
+    "n": 4792,
+    "total": 318763,
+    "pct": 1.5
+  },
+  {
+    "ethnicity": "Black",
+    "outcome": "Verbal Warning or Words of Advice",
+    "n": 1633,
+    "total": 318763,
+    "pct": 0.5
+  },
+  {
+    "ethnicity": "Black",
+    "outcome": "Voluntary Attendance",
+    "n": 1138,
+    "total": 318763,
+    "pct": 0.4
+  },
+  {
+    "ethnicity": "Mixed",
+    "outcome": "Arrest",
+    "n": 13847,
+    "total": 86428,
+    "pct": 16
+  },
+  {
+    "ethnicity": "Mixed",
+    "outcome": "Caution",
+    "n": 249,
+    "total": 86428,
+    "pct": 0.3
+  },
+  {
+    "ethnicity": "Mixed",
+    "outcome": "Community Resolution",
+    "n": 9123,
+    "total": 86428,
+    "pct": 10.6
+  },
+  {
+    "ethnicity": "Mixed",
+    "outcome": "Guardian Intervention",
+    "n": 9,
+    "total": 86428,
+    "pct": 0
+  },
+  {
+    "ethnicity": "Mixed",
+    "outcome": "Khat or Cannabis Warning",
+    "n": 883,
+    "total": 86428,
+    "pct": 1
+  },
+  {
+    "ethnicity": "Mixed",
+    "outcome": "No Further Action",
+    "n": 56231,
+    "total": 86428,
+    "pct": 65.1
+  },
+  {
+    "ethnicity": "Mixed",
+    "outcome": "Other Action",
+    "n": 699,
+    "total": 86428,
+    "pct": 0.8
+  },
+  {
+    "ethnicity": "Mixed",
+    "outcome": "Penalty Notice for Disorder",
+    "n": 1374,
+    "total": 86428,
+    "pct": 1.6
+  },
+  {
+    "ethnicity": "Mixed",
+    "outcome": "Seizure of Property",
+    "n": 940,
+    "total": 86428,
+    "pct": 1.1
+  },
+  {
+    "ethnicity": "Mixed",
+    "outcome": "Summons",
+    "n": 1289,
+    "total": 86428,
+    "pct": 1.5
+  },
+  {
+    "ethnicity": "Mixed",
+    "outcome": "Verbal Warning or Words of Advice",
+    "n": 1065,
+    "total": 86428,
+    "pct": 1.2
+  },
+  {
+    "ethnicity": "Mixed",
+    "outcome": "Voluntary Attendance",
+    "n": 719,
+    "total": 86428,
+    "pct": 0.8
+  },
+  {
+    "ethnicity": "Other",
+    "outcome": "Arrest",
+    "n": 7517,
+    "total": 49407,
+    "pct": 15.2
+  },
+  {
+    "ethnicity": "Other",
+    "outcome": "Caution",
+    "n": 96,
+    "total": 49407,
+    "pct": 0.2
+  },
+  {
+    "ethnicity": "Other",
+    "outcome": "Community Resolution",
+    "n": 4755,
+    "total": 49407,
+    "pct": 9.6
+  },
+  {
+    "ethnicity": "Other",
+    "outcome": "Guardian Intervention",
+    "n": 3,
+    "total": 49407,
+    "pct": 0
+  },
+  {
+    "ethnicity": "Other",
+    "outcome": "Khat or Cannabis Warning",
+    "n": 259,
+    "total": 49407,
+    "pct": 0.5
+  },
+  {
+    "ethnicity": "Other",
+    "outcome": "No Further Action",
+    "n": 33927,
+    "total": 49407,
+    "pct": 68.7
+  },
+  {
+    "ethnicity": "Other",
+    "outcome": "Other Action",
+    "n": 345,
+    "total": 49407,
+    "pct": 0.7
+  },
+  {
+    "ethnicity": "Other",
+    "outcome": "Penalty Notice for Disorder",
+    "n": 926,
+    "total": 49407,
+    "pct": 1.9
+  },
+  {
+    "ethnicity": "Other",
+    "outcome": "Seizure of Property",
+    "n": 147,
+    "total": 49407,
+    "pct": 0.3
+  },
+  {
+    "ethnicity": "Other",
+    "outcome": "Summons",
+    "n": 747,
+    "total": 49407,
+    "pct": 1.5
+  },
+  {
+    "ethnicity": "Other",
+    "outcome": "Verbal Warning or Words of Advice",
+    "n": 366,
+    "total": 49407,
+    "pct": 0.7
+  },
+  {
+    "ethnicity": "Other",
+    "outcome": "Voluntary Attendance",
+    "n": 319,
+    "total": 49407,
+    "pct": 0.6
+  },
+  {
+    "ethnicity": "White",
+    "outcome": "Arrest",
+    "n": 195713,
+    "total": 1470438,
+    "pct": 13.3
+  },
+  {
+    "ethnicity": "White",
+    "outcome": "Caution",
+    "n": 5929,
+    "total": 1470438,
+    "pct": 0.4
+  },
+  {
+    "ethnicity": "White",
+    "outcome": "Community Resolution",
+    "n": 115918,
+    "total": 1470438,
+    "pct": 7.9
+  },
+  {
+    "ethnicity": "White",
+    "outcome": "Guardian Intervention",
+    "n": 240,
+    "total": 1470438,
+    "pct": 0
+  },
+  {
+    "ethnicity": "White",
+    "outcome": "Khat or Cannabis Warning",
+    "n": 18600,
+    "total": 1470438,
+    "pct": 1.3
+  },
+  {
+    "ethnicity": "White",
+    "outcome": "No Further Action",
+    "n": 1023508,
+    "total": 1470438,
+    "pct": 69.6
+  },
+  {
+    "ethnicity": "White",
+    "outcome": "Other Action",
+    "n": 18923,
+    "total": 1470438,
+    "pct": 1.3
+  },
+  {
+    "ethnicity": "White",
+    "outcome": "Penalty Notice for Disorder",
+    "n": 11774,
+    "total": 1470438,
+    "pct": 0.8
+  },
+  {
+    "ethnicity": "White",
+    "outcome": "Seizure of Property",
+    "n": 8636,
+    "total": 1470438,
+    "pct": 0.6
+  },
+  {
+    "ethnicity": "White",
+    "outcome": "Summons",
+    "n": 25254,
+    "total": 1470438,
+    "pct": 1.7
+  },
+  {
+    "ethnicity": "White",
+    "outcome": "Verbal Warning or Words of Advice",
+    "n": 26506,
+    "total": 1470438,
+    "pct": 1.8
+  },
+  {
+    "ethnicity": "White",
+    "outcome": "Voluntary Attendance",
+    "n": 19437,
+    "total": 1470438,
+    "pct": 1.3
+  }
+]

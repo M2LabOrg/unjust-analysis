@@ -1,0 +1,5 @@
+term,ethnicity,irr,se_poisson,se_quasipoisson,se_ratio,ci_pois_lo,ci_pois_hi,ci_qp_lo,ci_qp_hi
+ethnicityAsian,Asian,1.169,0.0023,0.0306,13.48,1.164,1.174,1.101,1.241
+ethnicityBlack,Black,3.022,0.0022,0.0291,13.48,3.009,3.035,2.855,3.199
+ethnicityMixed,Mixed,1.357,0.0036,0.0488,13.48,1.348,1.367,1.233,1.494
+ethnicityOther,Other,0.934,0.0047,0.0635,13.48,0.925,0.942,0.824,1.057

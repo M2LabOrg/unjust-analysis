@@ -1,0 +1,25 @@
+specification,term,irr,irr_lower,irr_upper,ethnicity_group
+Full model (reference),ethnicityAsian,1.169,1.101,1.241,Asian
+Full model (reference),ethnicityBlack,3.022,2.855,3.199,Black
+Full model (reference),ethnicityMixed,1.357,1.233,1.494,Mixed
+Full model (reference),ethnicityOther,0.934,0.824,1.057,Other
+Drop financial_year,ethnicityAsian,1.169,1.096,1.247,Asian
+Drop financial_year,ethnicityBlack,3.022,2.842,3.213,Black
+Drop financial_year,ethnicityMixed,1.357,1.225,1.505,Mixed
+Drop financial_year,ethnicityOther,0.934,0.817,1.067,Other
+Drop region,ethnicityAsian,1.502,1.358,1.661,Asian
+Drop region,ethnicityBlack,4.351,3.972,4.766,Black
+Drop region,ethnicityMixed,1.639,1.391,1.931,Mixed
+Drop region,ethnicityOther,1.309,1.058,1.619,Other
+Drop sex,ethnicityAsian,1.17,1.023,1.339,Asian
+Drop sex,ethnicityBlack,3.026,2.663,3.438,Black
+Drop sex,ethnicityMixed,1.358,1.096,1.684,Mixed
+Drop sex,ethnicityOther,0.943,0.714,1.247,Other
+Drop age group,ethnicityAsian,1.169,1.101,1.241,Asian
+Drop age group,ethnicityBlack,3.022,2.855,3.199,Black
+Drop age group,ethnicityMixed,1.357,1.233,1.494,Mixed
+Drop age group,ethnicityOther,0.934,0.824,1.058,Other
+Drop reason (drugs),ethnicityAsian,1.169,1.086,1.259,Asian
+Drop reason (drugs),ethnicityBlack,3.022,2.816,3.243,Black
+Drop reason (drugs),ethnicityMixed,1.357,1.206,1.528,Mixed
+Drop reason (drugs),ethnicityOther,0.934,0.801,1.09,Other

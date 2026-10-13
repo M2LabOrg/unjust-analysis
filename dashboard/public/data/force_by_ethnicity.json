@@ -1,0 +1,6440 @@
+[
+  {
+    "financial_year": "2020/21",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "Asian",
+    "total_searches": 310
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "Black",
+    "total_searches": 859
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "Mixed",
+    "total_searches": 267
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "Other",
+    "total_searches": 63
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "White",
+    "total_searches": 6136
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Bedfordshire",
+    "ethnicity": "Asian",
+    "total_searches": 811
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Bedfordshire",
+    "ethnicity": "Black",
+    "total_searches": 354
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Bedfordshire",
+    "ethnicity": "Mixed",
+    "total_searches": 131
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Bedfordshire",
+    "ethnicity": "Other",
+    "total_searches": 42
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Bedfordshire",
+    "ethnicity": "White",
+    "total_searches": 1694
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "Asian",
+    "total_searches": 313
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "Black",
+    "total_searches": 192
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "Mixed",
+    "total_searches": 110
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "Other",
+    "total_searches": 57
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "White",
+    "total_searches": 1990
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Cheshire",
+    "ethnicity": "Asian",
+    "total_searches": 38
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Cheshire",
+    "ethnicity": "Black",
+    "total_searches": 126
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Cheshire",
+    "ethnicity": "Mixed",
+    "total_searches": 65
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Cheshire",
+    "ethnicity": "Other",
+    "total_searches": 34
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Cheshire",
+    "ethnicity": "White",
+    "total_searches": 4587
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Cleveland",
+    "ethnicity": "Asian",
+    "total_searches": 229
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Cleveland",
+    "ethnicity": "Black",
+    "total_searches": 83
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Cleveland",
+    "ethnicity": "Mixed",
+    "total_searches": 80
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Cleveland",
+    "ethnicity": "Other",
+    "total_searches": 55
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Cleveland",
+    "ethnicity": "White",
+    "total_searches": 4614
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Cumbria",
+    "ethnicity": "Asian",
+    "total_searches": 63
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Cumbria",
+    "ethnicity": "Black",
+    "total_searches": 17
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Cumbria",
+    "ethnicity": "Mixed",
+    "total_searches": 18
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Cumbria",
+    "ethnicity": "Other",
+    "total_searches": 6
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Cumbria",
+    "ethnicity": "White",
+    "total_searches": 2954
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Derbyshire",
+    "ethnicity": "Asian",
+    "total_searches": 204
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Derbyshire",
+    "ethnicity": "Black",
+    "total_searches": 139
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Derbyshire",
+    "ethnicity": "Mixed",
+    "total_searches": 81
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Derbyshire",
+    "ethnicity": "Other",
+    "total_searches": 18
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Derbyshire",
+    "ethnicity": "White",
+    "total_searches": 1381
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "Asian",
+    "total_searches": 59
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "Black",
+    "total_searches": 160
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "Mixed",
+    "total_searches": 105
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "Other",
+    "total_searches": 27
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "White",
+    "total_searches": 5618
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Dorset",
+    "ethnicity": "Asian",
+    "total_searches": 62
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Dorset",
+    "ethnicity": "Black",
+    "total_searches": 178
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Dorset",
+    "ethnicity": "Mixed",
+    "total_searches": 94
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Dorset",
+    "ethnicity": "Other",
+    "total_searches": 32
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Dorset",
+    "ethnicity": "White",
+    "total_searches": 2032
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Durham",
+    "ethnicity": "Asian",
+    "total_searches": 24
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Durham",
+    "ethnicity": "Black",
+    "total_searches": 9
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Durham",
+    "ethnicity": "Mixed",
+    "total_searches": 13
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Durham",
+    "ethnicity": "Other",
+    "total_searches": 7
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Durham",
+    "ethnicity": "White",
+    "total_searches": 2207
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Dyfed-Powys",
+    "ethnicity": "Asian",
+    "total_searches": 39
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Dyfed-Powys",
+    "ethnicity": "Black",
+    "total_searches": 23
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Dyfed-Powys",
+    "ethnicity": "Mixed",
+    "total_searches": 34
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Dyfed-Powys",
+    "ethnicity": "White",
+    "total_searches": 2953
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Essex",
+    "ethnicity": "Asian",
+    "total_searches": 951
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Essex",
+    "ethnicity": "Black",
+    "total_searches": 1877
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Essex",
+    "ethnicity": "Mixed",
+    "total_searches": 673
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Essex",
+    "ethnicity": "Other",
+    "total_searches": 141
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Essex",
+    "ethnicity": "White",
+    "total_searches": 17980
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Gloucestershire",
+    "ethnicity": "Asian",
+    "total_searches": 69
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Gloucestershire",
+    "ethnicity": "Black",
+    "total_searches": 148
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Gloucestershire",
+    "ethnicity": "Mixed",
+    "total_searches": 138
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Gloucestershire",
+    "ethnicity": "Other",
+    "total_searches": 16
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Gloucestershire",
+    "ethnicity": "White",
+    "total_searches": 2462
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Greater Manchester",
+    "ethnicity": "Asian",
+    "total_searches": 1352
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Greater Manchester",
+    "ethnicity": "Black",
+    "total_searches": 911
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Greater Manchester",
+    "ethnicity": "Mixed",
+    "total_searches": 261
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Greater Manchester",
+    "ethnicity": "Other",
+    "total_searches": 120
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Greater Manchester",
+    "ethnicity": "White",
+    "total_searches": 5241
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Gwent",
+    "ethnicity": "Asian",
+    "total_searches": 226
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Gwent",
+    "ethnicity": "Black",
+    "total_searches": 144
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Gwent",
+    "ethnicity": "Mixed",
+    "total_searches": 117
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Gwent",
+    "ethnicity": "Other",
+    "total_searches": 49
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Gwent",
+    "ethnicity": "White",
+    "total_searches": 3443
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Hampshire",
+    "ethnicity": "Asian",
+    "total_searches": 487
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Hampshire",
+    "ethnicity": "Black",
+    "total_searches": 797
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Hampshire",
+    "ethnicity": "Mixed",
+    "total_searches": 425
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Hampshire",
+    "ethnicity": "Other",
+    "total_searches": 160
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Hampshire",
+    "ethnicity": "White",
+    "total_searches": 9319
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Hertfordshire",
+    "ethnicity": "Asian",
+    "total_searches": 746
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Hertfordshire",
+    "ethnicity": "Black",
+    "total_searches": 843
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Hertfordshire",
+    "ethnicity": "Mixed",
+    "total_searches": 381
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Hertfordshire",
+    "ethnicity": "Other",
+    "total_searches": 148
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Hertfordshire",
+    "ethnicity": "White",
+    "total_searches": 5732
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Humberside",
+    "ethnicity": "Asian",
+    "total_searches": 167
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Humberside",
+    "ethnicity": "Black",
+    "total_searches": 165
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Humberside",
+    "ethnicity": "Mixed",
+    "total_searches": 101
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Humberside",
+    "ethnicity": "Other",
+    "total_searches": 22
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Humberside",
+    "ethnicity": "White",
+    "total_searches": 5358
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Kent",
+    "ethnicity": "Asian",
+    "total_searches": 493
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Kent",
+    "ethnicity": "Black",
+    "total_searches": 906
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Kent",
+    "ethnicity": "Mixed",
+    "total_searches": 419
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Kent",
+    "ethnicity": "Other",
+    "total_searches": 107
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Kent",
+    "ethnicity": "White",
+    "total_searches": 9897
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Lancashire",
+    "ethnicity": "Asian",
+    "total_searches": 1224
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Lancashire",
+    "ethnicity": "Black",
+    "total_searches": 123
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Lancashire",
+    "ethnicity": "Mixed",
+    "total_searches": 111
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Lancashire",
+    "ethnicity": "Other",
+    "total_searches": 19
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Lancashire",
+    "ethnicity": "White",
+    "total_searches": 6636
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Leicestershire",
+    "ethnicity": "Asian",
+    "total_searches": 687
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Leicestershire",
+    "ethnicity": "Black",
+    "total_searches": 490
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Leicestershire",
+    "ethnicity": "Mixed",
+    "total_searches": 131
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Leicestershire",
+    "ethnicity": "Other",
+    "total_searches": 50
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Leicestershire",
+    "ethnicity": "White",
+    "total_searches": 3274
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Lincolnshire",
+    "ethnicity": "Asian",
+    "total_searches": 76
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Lincolnshire",
+    "ethnicity": "Black",
+    "total_searches": 107
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Lincolnshire",
+    "ethnicity": "Mixed",
+    "total_searches": 63
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Lincolnshire",
+    "ethnicity": "Other",
+    "total_searches": 29
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Lincolnshire",
+    "ethnicity": "White",
+    "total_searches": 2688
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "London, City of",
+    "ethnicity": "Asian",
+    "total_searches": 294
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "London, City of",
+    "ethnicity": "Black",
+    "total_searches": 289
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "London, City of",
+    "ethnicity": "Mixed",
+    "total_searches": 78
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "London, City of",
+    "ethnicity": "Other",
+    "total_searches": 47
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "London, City of",
+    "ethnicity": "White",
+    "total_searches": 829
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Merseyside",
+    "ethnicity": "Asian",
+    "total_searches": 491
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Merseyside",
+    "ethnicity": "Black",
+    "total_searches": 887
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Merseyside",
+    "ethnicity": "Mixed",
+    "total_searches": 612
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Merseyside",
+    "ethnicity": "Other",
+    "total_searches": 298
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Merseyside",
+    "ethnicity": "White",
+    "total_searches": 39778
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "Asian",
+    "total_searches": 44444
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "Black",
+    "total_searches": 75651
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "Mixed",
+    "total_searches": 10644
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "Other",
+    "total_searches": 8558
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "White",
+    "total_searches": 99724
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Norfolk",
+    "ethnicity": "Asian",
+    "total_searches": 102
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Norfolk",
+    "ethnicity": "Black",
+    "total_searches": 244
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Norfolk",
+    "ethnicity": "Mixed",
+    "total_searches": 137
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Norfolk",
+    "ethnicity": "Other",
+    "total_searches": 57
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Norfolk",
+    "ethnicity": "White",
+    "total_searches": 5958
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "North Wales",
+    "ethnicity": "Asian",
+    "total_searches": 51
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "North Wales",
+    "ethnicity": "Black",
+    "total_searches": 30
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "North Wales",
+    "ethnicity": "Mixed",
+    "total_searches": 36
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "North Wales",
+    "ethnicity": "Other",
+    "total_searches": 17
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "North Wales",
+    "ethnicity": "White",
+    "total_searches": 5547
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "North Yorkshire",
+    "ethnicity": "Asian",
+    "total_searches": 193
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "North Yorkshire",
+    "ethnicity": "Black",
+    "total_searches": 45
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "North Yorkshire",
+    "ethnicity": "Mixed",
+    "total_searches": 78
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "North Yorkshire",
+    "ethnicity": "Other",
+    "total_searches": 19
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "North Yorkshire",
+    "ethnicity": "White",
+    "total_searches": 2988
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Northamptonshire",
+    "ethnicity": "Asian",
+    "total_searches": 160
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Northamptonshire",
+    "ethnicity": "Black",
+    "total_searches": 233
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Northamptonshire",
+    "ethnicity": "Mixed",
+    "total_searches": 103
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Northamptonshire",
+    "ethnicity": "Other",
+    "total_searches": 19
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Northamptonshire",
+    "ethnicity": "White",
+    "total_searches": 1866
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Northumbria",
+    "ethnicity": "Asian",
+    "total_searches": 341
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Northumbria",
+    "ethnicity": "Black",
+    "total_searches": 100
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Northumbria",
+    "ethnicity": "Mixed",
+    "total_searches": 39
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Northumbria",
+    "ethnicity": "Other",
+    "total_searches": 10
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Northumbria",
+    "ethnicity": "White",
+    "total_searches": 4403
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "Asian",
+    "total_searches": 338
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "Black",
+    "total_searches": 381
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "Mixed",
+    "total_searches": 204
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "Other",
+    "total_searches": 35
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "White",
+    "total_searches": 2849
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "South Wales",
+    "ethnicity": "Asian",
+    "total_searches": 816
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "South Wales",
+    "ethnicity": "Black",
+    "total_searches": 803
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "South Wales",
+    "ethnicity": "Mixed",
+    "total_searches": 384
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "South Wales",
+    "ethnicity": "Other",
+    "total_searches": 295
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "South Wales",
+    "ethnicity": "White",
+    "total_searches": 12534
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "South Yorkshire",
+    "ethnicity": "Asian",
+    "total_searches": 1426
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "South Yorkshire",
+    "ethnicity": "Black",
+    "total_searches": 747
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "South Yorkshire",
+    "ethnicity": "Mixed",
+    "total_searches": 287
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "South Yorkshire",
+    "ethnicity": "Other",
+    "total_searches": 157
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "South Yorkshire",
+    "ethnicity": "White",
+    "total_searches": 11321
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Staffordshire",
+    "ethnicity": "Asian",
+    "total_searches": 473
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Staffordshire",
+    "ethnicity": "Black",
+    "total_searches": 257
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Staffordshire",
+    "ethnicity": "Mixed",
+    "total_searches": 177
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Staffordshire",
+    "ethnicity": "Other",
+    "total_searches": 64
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Staffordshire",
+    "ethnicity": "White",
+    "total_searches": 4155
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Suffolk",
+    "ethnicity": "Asian",
+    "total_searches": 68
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Suffolk",
+    "ethnicity": "Black",
+    "total_searches": 297
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Suffolk",
+    "ethnicity": "Mixed",
+    "total_searches": 187
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Suffolk",
+    "ethnicity": "Other",
+    "total_searches": 65
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Suffolk",
+    "ethnicity": "White",
+    "total_searches": 3840
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Surrey",
+    "ethnicity": "Asian",
+    "total_searches": 472
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Surrey",
+    "ethnicity": "Black",
+    "total_searches": 437
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Surrey",
+    "ethnicity": "Mixed",
+    "total_searches": 214
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Surrey",
+    "ethnicity": "Other",
+    "total_searches": 62
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Surrey",
+    "ethnicity": "White",
+    "total_searches": 5204
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Sussex",
+    "ethnicity": "Asian",
+    "total_searches": 277
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Sussex",
+    "ethnicity": "Black",
+    "total_searches": 681
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Sussex",
+    "ethnicity": "Mixed",
+    "total_searches": 191
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Sussex",
+    "ethnicity": "Other",
+    "total_searches": 86
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Sussex",
+    "ethnicity": "White",
+    "total_searches": 6525
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Thames Valley",
+    "ethnicity": "Asian",
+    "total_searches": 2415
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Thames Valley",
+    "ethnicity": "Black",
+    "total_searches": 1445
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Thames Valley",
+    "ethnicity": "Mixed",
+    "total_searches": 804
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Thames Valley",
+    "ethnicity": "Other",
+    "total_searches": 114
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Thames Valley",
+    "ethnicity": "White",
+    "total_searches": 9531
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Warwickshire",
+    "ethnicity": "Asian",
+    "total_searches": 205
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Warwickshire",
+    "ethnicity": "Black",
+    "total_searches": 187
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Warwickshire",
+    "ethnicity": "Mixed",
+    "total_searches": 98
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Warwickshire",
+    "ethnicity": "Other",
+    "total_searches": 18
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Warwickshire",
+    "ethnicity": "White",
+    "total_searches": 1630
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "West Mercia",
+    "ethnicity": "Asian",
+    "total_searches": 497
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "West Mercia",
+    "ethnicity": "Black",
+    "total_searches": 268
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "West Mercia",
+    "ethnicity": "Mixed",
+    "total_searches": 148
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "West Mercia",
+    "ethnicity": "Other",
+    "total_searches": 29
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "West Mercia",
+    "ethnicity": "White",
+    "total_searches": 4438
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "West Midlands",
+    "ethnicity": "Asian",
+    "total_searches": 7045
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "West Midlands",
+    "ethnicity": "Black",
+    "total_searches": 3334
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "West Midlands",
+    "ethnicity": "Mixed",
+    "total_searches": 1812
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "West Midlands",
+    "ethnicity": "Other",
+    "total_searches": 25
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "West Midlands",
+    "ethnicity": "White",
+    "total_searches": 10052
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "West Yorkshire",
+    "ethnicity": "Asian",
+    "total_searches": 5423
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "West Yorkshire",
+    "ethnicity": "Black",
+    "total_searches": 882
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "West Yorkshire",
+    "ethnicity": "Mixed",
+    "total_searches": 757
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "West Yorkshire",
+    "ethnicity": "Other",
+    "total_searches": 152
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "West Yorkshire",
+    "ethnicity": "White",
+    "total_searches": 10433
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Wiltshire",
+    "ethnicity": "Asian",
+    "total_searches": 76
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Wiltshire",
+    "ethnicity": "Black",
+    "total_searches": 113
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Wiltshire",
+    "ethnicity": "Mixed",
+    "total_searches": 45
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Wiltshire",
+    "ethnicity": "Other",
+    "total_searches": 3
+  },
+  {
+    "financial_year": "2020/21",
+    "police_force": "Wiltshire",
+    "ethnicity": "White",
+    "total_searches": 1730
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "Asian",
+    "total_searches": 87
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "Black",
+    "total_searches": 417
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "Mixed",
+    "total_searches": 207
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "Other",
+    "total_searches": 67
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "White",
+    "total_searches": 4437
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Bedfordshire",
+    "ethnicity": "Asian",
+    "total_searches": 683
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Bedfordshire",
+    "ethnicity": "Black",
+    "total_searches": 430
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Bedfordshire",
+    "ethnicity": "Mixed",
+    "total_searches": 126
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Bedfordshire",
+    "ethnicity": "Other",
+    "total_searches": 48
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Bedfordshire",
+    "ethnicity": "White",
+    "total_searches": 1679
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "Asian",
+    "total_searches": 195
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "Black",
+    "total_searches": 147
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "Mixed",
+    "total_searches": 81
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "Other",
+    "total_searches": 51
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "White",
+    "total_searches": 1580
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Cheshire",
+    "ethnicity": "Asian",
+    "total_searches": 42
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Cheshire",
+    "ethnicity": "Black",
+    "total_searches": 94
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Cheshire",
+    "ethnicity": "Mixed",
+    "total_searches": 103
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Cheshire",
+    "ethnicity": "Other",
+    "total_searches": 37
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Cheshire",
+    "ethnicity": "White",
+    "total_searches": 4711
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Cleveland",
+    "ethnicity": "Asian",
+    "total_searches": 206
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Cleveland",
+    "ethnicity": "Black",
+    "total_searches": 94
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Cleveland",
+    "ethnicity": "Mixed",
+    "total_searches": 84
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Cleveland",
+    "ethnicity": "Other",
+    "total_searches": 79
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Cleveland",
+    "ethnicity": "White",
+    "total_searches": 4327
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Cumbria",
+    "ethnicity": "Asian",
+    "total_searches": 54
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Cumbria",
+    "ethnicity": "Black",
+    "total_searches": 29
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Cumbria",
+    "ethnicity": "Mixed",
+    "total_searches": 23
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Cumbria",
+    "ethnicity": "Other",
+    "total_searches": 17
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Cumbria",
+    "ethnicity": "White",
+    "total_searches": 1964
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Derbyshire",
+    "ethnicity": "Asian",
+    "total_searches": 158
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Derbyshire",
+    "ethnicity": "Black",
+    "total_searches": 60
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Derbyshire",
+    "ethnicity": "Mixed",
+    "total_searches": 68
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Derbyshire",
+    "ethnicity": "Other",
+    "total_searches": 16
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Derbyshire",
+    "ethnicity": "White",
+    "total_searches": 1046
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "Asian",
+    "total_searches": 62
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "Black",
+    "total_searches": 85
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "Mixed",
+    "total_searches": 55
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "Other",
+    "total_searches": 13
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "White",
+    "total_searches": 3679
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Dorset",
+    "ethnicity": "Asian",
+    "total_searches": 35
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Dorset",
+    "ethnicity": "Black",
+    "total_searches": 134
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Dorset",
+    "ethnicity": "Mixed",
+    "total_searches": 73
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Dorset",
+    "ethnicity": "Other",
+    "total_searches": 16
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Dorset",
+    "ethnicity": "White",
+    "total_searches": 1607
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Durham",
+    "ethnicity": "Asian",
+    "total_searches": 25
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Durham",
+    "ethnicity": "Black",
+    "total_searches": 19
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Durham",
+    "ethnicity": "Mixed",
+    "total_searches": 14
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Durham",
+    "ethnicity": "Other",
+    "total_searches": 10
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Durham",
+    "ethnicity": "White",
+    "total_searches": 1992
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Dyfed-Powys",
+    "ethnicity": "Asian",
+    "total_searches": 23
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Dyfed-Powys",
+    "ethnicity": "Black",
+    "total_searches": 19
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Dyfed-Powys",
+    "ethnicity": "Mixed",
+    "total_searches": 25
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Dyfed-Powys",
+    "ethnicity": "White",
+    "total_searches": 2200
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Essex",
+    "ethnicity": "Asian",
+    "total_searches": 509
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Essex",
+    "ethnicity": "Black",
+    "total_searches": 998
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Essex",
+    "ethnicity": "Mixed",
+    "total_searches": 368
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Essex",
+    "ethnicity": "Other",
+    "total_searches": 133
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Essex",
+    "ethnicity": "White",
+    "total_searches": 11293
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Gloucestershire",
+    "ethnicity": "Asian",
+    "total_searches": 38
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Gloucestershire",
+    "ethnicity": "Black",
+    "total_searches": 74
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Gloucestershire",
+    "ethnicity": "Mixed",
+    "total_searches": 84
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Gloucestershire",
+    "ethnicity": "Other",
+    "total_searches": 3
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Gloucestershire",
+    "ethnicity": "White",
+    "total_searches": 1503
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Greater Manchester",
+    "ethnicity": "Asian",
+    "total_searches": 1130
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Greater Manchester",
+    "ethnicity": "Black",
+    "total_searches": 801
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Greater Manchester",
+    "ethnicity": "Mixed",
+    "total_searches": 238
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Greater Manchester",
+    "ethnicity": "Other",
+    "total_searches": 117
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Greater Manchester",
+    "ethnicity": "White",
+    "total_searches": 5404
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Gwent",
+    "ethnicity": "Asian",
+    "total_searches": 67
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Gwent",
+    "ethnicity": "Black",
+    "total_searches": 61
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Gwent",
+    "ethnicity": "Mixed",
+    "total_searches": 36
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Gwent",
+    "ethnicity": "Other",
+    "total_searches": 13
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Gwent",
+    "ethnicity": "White",
+    "total_searches": 1455
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Hampshire",
+    "ethnicity": "Asian",
+    "total_searches": 282
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Hampshire",
+    "ethnicity": "Black",
+    "total_searches": 532
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Hampshire",
+    "ethnicity": "Mixed",
+    "total_searches": 294
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Hampshire",
+    "ethnicity": "Other",
+    "total_searches": 101
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Hampshire",
+    "ethnicity": "White",
+    "total_searches": 7151
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Hertfordshire",
+    "ethnicity": "Asian",
+    "total_searches": 450
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Hertfordshire",
+    "ethnicity": "Black",
+    "total_searches": 665
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Hertfordshire",
+    "ethnicity": "Mixed",
+    "total_searches": 266
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Hertfordshire",
+    "ethnicity": "Other",
+    "total_searches": 129
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Hertfordshire",
+    "ethnicity": "White",
+    "total_searches": 4437
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Humberside",
+    "ethnicity": "Asian",
+    "total_searches": 138
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Humberside",
+    "ethnicity": "Black",
+    "total_searches": 135
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Humberside",
+    "ethnicity": "Mixed",
+    "total_searches": 83
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Humberside",
+    "ethnicity": "Other",
+    "total_searches": 30
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Humberside",
+    "ethnicity": "White",
+    "total_searches": 4514
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Kent",
+    "ethnicity": "Asian",
+    "total_searches": 354
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Kent",
+    "ethnicity": "Black",
+    "total_searches": 746
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Kent",
+    "ethnicity": "Mixed",
+    "total_searches": 390
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Kent",
+    "ethnicity": "Other",
+    "total_searches": 232
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Kent",
+    "ethnicity": "White",
+    "total_searches": 8261
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Lancashire",
+    "ethnicity": "Asian",
+    "total_searches": 1089
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Lancashire",
+    "ethnicity": "Black",
+    "total_searches": 165
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Lancashire",
+    "ethnicity": "Mixed",
+    "total_searches": 152
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Lancashire",
+    "ethnicity": "Other",
+    "total_searches": 38
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Lancashire",
+    "ethnicity": "White",
+    "total_searches": 7006
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Leicestershire",
+    "ethnicity": "Asian",
+    "total_searches": 666
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Leicestershire",
+    "ethnicity": "Black",
+    "total_searches": 477
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Leicestershire",
+    "ethnicity": "Mixed",
+    "total_searches": 181
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Leicestershire",
+    "ethnicity": "Other",
+    "total_searches": 53
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Leicestershire",
+    "ethnicity": "White",
+    "total_searches": 3055
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Lincolnshire",
+    "ethnicity": "Asian",
+    "total_searches": 33
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Lincolnshire",
+    "ethnicity": "Black",
+    "total_searches": 64
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Lincolnshire",
+    "ethnicity": "Mixed",
+    "total_searches": 36
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Lincolnshire",
+    "ethnicity": "Other",
+    "total_searches": 28
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Lincolnshire",
+    "ethnicity": "White",
+    "total_searches": 2339
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "London, City of",
+    "ethnicity": "Asian",
+    "total_searches": 274
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "London, City of",
+    "ethnicity": "Black",
+    "total_searches": 254
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "London, City of",
+    "ethnicity": "Mixed",
+    "total_searches": 89
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "London, City of",
+    "ethnicity": "Other",
+    "total_searches": 40
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "London, City of",
+    "ethnicity": "White",
+    "total_searches": 806
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Merseyside",
+    "ethnicity": "Asian",
+    "total_searches": 399
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Merseyside",
+    "ethnicity": "Black",
+    "total_searches": 721
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Merseyside",
+    "ethnicity": "Mixed",
+    "total_searches": 607
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Merseyside",
+    "ethnicity": "Other",
+    "total_searches": 471
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Merseyside",
+    "ethnicity": "White",
+    "total_searches": 37790
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "Asian",
+    "total_searches": 25624
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "Black",
+    "total_searches": 48158
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "Mixed",
+    "total_searches": 7230
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "Other",
+    "total_searches": 5682
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "White",
+    "total_searches": 66023
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Norfolk",
+    "ethnicity": "Asian",
+    "total_searches": 64
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Norfolk",
+    "ethnicity": "Black",
+    "total_searches": 168
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Norfolk",
+    "ethnicity": "Mixed",
+    "total_searches": 127
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Norfolk",
+    "ethnicity": "Other",
+    "total_searches": 63
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Norfolk",
+    "ethnicity": "White",
+    "total_searches": 4343
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "North Wales",
+    "ethnicity": "Asian",
+    "total_searches": 37
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "North Wales",
+    "ethnicity": "Black",
+    "total_searches": 22
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "North Wales",
+    "ethnicity": "Mixed",
+    "total_searches": 29
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "North Wales",
+    "ethnicity": "Other",
+    "total_searches": 18
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "North Wales",
+    "ethnicity": "White",
+    "total_searches": 3782
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "North Yorkshire",
+    "ethnicity": "Asian",
+    "total_searches": 127
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "North Yorkshire",
+    "ethnicity": "Black",
+    "total_searches": 26
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "North Yorkshire",
+    "ethnicity": "Mixed",
+    "total_searches": 51
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "North Yorkshire",
+    "ethnicity": "Other",
+    "total_searches": 14
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "North Yorkshire",
+    "ethnicity": "White",
+    "total_searches": 1796
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Northamptonshire",
+    "ethnicity": "Asian",
+    "total_searches": 128
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Northamptonshire",
+    "ethnicity": "Black",
+    "total_searches": 316
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Northamptonshire",
+    "ethnicity": "Mixed",
+    "total_searches": 134
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Northamptonshire",
+    "ethnicity": "Other",
+    "total_searches": 17
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Northamptonshire",
+    "ethnicity": "White",
+    "total_searches": 2164
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Northumbria",
+    "ethnicity": "Asian",
+    "total_searches": 165
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Northumbria",
+    "ethnicity": "Black",
+    "total_searches": 84
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Northumbria",
+    "ethnicity": "Mixed",
+    "total_searches": 41
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Northumbria",
+    "ethnicity": "Other",
+    "total_searches": 8
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Northumbria",
+    "ethnicity": "White",
+    "total_searches": 3869
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "Asian",
+    "total_searches": 207
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "Black",
+    "total_searches": 327
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "Mixed",
+    "total_searches": 167
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "Other",
+    "total_searches": 43
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "White",
+    "total_searches": 2547
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "South Wales",
+    "ethnicity": "Asian",
+    "total_searches": 356
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "South Wales",
+    "ethnicity": "Black",
+    "total_searches": 387
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "South Wales",
+    "ethnicity": "Mixed",
+    "total_searches": 239
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "South Wales",
+    "ethnicity": "Other",
+    "total_searches": 144
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "South Wales",
+    "ethnicity": "White",
+    "total_searches": 8070
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "South Yorkshire",
+    "ethnicity": "Asian",
+    "total_searches": 756
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "South Yorkshire",
+    "ethnicity": "Black",
+    "total_searches": 533
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "South Yorkshire",
+    "ethnicity": "Mixed",
+    "total_searches": 204
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "South Yorkshire",
+    "ethnicity": "Other",
+    "total_searches": 100
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "South Yorkshire",
+    "ethnicity": "White",
+    "total_searches": 7494
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Staffordshire",
+    "ethnicity": "Asian",
+    "total_searches": 309
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Staffordshire",
+    "ethnicity": "Black",
+    "total_searches": 133
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Staffordshire",
+    "ethnicity": "Mixed",
+    "total_searches": 141
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Staffordshire",
+    "ethnicity": "Other",
+    "total_searches": 25
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Staffordshire",
+    "ethnicity": "White",
+    "total_searches": 3324
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Suffolk",
+    "ethnicity": "Asian",
+    "total_searches": 66
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Suffolk",
+    "ethnicity": "Black",
+    "total_searches": 271
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Suffolk",
+    "ethnicity": "Mixed",
+    "total_searches": 108
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Suffolk",
+    "ethnicity": "Other",
+    "total_searches": 84
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Suffolk",
+    "ethnicity": "White",
+    "total_searches": 3108
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Surrey",
+    "ethnicity": "Asian",
+    "total_searches": 334
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Surrey",
+    "ethnicity": "Black",
+    "total_searches": 290
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Surrey",
+    "ethnicity": "Mixed",
+    "total_searches": 146
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Surrey",
+    "ethnicity": "Other",
+    "total_searches": 67
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Surrey",
+    "ethnicity": "White",
+    "total_searches": 3391
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Sussex",
+    "ethnicity": "Asian",
+    "total_searches": 183
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Sussex",
+    "ethnicity": "Black",
+    "total_searches": 428
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Sussex",
+    "ethnicity": "Mixed",
+    "total_searches": 153
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Sussex",
+    "ethnicity": "Other",
+    "total_searches": 94
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Sussex",
+    "ethnicity": "White",
+    "total_searches": 4595
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Thames Valley",
+    "ethnicity": "Asian",
+    "total_searches": 1591
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Thames Valley",
+    "ethnicity": "Black",
+    "total_searches": 1017
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Thames Valley",
+    "ethnicity": "Mixed",
+    "total_searches": 590
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Thames Valley",
+    "ethnicity": "Other",
+    "total_searches": 88
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Thames Valley",
+    "ethnicity": "White",
+    "total_searches": 7193
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Warwickshire",
+    "ethnicity": "Asian",
+    "total_searches": 120
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Warwickshire",
+    "ethnicity": "Black",
+    "total_searches": 131
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Warwickshire",
+    "ethnicity": "Mixed",
+    "total_searches": 69
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Warwickshire",
+    "ethnicity": "Other",
+    "total_searches": 19
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Warwickshire",
+    "ethnicity": "White",
+    "total_searches": 1222
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "West Mercia",
+    "ethnicity": "Asian",
+    "total_searches": 264
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "West Mercia",
+    "ethnicity": "Black",
+    "total_searches": 182
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "West Mercia",
+    "ethnicity": "Mixed",
+    "total_searches": 76
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "West Mercia",
+    "ethnicity": "Other",
+    "total_searches": 24
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "West Mercia",
+    "ethnicity": "White",
+    "total_searches": 3199
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "West Midlands",
+    "ethnicity": "Asian",
+    "total_searches": 6836
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "West Midlands",
+    "ethnicity": "Black",
+    "total_searches": 3537
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "West Midlands",
+    "ethnicity": "Mixed",
+    "total_searches": 1926
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "West Midlands",
+    "ethnicity": "Other",
+    "total_searches": 19
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "West Midlands",
+    "ethnicity": "White",
+    "total_searches": 9364
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "West Yorkshire",
+    "ethnicity": "Asian",
+    "total_searches": 4126
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "West Yorkshire",
+    "ethnicity": "Black",
+    "total_searches": 775
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "West Yorkshire",
+    "ethnicity": "Mixed",
+    "total_searches": 684
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "West Yorkshire",
+    "ethnicity": "Other",
+    "total_searches": 145
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "West Yorkshire",
+    "ethnicity": "White",
+    "total_searches": 8355
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Wiltshire",
+    "ethnicity": "Asian",
+    "total_searches": 51
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Wiltshire",
+    "ethnicity": "Black",
+    "total_searches": 88
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Wiltshire",
+    "ethnicity": "Mixed",
+    "total_searches": 39
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Wiltshire",
+    "ethnicity": "Other",
+    "total_searches": 4
+  },
+  {
+    "financial_year": "2021/22",
+    "police_force": "Wiltshire",
+    "ethnicity": "White",
+    "total_searches": 1197
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "Asian",
+    "total_searches": 129
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "Black",
+    "total_searches": 448
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "Mixed",
+    "total_searches": 214
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "Other",
+    "total_searches": 80
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "White",
+    "total_searches": 3988
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Bedfordshire",
+    "ethnicity": "Asian",
+    "total_searches": 699
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Bedfordshire",
+    "ethnicity": "Black",
+    "total_searches": 482
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Bedfordshire",
+    "ethnicity": "Mixed",
+    "total_searches": 147
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Bedfordshire",
+    "ethnicity": "Other",
+    "total_searches": 61
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Bedfordshire",
+    "ethnicity": "White",
+    "total_searches": 1807
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "Asian",
+    "total_searches": 231
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "Black",
+    "total_searches": 166
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "Mixed",
+    "total_searches": 108
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "Other",
+    "total_searches": 55
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "White",
+    "total_searches": 1780
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Cheshire",
+    "ethnicity": "Asian",
+    "total_searches": 66
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Cheshire",
+    "ethnicity": "Black",
+    "total_searches": 206
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Cheshire",
+    "ethnicity": "Mixed",
+    "total_searches": 207
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Cheshire",
+    "ethnicity": "Other",
+    "total_searches": 84
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Cheshire",
+    "ethnicity": "White",
+    "total_searches": 9058
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Cleveland",
+    "ethnicity": "Asian",
+    "total_searches": 215
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Cleveland",
+    "ethnicity": "Black",
+    "total_searches": 123
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Cleveland",
+    "ethnicity": "Mixed",
+    "total_searches": 134
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Cleveland",
+    "ethnicity": "Other",
+    "total_searches": 94
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Cleveland",
+    "ethnicity": "White",
+    "total_searches": 5084
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Cumbria",
+    "ethnicity": "Asian",
+    "total_searches": 114
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Cumbria",
+    "ethnicity": "Black",
+    "total_searches": 48
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Cumbria",
+    "ethnicity": "Mixed",
+    "total_searches": 38
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Cumbria",
+    "ethnicity": "Other",
+    "total_searches": 35
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Cumbria",
+    "ethnicity": "White",
+    "total_searches": 3660
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Derbyshire",
+    "ethnicity": "Asian",
+    "total_searches": 171
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Derbyshire",
+    "ethnicity": "Black",
+    "total_searches": 88
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Derbyshire",
+    "ethnicity": "Mixed",
+    "total_searches": 96
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Derbyshire",
+    "ethnicity": "Other",
+    "total_searches": 25
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Derbyshire",
+    "ethnicity": "White",
+    "total_searches": 1301
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "Asian",
+    "total_searches": 53
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "Black",
+    "total_searches": 73
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "Mixed",
+    "total_searches": 77
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "Other",
+    "total_searches": 32
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "White",
+    "total_searches": 4506
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Dorset",
+    "ethnicity": "Asian",
+    "total_searches": 45
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Dorset",
+    "ethnicity": "Black",
+    "total_searches": 138
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Dorset",
+    "ethnicity": "Mixed",
+    "total_searches": 63
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Dorset",
+    "ethnicity": "Other",
+    "total_searches": 17
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Dorset",
+    "ethnicity": "White",
+    "total_searches": 1382
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Durham",
+    "ethnicity": "Asian",
+    "total_searches": 38
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Durham",
+    "ethnicity": "Black",
+    "total_searches": 15
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Durham",
+    "ethnicity": "Mixed",
+    "total_searches": 37
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Durham",
+    "ethnicity": "Other",
+    "total_searches": 11
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Durham",
+    "ethnicity": "White",
+    "total_searches": 3089
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Dyfed-Powys",
+    "ethnicity": "Asian",
+    "total_searches": 69
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Dyfed-Powys",
+    "ethnicity": "Black",
+    "total_searches": 44
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Dyfed-Powys",
+    "ethnicity": "Mixed",
+    "total_searches": 70
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Dyfed-Powys",
+    "ethnicity": "Other",
+    "total_searches": 4
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Dyfed-Powys",
+    "ethnicity": "White",
+    "total_searches": 7355
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Essex",
+    "ethnicity": "Asian",
+    "total_searches": 383
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Essex",
+    "ethnicity": "Black",
+    "total_searches": 861
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Essex",
+    "ethnicity": "Mixed",
+    "total_searches": 393
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Essex",
+    "ethnicity": "Other",
+    "total_searches": 162
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Essex",
+    "ethnicity": "White",
+    "total_searches": 10144
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Gloucestershire",
+    "ethnicity": "Asian",
+    "total_searches": 46
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Gloucestershire",
+    "ethnicity": "Black",
+    "total_searches": 102
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Gloucestershire",
+    "ethnicity": "Mixed",
+    "total_searches": 110
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Gloucestershire",
+    "ethnicity": "Other",
+    "total_searches": 21
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Gloucestershire",
+    "ethnicity": "White",
+    "total_searches": 1659
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Greater Manchester",
+    "ethnicity": "Asian",
+    "total_searches": 4080
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Greater Manchester",
+    "ethnicity": "Black",
+    "total_searches": 2502
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Greater Manchester",
+    "ethnicity": "Mixed",
+    "total_searches": 620
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Greater Manchester",
+    "ethnicity": "Other",
+    "total_searches": 348
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Greater Manchester",
+    "ethnicity": "White",
+    "total_searches": 16262
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Gwent",
+    "ethnicity": "Asian",
+    "total_searches": 93
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Gwent",
+    "ethnicity": "Black",
+    "total_searches": 82
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Gwent",
+    "ethnicity": "Mixed",
+    "total_searches": 56
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Gwent",
+    "ethnicity": "Other",
+    "total_searches": 17
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Gwent",
+    "ethnicity": "White",
+    "total_searches": 1571
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Hampshire",
+    "ethnicity": "Asian",
+    "total_searches": 290
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Hampshire",
+    "ethnicity": "Black",
+    "total_searches": 497
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Hampshire",
+    "ethnicity": "Mixed",
+    "total_searches": 283
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Hampshire",
+    "ethnicity": "Other",
+    "total_searches": 78
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Hampshire",
+    "ethnicity": "White",
+    "total_searches": 6939
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Hertfordshire",
+    "ethnicity": "Asian",
+    "total_searches": 437
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Hertfordshire",
+    "ethnicity": "Black",
+    "total_searches": 643
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Hertfordshire",
+    "ethnicity": "Mixed",
+    "total_searches": 278
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Hertfordshire",
+    "ethnicity": "Other",
+    "total_searches": 131
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Hertfordshire",
+    "ethnicity": "White",
+    "total_searches": 4128
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Humberside",
+    "ethnicity": "Asian",
+    "total_searches": 63
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Humberside",
+    "ethnicity": "Black",
+    "total_searches": 71
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Humberside",
+    "ethnicity": "Mixed",
+    "total_searches": 74
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Humberside",
+    "ethnicity": "Other",
+    "total_searches": 47
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Humberside",
+    "ethnicity": "White",
+    "total_searches": 3792
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Kent",
+    "ethnicity": "Asian",
+    "total_searches": 324
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Kent",
+    "ethnicity": "Black",
+    "total_searches": 741
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Kent",
+    "ethnicity": "Mixed",
+    "total_searches": 408
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Kent",
+    "ethnicity": "Other",
+    "total_searches": 232
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Kent",
+    "ethnicity": "White",
+    "total_searches": 8643
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Lancashire",
+    "ethnicity": "Asian",
+    "total_searches": 1634
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Lancashire",
+    "ethnicity": "Black",
+    "total_searches": 173
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Lancashire",
+    "ethnicity": "Mixed",
+    "total_searches": 173
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Lancashire",
+    "ethnicity": "Other",
+    "total_searches": 41
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Lancashire",
+    "ethnicity": "White",
+    "total_searches": 7826
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Leicestershire",
+    "ethnicity": "Asian",
+    "total_searches": 801
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Leicestershire",
+    "ethnicity": "Black",
+    "total_searches": 508
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Leicestershire",
+    "ethnicity": "Mixed",
+    "total_searches": 201
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Leicestershire",
+    "ethnicity": "Other",
+    "total_searches": 59
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Leicestershire",
+    "ethnicity": "White",
+    "total_searches": 3537
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Lincolnshire",
+    "ethnicity": "Asian",
+    "total_searches": 54
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Lincolnshire",
+    "ethnicity": "Black",
+    "total_searches": 69
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Lincolnshire",
+    "ethnicity": "Mixed",
+    "total_searches": 61
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Lincolnshire",
+    "ethnicity": "Other",
+    "total_searches": 24
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Lincolnshire",
+    "ethnicity": "White",
+    "total_searches": 2596
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "London, City of",
+    "ethnicity": "Asian",
+    "total_searches": 172
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "London, City of",
+    "ethnicity": "Black",
+    "total_searches": 232
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "London, City of",
+    "ethnicity": "Mixed",
+    "total_searches": 78
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "London, City of",
+    "ethnicity": "Other",
+    "total_searches": 47
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "London, City of",
+    "ethnicity": "White",
+    "total_searches": 578
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Merseyside",
+    "ethnicity": "Asian",
+    "total_searches": 666
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Merseyside",
+    "ethnicity": "Black",
+    "total_searches": 987
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Merseyside",
+    "ethnicity": "Mixed",
+    "total_searches": 888
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Merseyside",
+    "ethnicity": "Other",
+    "total_searches": 1114
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Merseyside",
+    "ethnicity": "White",
+    "total_searches": 43431
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "Asian",
+    "total_searches": 19232
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "Black",
+    "total_searches": 38961
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "Mixed",
+    "total_searches": 6216
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "Other",
+    "total_searches": 5311
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "White",
+    "total_searches": 53863
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Norfolk",
+    "ethnicity": "Asian",
+    "total_searches": 42
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Norfolk",
+    "ethnicity": "Black",
+    "total_searches": 135
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Norfolk",
+    "ethnicity": "Mixed",
+    "total_searches": 54
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Norfolk",
+    "ethnicity": "Other",
+    "total_searches": 63
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Norfolk",
+    "ethnicity": "White",
+    "total_searches": 2944
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "North Wales",
+    "ethnicity": "Asian",
+    "total_searches": 34
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "North Wales",
+    "ethnicity": "Black",
+    "total_searches": 27
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "North Wales",
+    "ethnicity": "Mixed",
+    "total_searches": 26
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "North Wales",
+    "ethnicity": "Other",
+    "total_searches": 20
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "North Wales",
+    "ethnicity": "White",
+    "total_searches": 3135
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "North Yorkshire",
+    "ethnicity": "Asian",
+    "total_searches": 70
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "North Yorkshire",
+    "ethnicity": "Black",
+    "total_searches": 33
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "North Yorkshire",
+    "ethnicity": "Mixed",
+    "total_searches": 46
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "North Yorkshire",
+    "ethnicity": "Other",
+    "total_searches": 25
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "North Yorkshire",
+    "ethnicity": "White",
+    "total_searches": 2057
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Northamptonshire",
+    "ethnicity": "Asian",
+    "total_searches": 143
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Northamptonshire",
+    "ethnicity": "Black",
+    "total_searches": 347
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Northamptonshire",
+    "ethnicity": "Mixed",
+    "total_searches": 142
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Northamptonshire",
+    "ethnicity": "Other",
+    "total_searches": 21
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Northamptonshire",
+    "ethnicity": "White",
+    "total_searches": 2792
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Northumbria",
+    "ethnicity": "Asian",
+    "total_searches": 280
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Northumbria",
+    "ethnicity": "Black",
+    "total_searches": 136
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Northumbria",
+    "ethnicity": "Mixed",
+    "total_searches": 61
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Northumbria",
+    "ethnicity": "Other",
+    "total_searches": 10
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Northumbria",
+    "ethnicity": "White",
+    "total_searches": 4885
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "Asian",
+    "total_searches": 270
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "Black",
+    "total_searches": 418
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "Mixed",
+    "total_searches": 171
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "Other",
+    "total_searches": 54
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "White",
+    "total_searches": 2426
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "South Wales",
+    "ethnicity": "Asian",
+    "total_searches": 259
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "South Wales",
+    "ethnicity": "Black",
+    "total_searches": 289
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "South Wales",
+    "ethnicity": "Mixed",
+    "total_searches": 177
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "South Wales",
+    "ethnicity": "Other",
+    "total_searches": 104
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "South Wales",
+    "ethnicity": "White",
+    "total_searches": 5670
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "South Yorkshire",
+    "ethnicity": "Asian",
+    "total_searches": 749
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "South Yorkshire",
+    "ethnicity": "Black",
+    "total_searches": 454
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "South Yorkshire",
+    "ethnicity": "Mixed",
+    "total_searches": 263
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "South Yorkshire",
+    "ethnicity": "Other",
+    "total_searches": 134
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "South Yorkshire",
+    "ethnicity": "White",
+    "total_searches": 7015
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Staffordshire",
+    "ethnicity": "Asian",
+    "total_searches": 298
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Staffordshire",
+    "ethnicity": "Black",
+    "total_searches": 114
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Staffordshire",
+    "ethnicity": "Mixed",
+    "total_searches": 176
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Staffordshire",
+    "ethnicity": "Other",
+    "total_searches": 29
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Staffordshire",
+    "ethnicity": "White",
+    "total_searches": 3385
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Suffolk",
+    "ethnicity": "Asian",
+    "total_searches": 52
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Suffolk",
+    "ethnicity": "Black",
+    "total_searches": 232
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Suffolk",
+    "ethnicity": "Mixed",
+    "total_searches": 115
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Suffolk",
+    "ethnicity": "Other",
+    "total_searches": 105
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Suffolk",
+    "ethnicity": "White",
+    "total_searches": 2870
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Surrey",
+    "ethnicity": "Asian",
+    "total_searches": 262
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Surrey",
+    "ethnicity": "Black",
+    "total_searches": 261
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Surrey",
+    "ethnicity": "Mixed",
+    "total_searches": 112
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Surrey",
+    "ethnicity": "Other",
+    "total_searches": 57
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Surrey",
+    "ethnicity": "White",
+    "total_searches": 2662
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Sussex",
+    "ethnicity": "Asian",
+    "total_searches": 170
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Sussex",
+    "ethnicity": "Black",
+    "total_searches": 339
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Sussex",
+    "ethnicity": "Mixed",
+    "total_searches": 150
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Sussex",
+    "ethnicity": "Other",
+    "total_searches": 97
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Sussex",
+    "ethnicity": "White",
+    "total_searches": 3850
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Thames Valley",
+    "ethnicity": "Asian",
+    "total_searches": 1126
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Thames Valley",
+    "ethnicity": "Black",
+    "total_searches": 827
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Thames Valley",
+    "ethnicity": "Mixed",
+    "total_searches": 408
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Thames Valley",
+    "ethnicity": "Other",
+    "total_searches": 90
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Thames Valley",
+    "ethnicity": "White",
+    "total_searches": 7113
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Warwickshire",
+    "ethnicity": "Asian",
+    "total_searches": 94
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Warwickshire",
+    "ethnicity": "Black",
+    "total_searches": 83
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Warwickshire",
+    "ethnicity": "Mixed",
+    "total_searches": 62
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Warwickshire",
+    "ethnicity": "Other",
+    "total_searches": 18
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Warwickshire",
+    "ethnicity": "White",
+    "total_searches": 791
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "West Mercia",
+    "ethnicity": "Asian",
+    "total_searches": 280
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "West Mercia",
+    "ethnicity": "Black",
+    "total_searches": 184
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "West Mercia",
+    "ethnicity": "Mixed",
+    "total_searches": 100
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "West Mercia",
+    "ethnicity": "Other",
+    "total_searches": 31
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "West Mercia",
+    "ethnicity": "White",
+    "total_searches": 3042
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "West Midlands",
+    "ethnicity": "Asian",
+    "total_searches": 7033
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "West Midlands",
+    "ethnicity": "Black",
+    "total_searches": 3763
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "West Midlands",
+    "ethnicity": "Mixed",
+    "total_searches": 2321
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "West Midlands",
+    "ethnicity": "Other",
+    "total_searches": 34
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "West Midlands",
+    "ethnicity": "White",
+    "total_searches": 9897
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "West Yorkshire",
+    "ethnicity": "Asian",
+    "total_searches": 4405
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "West Yorkshire",
+    "ethnicity": "Black",
+    "total_searches": 1123
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "West Yorkshire",
+    "ethnicity": "Mixed",
+    "total_searches": 867
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "West Yorkshire",
+    "ethnicity": "Other",
+    "total_searches": 184
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "West Yorkshire",
+    "ethnicity": "White",
+    "total_searches": 9247
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Wiltshire",
+    "ethnicity": "Asian",
+    "total_searches": 53
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Wiltshire",
+    "ethnicity": "Black",
+    "total_searches": 96
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Wiltshire",
+    "ethnicity": "Mixed",
+    "total_searches": 60
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Wiltshire",
+    "ethnicity": "Other",
+    "total_searches": 3
+  },
+  {
+    "financial_year": "2022/23",
+    "police_force": "Wiltshire",
+    "ethnicity": "White",
+    "total_searches": 1197
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "Asian",
+    "total_searches": 157
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "Black",
+    "total_searches": 438
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "Mixed",
+    "total_searches": 252
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "Other",
+    "total_searches": 74
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "White",
+    "total_searches": 3683
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Bedfordshire",
+    "ethnicity": "Asian",
+    "total_searches": 606
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Bedfordshire",
+    "ethnicity": "Black",
+    "total_searches": 500
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Bedfordshire",
+    "ethnicity": "Mixed",
+    "total_searches": 184
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Bedfordshire",
+    "ethnicity": "Other",
+    "total_searches": 44
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Bedfordshire",
+    "ethnicity": "White",
+    "total_searches": 2057
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "Asian",
+    "total_searches": 224
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "Black",
+    "total_searches": 186
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "Mixed",
+    "total_searches": 93
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "Other",
+    "total_searches": 58
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "White",
+    "total_searches": 1722
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Cheshire",
+    "ethnicity": "Asian",
+    "total_searches": 255
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Cheshire",
+    "ethnicity": "Black",
+    "total_searches": 299
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Cheshire",
+    "ethnicity": "Mixed",
+    "total_searches": 284
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Cheshire",
+    "ethnicity": "Other",
+    "total_searches": 239
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Cheshire",
+    "ethnicity": "White",
+    "total_searches": 10904
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Cleveland",
+    "ethnicity": "Asian",
+    "total_searches": 287
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Cleveland",
+    "ethnicity": "Black",
+    "total_searches": 108
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Cleveland",
+    "ethnicity": "Mixed",
+    "total_searches": 144
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Cleveland",
+    "ethnicity": "Other",
+    "total_searches": 86
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Cleveland",
+    "ethnicity": "White",
+    "total_searches": 6631
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Cumbria",
+    "ethnicity": "Asian",
+    "total_searches": 233
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Cumbria",
+    "ethnicity": "Black",
+    "total_searches": 59
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Cumbria",
+    "ethnicity": "Mixed",
+    "total_searches": 58
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Cumbria",
+    "ethnicity": "Other",
+    "total_searches": 53
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Cumbria",
+    "ethnicity": "White",
+    "total_searches": 6481
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Derbyshire",
+    "ethnicity": "Asian",
+    "total_searches": 182
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Derbyshire",
+    "ethnicity": "Black",
+    "total_searches": 108
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Derbyshire",
+    "ethnicity": "Mixed",
+    "total_searches": 103
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Derbyshire",
+    "ethnicity": "Other",
+    "total_searches": 36
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Derbyshire",
+    "ethnicity": "White",
+    "total_searches": 1900
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "Asian",
+    "total_searches": 68
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "Black",
+    "total_searches": 130
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "Mixed",
+    "total_searches": 127
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "Other",
+    "total_searches": 60
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "White",
+    "total_searches": 5241
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Dorset",
+    "ethnicity": "Asian",
+    "total_searches": 53
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Dorset",
+    "ethnicity": "Black",
+    "total_searches": 98
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Dorset",
+    "ethnicity": "Mixed",
+    "total_searches": 50
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Dorset",
+    "ethnicity": "Other",
+    "total_searches": 32
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Dorset",
+    "ethnicity": "White",
+    "total_searches": 1439
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Durham",
+    "ethnicity": "Asian",
+    "total_searches": 39
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Durham",
+    "ethnicity": "Black",
+    "total_searches": 8
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Durham",
+    "ethnicity": "Mixed",
+    "total_searches": 32
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Durham",
+    "ethnicity": "Other",
+    "total_searches": 20
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Durham",
+    "ethnicity": "White",
+    "total_searches": 2825
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Dyfed-Powys",
+    "ethnicity": "Asian",
+    "total_searches": 42
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Dyfed-Powys",
+    "ethnicity": "Black",
+    "total_searches": 29
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Dyfed-Powys",
+    "ethnicity": "Mixed",
+    "total_searches": 51
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Dyfed-Powys",
+    "ethnicity": "Other",
+    "total_searches": 16
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Dyfed-Powys",
+    "ethnicity": "White",
+    "total_searches": 4311
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Essex",
+    "ethnicity": "Asian",
+    "total_searches": 422
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Essex",
+    "ethnicity": "Black",
+    "total_searches": 922
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Essex",
+    "ethnicity": "Mixed",
+    "total_searches": 382
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Essex",
+    "ethnicity": "Other",
+    "total_searches": 211
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Essex",
+    "ethnicity": "White",
+    "total_searches": 8869
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Gloucestershire",
+    "ethnicity": "Asian",
+    "total_searches": 40
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Gloucestershire",
+    "ethnicity": "Black",
+    "total_searches": 85
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Gloucestershire",
+    "ethnicity": "Mixed",
+    "total_searches": 114
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Gloucestershire",
+    "ethnicity": "Other",
+    "total_searches": 18
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Gloucestershire",
+    "ethnicity": "White",
+    "total_searches": 1562
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Greater Manchester",
+    "ethnicity": "Asian",
+    "total_searches": 6159
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Greater Manchester",
+    "ethnicity": "Black",
+    "total_searches": 4178
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Greater Manchester",
+    "ethnicity": "Mixed",
+    "total_searches": 1012
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Greater Manchester",
+    "ethnicity": "Other",
+    "total_searches": 598
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Greater Manchester",
+    "ethnicity": "White",
+    "total_searches": 24175
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Gwent",
+    "ethnicity": "Asian",
+    "total_searches": 77
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Gwent",
+    "ethnicity": "Black",
+    "total_searches": 51
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Gwent",
+    "ethnicity": "Mixed",
+    "total_searches": 53
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Gwent",
+    "ethnicity": "Other",
+    "total_searches": 14
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Gwent",
+    "ethnicity": "White",
+    "total_searches": 1659
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Hampshire",
+    "ethnicity": "Asian",
+    "total_searches": 442
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Hampshire",
+    "ethnicity": "Black",
+    "total_searches": 563
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Hampshire",
+    "ethnicity": "Mixed",
+    "total_searches": 463
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Hampshire",
+    "ethnicity": "Other",
+    "total_searches": 200
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Hampshire",
+    "ethnicity": "White",
+    "total_searches": 8583
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Hertfordshire",
+    "ethnicity": "Asian",
+    "total_searches": 375
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Hertfordshire",
+    "ethnicity": "Black",
+    "total_searches": 635
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Hertfordshire",
+    "ethnicity": "Mixed",
+    "total_searches": 274
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Hertfordshire",
+    "ethnicity": "Other",
+    "total_searches": 158
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Hertfordshire",
+    "ethnicity": "White",
+    "total_searches": 3724
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Humberside",
+    "ethnicity": "Asian",
+    "total_searches": 76
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Humberside",
+    "ethnicity": "Black",
+    "total_searches": 57
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Humberside",
+    "ethnicity": "Mixed",
+    "total_searches": 57
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Humberside",
+    "ethnicity": "Other",
+    "total_searches": 60
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Humberside",
+    "ethnicity": "White",
+    "total_searches": 3517
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Kent",
+    "ethnicity": "Asian",
+    "total_searches": 356
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Kent",
+    "ethnicity": "Black",
+    "total_searches": 744
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Kent",
+    "ethnicity": "Mixed",
+    "total_searches": 417
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Kent",
+    "ethnicity": "Other",
+    "total_searches": 323
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Kent",
+    "ethnicity": "White",
+    "total_searches": 8662
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Lancashire",
+    "ethnicity": "Asian",
+    "total_searches": 2067
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Lancashire",
+    "ethnicity": "Black",
+    "total_searches": 278
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Lancashire",
+    "ethnicity": "Mixed",
+    "total_searches": 181
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Lancashire",
+    "ethnicity": "Other",
+    "total_searches": 102
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Lancashire",
+    "ethnicity": "White",
+    "total_searches": 11453
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Leicestershire",
+    "ethnicity": "Asian",
+    "total_searches": 615
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Leicestershire",
+    "ethnicity": "Black",
+    "total_searches": 571
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Leicestershire",
+    "ethnicity": "Mixed",
+    "total_searches": 200
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Leicestershire",
+    "ethnicity": "Other",
+    "total_searches": 72
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Leicestershire",
+    "ethnicity": "White",
+    "total_searches": 3196
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Lincolnshire",
+    "ethnicity": "Asian",
+    "total_searches": 38
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Lincolnshire",
+    "ethnicity": "Black",
+    "total_searches": 73
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Lincolnshire",
+    "ethnicity": "Mixed",
+    "total_searches": 67
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Lincolnshire",
+    "ethnicity": "Other",
+    "total_searches": 21
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Lincolnshire",
+    "ethnicity": "White",
+    "total_searches": 2530
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "London, City of",
+    "ethnicity": "Asian",
+    "total_searches": 176
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "London, City of",
+    "ethnicity": "Black",
+    "total_searches": 230
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "London, City of",
+    "ethnicity": "Mixed",
+    "total_searches": 92
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "London, City of",
+    "ethnicity": "Other",
+    "total_searches": 50
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "London, City of",
+    "ethnicity": "White",
+    "total_searches": 625
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Merseyside",
+    "ethnicity": "Asian",
+    "total_searches": 795
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Merseyside",
+    "ethnicity": "Black",
+    "total_searches": 1219
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Merseyside",
+    "ethnicity": "Mixed",
+    "total_searches": 1034
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Merseyside",
+    "ethnicity": "Other",
+    "total_searches": 1192
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Merseyside",
+    "ethnicity": "White",
+    "total_searches": 42547
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "Asian",
+    "total_searches": 13704
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "Black",
+    "total_searches": 30489
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "Mixed",
+    "total_searches": 4659
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "Other",
+    "total_searches": 4731
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "White",
+    "total_searches": 39382
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Norfolk",
+    "ethnicity": "Asian",
+    "total_searches": 33
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Norfolk",
+    "ethnicity": "Black",
+    "total_searches": 135
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Norfolk",
+    "ethnicity": "Mixed",
+    "total_searches": 30
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Norfolk",
+    "ethnicity": "Other",
+    "total_searches": 36
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Norfolk",
+    "ethnicity": "White",
+    "total_searches": 1972
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "North Wales",
+    "ethnicity": "Asian",
+    "total_searches": 27
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "North Wales",
+    "ethnicity": "Black",
+    "total_searches": 24
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "North Wales",
+    "ethnicity": "Mixed",
+    "total_searches": 27
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "North Wales",
+    "ethnicity": "Other",
+    "total_searches": 18
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "North Wales",
+    "ethnicity": "White",
+    "total_searches": 2223
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "North Yorkshire",
+    "ethnicity": "Asian",
+    "total_searches": 97
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "North Yorkshire",
+    "ethnicity": "Black",
+    "total_searches": 36
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "North Yorkshire",
+    "ethnicity": "Mixed",
+    "total_searches": 56
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "North Yorkshire",
+    "ethnicity": "Other",
+    "total_searches": 38
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "North Yorkshire",
+    "ethnicity": "White",
+    "total_searches": 2128
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Northamptonshire",
+    "ethnicity": "Asian",
+    "total_searches": 166
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Northamptonshire",
+    "ethnicity": "Black",
+    "total_searches": 424
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Northamptonshire",
+    "ethnicity": "Mixed",
+    "total_searches": 207
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Northamptonshire",
+    "ethnicity": "Other",
+    "total_searches": 33
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Northamptonshire",
+    "ethnicity": "White",
+    "total_searches": 3151
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Northumbria",
+    "ethnicity": "Asian",
+    "total_searches": 504
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Northumbria",
+    "ethnicity": "Black",
+    "total_searches": 217
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Northumbria",
+    "ethnicity": "Mixed",
+    "total_searches": 126
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Northumbria",
+    "ethnicity": "Other",
+    "total_searches": 17
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Northumbria",
+    "ethnicity": "White",
+    "total_searches": 7694
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "Asian",
+    "total_searches": 232
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "Black",
+    "total_searches": 362
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "Mixed",
+    "total_searches": 133
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "Other",
+    "total_searches": 38
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "White",
+    "total_searches": 2117
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "South Wales",
+    "ethnicity": "Asian",
+    "total_searches": 150
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "South Wales",
+    "ethnicity": "Black",
+    "total_searches": 266
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "South Wales",
+    "ethnicity": "Mixed",
+    "total_searches": 119
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "South Wales",
+    "ethnicity": "Other",
+    "total_searches": 80
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "South Wales",
+    "ethnicity": "White",
+    "total_searches": 4018
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "South Yorkshire",
+    "ethnicity": "Asian",
+    "total_searches": 783
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "South Yorkshire",
+    "ethnicity": "Black",
+    "total_searches": 525
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "South Yorkshire",
+    "ethnicity": "Mixed",
+    "total_searches": 303
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "South Yorkshire",
+    "ethnicity": "Other",
+    "total_searches": 211
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "South Yorkshire",
+    "ethnicity": "White",
+    "total_searches": 6603
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Staffordshire",
+    "ethnicity": "Asian",
+    "total_searches": 398
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Staffordshire",
+    "ethnicity": "Black",
+    "total_searches": 169
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Staffordshire",
+    "ethnicity": "Mixed",
+    "total_searches": 207
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Staffordshire",
+    "ethnicity": "Other",
+    "total_searches": 36
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Staffordshire",
+    "ethnicity": "White",
+    "total_searches": 4460
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Suffolk",
+    "ethnicity": "Asian",
+    "total_searches": 36
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Suffolk",
+    "ethnicity": "Black",
+    "total_searches": 104
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Suffolk",
+    "ethnicity": "Mixed",
+    "total_searches": 54
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Suffolk",
+    "ethnicity": "Other",
+    "total_searches": 50
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Suffolk",
+    "ethnicity": "White",
+    "total_searches": 1835
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Surrey",
+    "ethnicity": "Asian",
+    "total_searches": 291
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Surrey",
+    "ethnicity": "Black",
+    "total_searches": 330
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Surrey",
+    "ethnicity": "Mixed",
+    "total_searches": 253
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Surrey",
+    "ethnicity": "Other",
+    "total_searches": 93
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Surrey",
+    "ethnicity": "White",
+    "total_searches": 3199
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Sussex",
+    "ethnicity": "Asian",
+    "total_searches": 177
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Sussex",
+    "ethnicity": "Black",
+    "total_searches": 361
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Sussex",
+    "ethnicity": "Mixed",
+    "total_searches": 266
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Sussex",
+    "ethnicity": "Other",
+    "total_searches": 119
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Sussex",
+    "ethnicity": "White",
+    "total_searches": 4288
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Thames Valley",
+    "ethnicity": "Asian",
+    "total_searches": 1205
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Thames Valley",
+    "ethnicity": "Black",
+    "total_searches": 882
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Thames Valley",
+    "ethnicity": "Mixed",
+    "total_searches": 667
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Thames Valley",
+    "ethnicity": "Other",
+    "total_searches": 271
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Thames Valley",
+    "ethnicity": "White",
+    "total_searches": 8361
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Warwickshire",
+    "ethnicity": "Asian",
+    "total_searches": 69
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Warwickshire",
+    "ethnicity": "Black",
+    "total_searches": 67
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Warwickshire",
+    "ethnicity": "Mixed",
+    "total_searches": 37
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Warwickshire",
+    "ethnicity": "Other",
+    "total_searches": 12
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Warwickshire",
+    "ethnicity": "White",
+    "total_searches": 786
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "West Mercia",
+    "ethnicity": "Asian",
+    "total_searches": 259
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "West Mercia",
+    "ethnicity": "Black",
+    "total_searches": 193
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "West Mercia",
+    "ethnicity": "Mixed",
+    "total_searches": 104
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "West Mercia",
+    "ethnicity": "Other",
+    "total_searches": 29
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "West Mercia",
+    "ethnicity": "White",
+    "total_searches": 3213
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "West Midlands",
+    "ethnicity": "Asian",
+    "total_searches": 6246
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "West Midlands",
+    "ethnicity": "Black",
+    "total_searches": 3552
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "West Midlands",
+    "ethnicity": "Mixed",
+    "total_searches": 2258
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "West Midlands",
+    "ethnicity": "Other",
+    "total_searches": 63
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "West Midlands",
+    "ethnicity": "White",
+    "total_searches": 9825
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "West Yorkshire",
+    "ethnicity": "Asian",
+    "total_searches": 4952
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "West Yorkshire",
+    "ethnicity": "Black",
+    "total_searches": 1167
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "West Yorkshire",
+    "ethnicity": "Mixed",
+    "total_searches": 941
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "West Yorkshire",
+    "ethnicity": "Other",
+    "total_searches": 256
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "West Yorkshire",
+    "ethnicity": "White",
+    "total_searches": 9989
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Wiltshire",
+    "ethnicity": "Asian",
+    "total_searches": 41
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Wiltshire",
+    "ethnicity": "Black",
+    "total_searches": 67
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Wiltshire",
+    "ethnicity": "Mixed",
+    "total_searches": 52
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Wiltshire",
+    "ethnicity": "Other",
+    "total_searches": 13
+  },
+  {
+    "financial_year": "2023/24",
+    "police_force": "Wiltshire",
+    "ethnicity": "White",
+    "total_searches": 954
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "Asian",
+    "total_searches": 144
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "Black",
+    "total_searches": 415
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "Mixed",
+    "total_searches": 222
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "Other",
+    "total_searches": 63
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Avon & Somerset",
+    "ethnicity": "White",
+    "total_searches": 3229
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Bedfordshire",
+    "ethnicity": "Asian",
+    "total_searches": 615
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Bedfordshire",
+    "ethnicity": "Black",
+    "total_searches": 466
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Bedfordshire",
+    "ethnicity": "Mixed",
+    "total_searches": 145
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Bedfordshire",
+    "ethnicity": "Other",
+    "total_searches": 62
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Bedfordshire",
+    "ethnicity": "White",
+    "total_searches": 1734
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "Asian",
+    "total_searches": 268
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "Black",
+    "total_searches": 203
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "Mixed",
+    "total_searches": 119
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "Other",
+    "total_searches": 58
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Cambridgeshire",
+    "ethnicity": "White",
+    "total_searches": 1577
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Cheshire",
+    "ethnicity": "Asian",
+    "total_searches": 293
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Cheshire",
+    "ethnicity": "Black",
+    "total_searches": 336
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Cheshire",
+    "ethnicity": "Mixed",
+    "total_searches": 272
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Cheshire",
+    "ethnicity": "Other",
+    "total_searches": 209
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Cheshire",
+    "ethnicity": "White",
+    "total_searches": 9997
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Cleveland",
+    "ethnicity": "Asian",
+    "total_searches": 241
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Cleveland",
+    "ethnicity": "Black",
+    "total_searches": 101
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Cleveland",
+    "ethnicity": "Mixed",
+    "total_searches": 103
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Cleveland",
+    "ethnicity": "Other",
+    "total_searches": 66
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Cleveland",
+    "ethnicity": "White",
+    "total_searches": 4969
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Cumbria",
+    "ethnicity": "Asian",
+    "total_searches": 280
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Cumbria",
+    "ethnicity": "Black",
+    "total_searches": 107
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Cumbria",
+    "ethnicity": "Mixed",
+    "total_searches": 87
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Cumbria",
+    "ethnicity": "Other",
+    "total_searches": 64
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Cumbria",
+    "ethnicity": "White",
+    "total_searches": 7481
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Derbyshire",
+    "ethnicity": "Asian",
+    "total_searches": 262
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Derbyshire",
+    "ethnicity": "Black",
+    "total_searches": 162
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Derbyshire",
+    "ethnicity": "Mixed",
+    "total_searches": 149
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Derbyshire",
+    "ethnicity": "Other",
+    "total_searches": 62
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Derbyshire",
+    "ethnicity": "White",
+    "total_searches": 2641
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "Asian",
+    "total_searches": 62
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "Black",
+    "total_searches": 134
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "Mixed",
+    "total_searches": 116
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "Other",
+    "total_searches": 44
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Devon & Cornwall",
+    "ethnicity": "White",
+    "total_searches": 4968
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Dorset",
+    "ethnicity": "Asian",
+    "total_searches": 47
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Dorset",
+    "ethnicity": "Black",
+    "total_searches": 93
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Dorset",
+    "ethnicity": "Mixed",
+    "total_searches": 59
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Dorset",
+    "ethnicity": "Other",
+    "total_searches": 28
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Dorset",
+    "ethnicity": "White",
+    "total_searches": 1506
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Durham",
+    "ethnicity": "Asian",
+    "total_searches": 50
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Durham",
+    "ethnicity": "Black",
+    "total_searches": 18
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Durham",
+    "ethnicity": "Mixed",
+    "total_searches": 13
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Durham",
+    "ethnicity": "Other",
+    "total_searches": 6
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Durham",
+    "ethnicity": "White",
+    "total_searches": 2371
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Dyfed-Powys",
+    "ethnicity": "Asian",
+    "total_searches": 38
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Dyfed-Powys",
+    "ethnicity": "Black",
+    "total_searches": 30
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Dyfed-Powys",
+    "ethnicity": "Mixed",
+    "total_searches": 58
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Dyfed-Powys",
+    "ethnicity": "Other",
+    "total_searches": 23
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Dyfed-Powys",
+    "ethnicity": "White",
+    "total_searches": 3339
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Essex",
+    "ethnicity": "Asian",
+    "total_searches": 422
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Essex",
+    "ethnicity": "Black",
+    "total_searches": 935
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Essex",
+    "ethnicity": "Mixed",
+    "total_searches": 424
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Essex",
+    "ethnicity": "Other",
+    "total_searches": 279
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Essex",
+    "ethnicity": "White",
+    "total_searches": 8214
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Gloucestershire",
+    "ethnicity": "Asian",
+    "total_searches": 90
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Gloucestershire",
+    "ethnicity": "Black",
+    "total_searches": 117
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Gloucestershire",
+    "ethnicity": "Mixed",
+    "total_searches": 129
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Gloucestershire",
+    "ethnicity": "Other",
+    "total_searches": 43
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Gloucestershire",
+    "ethnicity": "White",
+    "total_searches": 1819
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Greater Manchester",
+    "ethnicity": "Asian",
+    "total_searches": 7120
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Greater Manchester",
+    "ethnicity": "Black",
+    "total_searches": 4411
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Greater Manchester",
+    "ethnicity": "Mixed",
+    "total_searches": 1167
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Greater Manchester",
+    "ethnicity": "Other",
+    "total_searches": 803
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Greater Manchester",
+    "ethnicity": "White",
+    "total_searches": 26616
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Gwent",
+    "ethnicity": "Asian",
+    "total_searches": 97
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Gwent",
+    "ethnicity": "Black",
+    "total_searches": 96
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Gwent",
+    "ethnicity": "Mixed",
+    "total_searches": 48
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Gwent",
+    "ethnicity": "Other",
+    "total_searches": 24
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Gwent",
+    "ethnicity": "White",
+    "total_searches": 2208
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Hampshire",
+    "ethnicity": "Asian",
+    "total_searches": 553
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Hampshire",
+    "ethnicity": "Black",
+    "total_searches": 752
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Hampshire",
+    "ethnicity": "Mixed",
+    "total_searches": 437
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Hampshire",
+    "ethnicity": "Other",
+    "total_searches": 282
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Hampshire",
+    "ethnicity": "White",
+    "total_searches": 9531
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Hertfordshire",
+    "ethnicity": "Asian",
+    "total_searches": 389
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Hertfordshire",
+    "ethnicity": "Black",
+    "total_searches": 543
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Hertfordshire",
+    "ethnicity": "Mixed",
+    "total_searches": 276
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Hertfordshire",
+    "ethnicity": "Other",
+    "total_searches": 142
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Hertfordshire",
+    "ethnicity": "White",
+    "total_searches": 3642
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Humberside",
+    "ethnicity": "Asian",
+    "total_searches": 64
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Humberside",
+    "ethnicity": "Black",
+    "total_searches": 73
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Humberside",
+    "ethnicity": "Mixed",
+    "total_searches": 46
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Humberside",
+    "ethnicity": "Other",
+    "total_searches": 78
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Humberside",
+    "ethnicity": "White",
+    "total_searches": 3487
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Kent",
+    "ethnicity": "Asian",
+    "total_searches": 453
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Kent",
+    "ethnicity": "Black",
+    "total_searches": 811
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Kent",
+    "ethnicity": "Mixed",
+    "total_searches": 461
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Kent",
+    "ethnicity": "Other",
+    "total_searches": 330
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Kent",
+    "ethnicity": "White",
+    "total_searches": 8967
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Lancashire",
+    "ethnicity": "Asian",
+    "total_searches": 2362
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Lancashire",
+    "ethnicity": "Black",
+    "total_searches": 314
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Lancashire",
+    "ethnicity": "Mixed",
+    "total_searches": 267
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Lancashire",
+    "ethnicity": "Other",
+    "total_searches": 162
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Lancashire",
+    "ethnicity": "White",
+    "total_searches": 13093
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Leicestershire",
+    "ethnicity": "Asian",
+    "total_searches": 550
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Leicestershire",
+    "ethnicity": "Black",
+    "total_searches": 506
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Leicestershire",
+    "ethnicity": "Mixed",
+    "total_searches": 163
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Leicestershire",
+    "ethnicity": "Other",
+    "total_searches": 96
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Leicestershire",
+    "ethnicity": "White",
+    "total_searches": 2499
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Lincolnshire",
+    "ethnicity": "Asian",
+    "total_searches": 47
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Lincolnshire",
+    "ethnicity": "Black",
+    "total_searches": 85
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Lincolnshire",
+    "ethnicity": "Mixed",
+    "total_searches": 46
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Lincolnshire",
+    "ethnicity": "Other",
+    "total_searches": 13
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Lincolnshire",
+    "ethnicity": "White",
+    "total_searches": 2109
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "London, City of",
+    "ethnicity": "Asian",
+    "total_searches": 227
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "London, City of",
+    "ethnicity": "Black",
+    "total_searches": 277
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "London, City of",
+    "ethnicity": "Mixed",
+    "total_searches": 92
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "London, City of",
+    "ethnicity": "Other",
+    "total_searches": 62
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "London, City of",
+    "ethnicity": "White",
+    "total_searches": 653
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Merseyside",
+    "ethnicity": "Asian",
+    "total_searches": 877
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Merseyside",
+    "ethnicity": "Black",
+    "total_searches": 1376
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Merseyside",
+    "ethnicity": "Mixed",
+    "total_searches": 1155
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Merseyside",
+    "ethnicity": "Other",
+    "total_searches": 1377
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Merseyside",
+    "ethnicity": "White",
+    "total_searches": 46403
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "Asian",
+    "total_searches": 12660
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "Black",
+    "total_searches": 29018
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "Mixed",
+    "total_searches": 5427
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "Other",
+    "total_searches": 4681
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Metropolitan Police",
+    "ethnicity": "White",
+    "total_searches": 31601
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Norfolk",
+    "ethnicity": "Asian",
+    "total_searches": 49
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Norfolk",
+    "ethnicity": "Black",
+    "total_searches": 129
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Norfolk",
+    "ethnicity": "Mixed",
+    "total_searches": 39
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Norfolk",
+    "ethnicity": "Other",
+    "total_searches": 27
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Norfolk",
+    "ethnicity": "White",
+    "total_searches": 1802
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "North Wales",
+    "ethnicity": "Asian",
+    "total_searches": 43
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "North Wales",
+    "ethnicity": "Black",
+    "total_searches": 25
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "North Wales",
+    "ethnicity": "Mixed",
+    "total_searches": 27
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "North Wales",
+    "ethnicity": "Other",
+    "total_searches": 15
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "North Wales",
+    "ethnicity": "White",
+    "total_searches": 2787
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "North Yorkshire",
+    "ethnicity": "Asian",
+    "total_searches": 96
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "North Yorkshire",
+    "ethnicity": "Black",
+    "total_searches": 55
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "North Yorkshire",
+    "ethnicity": "Mixed",
+    "total_searches": 39
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "North Yorkshire",
+    "ethnicity": "Other",
+    "total_searches": 17
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "North Yorkshire",
+    "ethnicity": "White",
+    "total_searches": 1750
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Northamptonshire",
+    "ethnicity": "Asian",
+    "total_searches": 122
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Northamptonshire",
+    "ethnicity": "Black",
+    "total_searches": 422
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Northamptonshire",
+    "ethnicity": "Mixed",
+    "total_searches": 151
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Northamptonshire",
+    "ethnicity": "Other",
+    "total_searches": 31
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Northamptonshire",
+    "ethnicity": "White",
+    "total_searches": 2559
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Northumbria",
+    "ethnicity": "Asian",
+    "total_searches": 527
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Northumbria",
+    "ethnicity": "Black",
+    "total_searches": 225
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Northumbria",
+    "ethnicity": "Mixed",
+    "total_searches": 136
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Northumbria",
+    "ethnicity": "Other",
+    "total_searches": 8
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Northumbria",
+    "ethnicity": "White",
+    "total_searches": 8966
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "Asian",
+    "total_searches": 133
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "Black",
+    "total_searches": 242
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "Mixed",
+    "total_searches": 146
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "Other",
+    "total_searches": 38
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Nottinghamshire",
+    "ethnicity": "White",
+    "total_searches": 1480
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "South Wales",
+    "ethnicity": "Asian",
+    "total_searches": 166
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "South Wales",
+    "ethnicity": "Black",
+    "total_searches": 224
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "South Wales",
+    "ethnicity": "Mixed",
+    "total_searches": 95
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "South Wales",
+    "ethnicity": "Other",
+    "total_searches": 76
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "South Wales",
+    "ethnicity": "White",
+    "total_searches": 3186
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "South Yorkshire",
+    "ethnicity": "Asian",
+    "total_searches": 755
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "South Yorkshire",
+    "ethnicity": "Black",
+    "total_searches": 556
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "South Yorkshire",
+    "ethnicity": "Mixed",
+    "total_searches": 342
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "South Yorkshire",
+    "ethnicity": "Other",
+    "total_searches": 222
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "South Yorkshire",
+    "ethnicity": "White",
+    "total_searches": 6435
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Staffordshire",
+    "ethnicity": "Asian",
+    "total_searches": 554
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Staffordshire",
+    "ethnicity": "Black",
+    "total_searches": 213
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Staffordshire",
+    "ethnicity": "Mixed",
+    "total_searches": 206
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Staffordshire",
+    "ethnicity": "Other",
+    "total_searches": 42
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Staffordshire",
+    "ethnicity": "White",
+    "total_searches": 4514
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Suffolk",
+    "ethnicity": "Asian",
+    "total_searches": 48
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Suffolk",
+    "ethnicity": "Black",
+    "total_searches": 118
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Suffolk",
+    "ethnicity": "Mixed",
+    "total_searches": 58
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Suffolk",
+    "ethnicity": "Other",
+    "total_searches": 40
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Suffolk",
+    "ethnicity": "White",
+    "total_searches": 1639
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Surrey",
+    "ethnicity": "Asian",
+    "total_searches": 360
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Surrey",
+    "ethnicity": "Black",
+    "total_searches": 458
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Surrey",
+    "ethnicity": "Mixed",
+    "total_searches": 312
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Surrey",
+    "ethnicity": "Other",
+    "total_searches": 127
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Surrey",
+    "ethnicity": "White",
+    "total_searches": 3564
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Sussex",
+    "ethnicity": "Asian",
+    "total_searches": 173
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Sussex",
+    "ethnicity": "Black",
+    "total_searches": 406
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Sussex",
+    "ethnicity": "Mixed",
+    "total_searches": 250
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Sussex",
+    "ethnicity": "Other",
+    "total_searches": 181
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Sussex",
+    "ethnicity": "White",
+    "total_searches": 4340
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Thames Valley",
+    "ethnicity": "Asian",
+    "total_searches": 1578
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Thames Valley",
+    "ethnicity": "Black",
+    "total_searches": 1185
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Thames Valley",
+    "ethnicity": "Mixed",
+    "total_searches": 753
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Thames Valley",
+    "ethnicity": "Other",
+    "total_searches": 288
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Thames Valley",
+    "ethnicity": "White",
+    "total_searches": 9549
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Warwickshire",
+    "ethnicity": "Asian",
+    "total_searches": 110
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Warwickshire",
+    "ethnicity": "Black",
+    "total_searches": 83
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Warwickshire",
+    "ethnicity": "Mixed",
+    "total_searches": 62
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Warwickshire",
+    "ethnicity": "Other",
+    "total_searches": 17
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Warwickshire",
+    "ethnicity": "White",
+    "total_searches": 913
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "West Mercia",
+    "ethnicity": "Asian",
+    "total_searches": 171
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "West Mercia",
+    "ethnicity": "Black",
+    "total_searches": 168
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "West Mercia",
+    "ethnicity": "Mixed",
+    "total_searches": 80
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "West Mercia",
+    "ethnicity": "Other",
+    "total_searches": 18
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "West Mercia",
+    "ethnicity": "White",
+    "total_searches": 2292
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "West Midlands",
+    "ethnicity": "Asian",
+    "total_searches": 6031
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "West Midlands",
+    "ethnicity": "Black",
+    "total_searches": 3666
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "West Midlands",
+    "ethnicity": "Mixed",
+    "total_searches": 2067
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "West Midlands",
+    "ethnicity": "Other",
+    "total_searches": 22
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "West Midlands",
+    "ethnicity": "White",
+    "total_searches": 9159
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "West Yorkshire",
+    "ethnicity": "Asian",
+    "total_searches": 4872
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "West Yorkshire",
+    "ethnicity": "Black",
+    "total_searches": 1004
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "West Yorkshire",
+    "ethnicity": "Mixed",
+    "total_searches": 872
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "West Yorkshire",
+    "ethnicity": "Other",
+    "total_searches": 338
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "West Yorkshire",
+    "ethnicity": "White",
+    "total_searches": 9415
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Wiltshire",
+    "ethnicity": "Asian",
+    "total_searches": 78
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Wiltshire",
+    "ethnicity": "Black",
+    "total_searches": 89
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Wiltshire",
+    "ethnicity": "Mixed",
+    "total_searches": 58
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Wiltshire",
+    "ethnicity": "Other",
+    "total_searches": 21
+  },
+  {
+    "financial_year": "2024/25",
+    "police_force": "Wiltshire",
+    "ethnicity": "White",
+    "total_searches": 1180
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "reason": "Anticipation of Violence",
+    "rate_Black": 1.877,
+    "rate_White": 0.236,
+    "black_white_ratio": 7.94
+  },
+  {
+    "reason": "Offensive Weapons",
+    "rate_Black": 26.907,
+    "rate_White": 3.881,
+    "black_white_ratio": 6.93
+  },
+  {
+    "reason": "Terrorism Act 2000 section 43",
+    "rate_Black": 0.072,
+    "rate_White": 0.011,
+    "black_white_ratio": 6.76
+  },
+  {
+    "reason": "Firearms",
+    "rate_Black": 1.211,
+    "rate_White": 0.221,
+    "black_white_ratio": 5.48
+  },
+  {
+    "reason": "Stolen Property",
+    "rate_Black": 13.64,
+    "rate_White": 2.964,
+    "black_white_ratio": 4.6
+  },
+  {
+    "reason": "Drugs",
+    "rate_Black": 81.23,
+    "rate_White": 18.998,
+    "black_white_ratio": 4.28
+  },
+  {
+    "reason": "Other",
+    "rate_Black": 1.761,
+    "rate_White": 0.63,
+    "black_white_ratio": 2.79
+  },
+  {
+    "reason": "Going Equipped",
+    "rate_Black": 5.013,
+    "rate_White": 2.738,
+    "black_white_ratio": 1.83
+  },
+  {
+    "reason": "Criminal Damage",
+    "rate_Black": 0.577,
+    "rate_White": 0.504,
+    "black_white_ratio": 1.14
+  }
+]

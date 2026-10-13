@@ -1,0 +1,216 @@
+financial_year,police_force,region_clean,total_searches,missing_searches,pct_missing
+2020/21,Avon & Somerset,South West,10174,2539,25
+2020/21,Bedfordshire,East of England,3845,813,21.1
+2020/21,Cambridgeshire,East of England,3335,673,20.2
+2020/21,Cheshire,North West,5831,981,16.8
+2020/21,Cleveland,North East,6080,1019,16.8
+2020/21,Cumbria,North West,3348,290,8.7
+2020/21,Derbyshire,East Midlands,2137,314,14.7
+2020/21,Devon & Cornwall,South West,8010,2041,25.5
+2020/21,Dorset,South West,2678,280,10.5
+2020/21,Durham,North East,2319,59,2.5
+2020/21,Dyfed-Powys,Wales,3296,247,7.5
+2020/21,Essex,East of England,25830,4208,16.3
+2020/21,Gloucestershire,South West,3029,196,6.5
+2020/21,Greater Manchester,North West,11488,3603,31.4
+2020/21,Gwent,Wales,4539,560,12.3
+2020/21,Hampshire,South East,12782,1594,12.5
+2020/21,Hertfordshire,East of England,9459,1609,17
+2020/21,Humberside,Yorkshire and The Humber,6807,994,14.6
+2020/21,Kent,South East,13826,2004,14.5
+2020/21,Lancashire,North West,10489,2376,22.7
+2020/21,Leicestershire,East Midlands,6932,2300,33.2
+2020/21,Lincolnshire,East Midlands,3379,416,12.3
+2020/21,"London, City of",London,2694,1157,42.9
+2020/21,Merseyside,North West,47977,5911,12.3
+2020/21,Metropolitan Police,London,311295,72274,23.2
+2020/21,Norfolk,East of England,7382,884,12
+2020/21,North Wales,Wales,6194,513,8.3
+2020/21,North Yorkshire,Yorkshire and The Humber,3658,335,9.2
+2020/21,Northamptonshire,East Midlands,2706,325,12
+2020/21,Northumbria,North East,5017,124,2.5
+2020/21,Nottinghamshire,East Midlands,4855,1048,21.6
+2020/21,South Wales,Wales,16248,1416,8.7
+2020/21,South Yorkshire,Yorkshire and The Humber,16600,2662,16
+2020/21,Staffordshire,West Midlands,5592,466,8.3
+2020/21,Suffolk,East of England,5250,793,15.1
+2020/21,Surrey,South East,7371,982,13.3
+2020/21,Sussex,South East,8639,879,10.2
+2020/21,Thames Valley,South East,18917,4608,24.4
+2020/21,Warwickshire,West Midlands,2393,255,10.7
+2020/21,West Mercia,West Midlands,5921,541,9.1
+2020/21,West Midlands,West Midlands,23620,1352,5.7
+2020/21,West Yorkshire,Yorkshire and The Humber,20187,2540,12.6
+2020/21,Wiltshire,South West,2219,252,11.4
+2021/22,Avon & Somerset,South West,6760,1545,22.9
+2021/22,Bedfordshire,East of England,3519,553,15.7
+2021/22,Cambridgeshire,East of England,2522,468,18.6
+2021/22,Cheshire,North West,5996,1009,16.8
+2021/22,Cleveland,North East,5890,1100,18.7
+2021/22,Cumbria,North West,2190,103,4.7
+2021/22,Derbyshire,East Midlands,1735,387,22.3
+2021/22,Devon & Cornwall,South West,5540,1646,29.7
+2021/22,Dorset,South West,2115,250,11.8
+2021/22,Durham,North East,2132,72,3.4
+2021/22,Dyfed-Powys,Wales,2478,211,8.5
+2021/22,Essex,East of England,16955,3654,21.6
+2021/22,Gloucestershire,South West,1839,137,7.4
+2021/22,Greater Manchester,North West,9393,1703,18.1
+2021/22,Gwent,Wales,1842,210,11.4
+2021/22,Hampshire,South East,9791,1431,14.6
+2021/22,Hertfordshire,East of England,7040,1093,15.5
+2021/22,Humberside,Yorkshire and The Humber,5628,728,12.9
+2021/22,Kent,South East,12031,2048,17
+2021/22,Lancashire,North West,9981,1531,15.3
+2021/22,Leicestershire,East Midlands,5633,1201,21.3
+2021/22,Lincolnshire,East Midlands,2748,248,9
+2021/22,"London, City of",London,2632,1169,44.4
+2021/22,Merseyside,North West,45384,5396,11.9
+2021/22,Metropolitan Police,London,209189,56472,27
+2021/22,Norfolk,East of England,5335,570,10.7
+2021/22,North Wales,Wales,4172,284,6.8
+2021/22,North Yorkshire,Yorkshire and The Humber,2420,406,16.8
+2021/22,Northamptonshire,East Midlands,3047,288,9.5
+2021/22,Northumbria,North East,4243,76,1.8
+2021/22,Nottinghamshire,East Midlands,4335,1044,24.1
+2021/22,South Wales,Wales,9900,704,7.1
+2021/22,South Yorkshire,Yorkshire and The Humber,11141,2054,18.4
+2021/22,Staffordshire,West Midlands,4372,440,10.1
+2021/22,Suffolk,East of England,4217,580,13.8
+2021/22,Surrey,South East,4893,665,13.6
+2021/22,Sussex,South East,6110,657,10.8
+2021/22,Thames Valley,South East,13777,3298,23.9
+2021/22,Warwickshire,West Midlands,1751,190,10.9
+2021/22,West Mercia,West Midlands,4230,485,11.5
+2021/22,West Midlands,West Midlands,23523,1841,7.8
+2021/22,West Yorkshire,Yorkshire and The Humber,15692,1607,10.2
+2021/22,Wiltshire,South West,1688,309,18.3
+2022/23,Avon & Somerset,South West,6205,1346,21.7
+2022/23,Bedfordshire,East of England,3830,634,16.6
+2022/23,Cambridgeshire,East of England,2746,406,14.8
+2022/23,Cheshire,North West,11943,2322,19.4
+2022/23,Cleveland,North East,6844,1194,17.4
+2022/23,Cumbria,North West,4334,439,10.1
+2022/23,Derbyshire,East Midlands,1976,295,14.9
+2022/23,Devon & Cornwall,South West,6122,1381,22.6
+2022/23,Dorset,South West,1892,247,13.1
+2022/23,Durham,North East,3276,86,2.6
+2022/23,Dyfed-Powys,Wales,8173,631,7.7
+2022/23,Essex,East of England,16061,4118,25.6
+2022/23,Gloucestershire,South West,2083,145,7
+2022/23,Greater Manchester,North West,29173,5361,18.4
+2022/23,Gwent,Wales,2159,340,15.7
+2022/23,Hampshire,South East,10101,2014,19.9
+2022/23,Hertfordshire,East of England,6613,996,15.1
+2022/23,Humberside,Yorkshire and The Humber,4947,900,18.2
+2022/23,Kent,South East,12717,2369,18.6
+2022/23,Lancashire,North West,11840,1993,16.8
+2022/23,Leicestershire,East Midlands,6615,1509,22.8
+2022/23,Lincolnshire,East Midlands,3156,352,11.2
+2022/23,"London, City of",London,2137,1030,48.2
+2022/23,Merseyside,North West,51783,4697,9.1
+2022/23,Metropolitan Police,London,175277,51694,29.5
+2022/23,Norfolk,East of England,3833,595,15.5
+2022/23,North Wales,Wales,3605,363,10.1
+2022/23,North Yorkshire,Yorkshire and The Humber,3021,790,26.2
+2022/23,Northamptonshire,East Midlands,3777,332,8.8
+2022/23,Northumbria,North East,5487,115,2.1
+2022/23,Nottinghamshire,East Midlands,4726,1387,29.3
+2022/23,South Wales,Wales,7102,603,8.5
+2022/23,South Yorkshire,Yorkshire and The Humber,10990,2375,21.6
+2022/23,Staffordshire,West Midlands,4438,436,9.8
+2022/23,Suffolk,East of England,4060,686,16.9
+2022/23,Surrey,South East,4771,1417,29.7
+2022/23,Sussex,South East,5432,826,15.2
+2022/23,Thames Valley,South East,14076,4512,32.1
+2022/23,Warwickshire,West Midlands,1171,123,10.5
+2022/23,West Mercia,West Midlands,4057,420,10.4
+2022/23,West Midlands,West Midlands,25487,2439,9.6
+2022/23,West Yorkshire,Yorkshire and The Humber,17564,1738,9.9
+2022/23,Wiltshire,South West,1765,356,20.2
+2023/24,Avon & Somerset,South West,6060,1456,24
+2023/24,Bedfordshire,East of England,4110,719,17.5
+2023/24,Cambridgeshire,East of England,2683,400,14.9
+2023/24,Cheshire,North West,13394,1413,10.5
+2023/24,Cleveland,North East,8603,1347,15.7
+2023/24,Cumbria,North West,7512,628,8.4
+2023/24,Derbyshire,East Midlands,2578,249,9.7
+2023/24,Devon & Cornwall,South West,6068,442,7.3
+2023/24,Dorset,South West,1944,272,14
+2023/24,Durham,North East,3044,120,3.9
+2023/24,Dyfed-Powys,Wales,4881,432,8.9
+2023/24,Essex,East of England,15305,4499,29.4
+2023/24,Gloucestershire,South West,1995,176,8.8
+2023/24,Greater Manchester,North West,44712,8590,19.2
+2023/24,Gwent,Wales,2289,435,19
+2023/24,Hampshire,South East,12191,1940,15.9
+2023/24,Hertfordshire,East of England,6253,1087,17.4
+2023/24,Humberside,Yorkshire and The Humber,4947,1180,23.9
+2023/24,Kent,South East,13283,2781,20.9
+2023/24,Lancashire,North West,16729,2648,15.8
+2023/24,Leicestershire,East Midlands,6096,1442,23.7
+2023/24,Lincolnshire,East Midlands,3178,449,14.1
+2023/24,"London, City of",London,2373,1200,50.6
+2023/24,Merseyside,North West,49573,2786,5.6
+2023/24,Metropolitan Police,London,135348,42383,31.3
+2023/24,Norfolk,East of England,2867,661,23.1
+2023/24,North Wales,Wales,3069,750,24.4
+2023/24,North Yorkshire,Yorkshire and The Humber,2955,600,20.3
+2023/24,Northamptonshire,East Midlands,4402,421,9.6
+2023/24,Northumbria,North East,8756,198,2.3
+2023/24,Nottinghamshire,East Midlands,4233,1351,31.9
+2023/24,South Wales,Wales,5400,767,14.2
+2023/24,South Yorkshire,Yorkshire and The Humber,10446,2021,19.3
+2023/24,Staffordshire,West Midlands,5753,483,8.4
+2023/24,Suffolk,East of England,2667,588,22
+2023/24,Surrey,South East,5084,918,18.1
+2023/24,Sussex,South East,6600,1389,21
+2023/24,Thames Valley,South East,16064,4678,29.1
+2023/24,Warwickshire,West Midlands,1252,281,22.4
+2023/24,West Mercia,West Midlands,4317,519,12
+2023/24,West Midlands,West Midlands,24146,2202,9.1
+2023/24,West Yorkshire,Yorkshire and The Humber,18421,1116,6.1
+2023/24,Wiltshire,South West,1512,385,25.5
+2024/25,Avon & Somerset,South West,5491,1418,25.8
+2024/25,Bedfordshire,East of England,3682,660,17.9
+2024/25,Cambridgeshire,East of England,2634,409,15.5
+2024/25,Cheshire,North West,11840,733,6.2
+2024/25,Cleveland,North East,6545,1065,16.3
+2024/25,Cumbria,North West,8908,889,10
+2024/25,Derbyshire,East Midlands,3418,142,4.2
+2024/25,Devon & Cornwall,South West,5808,484,8.3
+2024/25,Dorset,South West,2029,296,14.6
+2024/25,Durham,North East,2560,102,4
+2024/25,Dyfed-Powys,Wales,3686,198,5.4
+2024/25,Essex,East of England,13822,3548,25.7
+2024/25,Gloucestershire,South West,2461,263,10.7
+2024/25,Greater Manchester,North West,49275,9158,18.6
+2024/25,Gwent,Wales,3537,1064,30.1
+2024/25,Hampshire,South East,13337,1782,13.4
+2024/25,Hertfordshire,East of England,6270,1278,20.4
+2024/25,Humberside,Yorkshire and The Humber,5213,1465,28.1
+2024/25,Kent,South East,14587,3565,24.4
+2024/25,Lancashire,North West,19268,3070,15.9
+2024/25,Leicestershire,East Midlands,4983,1169,23.5
+2024/25,Lincolnshire,East Midlands,2707,407,15
+2024/25,"London, City of",London,2287,976,42.7
+2024/25,Merseyside,North West,53105,1917,3.6
+2024/25,Metropolitan Police,London,120922,37535,31
+2024/25,Norfolk,East of England,2694,648,24.1
+2024/25,North Wales,Wales,4357,1460,33.5
+2024/25,North Yorkshire,Yorkshire and The Humber,2366,409,17.3
+2024/25,Northamptonshire,East Midlands,3663,378,10.3
+2024/25,Northumbria,North East,10068,206,2
+2024/25,Nottinghamshire,East Midlands,3375,1336,39.6
+2024/25,South Wales,Wales,4925,1178,23.9
+2024/25,South Yorkshire,Yorkshire and The Humber,10067,1757,17.5
+2024/25,Staffordshire,West Midlands,6230,701,11.3
+2024/25,Suffolk,East of England,2476,573,23.1
+2024/25,Surrey,South East,5549,728,13.1
+2024/25,Sussex,South East,6215,865,13.9
+2024/25,Thames Valley,South East,17385,4032,23.2
+2024/25,Warwickshire,West Midlands,1325,140,10.6
+2024/25,West Mercia,West Midlands,3270,541,16.5
+2024/25,West Midlands,West Midlands,23448,2503,10.7
+2024/25,West Yorkshire,Yorkshire and The Humber,17178,677,3.9
+2024/25,Wiltshire,South West,1926,500,26
