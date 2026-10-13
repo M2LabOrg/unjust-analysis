@@ -63,7 +63,7 @@ in @sec-sens-denominators.
 The exception is region: removing the regional fixed effect inflates the
 Black/White IRR to
 `r black_noreg$irr` (95% CI: `r black_noreg$irr_lower`, `r black_noreg$irr_upper`).
-This is expected. London combines the largest Black population in England with
+This is expected. London combines the largest Black population in England and Wales with
 the highest per-capita stop and search volume. Without controlling for region,
 this concentration is partially absorbed into the ethnicity coefficient,
 producing upward bias. Crucially, even the uncontrolled estimate of

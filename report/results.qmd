@@ -217,8 +217,8 @@ data_map_final <- left_join(uk_shapefile,data_map_prop_black, by = "rgn22cd")
 ggplot() +
   geom_sf(data = data_map_final, aes(fill = prop), color = "white") +
   labs(
-    title = "London is home to the largest share of England's Black population",
-    subtitle = "Proportion of Black or Black British ethnic group by region, Census 2021",
+    title = "London has the highest proportion of Black residents",
+    subtitle = "Black or Black British share by region, England and Wales, Census 2021",
     fill = "Proportion (%)",
     caption = paste(
       "Source: ONS Census 2021, licensed under the Open Government Licence v3.0.",
